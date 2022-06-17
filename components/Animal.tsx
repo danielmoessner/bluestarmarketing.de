@@ -2,10 +2,11 @@ import React from "react";
 import Hero from "./Hero";
 import Animate from "./Animate";
 import { Animal } from "contentlayer/generated";
+import { BlurImage } from "types/shared";
 
 interface Props {
   body: string;
-  animal: Animal;
+  animal: Animal & BlurImage;
 }
 
 function Component({ animal, body }: Props) {
@@ -13,7 +14,7 @@ function Component({ animal, body }: Props) {
     <div>
       <div className="mb-6">
         <Animate>
-          <Hero image={animal.image} alt={animal.title} />
+          <Hero imageProps={animal.imageProps} alt={animal.title} />
         </Animate>
       </div>
       <div className="w-full max-w-xl mx-auto mb-3">

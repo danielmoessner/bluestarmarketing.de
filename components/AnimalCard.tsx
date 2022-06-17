@@ -2,9 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Animal } from "contentlayer/generated";
+import { BlurImage } from "types/shared";
 
 interface Props {
-  animal: Animal;
+  animal: Animal & BlurImage;
 }
 
 function AnimalCard({ animal }: Props) {
@@ -16,18 +17,19 @@ function AnimalCard({ animal }: Props) {
             <div className="relative block text-[0]">
               <Image
                 className="rounded-lg aspect-[16/10]"
-                src={animal.image}
+                {...animal.imageProps}
                 alt={animal.title}
                 height={500}
                 width={800}
                 objectFit="cover"
+                placeholder="blur"
               />
             </div>
           </a>
         </Link>
       </div>
       <div className="flex flex-col items-start justify-start px-2 pt-4">
-        <Link className="mb-2" href={`wildtiere/${animal.slug}`}>
+        <Link className="mb-2" href={`/wildtiere/${animal.slug}`}>
           <a>
             <div>
               <div className="mb-0 text-xs font-medium leading-tight tracking-tight text-gray-600 uppercase">
@@ -39,7 +41,7 @@ function AnimalCard({ animal }: Props) {
             </div>
           </a>
         </Link>
-        <Link href={`wildtiere/${animal.slug}`}>
+        <Link href={`/wildtiere/${animal.slug}`}>
           <a>
             <p className="text-sm leading-tight text-gray-900 line-clamp-3">
               {animal.excerpt}

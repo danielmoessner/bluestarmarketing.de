@@ -7,9 +7,11 @@ import Header from "../components/Header";
 import Script from "next/script";
 import { allAnimals, Animal } from "contentlayer/generated";
 import home from "../content/page/home.json";
+import { getPlaiceholder } from "plaiceholder";
+import { BlurImage } from "types/shared";
 
 interface Props {
-  animals: Animal[];
+  animals: (Animal & BlurImage)[];
 }
 
 function Page({ animals }: Props) {
@@ -40,9 +42,15 @@ function Page({ animals }: Props) {
 }
 
 export async function getStaticProps() {
+  const animalsPromiseList = allAnimals.map(async (a) => {
+    const { base64, img } = await getPlaiceholder(a.image);
+    return { ...a, imageProps: { ...img, blurDataURL: base64 } };
+  });
+  const animalsList = await Promise.all(animalsPromiseList);
+
   return {
     props: {
-      animals: allAnimals,
+      animals: animalsList,
     },
   };
 }

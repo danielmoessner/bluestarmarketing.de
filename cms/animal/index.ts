@@ -5,7 +5,7 @@ const animal: CmsCollection = {
   label: "Wildtiere",
   label_singular: "Wildtier",
   editor: {
-    preview: true,
+    preview: false,
   },
   folder: "content/animal",
   slug: "{{fields.slug}}",

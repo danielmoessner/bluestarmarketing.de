@@ -4,14 +4,14 @@ import AnimalComponent from "../../components/Animal";
 import Container from "../../components/Container";
 import Seo from "../../components/Seo";
 import { allAnimals, Animal } from "contentlayer/generated";
+import { BlurImage } from "types/shared";
+import { getPlaiceholder } from "plaiceholder";
 
 interface Props {
-  page: Animal;
+  animal: Animal & BlurImage;
 }
 
-function Page({ page }: Props) {
-  const animal = page;
-
+function Page({ animal }: Props) {
   const meta = {
     title: animal.title,
     description: animal.excerpt,
@@ -35,11 +35,13 @@ export default Page;
 export async function getStaticProps({ params }) {
   const { slug } = params;
 
-  const page = allAnimals.find((i) => i.slug === slug);
+  const animalRaw = allAnimals.find((i) => i.slug === slug);
+  const { base64, img } = await getPlaiceholder(animalRaw.image);
+  const animal = { ...animalRaw, imageProps: { ...img, blurDataURL: base64 } };
 
   return {
     props: {
-      page,
+      animal,
     },
   };
 }
