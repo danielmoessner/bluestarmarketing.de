@@ -19,7 +19,7 @@ function Page() {
           <div className="text-center">
             <Heading>Die Webseite befindet sich im Aufbau</Heading>
           </div>
-          <div className="mx-auto mt-12 md:w-1/2">
+          <div className="mx-auto mt-4 md:w-1/2">
             <div>
               <p className="text-lg text-center">
                 Wir freuen uns, Dich demnächst auf unserer neuen Seite begrüßen
