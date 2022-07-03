@@ -13,4 +13,8 @@ select {
     background-size: 1.5em 1.5em;
     print-color-adjust: exact;
     padding-right: 2.5rem;
-    }
+}
+
+html, h1, h2, h3, h4, h5, h6, p {
+    @apply text-bsm-nightblue;
+}

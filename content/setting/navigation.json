@@ -1,26 +1,6 @@
 {
-    "collection": "setting",
-    "slug": "navigation",
-    "title": "Tiere",
-    "links": [
-      {
-        "type": "links",
-        "text": "Große Tiere",
-        "links": [
-          {
-            "text": "Wolf",
-            "url": "/wildtiere/wolf/"
-          },
-          {
-            "text": "Hirsch",
-            "url": "/wildtiere/hirsch/"
-          }
-        ]
-      },
-      {
-        "type": "link",
-        "text": "Styleguide",
-        "url": "/styleguide/"
-      }
-    ]
-  }
+  "collection": "setting",
+  "slug": "navigation",
+  "title": "Tiere",
+  "links": []
+}

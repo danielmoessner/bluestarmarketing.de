@@ -1,53 +1,47 @@
 {
-    "copyright": "© Tortuga Webdesign",
-    "text": "Diese Seite ist eine beispielhafte Seite und wird als Starter für Webseitenprojekte benutzt.",
-    "columns": [
+  "row1": {
+    "copyright": "© 2022 Blue Star Marketing GmbH & Co. KG",
+    "content": [
       {
-        "title": "Navigation",
-        "content": [
-          {
-            "type": "link",
-            "text": "Startseite",
-            "url": "/"
-          },
-          {
-            "type": "link",
-            "text": "Styleguide",
-            "url": "/styleguide/"
-          }
-        ],
-        "class": "col-span-6 md:col-span-3"
+        "type": "externalLink",
+        "text": "Web Creation: Daniel Mössner",
+        "url": "https://tortuga-webdesign.de"
       },
       {
-        "title": "Kontakt",
-        "content": [
-          {
-            "type": "externalLink",
-            "text": "kontakt@tortuga-webdesign.de",
-            "url": "mailto:kontakt@tortuga-webdesign.de"
-          },
-          {
-            "type": "text",
-            "text": "Albert-Schweitzer-Str. 17b\n85375 Neufahrn b. Freising"
-          }
-        ],
-        "class": "col-span-6 md:col-span-5"
+        "type": "externalLink",
+        "text": "Design: Annika Lind",
+        "url": "https://annikalind-grafikdesign.de"
       },
       {
-        "title": "Rechtliches",
-        "content": [
-          {
-            "type": "link",
-            "text": "Impressum",
-            "url": "/rechtliches/impressum/"
-          },
-          {
-            "type": "link",
-            "text": "Datenschutz",
-            "url": "/rechtliches/datenschutz/"
-          }
-        ],
-        "class": "col-span-6 md:col-span-3 md:col-start-10 text-right"
+        "type": "externalLink",
+        "text": "Fotos: Kitty Fried",
+        "url": "https://www.kitty-fried.de"
       }
     ]
-  }
+  },
+  "row2": [
+    {
+      "type": "link",
+      "text": "Impressum",
+      "url": "/rechtliches/impressum/"
+    },
+    {
+      "type": "link",
+      "text": "Datenschutzerklärung",
+      "url": "/rechtliches/datenschutz/"
+    },
+    {
+      "type": "link",
+      "text": "Kontakt",
+      "url": "/#kontakt"
+    }
+  ],
+  "images": [
+    "/media/bluestar_footer_1.jpg",
+    "/media/bluestar_footer_2.jpg",
+    "/media/bluestar_footer_3.jpg",
+    "/media/bluestar_footer_4.jpg",
+    "/media/bluestar_footer_5.jpg",
+    "/media/bluestar_footer_6.jpg"
+  ]
+}

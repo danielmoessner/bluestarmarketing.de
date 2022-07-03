@@ -60,21 +60,21 @@ const footer: CmsCollectionFile = {
   label: "Footer",
   name: "footer",
   fields: [
-    { label: "Copyright", name: "copyright", widget: "string" },
-    { label: "Text", name: "text", widget: "text" },
     {
-      label: "Spalten",
-      name: "columns",
+      label: "Bilder",
+      name: "images",
       widget: "list",
       collapsed: false,
+      field: { label: "Bild", name: "image", widget: "image" },
+    },
+
+    {
+      label: "Zeile 1",
+      name: "row1",
+      widget: "object",
+      collapsed: false,
       fields: [
-        { label: "Titel", name: "title", widget: "string" },
-        {
-          label: "Class (Experte)",
-          name: "class",
-          widget: "string",
-          default: "col-span-6 md:col-span-3",
-        },
+        { label: "Copyright", name: "copyright", widget: "string" },
         {
           label: "Inhalt",
           name: "content",
@@ -82,6 +82,14 @@ const footer: CmsCollectionFile = {
           types: [link, externalLink, text],
         },
       ],
+    },
+
+    {
+      label: "Zeile 2",
+      name: "row2",
+      widget: "list",
+      collapsed: false,
+      types: [link, externalLink, text],
     },
   ],
 };

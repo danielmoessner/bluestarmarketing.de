@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
-import Header from "../../components/Header";
 import Container from "../../components/Container";
 import { allLegals, Legal } from "contentlayer/generated";
 
@@ -17,22 +16,18 @@ function Page({ page }: Props) {
     description: "",
   };
 
-  const header = {
-    title: legal.title,
-    text: "",
-  };
-
   return (
     <Layout>
       <Seo meta={meta} />
-      <Header header={header} />
-      <section className="pt-5 pb-20">
+      <section className="pt-12 pb-20">
         <Container layout="sm">
-          <article
-            className="prose"
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: page.body.html }}
-          />
+          <article className="mx-auto prose">
+            <h1>{legal.title}</h1>
+            <div
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: page.body.html }}
+            />
+          </article>
         </Container>
       </section>
     </Layout>
