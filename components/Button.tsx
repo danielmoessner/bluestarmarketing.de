@@ -52,7 +52,7 @@ function Component({
 
   const bClassName =
     className ||
-    `inline-flex items-center border-2 border-transparent font-medium rounded-md shadow-sm ${ring} ${ringOffset} ${size} ${bColor}`;
+    `inline-flex items-center border-2 border-bsm-ocean font-medium shadow-sm ${ring} ${ringOffset} ${size} ${bColor}`;
 
   return (
     <div>
@@ -83,12 +83,12 @@ Component.defaultProps = {
   size: "px-4 py-2 text-sm",
   // color
   color: null,
-  primaryColor: "text-white bg-gray-600 hover:bg-gray-700 focus:ring-gray-500",
+  primaryColor: "text-bsm-nightblue bg-transparent hover:bg-transparent",
   secondaryColor:
     "text-gray-700 bg-gray-100 hover:bg-gray-200 focus:ring-gray-500",
   // ring
-  ring: "focus:outline-none focus:ring-2 focus:ring-offset-2",
-  ringOffset: "ring-offset-pink-500",
+  ring: "focus:outline-none",
+  ringOffset: "",
   // className
   className: null,
 };

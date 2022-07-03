@@ -1,10 +1,14 @@
 {
   "meta": {
     "description": "Informationen und Wissenswertes über die in Deutschland lebenden Wildtiere. Von Wildschweinen über Rehen bis hin zu den Bergenten.",
-    "title": "Wildtiere in Deutschland"
+    "title": "Blue Star Marketing"
   },
   "header": {
-    "title": "Wildtiere in Deutschland",
-    "text": "Von wann bis wann gehen die Jagdzeiten? In welchem Gebiet sind welche Tiere? Diese Informationen und mehr findest Du hier."
+    "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+    "image": "/media/bluestar_home.jpg",
+    "cta": {
+      "text": "Jetzt Erstgespräch vereinbaren",
+      "url": "/#kontakt"
+    }
   }
 }

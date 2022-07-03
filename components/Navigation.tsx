@@ -6,24 +6,24 @@ import Container from "./Container";
 import NavigationDropdown from "./NavigationDropdown";
 import NavigationLink from "./NavigationLink";
 import data from "../content/setting/navigation.json";
+import Image from "next/image";
+import imageSrc from "../public/logo_bluestar_300px.svg";
 
 function Component() {
   const navigation = data;
 
   return (
-    <nav>
+    <nav className="border-b shadow-sm">
       <Container layout="sm">
-        <div className="border-b">
+        <div className="">
           <Popover className="relative bg-white">
             {({ open }) => (
               <>
-                <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
-                  <div className="flex justify-start lg:w-0 lg:flex-1">
+                <div className="flex items-center justify-between py-3 md:justify-start md:space-x-10">
+                  <div className="flex justify-start h-12 lg:w-0 lg:flex-1">
                     <Link href="/">
-                      <a>
-                        <h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-700 transition duration-150 ease-in-out hover:text-gray-800">
-                          {navigation.title}
-                        </h1>
+                      <a className="w-40">
+                        <Image src={imageSrc} alt="Blue Star Marketing Logo" />
                       </a>
                     </Link>
                   </div>

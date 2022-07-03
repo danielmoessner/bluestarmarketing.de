@@ -9,6 +9,7 @@ import { allAnimals, Animal } from "contentlayer/generated";
 import home from "../content/page/home.json";
 import { getPlaiceholder } from "plaiceholder";
 import { BlurImage } from "types/shared";
+import Heading from "../components/Heading";
 
 interface Props {
   animals: (Animal & BlurImage)[];
@@ -22,17 +23,29 @@ function Page({ animals }: Props) {
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
       <Seo meta={page.meta} />
       <Header header={page.header} />
-      <section>
+      <section className="pb-16" id="kontakt">
         <Container layout="sm">
-          <div className="pt-8 pb-20 sm:pt-4 lg:pt-6">
-            <div className="">
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:gap-6">
-                {animals.map((animal, index) => (
-                  <Animate key={animal.slug} delay={index % 3}>
-                    <AnimalCard animal={animal} />
-                  </Animate>
-                ))}
-              </div>
+          <div className="text-center">
+            <Heading>Die Webseite befindet sich im Aufbau</Heading>
+          </div>
+          <div className="w-1/2 mx-auto mt-12">
+            <div>
+              <p className="text-lg text-center">
+                Wir freuen uns, Sie demnächst auf unserer neuen Seite begrüßen
+                zu dürfen. Wir sind weiterhin Montag bis Freitag für Sie da von
+                8:00 Uhr bis 18:00 Uhr. Sie erreichen uns unter{" "}
+                <a className="underline" href="tel:+49 (0) 811 54 17 195">
+                  +49 (0) 811 54 17 195
+                </a>{" "}
+                oder{" "}
+                <a
+                  className="underline"
+                  href="mailto:kontakt@bluestarmarketing.de"
+                >
+                  kontakt@bluestarmarketing.de
+                </a>
+                {"."}
+              </p>
             </div>
           </div>
         </Container>
