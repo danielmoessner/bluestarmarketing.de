@@ -9,12 +9,12 @@ import { improveImages } from "lib/improveImages";
 import Footer from "../components/Footer";
 import footerSource from "../content/setting/footer.json";
 
-interface Props {
-  pageData: typeof pageSource;
-  footerData: typeof footerSource;
-}
+// interface Props {
+//   pageData: typeof pageSource;
+//   footerData: typeof footerSource;
+// }
 
-function Page({ pageData, footerData }: Props) {
+function Page({ pageData, footerData }) {
   const page = pageData;
 
   return (
