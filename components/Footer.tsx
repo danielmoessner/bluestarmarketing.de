@@ -1,14 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Container from "./Container";
-import footerSource from "../content/setting/footer.json";
+// import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
+// import { ImageTransformed } from "../types/shared";
 
-interface Props {
-  data: typeof footerSource;
-}
+// interface Props {
+//   data: ImageTransformed<typeof footerSource>;
+// }
 
-function Component({ data }: Props) {
+function Component({ data }) {
   return (
     <footer className="bg-white" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
