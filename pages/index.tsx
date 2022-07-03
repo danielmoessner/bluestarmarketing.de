@@ -22,9 +22,8 @@ function Page() {
           <div className="mx-auto mt-4 md:w-1/2">
             <div>
               <p className="text-lg text-center">
-                Wir freuen uns, Dich demnächst auf unserer neuen Seite begrüßen
-                zu dürfen. Wir sind weiterhin Montag bis Freitag für Dich da. Du
-                erreichst uns unter{" "}
+                Wir freuen uns, dich demnächst auf unserer neuen Seite begrüßen
+                zu dürfen. Du erreichst uns unter{" "}
                 <a className="underline" href="tel:+49 151 59 94 98 75">
                   +49 151 59 94 98 75
                 </a>{" "}
