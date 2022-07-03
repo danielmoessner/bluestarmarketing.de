@@ -3,11 +3,19 @@ import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
 import Script from "next/script";
-import home from "../content/page/home.json";
+import pageSource from "../content/page/home.json";
 import Heading from "../components/Heading";
+import { improveImages } from "lib/improveImages";
+import Footer from "../components/Footer";
+import footerSource from "../content/setting/footer.json";
 
-function Page() {
-  const page = home;
+interface Props {
+  pageData: typeof pageSource;
+  footerData: typeof footerSource;
+}
+
+function Page({ pageData, footerData }: Props) {
+  const page = pageData;
 
   return (
     <Layout>
@@ -40,8 +48,21 @@ function Page() {
           </div>
         </Container>
       </section>
+      <Footer data={footerData} />
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const pageData = await improveImages(pageSource);
+  const footerData = await improveImages(footerSource);
+
+  return {
+    props: {
+      pageData,
+      footerData,
+    },
+  };
 }
 
 export default Page;

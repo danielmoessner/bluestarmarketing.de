@@ -15,12 +15,7 @@ function Component({ header }) {
         <div className="pt-8">
           <div className="relative">
             <div className="leading-[0px]">
-              <Image
-                src={header.image}
-                alt={header.title}
-                width={1080}
-                height={660}
-              />
+              <Image {...header.image} alt={header.title} priority />
             </div>
             <div className="relative z-10 p-5 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 bg-bsm-matt/90">
               <Heading element="h1">{header.text}</Heading>

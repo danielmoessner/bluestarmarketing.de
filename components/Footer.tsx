@@ -1,41 +1,41 @@
 import React from "react";
 import Link from "next/link";
 import Container from "./Container";
-import footer from "../content/setting/footer.json";
+import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
 
-function Component() {
+interface Props {
+  data: typeof footerSource;
+}
+
+function Component({ data }: Props) {
   return (
     <footer className="bg-white" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
       <div className="flex">
-        {footer.images.map((image, index) => (
-          <Image
-            key={index}
-            width={500}
-            height={500}
-            src={image}
-            alt={`Footer Bild ${index}`}
-          />
+        {data.images.map((image, index) => (
+          <Image key={index} {...image} alt={`Footer Bild ${index}`} />
         ))}
       </div>
       <Container layout="sm">
         <div className="my-5">
           <div className="flex flex-col justify-between lg:items-center lg:flex-row">
-            <div>{footer.row1.copyright}</div>
+            <div>{data.row1.copyright}</div>
             <div>
               <div className="flex hidden space-x-5">
-                {footer.row1.content.map((item) => {
+                {data.row1.content.map((item) => {
                   let element = <div>?</div>;
                   if (item.type === "text")
                     element = (
-                      <div className="whitespace-pre-line ">{item.text}</div>
+                      <div className="whitespace-pre-line" key={item.text}>
+                        {item.text}
+                      </div>
                     );
                   if (item.type === "link")
                     element = (
-                      <Link href={item.url}>
+                      <Link href={item.url} key={item.url}>
                         <a className=" hover:text-gray-900">{item.text}</a>
                       </Link>
                     );
@@ -43,6 +43,7 @@ function Component() {
                     element = (
                       <a
                         href={item.url}
+                        key={item.url}
                         target="_blank"
                         className=" hover:text-gray-900"
                         rel="noreferrer"
@@ -59,17 +60,20 @@ function Component() {
 
         <div className="mb-5">
           <div className="flex items-center space-x-5">
-            {footer.row2.map((item) => {
+            {data.row2.map((item) => {
               let element = <div>?</div>;
               if (item.type === "text")
                 element = (
-                  <div className="text-base font-medium whitespace-pre-line">
+                  <div
+                    className="text-base font-medium whitespace-pre-line"
+                    key={item.text}
+                  >
                     {item.text}
                   </div>
                 );
               if (item.type === "link")
                 element = (
-                  <Link href={item.url}>
+                  <Link key={item.url} href={item.url}>
                     <a className="text-base font-medium hover:text-gray-900">
                       {item.text}
                     </a>
@@ -78,6 +82,7 @@ function Component() {
               if (item.type === "externalLink")
                 element = (
                   <a
+                    key={item.url}
                     href={item.url}
                     target="_blank"
                     className="text-base font-medium hover:text-gray-900"
