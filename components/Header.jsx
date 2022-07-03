@@ -6,21 +6,24 @@
 import Container from "./Container";
 import Image from "next/image";
 import Button from "./Button";
+import Heading from "./Heading";
 
 function Component({ header }) {
   return (
     <header>
       <Container layout="sm">
-        <div className="py-8 ">
+        <div className="pt-8">
           <div className="relative">
-            <Image
-              src={header.image}
-              alt={header.title}
-              width={1080}
-              height={660}
-            />
-            <div className="absolute z-10 w-5/12 p-5 right-10 bottom-10 bg-bsm-matt/90">
-              <h1 className="text-3xl font-normal">{header.text}</h1>
+            <div className="leading-[0px]">
+              <Image
+                src={header.image}
+                alt={header.title}
+                width={1080}
+                height={660}
+              />
+            </div>
+            <div className="relative z-10 p-5 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 bg-bsm-matt/90">
+              <Heading element="h1">{header.text}</Heading>
               <div className="mt-4">
                 <Button element="Link" href={header.cta.url}>
                   {header.cta.text}

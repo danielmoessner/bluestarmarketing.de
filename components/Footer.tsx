@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Container from "./Container";
-import global from "../content/setting/global.json";
 import footer from "../content/setting/footer.json";
 import Image from "next/image";
 
@@ -24,10 +23,10 @@ function Component() {
       </div>
       <Container layout="sm">
         <div className="my-5">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col justify-between lg:items-center lg:flex-row">
             <div>{footer.row1.copyright}</div>
             <div>
-              <div className="flex invisible space-x-5">
+              <div className="flex hidden space-x-5">
                 {footer.row1.content.map((item) => {
                   let element = <div>?</div>;
                   if (item.type === "text")
