@@ -31,7 +31,7 @@ function Component({
             required={required}
             autoComplete={autoComplete}
             placeholder={placeholder}
-            className="block w-full px-4 py-3 text-base border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500"
+            className="block w-full px-4 py-1.5 text-base border-2 border-gray-300 appearance-none focus:outline-none focus:border-bsm-ocean"
             // eslint-disable-next-line
             {...attrs}
           >

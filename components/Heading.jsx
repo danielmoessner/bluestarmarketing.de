@@ -7,9 +7,9 @@ function Component({ element, size, color, children, classes }) {
 
   let allClasses = classes;
   if (size === "h1") {
-    allClasses = `text-3xl tracking-tight sm:text-3xl lg:text-3xl ${classes} ${color}`;
+    allClasses = `text-3xl tracking-tight sm:text-4xl lg:text-6xl ${classes} ${color}`;
   } else if (size === "h2") {
-    allClasses = `text-2xl tracking-tight sm:text-3xl lg:text-4xl ${classes} ${color}`;
+    allClasses = `text-2xl tracking-tight sm:text-3xl lg:text-3xl ${classes} ${color}`;
   } else if (size === "h3") {
     allClasses = `text-xl ${color}`;
   }

@@ -7,9 +7,29 @@ const global: CmsCollectionFile = {
   fields: [
     { label: "Favicon", name: "favicon", widget: "image" },
     {
-      label: "Tortuga Webdesign Logo",
-      name: "tortugaWebdesignLogo",
-      widget: "text",
+      label: "E-Mail",
+      name: "email",
+      widget: "string",
+    },
+    {
+      label: "Handy",
+      name: "mobile",
+      widget: "string",
+    },
+    {
+      label: "Festnetz",
+      name: "phone",
+      widget: "string",
+    },
+    {
+      label: "LinkedIn",
+      name: "linkedin",
+      widget: "string",
+    },
+    {
+      label: "WhatsApp",
+      name: "whatsapp",
+      widget: "string",
     },
   ],
 };

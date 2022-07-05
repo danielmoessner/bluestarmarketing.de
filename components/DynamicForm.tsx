@@ -43,7 +43,7 @@ function Component({
   }, [name]);
 
   return (
-    <div className="max-w-xl">
+    <div className="max-w-none">
       <div className={`${formSent ? "block" : "hidden"}`}>
         <div className="pt-24">
           <Heading element="div" size="h3">
@@ -75,8 +75,8 @@ function Component({
                   type="button"
                   onClick={() => setEnabled(!enabled)}
                   className={`${
-                    enabled ? "bg-gray-600" : "bg-gray-200"
-                  } relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}
+                    enabled ? "bg-bsm-ocean" : "bg-gray-200"
+                  } relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bsm-ocean`}
                   role="switch"
                   aria-checked="false"
                 >
@@ -116,10 +116,10 @@ function Component({
 Component.defaultProps = {
   name: "standardformular",
   dataProtectionText:
-    "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehen gespeichert werden.",
+    "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden.",
   successHeading: "Vielen Dank",
   successText:
-    "Vielen Dank für Ihre Anfrage wir weden uns schnellstmöglich bei Ihnen melden.",
+    "Vielen Dank für deine Anfrage wir weden uns schnellstmöglich bei dir melden.",
 };
 
 Component.propTypes = {
