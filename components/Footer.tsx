@@ -21,7 +21,7 @@ function Component({ data }) {
         ))}
       </div>
       <Container layout="sm">
-        <div className="my-5">
+        <div className="mt-5">
           <div className="flex flex-col justify-between lg:items-center lg:flex-row">
             <div>{data.row1.copyright}</div>
             <div>
@@ -59,41 +59,43 @@ function Component({ data }) {
           </div>
         </div>
 
-        <div className="mb-5">
-          <div className="flex items-center space-x-5">
-            {data.row2.map((item) => {
-              let element = <div>?</div>;
-              if (item.type === "text")
-                element = (
-                  <div
-                    className="text-base font-medium whitespace-pre-line"
-                    key={item.text}
-                  >
-                    {item.text}
-                  </div>
-                );
-              if (item.type === "link")
-                element = (
-                  <Link key={item.url} href={item.url}>
-                    <a className="text-base font-medium hover:text-gray-900">
+        <div className="mt-2 mb-5">
+          <div className="-mx-2.5 -my-1">
+            <div className="flex flex-wrap items-center">
+              {data.row2.map((item) => {
+                let element = <div>?</div>;
+                if (item.type === "text")
+                  element = (
+                    <div
+                      className="text-base font-bold whitespace-pre-line px-2.5 py-1"
+                      key={item.text}
+                    >
+                      {item.text}
+                    </div>
+                  );
+                if (item.type === "link")
+                  element = (
+                    <Link key={item.url} href={item.url}>
+                      <a className="text-base font-bold hover:text-gray-900 px-2.5 py-1">
+                        {item.text}
+                      </a>
+                    </Link>
+                  );
+                if (item.type === "externalLink")
+                  element = (
+                    <a
+                      key={item.url}
+                      href={item.url}
+                      target="_blank"
+                      className="text-base font-bold hover:text-gray-900 px-2.5 py-1"
+                      rel="noreferrer"
+                    >
                       {item.text}
                     </a>
-                  </Link>
-                );
-              if (item.type === "externalLink")
-                element = (
-                  <a
-                    key={item.url}
-                    href={item.url}
-                    target="_blank"
-                    className="text-base font-medium hover:text-gray-900"
-                    rel="noreferrer"
-                  >
-                    {item.text}
-                  </a>
-                );
-              return element;
-            })}
+                  );
+                return element;
+              })}
+            </div>
           </div>
         </div>
       </Container>
