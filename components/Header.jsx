@@ -10,6 +10,7 @@ import Heading from "./Heading";
 import Animate from "./Animate";
 
 function Component({ header }) {
+  console.log(header.image);
   return (
     <header>
       <Container layout="sm">
@@ -20,7 +21,7 @@ function Component({ header }) {
                 {...header.image}
                 alt={header.title}
                 priority
-                blur={false}
+                placeholder="empty"
               />
             </div>
             <div className="relative z-10 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 ">
