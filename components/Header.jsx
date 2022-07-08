@@ -10,7 +10,6 @@ import Heading from "./Heading";
 import Animate from "./Animate";
 
 function Component({ header }) {
-  console.log(header.image);
   return (
     <header>
       <Container layout="sm">

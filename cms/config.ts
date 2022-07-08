@@ -4,6 +4,7 @@ import category from "./category/index";
 import setting from "./setting/index";
 import legal from "./legal/index";
 import { CmsConfig } from "netlify-cms-core";
+import customer from "./customer";
 
 const config: CmsConfig = {
   publish_mode: "editorial_workflow",
@@ -28,7 +29,7 @@ const config: CmsConfig = {
   // See https://www.netlifycms.org/docs/beta-features/#manual-initialization
   load_config_file: false,
   // See https://www.netlifycms.org/docs/collection-types/
-  collections: [page, animal, category, setting, legal],
+  collections: [page, customer, animal, category, setting, legal],
 };
 
 export default config;
