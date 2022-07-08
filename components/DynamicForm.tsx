@@ -46,8 +46,6 @@ function Component({
       });
   };
 
-  const onError = (errors, e) => console.log(errors, e);
-
   return (
     <div className="max-w-none">
       <div className={`${formSent ? "block" : "hidden"}`}>
@@ -64,7 +62,7 @@ function Component({
           name={name}
           id={name}
           ref={form}
-          onSubmit={handleSubmit(onSubmit, onError)}
+          onSubmit={handleSubmit(onSubmit)}
           data-netlify="true"
           noValidate
           className={` grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8`}
