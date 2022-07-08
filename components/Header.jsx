@@ -16,7 +16,12 @@ function Component({ header }) {
         <div className="pt-8">
           <div className="relative">
             <div className="leading-[0px]">
-              <Image {...header.image} alt={header.title} priority />
+              <Image
+                {...header.image}
+                alt={header.title}
+                priority
+                blur={false}
+              />
             </div>
             <div className="relative z-10 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 ">
               <Animate>
