@@ -9,27 +9,14 @@ export { isType } from 'contentlayer/client'
 export type { Markdown, MDX }
 
 /** Document types */
-export type Animal = {
+export type Customer = {
   /** File path relative to `contentDirPath` */
   _id: string
   _raw: Local.RawDocumentData
-  type: 'Animal'
-  title?: string | undefined
-  slug?: string | undefined
-  image?: string | undefined
-  excerpt?: string | undefined
-  category?: string | undefined
-  /** Markdown file body */
-  body: Markdown
-
-}
-
-export type Category = {
-  /** File path relative to `contentDirPath` */
-  _id: string
-  _raw: Local.RawDocumentData
-  type: 'Category'
-  title?: string | undefined
+  type: 'Customer'
+  customer?: string | undefined
+  text?: string | undefined
+  company?: string | undefined
   /** Markdown file body */
   body: Markdown
 
@@ -55,8 +42,8 @@ export type Legal = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Animal | Category | Legal
-export type DocumentTypeNames = 'Animal' | 'Category' | 'Legal'
+export type DocumentTypes = Customer | Legal
+export type DocumentTypeNames = 'Customer' | 'Legal'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -77,8 +64,7 @@ declare global {
 }
 
 export type DocumentTypeMap = {
-  Animal: Animal
-  Category: Category
+  Customer: Customer
   Legal: Legal
 }
 
