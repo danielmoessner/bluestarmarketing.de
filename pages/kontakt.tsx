@@ -12,7 +12,7 @@ import Image from "next/image";
 import Multiline from "../components/Multiline";
 import DynamicForm from "../components/DynamicForm";
 import globalSource from "../content/setting/global.json";
-
+import Animate from "../components/Animate";
 // interface Props {
 //   pageData: typeof pageSource;
 //   footerData: typeof footerSource;
@@ -67,14 +67,19 @@ function Page({ pageData, footerData }) {
         <Container layout="sm">
           <div className="text-center">
             <Heading size="h1">{page.start.title}</Heading>
+            {/* <HeadingStar /> */}
           </div>
-          <div className="grid gap-8 mt-16 lg:grid-cols-2">
-            <div className="leading-[0px]">
-              <Image {...page.start.image} alt={page.start.title} />
-            </div>
-            <div>
-              <Multiline text={page.start.text} />
-            </div>
+          <div className="mt-16">
+            <Animate>
+              <div className="grid gap-8 lg:grid-cols-2">
+                <div className="leading-[0px]">
+                  <Image {...page.start.image} alt={page.start.title} />
+                </div>
+                <div>
+                  <Multiline text={page.start.text} />
+                </div>
+              </div>
+            </Animate>
           </div>
         </Container>
       </section>
@@ -142,14 +147,18 @@ function Page({ pageData, footerData }) {
                 />
               </div>
             </div>
-            <div className="leading-[0px]">
-              <Image {...page.benefits.image} alt={page.benefits.title} />
+            <div>
+              <Animate>
+                <div className="leading-[0px]">
+                  <Image {...page.benefits.image} alt={page.benefits.title} />
+                </div>
+              </Animate>
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="py-16">
+      <section className="py-16" id="k">
         <Container layout="sm">
           <div className="w-full py-2 text-center text-white bg-bsm-ocean">
             <h2 className="text-2xl text-white">{page.form.title}</h2>

@@ -52,8 +52,8 @@ function Animate({ children, className, delay, duration, from, to }) {
 Animate.defaultProps = {
   className: "",
   delay: 0,
-  duration: "duration-500",
-  from: "opacity-0 translate-y-10",
+  duration: "duration-[2s]",
+  from: "opacity-0 translate-y-0",
   to: "opacity-100 translate-y-0",
 };
 
