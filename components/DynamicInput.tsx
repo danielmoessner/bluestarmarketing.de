@@ -14,6 +14,8 @@ function Component({
   placeholder,
   children,
   value,
+  register,
+  error,
 }) {
   const Tag = element;
 
@@ -24,6 +26,7 @@ function Component({
         {label}
         <div className="mt-1">
           <Tag
+            {...register(name, { required: required })}
             type={type}
             name={name}
             id={name}
@@ -37,6 +40,11 @@ function Component({
           >
             {children}
           </Tag>
+          {error && (
+            <span className="block mt-1 font-bold text-red-600">
+              Dieses Feld ist benötigt.
+            </span>
+          )}
         </div>
       </label>
     </div>
