@@ -85,16 +85,22 @@ function Page({ pageData, footerData, reviews }) {
                     key={item.customer}
                     className="grid py-2 md:py-4 break-inside-avoid"
                   >
-                    <div className="p-5 bg-bsm-ocean/10">
-                      <h3 className="sr-only">{item.customer}</h3>
-                      <p className="text-sm">{item.text}</p>
-                      <div className="mt-4">
-                        <span className="block font-bold">{item.customer}</span>
-                        {item.company && (
-                          <span className="block text-sm">{item.company}</span>
-                        )}
+                    <Animate>
+                      <div className="p-5 bg-bsm-ocean/10">
+                        <h3 className="sr-only">{item.customer}</h3>
+                        <p className="text-sm">{item.text}</p>
+                        <div className="mt-4">
+                          <span className="block font-bold">
+                            {item.customer}
+                          </span>
+                          {item.company && (
+                            <span className="block text-sm">
+                              {item.company}
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    </Animate>
                   </div>
                 );
               })}
