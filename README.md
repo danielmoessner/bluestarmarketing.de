@@ -4,12 +4,17 @@
 
 ### Kontakt
 
-- Adobe Stock Bild einbauen
+### Kunden
+
+- Zitate: Anführungszeichen Icon einfügen
 
 ### Allgemein
 
 - Lazy Loading im Footer überprüfen
+- Button: Stern fehlt
+- Überschrift: Animation mobil
 
 ### Erledigt
 
-- Fehlermeldungen im Formular
+- Kontakt: Fehlermeldungen im Formular
+- Kontakt: Adobe Stock Bild einbauen
