@@ -12,13 +12,14 @@ import Animate from "../components/Animate";
 import Image from "next/image";
 import Multiline from "../components/Multiline";
 import Button from "../components/Button";
+import { allCustomers } from "contentlayer/generated";
 
 // interface Props {
 //   pageData: typeof pageSource;
 //   footerData: typeof footerSource;
 // }
 
-function Page({ pageData, footerData }) {
+function Page({ pageData, footerData, reviews }) {
   const page = pageData;
 
   return (
@@ -71,6 +72,37 @@ function Page({ pageData, footerData }) {
         </Container>
       </section>
 
+      <section className="pt-16 pb-32">
+        <Container layout="sm">
+          <div className="text-center">
+            <Heading size="h2">{page.customers.title}</Heading>
+          </div>
+          <div className="mt-8">
+            <div className="gap-8 -my-2 md:-my-4 columns-1 md:columns-2">
+              {reviews.map((item) => {
+                return (
+                  <div
+                    key={item.customer}
+                    className="grid py-2 md:py-4 break-inside-avoid"
+                  >
+                    <div className="p-5 bg-bsm-ocean/10">
+                      <h3 className="sr-only">{item.customer}</h3>
+                      <p className="text-sm">{item.text}</p>
+                      <div className="mt-4">
+                        <span className="block font-bold">{item.customer}</span>
+                        {item.company && (
+                          <span className="block text-sm">{item.company}</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <Footer data={footerData} />
     </Layout>
   );
@@ -79,11 +111,13 @@ function Page({ pageData, footerData }) {
 export async function getStaticProps() {
   const pageData = await improveImages(pageSource);
   const footerData = await improveImages(footerSource);
+  const reviews = allCustomers;
 
   return {
     props: {
       pageData,
       footerData,
+      reviews,
     },
   };
 }
