@@ -8,6 +8,10 @@
 
 - Zitate: Anführungszeichen Icon einfügen
 
+### Für dich
+
+- Zitat-Icon fehlt
+
 ### Allgemein
 
 - Lazy Loading im Footer überprüfen
