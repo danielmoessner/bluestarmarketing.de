@@ -12,16 +12,16 @@ const config: CmsConfig = {
   backend: {
     name: "git-gateway",
     branch: "main",
-    repo: "danielmoessner/nextjs.tortuga-webdesign.de",
+    repo: "danielmoessner/bluestarmarketing.de",
   },
   // See https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
   local_backend: true,
   // See https://www.netlifycms.org/docs/configuration-options/#locale
   locale: "de",
   // See https://www.netlifycms.org/docs/configuration-options/#display-url
-  display_url: "https://nextjs.tortuga-webdesign.de",
+  display_url: "https://bluestarmarketing.de",
   // See https://www.netlifycms.org/docs/configuration-options/#site-url
-  site_url: "https://nextjs.tortuga-webdesign.de",
+  site_url: "https://bluestarmarketing.de",
   // See https://www.netlifycms.org/docs/configuration-options/#media-folder
   media_folder: "/public/media",
   // See https://www.netlifycms.org/docs/configuration-options/#public-folder
