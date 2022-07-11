@@ -81,7 +81,7 @@ function Page({ pageData, footerData }) {
       <section className="relative py-16 bg-bsm-matt">
         <div className="absolute inset-0 overflow-hidden">
           <svg
-            className="absolute h-full pt-20 pb-20"
+            className="absolute min-w-full min-h-full pt-20 pb-20"
             data-name="Ebene 1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1791.95 4805.06"
