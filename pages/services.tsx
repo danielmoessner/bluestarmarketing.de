@@ -9,7 +9,6 @@ import { improveImages } from "lib/improveImages";
 import Footer from "../components/Footer";
 import footerSource from "../content/setting/footer.json";
 import Animate from "../components/Animate";
-import Image from "next/image";
 import Multiline from "../components/Multiline";
 import Button from "../components/Button";
 import Link from "next/link";
