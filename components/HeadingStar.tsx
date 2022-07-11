@@ -28,15 +28,15 @@ function Component() {
   }, []);
 
   return (
-    <div ref={ref} className="relative w-48 h-16">
+    <div ref={ref} className="relative h-16 w-28 md:w-36 lg:w-48">
       {/* <button onClick={() => setShow(true)}>click</button> */}
       <div
         className={`${
-          show ? "w-48" : "w-0"
+          show ? "w-28 md:w-36 lg:w-48" : "w-0"
         } overflow-hidden transition-all duration-700 ease-in-out delay-500`}
       >
         <svg
-          className="w-48"
+          className="w-28 md:w-36 lg:w-48"
           id="a"
           data-name="Ebene 1"
           xmlns="http://www.w3.org/2000/svg"
