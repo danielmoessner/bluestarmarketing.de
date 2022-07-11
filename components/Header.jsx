@@ -26,7 +26,9 @@ function Component({ header }) {
             <div className="relative z-10 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 ">
               <Animate>
                 <div className="p-5 bg-bsm-matt/90">
-                  <Heading element="h1">{header.text}</Heading>
+                  <Heading element="h1" size="header">
+                    {header.text}
+                  </Heading>
                   <div className="mt-4">
                     <Button element="Link" href={header.cta.url}>
                       {header.cta.text}

@@ -20,34 +20,24 @@
     },
     "links": [
       {
-        "link": {
-          "text": "Erstgespräch",
-          "url": "#erstgespraech"
-        }
+        "text": "Erstgespräch",
+        "url": "#erstgespraech"
       },
       {
-        "link": {
-          "text": "Strategie-Workshop",
-          "url": "#strategie-workshop"
-        }
+        "text": "Strategieworkshop",
+        "url": "#strategieworkshop"
       },
       {
-        "link": {
-          "text": "Marketingstrategie",
-          "url": "#marketingstrategie"
-        }
+        "text": "Marketingstrategie",
+        "url": "#marketingstrategie"
       },
       {
-        "link": {
-          "text": "Marketingkampagenen",
-          "url": "#marketingkampagnen"
-        }
+        "text": "Marketingkampagnen",
+        "url": "#marketingkampagnen"
       },
       {
-        "link": {
-          "text": "Projektmanagement",
-          "url": "#projektmanagement"
-        }
+        "text": "Projektmanagement",
+        "url": "#projektmanagement"
       }
     ]
   },
@@ -72,7 +62,8 @@
         "cta": {
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
-        }
+        },
+        "side": "R"
       },
       {
         "title": "Strategieworkshop",
@@ -82,7 +73,8 @@
         "cta": {
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
-        }
+        },
+        "side": "L"
       },
       {
         "title": "Marketingstrategie",
@@ -92,7 +84,8 @@
         "cta": {
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
-        }
+        },
+        "side": "L"
       },
       {
         "title": "Sales & Marketing Funnel",
@@ -102,17 +95,19 @@
         "cta": {
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
-        }
+        },
+        "side": "L"
       },
       {
-        "title": "Marketingkampagne",
-        "id": "marketingkampagne",
+        "title": "Marketingkampagnen",
+        "id": "marketingkampagnen",
         "text": "Wir erfassen euren Marktkontext & Status quo und kombinieren neue Erkenntnisse zu Segmenten, Zielgruppen, Verticals und/ oder dem Partner- Ökosystem. Daraus leiten wir zielführende & integrierte Marketingkampagnen ab, verlinkt mit euren Zielen und eurer Strategie.  \nAuf Wunsch fokussieren wir uns auf definierte Teilaspekte der Gesamtstrategie und des Marketingplans.",
         "image": "/media/service_marketingkampagnen.jpg",
         "cta": {
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
-        }
+        },
+        "side": "L"
       },
       {
         "title": "Projektmanagement",
@@ -122,7 +117,8 @@
         "cta": {
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
-        }
+        },
+        "side": "R"
       },
       {
         "title": "Erfolge feiern",
@@ -132,7 +128,8 @@
         "cta": {
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
-        }
+        },
+        "side": "R"
       }
     ]
   }

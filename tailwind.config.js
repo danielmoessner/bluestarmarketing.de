@@ -14,8 +14,11 @@ module.exports = {
       },
       colors: {
         bsm: {
+          faince: "#45b5cf",
+          cornblue: "#2a7fc2",
           ocean: "#00adea",
           matt: "#f6f6f6",
+          orientblue: "#0f4988",
           nightblue: "#162259",
         },
       },

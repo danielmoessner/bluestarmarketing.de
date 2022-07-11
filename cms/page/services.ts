@@ -4,7 +4,7 @@ import { CmsCollectionFile } from "netlify-cms-core";
 import title from "cms/symbols/title";
 import text from "cms/symbols/text";
 import cta from "cms/symbols/cta";
-import { internalLink } from "cms/symbols/link";
+import { internalLink, internalLinkFields } from "cms/symbols/link";
 import image from "cms/symbols/image";
 
 const services: CmsCollectionFile = {
@@ -24,7 +24,7 @@ const services: CmsCollectionFile = {
           label: "Links",
           name: "links",
           widget: "list",
-          field: internalLink,
+          fields: internalLinkFields,
         },
         text,
         cta,
@@ -43,6 +43,12 @@ const services: CmsCollectionFile = {
           fields: [
             title,
             { label: "ID", name: "id", widget: "string" },
+            {
+              label: "Seite",
+              name: "side",
+              widget: "select",
+              options: ["L", "R"],
+            },
             text,
             image,
             cta,
