@@ -3,15 +3,15 @@ import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
 import Script from "next/script";
-import pageSource from "../content/page/strategyworkshop.json";
+import pageSource from "../content/page/marketingstrategy.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
 import Footer from "../components/Footer";
 import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
-import Multiline from "../components/Multiline";
 import Animate from "../components/Animate";
 import Button from "../components/Button";
+import Prose from "../components/Prose";
 
 function Page({ pageData, footerData }) {
   const page = pageData;
@@ -33,15 +33,17 @@ function Page({ pageData, footerData }) {
           <div className="mt-16">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
-                <div className="leading-[0px]">
-                  <Image {...page.start.image} alt={page.start.title} />
-                </div>
+                <Prose html={page.start.markdown.html} />
                 <div>
-                  <Multiline text={page.start.text} />
+                  <div className="leading-[0px]">
+                    <Image {...page.start.image} alt={page.start.title} />
+                  </div>
+                  <div className="mt-8">
+                    <Button href={page.start.cta.url}>
+                      {page.start.cta.text}
+                    </Button>
+                  </div>
                 </div>
-              </div>
-              <div className="flex justify-center mt-8">
-                <Button href={page.start.cta.url}>{page.start.cta.text}</Button>
               </div>
             </Animate>
           </div>

@@ -30,6 +30,7 @@ module.exports = {
           css: {
             color: theme("colors.bsm.nightblue"),
             "--tw-prose-headings": theme("colors.bsm.nightblue"),
+            "line-height": "1.5",
           },
         },
       }),

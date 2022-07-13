@@ -5,6 +5,7 @@ import home from "./home";
 import forYou from "./forYou";
 import services from "./services";
 import strategyworkshop from "./strategyworkshop";
+import marketingstrategy from "./marketingstrategy";
 
 const config: CmsCollection = {
   name: "pages",
@@ -14,7 +15,15 @@ const config: CmsCollection = {
   editor: {
     preview: false,
   },
-  files: [home, services, strategyworkshop, customers, contact, forYou],
+  files: [
+    home,
+    services,
+    strategyworkshop,
+    marketingstrategy,
+    customers,
+    contact,
+    forYou,
+  ],
 };
 
 export default config;
