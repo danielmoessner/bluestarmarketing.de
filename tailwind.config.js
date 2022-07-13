@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
       },
+      maxWidth: {
+        // "6xl": "71.5rem",
+      },
       colors: {
         bsm: {
           faince: "#45b5cf",

@@ -18,3 +18,7 @@ select {
 html, h1, h2, h3, h4, h5, h6, p {
     @apply text-bsm-nightblue;
 }
+
+html {
+    font-size: 16px;
+}

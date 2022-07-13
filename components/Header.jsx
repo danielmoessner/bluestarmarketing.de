@@ -21,22 +21,28 @@ function Component({ header }) {
                 alt={header.title}
                 priority
                 placeholder="empty"
+                className="w-full"
               />
             </div>
-            <div className="relative z-10 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 ">
-              <Animate>
-                <div className="p-5 bg-bsm-matt/90">
-                  <Heading element="h1" size="header">
-                    {header.text}
-                  </Heading>
-                  <div className="mt-4">
-                    <Button element="Link" href={header.cta.url}>
-                      {header.cta.text}
-                    </Button>
+            {header.title && header.cta && (
+              <div className="relative z-10 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 ">
+                <Animate>
+                  <div className="p-5 bg-bsm-matt/90">
+                    <Heading element="h1" size="header">
+                      {header.text}
+                    </Heading>
+                    <div className="mt-4">
+                      <Button element="Link" href={header.cta.url}>
+                        {header.cta.text}
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </Animate>
-            </div>
+                </Animate>
+              </div>
+            )}
+            {!header.title && !header.cta && (
+              <div className="w-full h-5 bg-bsm-ocean"></div>
+            )}
           </div>
         </div>
       </Container>
