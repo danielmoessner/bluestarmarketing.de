@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Script from "next/script";
 import pageSource from "../content/page/forYou.json";
 import Heading from "../components/Heading";
-import { improveImages } from "lib/improveImages";
+import { renderContent } from "lib/renderContent";
 import Footer from "../components/Footer";
 import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
@@ -156,8 +156,8 @@ function Page({ pageData, footerData }) {
 }
 
 export async function getStaticProps() {
-  const pageData = await improveImages(pageSource);
-  const footerData = await improveImages(footerSource);
+  const pageData = await renderContent(pageSource);
+  const footerData = await renderContent(footerSource);
 
   return {
     props: {
