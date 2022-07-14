@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  ignorePatterns: ["public/admin/config.js"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
