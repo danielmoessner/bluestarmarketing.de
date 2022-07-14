@@ -10,8 +10,6 @@ import Footer from "../components/Footer";
 import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
 import Multiline from "../components/Multiline";
-import DynamicForm from "../components/DynamicForm";
-import globalSource from "../content/setting/global.json";
 import Animate from "../components/Animate";
 import Button from "../components/Button";
 
