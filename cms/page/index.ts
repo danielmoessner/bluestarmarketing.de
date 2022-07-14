@@ -7,6 +7,7 @@ import services from "./services";
 import strategyworkshop from "./strategyworkshop";
 import marketingstrategy from "./marketingstrategy";
 import salesmarketing from "./salesmarketing";
+import marketingcampaign from "./marketingcampaign";
 
 const config: CmsCollection = {
   name: "pages",
@@ -19,6 +20,7 @@ const config: CmsCollection = {
   files: [
     home,
     services,
+    marketingcampaign,
     strategyworkshop,
     marketingstrategy,
     salesmarketing,
