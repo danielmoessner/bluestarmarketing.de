@@ -72,7 +72,7 @@
         "image": "/media/service_strategieworkshop.jpg",
         "cta": {
           "text": "Starte deine Marketingreise",
-          "url": "/kontakt"
+          "url": "/strategieworkshop"
         },
         "side": "L"
       },
@@ -83,7 +83,7 @@
         "image": "/media/service_marketingstrategie.jpg",
         "cta": {
           "text": "Starte deine Marketingreise",
-          "url": "/kontakt"
+          "url": "/marketingstrategie"
         },
         "side": "L"
       },
@@ -94,7 +94,7 @@
         "image": "/media/service_sales_marketing_funnel.jpg",
         "cta": {
           "text": "Starte deine Marketingreise",
-          "url": "/kontakt"
+          "url": "/marketingfunnel"
         },
         "side": "L"
       },
@@ -105,7 +105,7 @@
         "image": "/media/service_marketingkampagnen.jpg",
         "cta": {
           "text": "Starte deine Marketingreise",
-          "url": "/kontakt"
+          "url": "/marketingkampagnen"
         },
         "side": "L"
       },
