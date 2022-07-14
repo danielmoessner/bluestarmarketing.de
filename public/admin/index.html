@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+  <script type="module">
+    import config from '../cms/config.js';
+    console.log(config);
+
+    // This global flag enables manual initialization.
+window.CMS_MANUAL_INIT = true
+// Usage with import from npm package
+// import CMS, { init } from 'netlify-cms'
+// Usage with script tag
+const { CMS, initCMS: init } = window
+
+/**
+ * Optionally pass in a config object. This object will be merged into
+ * `config.yml` if it exists, and any portion that conflicts with
+ * `config.yml` will be overwritten. Arrays will be replaced during merge,
+ * not concatenated.
+ *
+ * For example, the code below contains an incomplete config, but using it,
+ * your `config.yml` can be missing its backend property, allowing you
+ * to set this property at runtime.
+ */
+init({
+  config: config,
+})
+
+  </script>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+</body>
+</html>
