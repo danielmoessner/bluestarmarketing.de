@@ -31,6 +31,9 @@ module.exports = {
             color: theme("colors.bsm.nightblue"),
             "--tw-prose-headings": theme("colors.bsm.nightblue"),
             "line-height": "1.5",
+            strong: {
+              color: "inherit",
+            },
           },
         },
       }),
