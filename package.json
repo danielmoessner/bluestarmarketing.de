@@ -4,19 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
-    "build": "next build",
+    "build": "npm run cms:build && next build",
     "start": "next start",
     "lint": "next lint",
-    "cms": "npx netlify-cms-proxy-server"
+    "cms": "watch 'npm run cms:build' cms && npx netlify-cms-proxy-server",
+    "cms:build": "esbuild cms/config.ts --bundle --outfile=./public/admin/config.js --target=es2020 --format=esm"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.1",
     "@heroicons/react": "^1.0.6",
-    "@netlify/plugin-nextjs": "^4.7.0",
     "@tailwindcss/typography": "^0.5.2",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "autoprefixer": "^10.4.7",
     "contentlayer": "^0.2.5",
+    "esbuild": "^0.14.49",
     "eslint": "^8.17.0",
     "eslint-config-next": "^12.2.0",
     "eslint-config-prettier": "^8.5.0",
@@ -24,18 +25,18 @@
     "frontmatter-markdown-loader": "^3.7.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
-    "netlify-cms-app": "^2.15.72",
-    "netlify-cms-locales": "^1.39.0",
+    "netlify-cms-core": "^2.55.2",
     "next": "^12.2.0",
     "next-contentlayer": "^0.2.5",
     "plaiceholder": "^2.3.0",
     "postcss": "^8.4.13",
     "prettier": "^2.6.2",
-    "react": "17.0.x",
-    "react-dom": "17.0.x",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.33.1",
     "sharp": "^0.30.6",
     "tailwindcss": "^3.0.24",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "watch": "^1.0.2"
   }
 }
