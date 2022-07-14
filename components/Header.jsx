@@ -24,7 +24,7 @@ function Component({ header }) {
                 className="w-full"
               />
             </div>
-            {header.title && header.cta && (
+            {header.text && header.cta && (
               <div className="relative z-10 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 ">
                 <Animate>
                   <div className="p-5 bg-bsm-matt/90">
@@ -40,7 +40,7 @@ function Component({ header }) {
                 </Animate>
               </div>
             )}
-            {!header.title && !header.cta && (
+            {!(header.text && header.cta) && (
               <div className="w-full h-5 bg-bsm-ocean"></div>
             )}
           </div>

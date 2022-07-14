@@ -21,7 +21,7 @@ function Component({ element, size, color, children, classes, showStar }) {
     <Tag className={`relative ${allClasses}`}>
       {children}
       {size === "h1" && (
-        <div className="absolute flex items-center justify-center mx-auto pointer-events-none top-3 -right-7 md:top-2 md:-right-8 lg:-right-12 lg:top-5">
+        <div className="absolute items-center justify-center hidden mx-auto pointer-events-none sm:flex top-3 -right-7 md:top-2 md:-right-8 lg:-right-12 lg:top-5">
           <HeadingStar />
         </div>
       )}
