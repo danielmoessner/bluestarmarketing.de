@@ -6,6 +6,7 @@ import forYou from "./forYou";
 import services from "./services";
 import strategyworkshop from "./strategyworkshop";
 import marketingstrategy from "./marketingstrategy";
+import salesmarketing from "./salesmarketing";
 
 const config: CmsCollection = {
   name: "pages",
@@ -20,6 +21,7 @@ const config: CmsCollection = {
     services,
     strategyworkshop,
     marketingstrategy,
+    salesmarketing,
     customers,
     contact,
     forYou,
