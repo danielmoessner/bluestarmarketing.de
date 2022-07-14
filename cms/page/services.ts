@@ -6,6 +6,7 @@ import text from "cms/symbols/text";
 import cta from "cms/symbols/cta";
 import { internalLinkFields } from "cms/symbols/link";
 import image from "cms/symbols/image";
+import customersSection from "cms/symbols/customersSection";
 
 const services: CmsCollectionFile = {
   file: "content/page/services.json",
@@ -56,23 +57,7 @@ const services: CmsCollectionFile = {
         },
       ],
     },
-    {
-      label: "Kunden",
-      name: "customers",
-      widget: "object",
-      fields: [
-        title,
-        text,
-        { label: "Kunde", name: "customer", widget: "string" },
-        {
-          label: "Unternehmen",
-          name: "company",
-          widget: "string",
-          required: false,
-        },
-        cta,
-      ],
-    },
+    customersSection,
   ],
 };
 

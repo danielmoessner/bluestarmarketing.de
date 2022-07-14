@@ -179,12 +179,95 @@ var customers = {
 };
 var customers_default = customers;
 
+// cms/symbols/customersSection.ts
+var customersSection = {
+  label: "Kunden",
+  name: "customers",
+  widget: "object",
+  fields: [
+    title_default,
+    text_default,
+    { label: "Kunde", name: "customer", widget: "string" },
+    {
+      label: "Unternehmen",
+      name: "company",
+      widget: "string",
+      required: false
+    },
+    cta_default
+  ]
+};
+var customersSection_default = customersSection;
+
+// cms/symbols/markdown.ts
+var markdown = {
+  label: "Markdown",
+  name: "markdown",
+  widget: "markdown"
+};
+var markdown_default = markdown;
+
+// cms/symbols/svg.ts
+var svg = { label: "SVG", name: "svg", widget: "string" };
+var svg_default = svg;
+
 // cms/page/home.ts
+var service = (n) => ({
+  label: "Service",
+  name: `service${n}`,
+  widget: "object",
+  fields: [title_default, text_default, cta_default]
+});
 var home = {
   file: "content/page/home.json",
   label: "Startseite",
   name: "home",
-  fields: [meta_default, header_default]
+  fields: [
+    meta_default,
+    header_default,
+    {
+      label: "Start",
+      name: "start",
+      widget: "object",
+      fields: [title_default, text_default, cta_default, svg_default]
+    },
+    {
+      label: "Wir sind",
+      name: "about",
+      widget: "object",
+      fields: [
+        { label: "Textbild", name: "textimage", widget: "image" },
+        title_default,
+        { label: "Untertitel", name: "subtitle", widget: "string" },
+        markdown_default,
+        cta_default,
+        image_default
+      ]
+    },
+    {
+      label: "Marketingreise",
+      name: "travel",
+      widget: "object",
+      fields: [
+        title_default,
+        {
+          label: "Links",
+          name: "links",
+          widget: "list",
+          fields: internalLinkFields
+        },
+        text_default,
+        cta_default
+      ]
+    },
+    {
+      label: "Services",
+      name: "services",
+      widget: "object",
+      fields: [title_default, service(1), service(2), service(3)]
+    },
+    customersSection_default
+  ]
 };
 var home_default = home;
 
@@ -294,23 +377,7 @@ var services = {
         }
       ]
     },
-    {
-      label: "Kunden",
-      name: "customers",
-      widget: "object",
-      fields: [
-        title_default,
-        text_default,
-        { label: "Kunde", name: "customer", widget: "string" },
-        {
-          label: "Unternehmen",
-          name: "company",
-          widget: "string",
-          required: false
-        },
-        cta_default
-      ]
-    }
+    customersSection_default
   ]
 };
 var services_default = services;
@@ -323,10 +390,6 @@ var headerSmall = {
   fields: [{ label: "Bild", name: "image", widget: "image" }]
 };
 var headerSmall_default = headerSmall;
-
-// cms/symbols/svg.ts
-var svg = { label: "SVG", name: "svg", widget: "string" };
-var svg_default = svg;
 
 // cms/page/strategyworkshop.ts
 var strategyworkshop = {
@@ -357,14 +420,6 @@ var strategyworkshop = {
   ]
 };
 var strategyworkshop_default = strategyworkshop;
-
-// cms/symbols/markdown.ts
-var markdown = {
-  label: "Markdown",
-  name: "markdown",
-  widget: "markdown"
-};
-var markdown_default = markdown;
 
 // cms/page/marketingstrategy.ts
 var marketingstrategy = {
