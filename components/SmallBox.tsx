@@ -14,7 +14,7 @@ function Component({ service }) {
         </div>
       </div>
       <div className="flex justify-start mt-5">
-        <Button href={service.cta.href}>{service.cta.text}</Button>
+        <Button href={service.cta.url}>{service.cta.text}</Button>
       </div>
     </div>
   );
