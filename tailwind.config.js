@@ -23,6 +23,7 @@ module.exports = {
           matt: "#f6f6f6",
           orientblue: "#0f4988",
           nightblue: "#162259",
+          alice: "#dfeaf8",
         },
       },
       typography: (theme) => ({
