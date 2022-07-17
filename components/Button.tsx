@@ -53,7 +53,7 @@ function Component({
 
   const bClassName =
     className ||
-    `inline-flex text-center items-center border-2 border-transparent font-medium ${ring} ${ringOffset} ${size} ${bColor}`;
+    `inline-flex text-center items-center border-2 border-transparent font-medium ${ring} ${ringOffset} ${size} ${bColor} group-hover:pl-3 group-hover:pr-9 transition-all duration-500`;
 
   const button = useRef(null);
 
@@ -80,7 +80,7 @@ function Component({
   return (
     <div
       ref={button}
-      className="relative table button-svg--wrapper"
+      className="relative table group button-svg--wrapper"
       onMouseEnter={mouseEnterHandler}
       onMouseLeave={mouseLeaveHandler}
     >
@@ -122,6 +122,25 @@ function Component({
           <span>{children}</span>
         </Tag>
       )}
+      <div className="absolute top-0 bottom-0 flex items-center justify-center my-auto transition-all duration-700 opacity-0 pointer-events-none right-0.5 group-hover:opacity-100">
+        <svg
+          className="w-6 h-6"
+          data-name="Ebene 1"
+          version="1.1"
+          viewBox="0 0 15 14.35"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m15 5.16h-5.2c-1.24 3.7-3.06 5.39-4.72 7.21l2.81-2.04 4.39 3.19-1.68-5.16 4.39-3.19z"
+            fill="#00adea"
+          />
+          <path
+            d="m7.92 0-1.68 5.16h-5.43l4.39 3.2s-1.2 1.66-2.01 2.64c-0.97 1.15-3.19 3.35-3.19 3.35 4.3-1.98 8.19-6.59 9.56-9.31z"
+            fill="#0f4988"
+          />
+          <rect width="15" height="14.35" fill="none" />
+        </svg>
+      </div>
     </div>
   );
 }
