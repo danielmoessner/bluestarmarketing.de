@@ -40,7 +40,7 @@ function Component({ customers }) {
           </Animate>
         </div>
         <div className="flex justify-center mt-10">
-          <Button href={customers.cta.href}>{customers.cta.text}</Button>
+          <Button href={customers.cta.url}>{customers.cta.text}</Button>
         </div>
       </Container>
     </section>

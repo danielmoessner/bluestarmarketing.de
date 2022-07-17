@@ -135,7 +135,7 @@ function Page({ pageData, footerData }) {
                 <div>
                   <Multiline text={page.travel.text} />
                   <div className="mt-8">
-                    <Button href={page.travel.cta.href}>
+                    <Button href={page.travel.cta.url}>
                       {page.travel.cta.text}
                     </Button>
                   </div>

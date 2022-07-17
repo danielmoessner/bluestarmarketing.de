@@ -82,7 +82,7 @@ function Page({ pageData, footerData }) {
                 <div>
                   <Multiline text={page.start.text} />
                   <div className="mt-8">
-                    <Button href={page.start.cta.href}>
+                    <Button href={page.start.cta.url}>
                       {page.start.cta.text}
                     </Button>
                   </div>
@@ -142,7 +142,7 @@ function Page({ pageData, footerData }) {
             </Animate>
           </div>
           <div className="flex justify-center mt-10">
-            <Button href={page.customers.cta.href}>
+            <Button href={page.customers.cta.url}>
               {page.customers.cta.text}
             </Button>
           </div>
