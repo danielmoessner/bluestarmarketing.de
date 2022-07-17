@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="a" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 14.35">
-  <defs>
-    <clipPath id="b">
-      <rect x="0" width="15" height="14.35" style="fill: none;"/>
-    </clipPath>
-  </defs>
-  <g style="clip-path: url(#b);">
-    <path d="M15,5.16h-5.2c-1.24,3.7-3.06,5.39-4.72,7.21l2.81-2.04,4.39,3.19-1.68-5.16,4.39-3.19Z" style="fill: #00adea;"/>
-    <path d="M7.92,0l-1.68,5.16H.81l4.39,3.2s-1.2,1.66-2.01,2.64c-.97,1.15-3.19,3.35-3.19,3.35,4.3-1.98,8.19-6.59,9.56-9.31L7.92,0Z" style="fill: #0f4988;"/>
-  </g>
+<svg id="a" data-name="Ebene 1" version="1.1" viewBox="0 0 15 14.35" xmlns="http://www.w3.org/2000/svg">
+ <path d="m15 5.16h-5.2c-1.24 3.7-3.06 5.39-4.72 7.21l2.81-2.04 4.39 3.19-1.68-5.16 4.39-3.19z" fill="#00adea"/>
+ <path d="m7.92 0-1.68 5.16h-5.43l4.39 3.2s-1.2 1.66-2.01 2.64c-0.97 1.15-3.19 3.35-3.19 3.35 4.3-1.98 8.19-6.59 9.56-9.31z" fill="#0f4988"/>
+ <rect width="15" height="14.35" fill="none"/>
 </svg>
