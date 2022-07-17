@@ -60,23 +60,23 @@
     "links": [
       {
         "text": "Erstgespräch",
-        "url": "#erstgespraech"
+        "url": "/services#erstgespraech"
       },
       {
         "text": "Strategieworkshop",
-        "url": "#strategieworkshop"
+        "url": "/services#strategieworkshop"
       },
       {
         "text": "Marketingstrategie",
-        "url": "#marketingstrategie"
+        "url": "/services#marketingstrategie"
       },
       {
         "text": "Marketingkampagnen",
-        "url": "#marketingkampagnen"
+        "url": "/services#marketingkampagnen"
       },
       {
         "text": "Projektmanagement",
-        "url": "#projektmanagement"
+        "url": "/services#projektmanagement"
       }
     ]
   },

@@ -180,7 +180,12 @@ function Page({ pageData, footerData }) {
                 {global.phone}
               </a>
               <div className="mt-8">
-                <a href={global.linkedin} className="block">
+                <a
+                  href={global.linkedin}
+                  className="block"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="w-5 h-5"
