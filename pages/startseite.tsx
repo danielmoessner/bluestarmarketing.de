@@ -17,6 +17,7 @@ import Button from "../components/Button";
 import Prose from "../components/Prose";
 import Image from "next/image";
 import SmallBox from "../components/SmallBox";
+import ServiceLinks from "../components/ServiceLinks";
 
 // interface Props {
 //   pageData: typeof pageSource;
@@ -114,24 +115,7 @@ function Page({ pageData, footerData }) {
           <div className="mt-16">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
-                <div>
-                  <div className="flex flex-col w-full space-y-2">
-                    {page.travel.links.map((link, index) => (
-                      <Link href={link.url} key={link.url}>
-                        <a
-                          className={`block px-6 py-5 text-white text-lg group ${
-                            background[index % 5]
-                          }`}
-                        >
-                          <div className="flex items-center space-x-4">
-                            <PlusIcon className="w-6 h-6 transition transform group-hover:rotate-90" />
-                            <span>{link.text}</span>
-                          </div>
-                        </a>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                <ServiceLinks links={page.travel.links} />
                 <div>
                   <Multiline text={page.travel.text} />
                   <div className="mt-8">
