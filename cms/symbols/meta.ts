@@ -8,6 +8,12 @@ const meta: CmsField = {
     { label: "Titel", name: "title", widget: "string" },
     { label: "Beschreibung", name: "description", widget: "text" },
     { label: "Bild", name: "image", widget: "image", required: false },
+    {
+      label: "Keywords",
+      name: "keywords",
+      widget: "markdown",
+      required: false,
+    },
   ],
 };
 

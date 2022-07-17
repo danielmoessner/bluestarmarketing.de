@@ -3,7 +3,7 @@ import Head from "next/head";
 import global from "../content/setting/global.json";
 
 function SEO({ meta }) {
-  const { title, description, image } = meta;
+  const { title, description, image, keywords } = meta;
 
   return (
     <Head>
@@ -11,6 +11,9 @@ function SEO({ meta }) {
       <title>{title}</title>
       <meta name="description" content={description} />
       {image ? <meta name="image" content={image} /> : null}
+
+      {/* Keywords */}
+      {keywords && <meta name="keywords" content={keywords} />}
 
       {/* OpenGraph tags */}
       <meta property="og:title" content={title} />

@@ -9,7 +9,9 @@ import Button from "./Button";
 import Heading from "./Heading";
 import Animate from "./Animate";
 
-function Component({ header }) {
+function Component({ header, position = "bottom" }) {
+  const positionClass = position === "top" ? "lg:top-10" : "lg:bottom-10";
+
   return (
     <header>
       <Container layout="sm">
@@ -25,7 +27,9 @@ function Component({ header }) {
               />
             </div>
             {header.text && header.cta && (
-              <div className="relative z-10 lg:w-5/12 lg:absolute lg:right-10 lg:bottom-10 ">
+              <div
+                className={`relative z-10 lg:w-5/12 lg:absolute lg:right-10 ${positionClass}`}
+              >
                 <Animate>
                   <div className="p-5 bg-bsm-matt/90">
                     <Heading element="h1" size="header">
