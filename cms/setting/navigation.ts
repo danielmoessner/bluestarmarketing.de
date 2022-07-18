@@ -52,11 +52,6 @@ const navigation: CmsCollectionFile = {
   name: "navigation",
   fields: [
     {
-      label: "Titel",
-      name: "title",
-      widget: "string",
-    },
-    {
       label: "Links",
       name: "links",
       widget: "list",

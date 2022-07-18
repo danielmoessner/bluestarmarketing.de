@@ -156,7 +156,7 @@ Component.defaultProps = {
   // style
   secondary: false,
   // size
-  size: "px-6 py-3 text-lg",
+  size: "px-6 py-1 text-lg",
   // color
   color: null,
   primaryColor: "text-bsm-nightblue bg-transparent hover:bg-transparent",
