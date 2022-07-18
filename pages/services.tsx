@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
-import Script from "next/script";
 import pageSource from "../content/page/services.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
@@ -11,8 +10,6 @@ import footerSource from "../content/setting/footer.json";
 import Animate from "../components/Animate";
 import Multiline from "../components/Multiline";
 import Button from "../components/Button";
-import Link from "next/link";
-import { PlusIcon } from "@heroicons/react/outline";
 import ServiceBox from "../components/ServiceBox";
 import ServiceLinks from "../components/ServiceLinks";
 

@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
-import Script from "next/script";
 import pageSource from "../content/page/strategyworkshop.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
@@ -18,7 +17,6 @@ function Page({ pageData, footerData }) {
 
   return (
     <Layout>
-      
       <Seo meta={page.meta} />
       <Header header={page.header} />
 

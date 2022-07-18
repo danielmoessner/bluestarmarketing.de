@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
-import Script from "next/script";
 import pageSource from "../content/page/forYou.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
