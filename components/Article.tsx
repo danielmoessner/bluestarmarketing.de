@@ -14,7 +14,7 @@ function Component({ image, article, children }) {
       <div className="mt-1 lg:mt-2">
         <ArticleMeta article={article} />
       </div>
-      <div className="mt-8">
+      <div className="">
         <div>{children}</div>
       </div>
     </div>
