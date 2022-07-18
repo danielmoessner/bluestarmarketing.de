@@ -53,7 +53,7 @@ function Page({ pageData, footerData, reviews }) {
                       </span>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={page.start.textimage}
+                        src={page.start.textimage.src}
                         className="h-14"
                         alt={page.start.aftertext}
                       />

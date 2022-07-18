@@ -117,7 +117,7 @@ function Page({ pageData, footerData }) {
 
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={page.benefits.textimage}
+                  src={page.benefits.textimage.src}
                   className="h-14"
                   alt={page.benefits.subtitle}
                 />
@@ -191,7 +191,12 @@ function Page({ pageData, footerData }) {
                     alt="LinkedIn Icon"
                   />
                 </a>
-                <a href={global.whatsapp} className="block">
+                <a
+                  href={global.whatsapp}
+                  target="_blank"
+                  className="block"
+                  rel="noreferrer"
+                >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="w-5 h-5 mt-4"
