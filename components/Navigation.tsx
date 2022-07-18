@@ -63,7 +63,12 @@ function Component() {
                           alt="LinkedIn Icon"
                         />
                       </a>
-                      <a href={global.whatsapp} className="block">
+                      <a
+                        href={global.whatsapp}
+                        className="block"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           className="w-5 h-5"
