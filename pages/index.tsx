@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
-import Script from "next/script";
 import pageSource from "../content/page/home.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
@@ -19,7 +18,6 @@ function Page({ pageData, footerData }) {
 
   return (
     <Layout hide>
-      
       <Seo meta={page.meta} />
       <Header header={page.header} />
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
