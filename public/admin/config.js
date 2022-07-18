@@ -854,7 +854,7 @@ var article = {
       value_field: "title"
     },
     { label: "Auszug", name: "excerpt", widget: "text" },
-    { label: "Inhalt", name: "body", widget: "markdown" }
+    { label: "Inhalt", name: "markdown", widget: "markdown" }
   ]
 };
 var article_default = article;

@@ -32,7 +32,7 @@ async function renderImages(
   } else if (
     typeof data === "string" &&
     data.startsWith("/media") &&
-    (key === "image" || key === "images")
+    key.includes("image")
   ) {
     const { base64, img } = await getPlaiceholder(data);
     return {
