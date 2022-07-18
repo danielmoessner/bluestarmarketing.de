@@ -75,7 +75,7 @@ function Page({ pageData, footerData }) {
             <div className="flex items-center space-x-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={page.about.textimage}
+                src={page.about.textimage.src}
                 className="h-14"
                 alt={page.about.title}
               />

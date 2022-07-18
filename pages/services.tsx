@@ -12,6 +12,7 @@ import Multiline from "../components/Multiline";
 import Button from "../components/Button";
 import ServiceBox from "../components/ServiceBox";
 import ServiceLinks from "../components/ServiceLinks";
+import SectionCustomers from "../components/SectionCustomers";
 
 // interface Props {
 //   pageData: typeof pageSource;
@@ -80,31 +81,7 @@ function Page({ pageData, footerData }) {
         </Container>
       </section>
 
-      <section className="py-32">
-        <Container layout="sm">
-          <div className="text-center">
-            <Heading size="h2">{page.customers.title}</Heading>
-          </div>
-          <div className="mt-10">
-            <Animate>
-              <div className="px-20 py-8 bg-bsm-ocean/10">
-                <Multiline text={page.customers.text} />
-                <div className="mt-4">
-                  <span className="font-bold">{page.customers.customer}</span>
-                  {page.customers.company && (
-                    <span className="">, {page.customers.company}</span>
-                  )}
-                </div>
-              </div>
-            </Animate>
-          </div>
-          <div className="flex justify-center mt-10">
-            <Button href={page.customers.cta.url}>
-              {page.customers.cta.text}
-            </Button>
-          </div>
-        </Container>
-      </section>
+      <SectionCustomers customers={page.customers} />
 
       <Footer data={footerData} />
     </Layout>
