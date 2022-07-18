@@ -19,6 +19,11 @@
     },
     {
       "type": "link",
+      "text": "Star News",
+      "url": "/starnews"
+    },
+    {
+      "type": "link",
       "text": "Kontakt",
       "url": "/kontakt"
     }

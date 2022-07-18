@@ -19,7 +19,7 @@ function Page({ pageData, footerData }) {
 
   return (
     <Layout hide>
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+      
       <Seo meta={page.meta} />
       <Header header={page.header} />
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
