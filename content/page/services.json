@@ -73,7 +73,7 @@
         "image": "/media/service_strategieworkshop.jpg",
         "cta": {
           "text": "Starte deine Marketingreise",
-          "url": "/strategieworkshop"
+          "url": "/workshop"
         },
         "side": "L"
       },
@@ -84,7 +84,7 @@
         "image": "/media/service_marketingstrategie.jpg",
         "cta": {
           "text": "Starte deine Marketingreise",
-          "url": "/marketingstrategie"
+          "url": "/b2bmarketingstrategie"
         },
         "side": "L"
       },
