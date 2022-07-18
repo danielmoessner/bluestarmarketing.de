@@ -1,3 +1,4 @@
+import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
 
 const category: CmsCollection = {
@@ -11,7 +12,14 @@ const category: CmsCollection = {
   folder: "content/category",
   slug: "{{slug}}",
   create: true,
-  fields: [{ label: "Titel", name: "title", widget: "string" }],
+  fields: [
+    title,
+    {
+      label: "Slug",
+      name: "slug",
+      widget: "string",
+    },
+  ],
 };
 
 export default category;

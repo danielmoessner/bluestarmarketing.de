@@ -1,5 +1,7 @@
 export type Markdown<T> = { html: string; _path: string; frontmatter: T };
 
+export type Loaded<T> = { [V in keyof T]: V } & { _path: string };
+
 export type BlurImage = {
   imageProps: {
     src: string;
@@ -8,10 +10,6 @@ export type BlurImage = {
     type: string;
     blurDataURL: string;
   };
-};
-
-type SourceImage = {
-  image: string;
 };
 
 export type ImprovedImage = {

@@ -499,6 +499,52 @@ var marketingcampaign = {
 };
 var marketingcampaign_default = marketingcampaign;
 
+// cms/page/starnews.ts
+var starnews = {
+  file: "content/page/starnews.json",
+  label: "Star News",
+  name: "starnews",
+  fields: [
+    meta_default,
+    {
+      label: "Start",
+      name: "start",
+      widget: "object",
+      fields: [
+        title_default,
+        image_default,
+        {
+          label: "Artikel",
+          name: "article",
+          widget: "relation",
+          collection: "article",
+          value_field: "slug",
+          display_fields: ["title"],
+          search_fields: ["title"]
+        },
+        {
+          label: "Button",
+          name: "button",
+          widget: "string"
+        }
+      ]
+    },
+    {
+      label: "Seite",
+      name: "aside",
+      widget: "object",
+      fields: [
+        { label: "Titel Kategorien", name: "categories", widget: "string" },
+        image_default,
+        title_default,
+        text_default,
+        cta_default
+      ]
+    }
+  ]
+};
+var starnews_default = starnews;
+
 // cms/page/index.ts
 var config = {
   name: "pages",
@@ -517,40 +563,11 @@ var config = {
     salesmarketing_default,
     customers_default,
     contact_default,
+    starnews_default,
     forYou_default
   ]
 };
 var page_default = config;
-
-// cms/animal/index.ts
-var animal = {
-  name: "animal",
-  label: "Wildtiere",
-  label_singular: "Wildtier",
-  editor: {
-    preview: false
-  },
-  folder: "content/animal",
-  slug: "{{fields.slug}}",
-  create: true,
-  preview_path: "wildtiere/{{fields.slug}}",
-  fields: [
-    { label: "Titel", name: "title", widget: "string" },
-    { label: "Slug", name: "slug", widget: "string" },
-    { label: "Bild", name: "image", widget: "image" },
-    { label: "Auszug", name: "excerpt", widget: "text" },
-    { label: "Inhalt", name: "body", widget: "markdown" },
-    {
-      label: "Kategorie",
-      name: "category",
-      widget: "relation",
-      collection: "category",
-      search_fields: ["title"],
-      value_field: "title"
-    }
-  ]
-};
-var animal_default = animal;
 
 // cms/category/index.ts
 var category = {
@@ -564,7 +581,14 @@ var category = {
   folder: "content/category",
   slug: "{{slug}}",
   create: true,
-  fields: [{ label: "Titel", name: "title", widget: "string" }]
+  fields: [
+    title_default,
+    {
+      label: "Slug",
+      name: "slug",
+      widget: "string"
+    }
+  ]
 };
 var category_default = category;
 
@@ -802,6 +826,39 @@ var customer = {
 };
 var customer_default = customer;
 
+// cms/article/index.ts
+var article = {
+  name: "article",
+  label: "Artikel",
+  label_singular: "Artikel",
+  editor: {
+    preview: false
+  },
+  extension: "json",
+  folder: "content/article",
+  slug: "{{fields.slug}}",
+  create: true,
+  fields: [
+    image_default,
+    { label: "Preview Bild", name: "previewimage", widget: "image" },
+    title_default,
+    { label: "Slug", name: "slug", widget: "string" },
+    { label: "Datum", name: "date", widget: "datetime", time_format: false },
+    {
+      label: "Kategorie",
+      name: "categories",
+      widget: "relation",
+      multiple: true,
+      collection: "category",
+      search_fields: ["title"],
+      value_field: "title"
+    },
+    { label: "Auszug", name: "excerpt", widget: "text" },
+    { label: "Inhalt", name: "body", widget: "markdown" }
+  ]
+};
+var article_default = article;
+
 // cms/config.ts
 var config2 = {
   publish_mode: "editorial_workflow",
@@ -817,7 +874,7 @@ var config2 = {
   media_folder: "/public/media",
   public_folder: "/media",
   load_config_file: false,
-  collections: [page_default, customer_default, animal_default, category_default, setting_default, legal_default]
+  collections: [page_default, article_default, category_default, customer_default, setting_default, legal_default]
 };
 var config_default = config2;
 export {

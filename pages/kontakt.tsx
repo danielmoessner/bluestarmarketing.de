@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
-import Script from "next/script";
 import pageSource from "../content/page/contact.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
@@ -59,7 +58,6 @@ function Page({ pageData, footerData }) {
 
   return (
     <Layout>
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
       <Seo meta={page.meta} />
       <Header header={page.header} />
 
