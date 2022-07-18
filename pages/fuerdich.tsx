@@ -108,10 +108,13 @@ function Page({ pageData, footerData }) {
                       />
                     </svg>
                   </div>
-                  <p className="text-sm">{page.about.quote1}</p>
-                  <p className="mt-2 text-sm">{page.about.quote2}</p>
+                  <p className="text-base italic">{page.about.quote1}</p>
+                  <p className="mt-2 text-base italic">{page.about.quote2}</p>
                   <div className="mt-4 text-xs">
-                    <Multiline text={page.about.afterquote} />
+                    <Multiline
+                      text={page.about.afterquote}
+                      spaceClass="space-y-0.5"
+                    />
                   </div>
                 </div>
               </div>

@@ -18,7 +18,7 @@ function Page({ pageData, footerData }) {
   const page = pageData;
 
   return (
-    <Layout>
+    <Layout hide>
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
       <Seo meta={page.meta} />
       <Header header={page.header} />

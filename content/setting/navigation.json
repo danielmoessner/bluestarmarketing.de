@@ -1,6 +1,26 @@
 {
   "collection": "setting",
   "slug": "navigation",
-  "title": "Tiere",
-  "links": []
+  "links": [
+    {
+      "type": "link",
+      "text": "Services",
+      "url": "/services"
+    },
+    {
+      "type": "link",
+      "text": "Für dich",
+      "url": "/fuerdich"
+    },
+    {
+      "type": "link",
+      "text": "Unsere Kunden",
+      "url": "/kunden"
+    },
+    {
+      "type": "link",
+      "text": "Kontakt",
+      "url": "/kontakt"
+    }
+  ]
 }

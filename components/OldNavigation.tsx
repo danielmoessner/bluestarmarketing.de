@@ -8,11 +8,9 @@ import NavigationLink from "./NavigationLink";
 import data from "../content/setting/navigation.json";
 import Image from "next/image";
 import imageSrc from "../public/logo_bluestar_300px.svg";
-import globalSource from "../content/setting/global.json";
 
 function Component() {
   const navigation = data;
-  const global = globalSource;
 
   return (
     <nav className="border-b shadow-sm">
@@ -22,14 +20,14 @@ function Component() {
             {({ open }) => (
               <>
                 <div className="flex items-center justify-between py-3 md:justify-start md:space-x-10">
-                  <div className="flex justify-start h-12 md:w-0 md:flex-1">
+                  <div className="flex justify-start h-12 lg:w-0 lg:flex-1">
                     <Link href="/">
                       <a className="w-40">
                         <Image src={imageSrc} alt="Blue Star Marketing Logo" />
                       </a>
                     </Link>
                   </div>
-                  <div className="md:hidden">
+                  <div className="hidden md:hidden">
                     <Popover.Button className="bg-white border-2 border-gray-100 rounded-md px-2 py-1.5 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
                       <span className="sr-only">Menü öffnen</span>
                       <MenuIcon className="w-6 h-6" aria-hidden="true" />
@@ -37,42 +35,8 @@ function Component() {
                   </div>
                   <Popover.Group
                     as="nav"
-                    className="hidden space-x-4 md:flex md:items-center"
-                  >
-                    {navigation.links &&
-                      navigation.links.map((link) => {
-                        if (link.type === "link")
-                          return <NavigationLink key={link.text} link={link} />;
-                        if (link.type === "links")
-                          return (
-                            <NavigationDropdown key={link.text} link={link} />
-                          );
-                        return "?";
-                      })}
-                    <div className="flex pl-3 space-x-4">
-                      <a
-                        href={global.linkedin}
-                        className="block"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          className="w-5 h-5"
-                          src="/linkedin.png"
-                          alt="LinkedIn Icon"
-                        />
-                      </a>
-                      <a href={global.whatsapp} className="block">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          className="w-5 h-5"
-                          src="/whatsapp.png"
-                          alt="WhatsApp Icon"
-                        />
-                      </a>
-                    </div>
-                  </Popover.Group>
+                    className="hidden space-x-4 md:flex"
+                  ></Popover.Group>
                 </div>
 
                 <Transition

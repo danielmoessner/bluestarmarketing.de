@@ -10,8 +10,6 @@ import Footer from "../components/Footer";
 import footerSource from "../content/setting/footer.json";
 import SectionCustomers from "../components/SectionCustomers";
 import Animate from "../components/Animate";
-import Link from "next/link";
-import { PlusIcon } from "@heroicons/react/outline";
 import Multiline from "../components/Multiline";
 import Button from "../components/Button";
 import Prose from "../components/Prose";
@@ -26,13 +24,6 @@ import ServiceLinks from "../components/ServiceLinks";
 
 function Page({ pageData, footerData }) {
   const page = pageData;
-  const background = [
-    "bg-bsm-faince",
-    "bg-bsm-ocean",
-    "bg-bsm-cornblue",
-    "bg-bsm-orientblue",
-    "bg-bsm-nightblue",
-  ];
 
   return (
     <Layout>
