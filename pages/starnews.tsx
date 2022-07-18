@@ -9,11 +9,10 @@ import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
 import Button from "../components/Button";
 import { getAllJSON } from "lib/getMarkdown";
-
-// interface Props {
-//   pageData: typeof pageSource;
-//   footerData: typeof footerSource;
-// }
+import Article from "../components/Article";
+import BlogLayout from "../components/BlogLayout";
+import ArticleMeta from "../components/ArticleMeta";
+import { useRouter } from "next/router";
 
 function Page({
   pageData,
@@ -23,6 +22,13 @@ function Page({
   mainArticleData,
 }) {
   const page = pageData;
+
+  let articles = articleData;
+  const router = useRouter();
+  if (router.query.c) {
+    articles = articles.filter((i) => i.categories.includes(router.query.c));
+  }
+  const current = router.query.c || "---";
 
   return (
     <Layout>
@@ -34,86 +40,44 @@ function Page({
               {page.start.title}
             </Heading>
           </div>
-          <div className="grid grid-cols-12 gap-8 mt-20">
-            <div className="col-span-9">
+          <div className="mt-20">
+            <BlogLayout
+              aside={page.aside}
+              categories={categoryData}
+              current={current as string}
+            >
               <article>
-                <div>
-                  <div className="leading-[0px]">
-                    <Image {...page.start.image} alt="test" />
-                  </div>
-                  <h2 className="mt-10 text-5xl font-bold">
-                    {mainArticleData.title}
-                  </h2>
-                  <div className="flex mt-3 space-x-2">
-                    <span className="text-lg">
-                      {new Date(mainArticleData.date).toLocaleDateString(
-                        "de-de"
-                      )}
-                    </span>
-                    {mainArticleData.categories.map((c) => (
-                      <>
-                        <span key={c}>|</span>
-                        <span className="text-lg" key={c}>
-                          {c}
-                        </span>
-                      </>
-                    ))}
-                  </div>
-                  <div className="mt-5">
-                    <p>{mainArticleData.excerpt}</p>
-                  </div>
-                  <div className="mt-5">
-                    <Button>{page.start.button}</Button>
-                  </div>
+                <Article article={mainArticleData} image={page.start.image}>
+                  <p>{mainArticleData.excerpt}</p>
+                </Article>
+                <div className="mt-5">
+                  <Button href={`/starnews/${mainArticleData.slug}`}>
+                    {page.start.button}
+                  </Button>
                 </div>
               </article>
-            </div>
-            <div className="col-span-3">
-              <aside>
-                <div>
-                  <h2 className="text-4xl font-bold">
-                    {page.aside.categories}
-                  </h2>
-                  <ul className="mt-4 space-y-2">
-                    {categoryData.map((category) => (
-                      <li key={category.title}>
-                        <button>{category.title}</button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-20">
-                  <Image {...page.aside.image} alt="Aside Image" />
-                  <h2 className="mt-5 font-bold">
-                    {page.aside.title}
-                    <span className="pl-1">
-                      <svg
-                        className="inline-block w-5 h-5"
-                        data-name="Ebene 1"
-                        version="1.1"
-                        viewBox="0 0 15 14.35"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="m15 5.16h-5.2c-1.24 3.7-3.06 5.39-4.72 7.21l2.81-2.04 4.39 3.19-1.68-5.16 4.39-3.19z"
-                          fill="#00adea"
-                        />
-                        <path
-                          d="m7.92 0-1.68 5.16h-5.43l4.39 3.2s-1.2 1.66-2.01 2.64c-0.97 1.15-3.19 3.35-3.19 3.35 4.3-1.98 8.19-6.59 9.56-9.31z"
-                          fill="#0f4988"
-                        />
-                      </svg>
-                    </span>
-                  </h2>
-                  <p className="mt-4">{page.aside.text}</p>
-                  <div className="mt-5">
-                    <Button href={page.aside.cta.url}>
-                      {page.aside.cta.text}
-                    </Button>
-                  </div>
-                </div>
-              </aside>
-            </div>
+              <div className="grid grid-cols-2 gap-8 mt-20">
+                {articles.map((article) => (
+                  <article key={article.slug}>
+                    <Image {...article.previewimage} alt="test" />
+                    <div className="mt-2">
+                      <h2 className="text-3xl font-bold">{article.title}</h2>
+                    </div>
+                    <div className="mt-2">
+                      <ArticleMeta article={article} />
+                    </div>
+                    <div className="mt-3">
+                      <p>{article.excerpt}</p>
+                    </div>
+                    <div className="mt-5">
+                      <Button href={`/starnews/${article.slug}`}>
+                        {page.start.button}
+                      </Button>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </BlogLayout>
           </div>
         </Container>
       </section>
@@ -126,9 +90,16 @@ export async function getStaticProps() {
   const pageData = await renderContent(pageSource);
   const footerData = await renderContent(footerSource);
   const categoryData = getAllJSON("category");
-  const articleData = getAllJSON("article");
-  const mainArticleData = articleData.find(
+
+  const articleData1 = getAllJSON("article");
+  const articleData2 = await renderContent(articleData1);
+
+  const mainArticleData = articleData2.find(
     (a) => a.slug === pageData.start.article
+  );
+
+  const articleData = articleData2.filter(
+    (a) => a.slug !== pageData.start.article
   );
 
   return {
