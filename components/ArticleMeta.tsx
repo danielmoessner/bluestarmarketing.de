@@ -1,6 +1,10 @@
 import React from "react";
 
-function Component({ article, size = "text-lg", dividerSize = "text-base" }) {
+function Component({
+  article,
+  size = "text-base lg:text-lg",
+  dividerSize = "text-sm lg:text-base",
+}) {
   return (
     <div className={size}>
       <div className="flex space-x-2">

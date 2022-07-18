@@ -4,12 +4,14 @@ import Link from "next/link";
 
 function Component({ children, categories, aside, current = "---" }) {
   return (
-    <div className="grid grid-cols-12 gap-16">
-      <div className="col-span-9">{children}</div>
-      <div className="col-span-3">
+    <div className="grid grid-cols-4 gap-16">
+      <div className="col-span-4 md:col-span-3">{children}</div>
+      <div className="col-span-4 row-start-1 md:row-start-auto md:col-span-1">
         <aside>
           <div>
-            <h2 className="text-4xl font-bold">{aside.categories}</h2>
+            <h2 className="text-xl font-bold lg:text-4xl">
+              {aside.categories}
+            </h2>
             <ul className="mt-4 space-y-2">
               {categories.map((category) => (
                 <li key={category.title}>
@@ -26,7 +28,7 @@ function Component({ children, categories, aside, current = "---" }) {
               ))}
             </ul>
           </div>
-          <div className="mt-20">
+          <div className="hidden mt-20 md:block">
             <Image {...aside.image} alt={aside.title} />
             <h2 className="mt-5 font-bold">
               {aside.title}
