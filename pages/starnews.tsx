@@ -48,7 +48,9 @@ function Page({
             >
               <article>
                 <Article article={mainArticleData} image={page.start.image}>
-                  <p>{mainArticleData.excerpt}</p>
+                  <div className="mt-4">
+                    <p>{mainArticleData.excerpt}</p>
+                  </div>
                 </Article>
                 <div className="mt-5">
                   <Button href={`/starnews/${mainArticleData.slug}`}>

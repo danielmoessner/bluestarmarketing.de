@@ -28,7 +28,9 @@ function Page({ articleData, pageData, categoryData, footerData }) {
           <BlogLayout aside={page.aside} categories={categoryData}>
             <article>
               <Article article={articleData} image={articleData.image}>
-                <Prose html={articleData.markdown.html} />
+                <div className="mt-8">
+                  <Prose html={articleData.markdown.html} />
+                </div>
               </Article>
             </article>
           </BlogLayout>

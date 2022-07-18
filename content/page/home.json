@@ -10,7 +10,7 @@
     "image": "/media/bluestar_home.jpg",
     "cta": {
       "text": "Jetzt Erstgespräch vereinbaren",
-      "url": "/#kontakt"
+      "url": "/kontakt"
     }
   },
   "customers": {

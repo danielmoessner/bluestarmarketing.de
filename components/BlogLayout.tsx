@@ -9,7 +9,7 @@ function Component({ children, categories, aside, current = "---" }) {
       <div className="col-span-4 row-start-1 md:row-start-auto md:col-span-1">
         <aside>
           <div>
-            <h2 className="text-xl font-bold lg:text-4xl">
+            <h2 className="text-xl font-bold lg:text-2xl">
               {aside.categories}
             </h2>
             <ul className="mt-4 space-y-2">
