@@ -62,6 +62,14 @@ function Component({ data }) {
         <div className="mt-2 mb-5">
           <div className="-mx-2.5 -my-1">
             <div className="flex flex-wrap items-center">
+              <a
+                href="#"
+                onClick={() => {
+                  CCM.openWidget();
+                }}
+              >
+                Konfigurationsbox öffnen
+              </a>
               {data.row2.map((item) => {
                 let element = <div>?</div>;
                 if (item.type === "text")
