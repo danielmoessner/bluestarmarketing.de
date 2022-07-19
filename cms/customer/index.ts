@@ -7,6 +7,7 @@ const customer: CmsCollection = {
   editor: {
     preview: false,
   },
+  extension: "json",
   folder: "content/customer",
   slug: "{{fields.customer}}",
   create: true,

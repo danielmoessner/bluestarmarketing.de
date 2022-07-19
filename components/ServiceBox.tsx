@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ImprovedImage } from "types/shared";
+import { ImageRendered } from "types/shared";
 import Heading from "./Heading";
 import Multiline from "./Multiline";
 import Button from "./Button";
@@ -9,7 +9,7 @@ interface Props {
     title: string;
     id: string;
     text: string;
-    image: ImprovedImage;
+    image: ImageRendered;
     cta: {
       text: string;
       url: string;
