@@ -90,7 +90,6 @@ function Page({
 
 export async function getStaticProps() {
   const pageData = await renderContent(pageSource);
-  console.log(pageData);
   const footerData = await renderContent(footerSource);
   const categoryData = getAllJson("category");
 

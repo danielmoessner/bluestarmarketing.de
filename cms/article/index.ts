@@ -15,12 +15,18 @@ const article: CmsCollection = {
   create: true,
   fields: [
     image,
+    {
+      label: "Bildnachweis",
+      name: "credit",
+      widget: "string",
+      required: false,
+    },
     { label: "Preview Bild", name: "previewimage", widget: "image" },
     title,
     { label: "Slug", name: "slug", widget: "string" },
     { label: "Datum", name: "date", widget: "datetime", time_format: false },
     {
-      label: "Kategorie",
+      label: "Kategorien",
       name: "categories",
       widget: "relation",
       multiple: true,
