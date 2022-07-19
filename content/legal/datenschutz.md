@@ -53,9 +53,9 @@ Deutschland
 
 Tel.: (0) 811 54 17 195
 
-E-Mail: kontakt@s-marketingmanagement.de
+E-Mail: kontakt@bluestarmarketing.de
 
-Website: https://s-marketingmanagement.de/
+Website: https://bluestarmarketing.de/
 
 #### 3. Cookies
 
