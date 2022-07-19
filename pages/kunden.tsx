@@ -69,12 +69,12 @@ function Page({ pageData, footerData, reviews }) {
         </Container>
       </section>
 
-      <section className="pt-16 pb-32">
+      <section className="pt-8 pb-32">
         <Container layout="sm">
           <div className="text-center">
             <Heading size="h2">{page.customers.title}</Heading>
           </div>
-          <div className="mt-8">
+          <div className="mt-16">
             <div className="-my-2 md:-my-4 columns-1 md:columns-2 md:gap-8">
               {reviews.map((item) => {
                 return (
@@ -101,7 +101,9 @@ function Page({ pageData, footerData, reviews }) {
                         </div>
                         <div className="p-5 bg-bsm-alice">
                           <h3 className="sr-only">{item.customer}</h3>
-                          <p className="text-sm">{item.text}</p>
+                          <p className="text-sm italic leading-normal">
+                            {item.text}
+                          </p>
                           <div className="mt-4">
                             <span className="block font-bold">
                               {item.customer}
