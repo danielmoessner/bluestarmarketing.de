@@ -82,10 +82,7 @@ function Page({ pageData, footerData }) {
         </Container>
       </section>
 
-      <section
-        className="relative py-16 bg-no-repeat bg-cover bg-bsm-matt"
-        // style={{ background: "url()" }}
-      >
+      <section className="relative py-16 bg-no-repeat bg-cover bg-bsm-matt">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <svg
             className="absolute top-0 bottom-0 left-0 right-0 mx-auto my-auto"
@@ -109,12 +106,11 @@ function Page({ pageData, footerData }) {
         <Container layout="sm">
           <div className="relative grid gap-8 lg:grid-cols-2">
             <div>
-              <Heading classes="uppercase tracking-wide">
+              <Heading classes="!font-normal uppercase">
                 {page.benefits.title}
               </Heading>
-              <div className="flex items-center">
+              <div className="flex items-center space-x-1.5">
                 <p className="text-2xl font-bold">{page.benefits.subtitle}</p>
-
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={page.benefits.textimage.src}
@@ -125,7 +121,7 @@ function Page({ pageData, footerData }) {
               <div className="mt-5">
                 <Multiline text={page.benefits.pretext} />
               </div>
-              <ul className="mt-3">
+              <ul className="mt-3 space-y-0.5">
                 {page.benefits.points.map((point) => (
                   <li key={point} className="flex items-center space-x-2">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
