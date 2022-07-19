@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
 import Container from "../../components/Container";
-import { getAllJSON } from "lib/getMarkdown";
+import { getAllJson } from "lib/getContent";
 import Article from "../../components/Article";
 import BlogLayout from "../../components/BlogLayout";
 import { renderContent } from "lib/renderContent";
@@ -46,13 +46,13 @@ export default Page;
 export async function getStaticProps({ params }) {
   const { slug } = params;
 
-  const items = getAllJSON("article");
+  const items = getAllJson("article");
 
   const articleDataSource = items.find((i) => i.slug === slug);
   const articleData = await renderContent(articleDataSource);
 
   const pageData = await renderContent(pageSource);
-  const categoryData = getAllJSON("category");
+  const categoryData = getAllJson("category");
 
   const footerData = await renderContent(footerSource);
 
@@ -67,7 +67,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const items = getAllJSON("article");
+  const items = getAllJson("article");
 
   return {
     paths: items.map((i) => {

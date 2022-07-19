@@ -11,7 +11,7 @@ import Animate from "../components/Animate";
 import Image from "next/image";
 import Multiline from "../components/Multiline";
 import Button from "../components/Button";
-import { getAllJSON } from "lib/getMarkdown";
+import { getAllJson } from "lib/getContent";
 
 // interface Props {
 //   pageData: typeof pageSource;
@@ -132,7 +132,7 @@ export async function getStaticProps() {
   const pageData = await renderContent(pageSource);
   const footerData = await renderContent(footerSource);
 
-  const reviews = getAllJSON("customer");
+  const reviews = getAllJson("customer");
 
   return {
     props: {

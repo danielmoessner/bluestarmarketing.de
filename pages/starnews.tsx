@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
 import Button from "../components/Button";
-import { getAllJSON } from "lib/getMarkdown";
+import { getAllJson } from "lib/getContent";
 import Article from "../components/Article";
 import BlogLayout from "../components/BlogLayout";
 import ArticleMeta from "../components/ArticleMeta";
@@ -91,9 +91,9 @@ function Page({
 export async function getStaticProps() {
   const pageData = await renderContent(pageSource);
   const footerData = await renderContent(footerSource);
-  const categoryData = getAllJSON("category");
+  const categoryData = getAllJson("category");
 
-  const articleData1 = getAllJSON("article");
+  const articleData1 = getAllJson("article");
   const articleData2 = await renderContent(articleData1);
 
   const mainArticleData = articleData2.find(

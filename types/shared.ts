@@ -1,7 +1,3 @@
-export type Markdown<T> = T & { markdown: string; _path: string };
-
-export type Loaded<T> = { [V in keyof T]: V } & { _path: string };
-
 export type ImageRendered = {
   placeholder: "blur";
   src: string;
