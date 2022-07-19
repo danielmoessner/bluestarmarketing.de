@@ -27,7 +27,7 @@ function Page({ legalData, footerData }: Props) {
       <Seo meta={meta} />
       <section className="pt-12 pb-20">
         <Container layout="sm">
-          <article className="mx-auto prose">
+          <article className="max-w-3xl mx-auto prose">
             <h1>{legal.title}</h1>
             <div
               // eslint-disable-next-line react/no-danger

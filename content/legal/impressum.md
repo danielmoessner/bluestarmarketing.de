@@ -23,7 +23,7 @@ DE 322273419
 
 ## Berufsbezeichnung und berufsrechtliche Regelungen
 
-Berufsbezeichnung: Freiberufler - Marketingdienstleistungen
+Gegenstand des Unternehmens ist integrierte B2B Marketing Planung auf Basis von Erfolgskennzahlen (Key Performance Indicators) & Erfolgskontrolle auf Basis von Geschäfts- und Umsatzzielen, Integrierte B2B Marketing Kommunikation & Mix von der Strategie bis zur Durchführung nach Business Prioritäten zur Nachfrage-/Leadgenerierung und zum Auf- & Ausbau der Sales Pipeline, B2B Marketing & Sales Integration & Zusammenarbeit auf Team- und Managementebene, sowie Marketing Management und Beratung.
 
 ## Angaben zur Berufshaftpflichtversicherung
 
