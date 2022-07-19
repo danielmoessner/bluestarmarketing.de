@@ -49,7 +49,7 @@ function Page({ pageData, footerData }) {
           </div>
           <div className="mt-12">
             <div
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto md:pl-[13%]"
               dangerouslySetInnerHTML={{ __html: page.start.svg }}
             ></div>
           </div>
