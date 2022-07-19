@@ -855,12 +855,18 @@ var article = {
   create: true,
   fields: [
     image_default,
+    {
+      label: "Bildnachweis",
+      name: "credit",
+      widget: "string",
+      required: false
+    },
     { label: "Preview Bild", name: "previewimage", widget: "image" },
     title_default,
     { label: "Slug", name: "slug", widget: "string" },
     { label: "Datum", name: "date", widget: "datetime", time_format: false },
     {
-      label: "Kategorie",
+      label: "Kategorien",
       name: "categories",
       widget: "relation",
       multiple: true,

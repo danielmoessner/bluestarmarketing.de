@@ -8,6 +8,9 @@ function Component({ image, article, children }) {
       <div className="leading-[0px]">
         <Image {...image} alt="test" />
       </div>
+      {article.credit && (
+        <span className="block text-xs">{article.credit}</span>
+      )}
       <h2 className="mt-5 text-2xl font-bold lg:mt-4 lg:text-3xl">
         {article.title}
       </h2>
