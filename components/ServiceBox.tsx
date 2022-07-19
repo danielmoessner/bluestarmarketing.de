@@ -16,6 +16,7 @@ interface Props {
     };
     side: "R" | "L";
     color: string;
+    quote?: string;
   };
 }
 
@@ -39,8 +40,13 @@ function Component({ service }: Props) {
         </div>
         <div className="mt-10">
           <div className="grid gap-6 sm:grid-cols-2">
-            <div>
+            <div className="relative">
               <Multiline text={service.text} />
+              {service.quote && (
+                <div className="absolute bottom-0 right-0">
+                  <span className="text-xs">{service.quote}</span>
+                </div>
+              )}
             </div>
             <div className="leading-[0px]">
               <Image {...service.image} alt={service.title} />
