@@ -4,7 +4,10 @@ const headerSmall: CmsField = {
   label: "Header",
   name: "header",
   widget: "object",
-  fields: [{ label: "Bild", name: "image", widget: "image" }],
+  fields: [
+    { label: "Bild", name: "image", widget: "image" },
+    { label: "Balkenfarbe", name: "color", widget: "string" },
+  ],
 };
 
 export default headerSmall;

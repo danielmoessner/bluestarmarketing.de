@@ -64,7 +64,8 @@
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
         },
-        "side": "R"
+        "side": "R",
+        "color": "#45b5cf"
       },
       {
         "title": "Strategieworkshop",
@@ -75,7 +76,8 @@
           "text": "Starte deine Marketingreise",
           "url": "/workshop"
         },
-        "side": "L"
+        "side": "L",
+        "color": "#00adea"
       },
       {
         "title": "Marketingstrategie",
@@ -86,7 +88,8 @@
           "text": "Starte deine Marketingreise",
           "url": "/b2bmarketingstrategie"
         },
-        "side": "L"
+        "side": "L",
+        "color": "#2a7fc2"
       },
       {
         "title": "Sales & Marketing Funnel",
@@ -97,7 +100,8 @@
           "text": "Starte deine Marketingreise",
           "url": "/marketingfunnel"
         },
-        "side": "L"
+        "side": "L",
+        "color": "#0f4988"
       },
       {
         "title": "Marketingkampagnen",
@@ -108,7 +112,8 @@
           "text": "Starte deine Marketingreise",
           "url": "/marketingkampagnen"
         },
-        "side": "L"
+        "side": "L",
+        "color": "#0f4988"
       },
       {
         "title": "Projektmanagement",
@@ -119,7 +124,8 @@
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
         },
-        "side": "R"
+        "side": "R",
+        "color": "#162259"
       },
       {
         "title": "Erfolge feiern",
@@ -130,7 +136,8 @@
           "text": "Starte deine Marketingreise",
           "url": "/kontakt"
         },
-        "side": "R"
+        "side": "R",
+        "color": "#dfeaf8"
       }
     ]
   }

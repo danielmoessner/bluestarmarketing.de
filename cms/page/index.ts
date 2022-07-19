@@ -21,14 +21,14 @@ const config: CmsCollection = {
   files: [
     home,
     services,
-    marketingcampaign,
     strategyworkshop,
     marketingstrategy,
     salesmarketing,
-    customers,
-    contact,
-    starnews,
+    marketingcampaign,
     forYou,
+    customers,
+    starnews,
+    contact,
   ],
 };
 

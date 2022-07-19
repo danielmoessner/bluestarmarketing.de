@@ -53,6 +53,11 @@ const services: CmsCollectionFile = {
             text,
             image,
             cta,
+            {
+              label: "Balkenfarbe",
+              name: "color",
+              widget: "string",
+            },
           ],
         },
       ],

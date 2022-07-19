@@ -1,8 +1,3 @@
-// import React from "react";
-// import PropTypes from "prop-types";
-// import { Link } from 'gatsby';
-// import { Transition } from '@headlessui/react';
-// import { graphql } from "gatsby";
 import Container from "./Container";
 import Image from "next/image";
 import Button from "./Button";
@@ -45,7 +40,10 @@ function Component({ header, position = "bottom" }) {
               </div>
             )}
             {!(header.text && header.cta) && (
-              <div className="w-full h-5 bg-bsm-ocean"></div>
+              <div
+                className="w-full h-5"
+                style={{ backgroundColor: header.color }}
+              ></div>
             )}
           </div>
         </div>

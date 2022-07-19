@@ -15,6 +15,7 @@ interface Props {
       url: string;
     };
     side: "R" | "L";
+    color: string;
   };
 }
 
@@ -26,7 +27,10 @@ function Component({ service }: Props) {
       }`}
       id={service.id}
     >
-      <div className="w-full h-6 bg-bsm-faince"></div>
+      <div
+        className="w-full h-6"
+        style={{ backgroundColor: service.color }}
+      ></div>
       <div className="px-10 pt-6 pb-8">
         <div className="flex justify-center">
           <Heading element="h3" size="h3" showStar={true}>
