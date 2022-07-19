@@ -1,102 +1,82 @@
-/* eslint-disable */
 import { getPlaiceholder } from "plaiceholder";
-import { ImageRendered, Rendered, MarkdownRendered, RenderedMarkdown } from "types/shared";
+import {
+  ImageRendered,
+  Rendered,
+  MarkdownRendered,
+  RenderedMarkdown,
+  RenderedImage,
+} from "types/shared";
 import md from "markdown-it";
 
-async function renderImages(
-  data: any,
-  key?: string | null
-): Promise<any>;
-async function renderImages(
-  data: Record<string, any>,
-  key?: string | null
-): Promise<Record<string, any>>;
-async function renderImages(
-  data: string,
-  key: "image"
-): Promise<ImageRendered>;
-async function renderImages(
-  data: string[],
-  key: "images"
-): Promise<ImageRendered[]>;
-async function renderImages(
-  data: Record<string, any> | string | string[],
-  key?: string | null
-) {
-  if (Array.isArray(data)) {
-    return await Promise.all(data.map((i) => renderImages(i, key)));
-  } else if (typeof data === "object") {
-    for (const [key, value] of Object.entries(data)) {
-      data[key] = await renderImages(value, key);
-    }
-  } else if (
-    typeof data === "string" &&
-    data.startsWith("/media") &&
-    key.includes("image")
-  ) {
-    const { base64, img } = await getPlaiceholder(data);
-    return {
-      ...img,
-      blurDataURL: base64,
-      placeholder: "blur",
-    } as ImageRendered;
-  }
-  return data;
+// render images
+async function renderImages1(data: string): Promise<ImageRendered> {
+  const { base64, img } = await getPlaiceholder(data);
+  return {
+    ...img,
+    blurDataURL: base64,
+    placeholder: "blur",
+  };
 }
 
+async function renderImages<T extends object | Array<object>>(
+  data: T
+): Promise<RenderedImage<T>> {
+  let result;
+
+  if (Array.isArray(data)) {
+    result = await Promise.all(data.map((i) => renderImages(i)));
+  } else {
+    result = data;
+
+    for (const [key, value] of Object.entries(data)) {
+      if (key.includes("image")) {
+        if (typeof value === "string") result[key] = await renderImages1(value);
+        else if (Array.isArray(value))
+          result[key] = await Promise.all(
+            value.map((i) => (typeof i === "string" ? renderImages1(i) : i))
+          );
+      } else if (typeof value === "object") {
+        result[key] = await renderImages(value);
+      }
+    }
+  }
+
+  return result;
+}
+
+// render markdown
 function renderMarkdown1(data: string): MarkdownRendered {
   const renderedMarkdown = md().render(data);
-  return {'html': renderedMarkdown};
+  return { html: renderedMarkdown };
 }
 
-// function renderMarkdown1(data: string): RenderedMarkdown {
-//   const renderedMarkdown = md().render(data);
-//   return {'html': renderedMarkdown};
-// }
-
-// function renderMarkdown<K>(
-//   data: K[],
-//   key?: string | null
-// ): K;
-// function renderMarkdown<T>(
-//   data: string,
-//   key?: 'markdown'
-// ): RenderedMarkdown;
-function renderMarkdown<T extends object>(
+function renderMarkdown<T extends object | Array<object>>(
   data: T
 ): RenderedMarkdown<T> {
+  let result;
 
-  for (const [key, value] of Object.entries(data)) {
-    if (key === 'markdown' && typeof value === 'string') {
-      data[key] = renderMarkdown1(value);
-    } 
-    else if (typeof value === 'object') {
-      data[key] = renderMarkdown(value);
-    }
-    else if (Array.isArray(value)) {
-      data[key] = value.map(i => renderMarkdown(i));
+  if (Array.isArray(data)) {
+    result = data.map((i) => renderMarkdown(i));
+  } else {
+    result = data;
+
+    for (const [key, value] of Object.entries(data)) {
+      if (key === "markdown" && typeof value === "string") {
+        result[key] = renderMarkdown1(value);
+      } else if (typeof value === "object") {
+        result[key] = renderMarkdown(value);
+      }
     }
   }
 
-  return data as RenderedMarkdown<T>;
-
-  // if (Array.isArray(data)) {
-  //   return data.map((i) => renderMarkdown(i, key));
-  // } else if (typeof data === "object") {
-  //   for (const [key, value] of Object.entries(data)) {
-  //     data[key] = renderMarkdown(value, key);
-  //   }
-  // } else if (
-  //   typeof data === "string" && key === "markdown"
-  // ) {
-  //   renderMarkdown1(data);
-  // }
-  // return data as string;
+  return result;
 }
 
-
-export async function renderContent<T extends Array<object> | object>(data: T): Promise<Rendered<T>> {
-  const imageResult = await renderImages(data);
-  const markdownResult = renderMarkdown(imageResult);
+// render everything
+export async function renderContent<T extends Array<object> | object>(
+  data: T
+): Promise<Rendered<T>> {
+  const imageResult = await renderImages<T>(data);
+  const markdownResult = renderMarkdown<RenderedImage<T>>(imageResult);
   return markdownResult as Rendered<T>;
 }

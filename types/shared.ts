@@ -28,17 +28,19 @@ export type RenderedImage<T> = T extends object
   ? RenderedImage<U>[]
   : T;
 
-export type Rendered<T> = T extends object
-  ? {
-      [K in keyof T]: K extends "image"
-        ? ImageRendered
-        : K extends "markdown"
-        ? MarkdownRendered
-        : Rendered<T[K]>;
-    }
-  : T extends Array<infer U>
-  ? Rendered<U>[]
-  : T;
+export type Rendered<T> = RenderedMarkdown<RenderedImage<T>>;
+
+// export type Rendered<T> = T extends object
+//   ? {
+//       [K in keyof T]: K extends "image"
+//         ? ImageRendered
+//         : K extends "markdown"
+//         ? MarkdownRendered
+//         : Rendered<T[K]>;
+//     }
+//   : T extends Array<infer U>
+//   ? Rendered<U>[]
+//   : T;
 
 // const i: { image: string; markdown: string } = {
 //   image: "test",
