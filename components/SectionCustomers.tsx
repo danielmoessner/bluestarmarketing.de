@@ -11,7 +11,7 @@ function Component({ customers }) {
         <div className="text-center">
           <Heading size="h2">{customers.title}</Heading>
         </div>
-        <div className="relative mt-10">
+        <div className="relative mt-16">
           <Animate>
             <div className="absolute left-0 right-0 mx-auto -top-4 lg:-top-5">
               <svg
@@ -29,7 +29,9 @@ function Component({ customers }) {
               </svg>
             </div>
             <div className="px-5 py-5 md:px-20 md:py-8 bg-bsm-alice">
-              <Multiline text={customers.text} />
+              <div className="italic">
+                <Multiline text={customers.text} />
+              </div>
               <div className="mt-4">
                 <span className="font-bold">{customers.customer}</span>
                 {customers.company && (
