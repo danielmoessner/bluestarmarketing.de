@@ -51,6 +51,12 @@ const services: CmsCollectionFile = {
               options: ["L", "R"],
             },
             text,
+            {
+              label: "Zitat",
+              name: "quote",
+              widget: "string",
+              required: false,
+            },
             image,
             cta,
             {

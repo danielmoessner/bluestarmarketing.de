@@ -377,6 +377,12 @@ var services = {
               options: ["L", "R"]
             },
             text_default,
+            {
+              label: "Zitat",
+              name: "quote",
+              widget: "string",
+              required: false
+            },
             image_default,
             cta_default,
             {
