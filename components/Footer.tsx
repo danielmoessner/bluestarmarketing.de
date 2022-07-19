@@ -3,10 +3,10 @@ import Link from "next/link";
 import Container from "./Container";
 // import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
-// import { ImageTransformed } from "../types/shared";
+// import { Rendered } from "../types/shared";
 
 // interface Props {
-//   data: ImageTransformed<typeof footerSource>;
+//   data: Rendered<typeof footerSource>;
 // }
 
 function Component({ data }) {

@@ -1,0 +1,18 @@
+{
+  "customer": "Debora Von Scheliha",
+  "text": "Wir schätzen die professionelle und kompetente Zusammenarbeit mit Blue Star Marketing. Silke ist ein Partner, auf den wir uns insbesondere im Bereich der Lead-Generierung verlassen können und der immer strukturiert und lösungsorientiert agiert und dabei kreativ mitdenkt.",
+  "company": "Head of Marketing DACH, Red Hat",
+  "body": {
+    "raw": "",
+    "html": ""
+  },
+  "_id": "customer/debora-von-scheliha.md",
+  "_raw": {
+    "sourceFilePath": "customer/debora-von-scheliha.md",
+    "sourceFileName": "debora-von-scheliha.md",
+    "sourceFileDir": "customer",
+    "contentType": "markdown",
+    "flattenedPath": "customer/debora-von-scheliha"
+  },
+  "type": "Customer"
+}

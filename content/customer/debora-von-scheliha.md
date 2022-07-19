@@ -1,8 +1,0 @@
----
-text: Wir schätzen die professionelle und kompetente Zusammenarbeit mit Blue
-  Star Marketing. Silke ist ein Partner, auf den wir uns insbesondere im Bereich
-  der Lead-Generierung verlassen können und der immer strukturiert und
-  lösungsorientiert agiert und dabei kreativ mitdenkt.
-customer: Debora Von Scheliha
-company: Head of Marketing DACH, Red Hat
----

@@ -11,7 +11,7 @@ import Animate from "../components/Animate";
 import Image from "next/image";
 import Multiline from "../components/Multiline";
 import Button from "../components/Button";
-import { allCustomers } from "contentlayer/generated";
+import { getAllJSON } from "lib/getMarkdown";
 
 // interface Props {
 //   pageData: typeof pageSource;
@@ -131,7 +131,8 @@ function Page({ pageData, footerData, reviews }) {
 export async function getStaticProps() {
   const pageData = await renderContent(pageSource);
   const footerData = await renderContent(footerSource);
-  const reviews = allCustomers;
+
+  const reviews = getAllJSON("customer");
 
   return {
     props: {

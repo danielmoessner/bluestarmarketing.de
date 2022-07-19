@@ -1,0 +1,18 @@
+{
+  "customer": "Waltraud Jung",
+  "text": "So macht Zusammenarbeit Spaß: professionell, kompetent, auf Augenhöhe und immer gut gelaunt! Unsere Kernkompetenzen haben sich bei der Organisation des Events super ergänzt und ich freue mich schon auf weitere spannende Projekte, die wir als unschlagbares Team bestreiten.",
+  "company": "Geschäftsführerin, Atlantik Network GmbH & Co. KG",
+  "body": {
+    "raw": "",
+    "html": ""
+  },
+  "_id": "customer/waltraud-jung.md",
+  "_raw": {
+    "sourceFilePath": "customer/waltraud-jung.md",
+    "sourceFileName": "waltraud-jung.md",
+    "sourceFileDir": "customer",
+    "contentType": "markdown",
+    "flattenedPath": "customer/waltraud-jung"
+  },
+  "type": "Customer"
+}

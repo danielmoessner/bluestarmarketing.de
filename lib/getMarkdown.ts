@@ -2,7 +2,6 @@ import matter from "gray-matter";
 import fs from "fs";
 import { join } from "path";
 import { Loaded, Markdown } from "../types/shared";
-import md from "markdown-it";
 
 interface Frontmatter {
   slug: string;
@@ -20,9 +19,7 @@ function loadMarkdown<T extends Frontmatter>(path: string): Markdown<T> {
   const content = fs.readFileSync(path, "utf8");
   const { data, content: markdown } = matter(content);
 
-  const html = md().render(markdown);
-
-  return { frontmatter: data, html: html, _path: path } as Markdown<T>;
+  return { ...data, markdown, _path: path } as Markdown<T>;
 }
 
 function loadFrontmatter<T extends Frontmatter>(
@@ -56,8 +53,8 @@ export function getAllMarkdown<T extends Frontmatter>(
 }
 
 export function findMarkdown<T extends Frontmatter>(
-  slug,
-  collection
+  collection,
+  slug
 ): Markdown<T> {
   const items = getAllMarkdown<T>(collection);
   const item = items.find((item) => item.slug === slug);

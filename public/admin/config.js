@@ -810,6 +810,7 @@ var customer = {
   editor: {
     preview: false
   },
+  extension: "json",
   folder: "content/customer",
   slug: "{{fields.customer}}",
   create: true,

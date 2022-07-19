@@ -1,8 +1,0 @@
----
-text: "So macht Zusammenarbeit Spaß: professionell, kompetent, auf Augenhöhe und
-  immer gut gelaunt! Unsere Kernkompetenzen haben sich bei der Organisation des
-  Events super ergänzt und ich freue mich schon auf weitere spannende Projekte,
-  die wir als unschlagbares Team bestreiten."
-customer: Waltraud Jung
-company: Geschäftsführerin, Atlantik Network GmbH & Co. KG
----

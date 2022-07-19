@@ -2,14 +2,20 @@ import React from "react";
 import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
 import Container from "../../components/Container";
-import { allLegals, Legal } from "contentlayer/generated";
+import { renderContent } from "lib/renderContent";
+import { findMarkdown, getAllMarkdown } from "lib/getMarkdown";
+import footerSource from "../../content/setting/footer.json";
+import Footer from "../../components/Footer";
+import { Rendered } from "types/shared";
+import { Legal } from "types/legal";
 
 interface Props {
-  page: Legal;
+  legalData: Rendered<Legal>;
+  footerData: Rendered<typeof footerSource>;
 }
 
-function Page({ page }: Props) {
-  const legal = page;
+function Page({ legalData, footerData }: Props) {
+  const legal = legalData;
 
   const meta = {
     title: legal.title,
@@ -25,11 +31,12 @@ function Page({ page }: Props) {
             <h1>{legal.title}</h1>
             <div
               // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: page.body.html }}
+              dangerouslySetInnerHTML={{ __html: legal.markdown.html }}
             />
           </article>
         </Container>
       </section>
+      <Footer data={footerData} />
     </Layout>
   );
 }
@@ -37,18 +44,20 @@ function Page({ page }: Props) {
 export default Page;
 
 export async function getStaticProps({ params }) {
-  const { slug } = params;
+  const legalData1 = findMarkdown("legal", params.slug);
+  const legalData = await renderContent(legalData1);
+  const footerData = await renderContent(footerSource);
 
-  const page = allLegals.find((i) => i.slug === slug);
   return {
     props: {
-      page,
+      legalData,
+      footerData,
     }, // will be passed to the page component as props
   };
 }
 
 export async function getStaticPaths() {
-  const items = allLegals;
+  const items = getAllMarkdown("legal");
 
   return {
     paths: items.map((i) => {

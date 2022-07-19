@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts", "../../../types/legal.ts"],
+  "sourcesContent": ["// import { Category } from \"./types/category\";\nimport { makeSource } from \"contentlayer/source-files\";\n// import { Animal } from \"./types/animal\";\nimport { Legal } from \"./types/legal\";\nimport { Customer } from \"types/customer\";\n\nexport default makeSource({\n  contentDirPath: \"content\",\n  contentDirExclude: [\"setting\", \"page\", \"category\", \"animal\"],\n  documentTypes: [Legal, Customer],\n});\n", "import { defineDocumentType } from \"contentlayer/source-files\";\n\nconst Legal = defineDocumentType(() => ({\n  name: \"Legal\",\n  filePathPattern: \"legal/*.md\",\n  fields: {\n    title: {\n      type: \"string\",\n    },\n    slug: {\n      type: \"string\",\n    },\n  },\n}));\n\nexport { Legal };\n"],
+  "mappings": ";AACA;;;ACDA;AAEA,IAAM,QAAQ,mBAAmB,MAAO;AAAA,EACtC,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,QAAQ;AAAA,IACN,OAAO;AAAA,MACL,MAAM;AAAA,IACR;AAAA,IACA,MAAM;AAAA,MACJ,MAAM;AAAA,IACR;AAAA,EACF;AACF,EAAE;;;ADTF;AAEA,IAAO,8BAAQ,WAAW;AAAA,EACxB,gBAAgB;AAAA,EAChB,mBAAmB,CAAC,WAAW,QAAQ,YAAY,QAAQ;AAAA,EAC3D,eAAe,CAAC,OAAO,QAAQ;AACjC,CAAC;",
+  "names": []
+}
