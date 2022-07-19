@@ -12,6 +12,8 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
           rel="stylesheet"
         />
+        {/* ccm19 */}
+        <Script src="https://cloud.ccm19.de/app.js?apiKey=b9e262b97b9aebc3dc1022716cb2b15f8caad1fd015abffe&amp;domain=62d66c6c9959420997529953"></Script>
         {/* google */}
         <Script
           strategy="afterInteractive"
