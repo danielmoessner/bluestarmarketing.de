@@ -378,7 +378,12 @@ var services = {
             },
             text_default,
             image_default,
-            cta_default
+            cta_default,
+            {
+              label: "Balkenfarbe",
+              name: "color",
+              widget: "string"
+            }
           ]
         }
       ]
@@ -393,7 +398,10 @@ var headerSmall = {
   label: "Header",
   name: "header",
   widget: "object",
-  fields: [{ label: "Bild", name: "image", widget: "image" }]
+  fields: [
+    { label: "Bild", name: "image", widget: "image" },
+    { label: "Balkenfarbe", name: "color", widget: "string" }
+  ]
 };
 var headerSmall_default = headerSmall;
 
@@ -557,14 +565,14 @@ var config = {
   files: [
     home_default,
     services_default,
-    marketingcampaign_default,
     strategyworkshop_default,
     marketingstrategy_default,
     salesmarketing_default,
+    marketingcampaign_default,
+    forYou_default,
     customers_default,
-    contact_default,
     starnews_default,
-    forYou_default
+    contact_default
   ]
 };
 var page_default = config;
