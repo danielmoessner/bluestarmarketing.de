@@ -62,14 +62,14 @@ function Component({ data }) {
         <div className="mt-2 mb-5">
           <div className="-mx-2.5 -my-1">
             <div className="flex flex-wrap items-center">
-              <a
-                href="#"
+              <button
+                className="text-base font-bold whitespace-pre-line px-2.5 py-1"
                 onClick={() => {
-                  CCM.openWidget();
+                  window.CCM.openWidget();
                 }}
               >
-                Konfigurationsbox öffnen
-              </a>
+                Cookie-Einstellungen
+              </button>
               {data.row2.map((item) => {
                 let element = <div>?</div>;
                 if (item.type === "text")
