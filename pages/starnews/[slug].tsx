@@ -23,7 +23,7 @@ function Page({ articleData, pageData, categoryData, footerData }) {
   return (
     <Layout>
       <Seo meta={meta} />
-      <section className="pt-12 pb-20">
+      <section className="pt-12 pb-12 lg:pb-20">
         <Container layout="sm">
           <BlogLayout aside={page.aside} categories={categoryData}>
             <article>

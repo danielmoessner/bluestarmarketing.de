@@ -31,7 +31,7 @@ function Page({ pageData, footerData }) {
             <Heading size="h1">{page.start.title}</Heading>
             {/* <HeadingStar /> */}
           </div>
-          <div className="mt-16">
+          <div className="mt-6 md:mt-10 lg:mt-16">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="leading-[0px]">
@@ -84,7 +84,7 @@ function Page({ pageData, footerData }) {
               </Heading>
             </div>
           </div>
-          <div className="relative grid gap-8 mt-8 lg:grid-cols-2">
+          <div className="relative grid gap-8 mt-4 lg:mt-8 lg:grid-cols-2">
             <div>
               <div className="">
                 <Multiline text={page.about.text} />
@@ -150,10 +150,10 @@ function Page({ pageData, footerData }) {
         </Container>
       </section>
 
-      <section className="py-32">
+      <section className="py-10 md:py-16 lg:py-32">
         <Container layout="sm">
           <div className="mx-auto text-center">
-            <Heading element="h2" size="h2">
+            <Heading element="h2" size="h3">
               {page.cta.title}
             </Heading>
             <p className="max-w-2xl mx-auto mt-5">{page.cta.text}</p>

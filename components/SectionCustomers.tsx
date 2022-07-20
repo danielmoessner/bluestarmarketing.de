@@ -6,12 +6,14 @@ import Button from "../components/Button";
 
 function Component({ customers }) {
   return (
-    <section className="py-32">
+    <section className="pt-12 pb-16 md:py-20 lg:py-32">
       <Container layout="sm">
         <div className="text-center">
-          <Heading size="h2">{customers.title}</Heading>
+          <Heading size="h3" element="h2">
+            {customers.title}
+          </Heading>
         </div>
-        <div className="relative mt-16">
+        <div className="relative mt-10 lg:mt-16">
           <Animate>
             <div className="absolute left-0 right-0 mx-auto -top-4 lg:-top-5">
               <svg

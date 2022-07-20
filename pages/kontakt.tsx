@@ -67,7 +67,7 @@ function Page({ pageData, footerData }) {
             <Heading size="h1">{page.start.title}</Heading>
             {/* <HeadingStar /> */}
           </div>
-          <div className="mt-16">
+          <div className="mt-6 md:mt-10 lg:mt-16">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="leading-[0px]">
@@ -118,7 +118,7 @@ function Page({ pageData, footerData }) {
                   alt={page.benefits.subtitle}
                 />
               </div>
-              <div className="mt-5">
+              <div className="mt-2 lg:mt-5">
                 <Multiline text={page.benefits.pretext} />
               </div>
               <ul className="mt-3 space-y-0.5">

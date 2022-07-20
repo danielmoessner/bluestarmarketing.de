@@ -7,7 +7,7 @@ function Component({
 }) {
   return (
     <div className={size}>
-      <div className="flex space-x-2">
+      <div className="flex flex-wrap space-x-2">
         <time className="">
           {new Date(article.date).toLocaleDateString("de-de")}
         </time>

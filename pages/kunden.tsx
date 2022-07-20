@@ -33,7 +33,7 @@ function Page({ pageData, footerData, reviews }) {
             <Heading size="h1">{page.start.title}</Heading>
             {/* <HeadingStar /> */}
           </div>
-          <div className="mt-16">
+          <div className="mt-6 md:mt-10 lg:mt-16">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="leading-[0px]">
@@ -61,7 +61,7 @@ function Page({ pageData, footerData, reviews }) {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center mt-10">
+              <div className="flex justify-center mt-6 lg:mt-10">
                 <Button href={page.start.cta.url}>{page.start.cta.text}</Button>
               </div>
             </Animate>
@@ -72,9 +72,11 @@ function Page({ pageData, footerData, reviews }) {
       <section className="pt-8 pb-32">
         <Container layout="sm">
           <div className="text-center">
-            <Heading size="h2">{page.customers.title}</Heading>
+            <Heading size="h3" element="h2">
+              {page.customers.title}
+            </Heading>
           </div>
-          <div className="mt-16">
+          <div className="mt-6 md:mt-10 lg:mt-16">
             <div className="-my-2 md:-my-4 columns-1 md:columns-2 md:gap-8">
               {reviews.map((item) => {
                 return (

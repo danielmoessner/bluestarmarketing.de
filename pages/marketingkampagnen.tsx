@@ -28,7 +28,7 @@ function Page({ pageData, footerData }) {
             </Heading>
             {/* <HeadingStar /> */}
           </div>
-          <div className="mt-16">
+          <div className="mt-6 md:mt-8 lg:mt-16">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
                 <div>
