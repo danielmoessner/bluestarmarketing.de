@@ -33,13 +33,13 @@ function Page({ pageData, footerData }) {
           <div className="text-center">
             <Heading size="h1">{page.start.title}</Heading>
           </div>
-          <div className="mt-16">
+          <div className="mt-4 md:mt-8 lg:mt-16">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
                 <ServiceLinks links={page.start.links} />
                 <div>
                   <Multiline text={page.start.text} />
-                  <div className="mt-8">
+                  <div className="mt-6 lg:mt-8">
                     <Button href={page.start.cta.url}>
                       {page.start.cta.text}
                     </Button>
@@ -69,7 +69,7 @@ function Page({ pageData, footerData }) {
           <div className="text-center">
             <Heading size="h2">{page.services.title}</Heading>
           </div>
-          <div className="mt-20 space-y-10">
+          <div className="mt-6 space-y-10 md:mt-10 lg:mt-16">
             {page.services.services.map((service) => (
               <div key={service.title}>
                 <Animate>

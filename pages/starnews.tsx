@@ -33,14 +33,14 @@ function Page({
   return (
     <Layout>
       <Seo meta={page.meta} />
-      <section className="py-16">
+      <section className="py-5 lg:py-16">
         <Container layout="sm">
           <div className="flex justify-center">
             <Heading element="h1" size="h1" showStar>
               {page.start.title}
             </Heading>
           </div>
-          <div className="mt-20">
+          <div className="mt-4 lg:mt-20">
             <BlogLayout
               aside={page.aside}
               categories={categoryData}

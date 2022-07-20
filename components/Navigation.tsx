@@ -24,7 +24,7 @@ function Component() {
                 <div className="flex items-center justify-between py-3 md:justify-start md:space-x-10">
                   <div className="flex justify-start h-12 md:w-0 md:flex-1">
                     <Link href="/">
-                      <a className="w-40">
+                      <a className="w-40 focus:outline-none">
                         <Image src={imageSrc} alt="Blue Star Marketing Logo" />
                       </a>
                     </Link>

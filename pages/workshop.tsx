@@ -28,7 +28,7 @@ function Page({ pageData, footerData }) {
             </Heading>
             {/* <HeadingStar /> */}
           </div>
-          <div className="mt-16">
+          <div className="mt-6 md:mt-8 lg:mt-16">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="leading-[0px]">
@@ -38,7 +38,7 @@ function Page({ pageData, footerData }) {
                   <Multiline text={page.start.text} />
                 </div>
               </div>
-              <div className="flex justify-center mt-8">
+              <div className="flex justify-center mt-6 lg:mt-8">
                 <Button href={page.start.cta.url}>{page.start.cta.text}</Button>
               </div>
             </Animate>

@@ -32,12 +32,12 @@ function Page({ pageData, footerData }) {
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
           <div className="text-center">
-            <Heading element="h1" size="h1">
+            <Heading element="h2" size="h1">
               {page.start.title}
             </Heading>
             {/* <HeadingStar /> */}
           </div>
-          <div className="mt-16">
+          <div className="mt-4 lg:mt-14">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
                 <div>
@@ -64,22 +64,26 @@ function Page({ pageData, footerData }) {
         <Container layout="sm">
           <div className="relative grid gap-8 lg:grid-cols-2">
             <div>
-              <div className="flex items-center space-x-3">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={page.about.textimage.src}
-                  className="h-14"
-                  alt={page.about.subtitle}
-                />
-                <Heading size="h2">{page.about.title}</Heading>
-              </div>
-              <div className="mt-2">
-                <p className="text-2xl font-bold">{page.about.subtitle}</p>
+              <div className="flex flex-col-reverse">
+                <div className="mt-2">
+                  <h2 className="text-2xl font-bold">{page.about.subtitle}</h2>
+                </div>
+                <div className="flex items-center space-x-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={page.about.textimage.src}
+                    className="h-14"
+                    alt={page.about.subtitle}
+                  />
+                  <Heading element="div" size="h2">
+                    {page.about.title}
+                  </Heading>
+                </div>
               </div>
               <div className="mt-8">
                 <Prose html={page.about.markdown.html} />
               </div>
-              <div className="mt-12">
+              <div className="mt-8 lg:mt-12">
                 <Button href={page.about.cta.url}>{page.about.cta.text}</Button>
               </div>
             </div>
@@ -97,11 +101,11 @@ function Page({ pageData, footerData }) {
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
           <div className="text-center">
-            <Heading size="h2" element="h2">
+            <Heading size="h3" element="h2">
               {page.travel.title}
             </Heading>
           </div>
-          <div className="mt-16">
+          <div className="mt-4 md:mt-8 lg:mt-12">
             <Animate>
               <div className="grid gap-8 lg:grid-cols-2">
                 <ServiceLinks links={page.travel.links} />
@@ -146,11 +150,11 @@ function Page({ pageData, footerData }) {
         <div className="relative">
           <Container layout="sm">
             <div className="text-center">
-              <Heading size="h2" element="h2">
+              <Heading size="h3" element="h2">
                 {page.services.title}
               </Heading>
             </div>
-            <div className="mt-20">
+            <div className="mt-8 md:mt-12 lg:mt-20">
               <div className="grid gap-10 md:grid-cols-3">
                 <SmallBox service={page.services.service1} />
                 <SmallBox service={page.services.service2} />
