@@ -27,8 +27,13 @@ function SEO({ meta }) {
       {image ? <meta name="twitter:image" content={image} /> : null}
 
       {/* Different Favicons */}
-      <link rel="icon" type="image/png" href={global.favicon} sizes="256x256" />
-      <link rel="apple-touch-icon" sizes="256x256" href={global.favicon} />
+      <link
+        rel="icon"
+        type="image/png"
+        href={global.de.favicon}
+        sizes="256x256"
+      />
+      <link rel="apple-touch-icon" sizes="256x256" href={global.de.favicon} />
     </Head>
   );
 }

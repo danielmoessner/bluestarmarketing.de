@@ -13,8 +13,8 @@ import globalSource from "../content/setting/global.json";
 import { useRouter } from "next/router";
 
 function Component() {
-  const { asPath, locale } = useRouter();
-  const languagePath = asPath.split("/").slice(0, 2).join("/");
+  const { locale } = useRouter();
+  // const languagePath = asPath.split("/").slice(0, 2).join("/");
   const navigation = navigationSource[locale];
   const global = globalSource[locale];
 
@@ -55,13 +55,13 @@ function Component() {
                       })}
 
                     <div className="hidden">
-                      <NextLink href={languagePath} locale="de">
+                      <NextLink href="/" locale="de">
                         <a className="hover:underline" href="">
                           DE
                         </a>
                       </NextLink>
                       /
-                      <NextLink href={languagePath} locale="en">
+                      <NextLink href="/" locale="en">
                         <a className="hover:underline" href="">
                           EN
                         </a>

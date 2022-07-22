@@ -57,10 +57,8 @@ export async function getStaticProps({ params, locale }) {
   };
 }
 
-export async function getStaticPaths(locales) {
-  const items = locales
-    .map((locale) => getAllMarkdown("article", locale))
-    .flat();
+export async function getStaticPaths({ locales }) {
+  const items = locales.map((locale) => getAllMarkdown("legal", locale)).flat();
 
   return {
     paths: items.map((i) => {
@@ -68,6 +66,7 @@ export async function getStaticPaths(locales) {
         params: {
           slug: i.slug,
         },
+        locale: i._locale,
       };
     }),
     fallback: false, // false or 'blocking'

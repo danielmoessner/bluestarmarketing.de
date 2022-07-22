@@ -3,7 +3,7 @@ import Script from "next/script";
 
 export default function Document() {
   return (
-    <Html lang="de">
+    <Html>
       <Head>
         {/* font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
