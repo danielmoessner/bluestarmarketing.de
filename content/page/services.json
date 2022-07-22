@@ -1,145 +1,292 @@
 {
-  "meta": {
-    "title": "Services",
-    "description": "Suchst du B2B-Marketing Services in der Tech-Industrie und DACH-Region? Dort liegt unser Fokus: Ganzheitliche Marketingstrategien - & kampagnen.",
-    "keywords": "b2b marketing, b2b marketing strategie, b2b marketing strategien, b2b marketing agentur, b2b tech marketing, integriertes marketing, business marketing, funnelstrategien"
-  },
-  "header": {
-    "image": "/media/bluestar_marketing_services.jpg",
-    "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
-    "cta": {
-      "text": "Jetzt Erstgespräch vereinbaren",
-      "url": "/kontakt"
-    }
-  },
-  "start": {
-    "title": "Wir lassen dich strahlen",
-    "text": "Entdecke die Potenziale, sichere dir mit der passenden Marketingstrategie und integrierten Kampagnen mit verlinkten Kampagnenelementen deinen Erfolg und Wachstumschancen. \nWir spüren Potenziale gemeinsam auf, verbinden und erarbeiten für dich und dein Team partnerschaftlich die Strategie und passgenaue Kampagnen innerhalb der Buyer’s Journey und für die Bereicherung eures Sales- und Marketing-Funnels. \nDer Schulterschluss von Marketing und Vertrieb auf allen Hierarchieebenen ist einer der wichtigsten Schlüssel zu Wachstum und Erfolg! \nSchlank aufgestellt, reagieren wir agil und prompt auf kurzfristige Anforderungen in der agilen IT-Branche. \nNutze gerne die strategischen Insights unseres leidenschaftlichen und spezialisierten Teams für langfristiges Wachstum!",
-    "cta": {
-      "text": "Potenziale entdecken – Kontakt aufnehmen",
-      "url": "/kontakt"
+  "de": {
+    "meta": {
+      "title": "Services",
+      "description": "Suchst du B2B-Marketing Services in der Tech-Industrie und DACH-Region? Dort liegt unser Fokus: Ganzheitliche Marketingstrategien - & kampagnen.",
+      "keywords": "b2b marketing, b2b marketing strategie, b2b marketing strategien, b2b marketing agentur, b2b tech marketing, integriertes marketing, business marketing, funnelstrategien"
     },
-    "links": [
-      {
-        "text": "Erstgespräch",
-        "url": "#erstgespraech"
-      },
-      {
-        "text": "Strategieworkshop",
-        "url": "#strategieworkshop"
-      },
-      {
-        "text": "Marketingstrategie",
-        "url": "#marketingstrategie"
-      },
-      {
-        "text": "Marketingkampagnen",
-        "url": "#marketingkampagnen"
-      },
-      {
-        "text": "Projektmanagement",
-        "url": "#projektmanagement"
+    "header": {
+      "image": "/media/bluestar_marketing_services.jpg",
+      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "cta": {
+        "text": "Jetzt Erstgespräch vereinbaren",
+        "url": "/kontakt"
       }
-    ]
-  },
-  "customers": {
-    "title": "DAS SAGEN UNSERE KUND:INNEN",
-    "text": "Gemeinsam auf Reisen mit Blue Star Marketing: Seit mein Verantwortungs- und Aufgabenbereich meinen zur Verfügung stehenden Zeitrahmen bereits 2019 wie auch aktuell durch die zunehmende Reisetätigkeit sprengte, suchte ich eine Lösung, um das Channel-Marketing nachhaltig und mit Lernkurve auf Wachstumskurs zu bringen. \nMit Silke habe ich jemanden gefunden, die mir mit Ideenreichtum, Begeisterung und einer enorm schnellen Auffassungsgabe Projekte vollumfänglich abnimmt. Egal, ob sie bei einem Job die Stafette übernimmt oder ob sie ein Konzept entwirft und umsetzt: Die Arbeit ist immer geprägt durch tiefgreifendes, aktuelles Marketing-Know-how in unserem Marktumfeld. Dadurch fühle ich mich besonders individuell und gut beraten und lasse mich gerne davon überzeugen, neue Wege zu gehen. Die Resultate sind überzeugend und von außergewöhnlicher Qualität. Mit Silke konnte ich die Ergebnisse meiner Aufgaben auf ein neues Level bringen und wachsen. In wenigen Worten: schnell, strukturiert, zuverlässig, begeistert und begeisternd. \nSo macht Zusammenarbeit Spaß.",
-    "customer": "Claudia Loche",
-    "company": "Senior Marketing Manager Germany Channel & Distribution, Trend Micro GmbH",
-    "cta": {
-      "text": "Mehr über unsere Kund:innen",
-      "url": "/kunden"
+    },
+    "start": {
+      "title": "Wir lassen dich strahlen",
+      "text": "Entdecke die Potenziale, sichere dir mit der passenden Marketingstrategie und integrierten Kampagnen mit verlinkten Kampagnenelementen deinen Erfolg und Wachstumschancen. \nWir spüren Potenziale gemeinsam auf, verbinden und erarbeiten für dich und dein Team partnerschaftlich die Strategie und passgenaue Kampagnen innerhalb der Buyer’s Journey und für die Bereicherung eures Sales- und Marketing-Funnels. \nDer Schulterschluss von Marketing und Vertrieb auf allen Hierarchieebenen ist einer der wichtigsten Schlüssel zu Wachstum und Erfolg! \nSchlank aufgestellt, reagieren wir agil und prompt auf kurzfristige Anforderungen in der agilen IT-Branche. \nNutze gerne die strategischen Insights unseres leidenschaftlichen und spezialisierten Teams für langfristiges Wachstum!",
+      "cta": {
+        "text": "Potenziale entdecken – Kontakt aufnehmen",
+        "url": "/kontakt"
+      },
+      "links": [
+        {
+          "text": "Erstgespräch",
+          "url": "#erstgespraech"
+        },
+        {
+          "text": "Strategieworkshop",
+          "url": "#strategieworkshop"
+        },
+        {
+          "text": "Marketingstrategie",
+          "url": "#marketingstrategie"
+        },
+        {
+          "text": "Marketingkampagnen",
+          "url": "#marketingkampagnen"
+        },
+        {
+          "text": "Projektmanagement",
+          "url": "#projektmanagement"
+        }
+      ]
+    },
+    "customers": {
+      "title": "DAS SAGEN UNSERE KUND:INNEN",
+      "text": "Gemeinsam auf Reisen mit Blue Star Marketing: Seit mein Verantwortungs- und Aufgabenbereich meinen zur Verfügung stehenden Zeitrahmen bereits 2019 wie auch aktuell durch die zunehmende Reisetätigkeit sprengte, suchte ich eine Lösung, um das Channel-Marketing nachhaltig und mit Lernkurve auf Wachstumskurs zu bringen. \nMit Silke habe ich jemanden gefunden, die mir mit Ideenreichtum, Begeisterung und einer enorm schnellen Auffassungsgabe Projekte vollumfänglich abnimmt. Egal, ob sie bei einem Job die Stafette übernimmt oder ob sie ein Konzept entwirft und umsetzt: Die Arbeit ist immer geprägt durch tiefgreifendes, aktuelles Marketing-Know-how in unserem Marktumfeld. Dadurch fühle ich mich besonders individuell und gut beraten und lasse mich gerne davon überzeugen, neue Wege zu gehen. Die Resultate sind überzeugend und von außergewöhnlicher Qualität. Mit Silke konnte ich die Ergebnisse meiner Aufgaben auf ein neues Level bringen und wachsen. In wenigen Worten: schnell, strukturiert, zuverlässig, begeistert und begeisternd. \nSo macht Zusammenarbeit Spaß.",
+      "customer": "Claudia Loche",
+      "company": "Senior Marketing Manager Germany Channel & Distribution, Trend Micro GmbH",
+      "cta": {
+        "text": "Mehr über unsere Kund:innen",
+        "url": "/kunden"
+      }
+    },
+    "services": {
+      "title": "Marketingreise zu Wachstum und Erfolg",
+      "services": [
+        {
+          "title": "Erstgespräch",
+          "id": "erstgespraech",
+          "text": "Wir freuen uns darauf, dich und dein Team kennenzulernen, um mehr über euer Marketing Set-Up und eure Herausforderungen zu erfahren. \nIm initialen Gespräch finden wir heraus, wo wir mit unseren Kernkompetenzen bereichernd und erfolgsversprechend gestalten und euer Marketingwachstum nachhaltig mit- und weiterentwickeln können.",
+          "image": "/media/service_erstgespraech.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/kontakt"
+          },
+          "side": "R",
+          "color": "#45b5cf"
+        },
+        {
+          "title": "Strategieworkshop",
+          "id": "strategieworkshop",
+          "text": "Unsere Reise startet mit einem tiefen Verständnis eures Status quo, der Geschäftsziele, eurer globalen und regionalen Marketingziele und aktuellen Herausforderungen. \nMit deiner Erlaubnis werfen wir einen Blick auf eure bestehende Marketingstrategie sowie die Marketingpläne und Kampagnen, um Stärken, Schwächen, Chancen und Risiken zu erkennen.",
+          "image": "/media/service_strategieworkshop.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/workshop"
+          },
+          "side": "L",
+          "color": "#00adea"
+        },
+        {
+          "title": "Marketingstrategie",
+          "id": "marketingstrategie",
+          "text": "Die Ergebnisse des Strategieworkshops fassen wir im Nachgang zu unserer Landkarte zusammen. Sie dient uns zur Priorisierung der Next Steps, Quick Wins und als Rahmen für die weitere Zusammenarbeit. \nBasierend auf unserem Strategieworkshop und dem vereinbarten Rahmen entwickeln wir Marketingkampagnen für dich und dein Team.",
+          "image": "/media/service_marketingstrategie.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/b2bmarketingstrategie"
+          },
+          "side": "L",
+          "color": "#2a7fc2"
+        },
+        {
+          "title": "Sales & Marketing Funnel",
+          "id": "sales-and-marketing-funnel",
+          "text": "An welchem Punkt benötigt eure Marketing-Pipeline einen echten Push? \nAn dieser Stelle benötigen wir einen Vertrauensvorschuss, denn Einblicke und Transparenz sind extrem relevant, um Schätze zu finden und Potenziale zu heben. Wir begrüßen und schätzen deine Offenheit, denn es stellen sich viele Fragen, beispielsweise ob bereits ausreichend Leads zur Zielerreichung generiert werden.",
+          "image": "/media/service_sales_marketing_funnel.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/marketingfunnel"
+          },
+          "side": "L",
+          "color": "#0f4988"
+        },
+        {
+          "title": "Marketingkampagnen",
+          "id": "marketingkampagnen",
+          "text": "Wir erfassen euren Marktkontext & Status quo und kombinieren neue Erkenntnisse zu Segmenten, Zielgruppen, Verticals und/ oder dem Partner-Ökosystem. Daraus leiten wir zielführende & integrierte Marketingkampagnen ab, verlinkt mit euren Zielen und eurer Strategie.  \nAuf Wunsch fokussieren wir uns auf definierte Teilaspekte der Gesamtstrategie und des Marketingplans.",
+          "image": "/media/service_marketingkampagnen.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/marketingkampagnen"
+          },
+          "side": "L",
+          "color": "#0f4988"
+        },
+        {
+          "title": "Projektmanagement",
+          "id": "projektmanagement",
+          "text": "Support der Extraklasse mit unserem Team, Partneragenturen & Experten oder gemeinsam mit eurer bevorzugten Full-Service-Agentur. \nInnerhalb eines vordefinierten Zeitrahmens und mit enger Erfolgskontrolle.",
+          "image": "/media/service_projektmanagement.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/kontakt"
+          },
+          "side": "R",
+          "color": "#162259"
+        },
+        {
+          "title": "Erfolge feiern",
+          "id": "erfolge-feiern",
+          "text": "In unserer schnelllebigen Zeit und in der IT-Branche ist es uns sehr wichtig, Erfolge zu feiern. Nimm dir einen Moment zum Feiern, Reflektieren und Genießen – gerne zusammen mit uns! \nDie Reflexion gibt uns die großartige Möglichkeit, zu optimieren und anzureichern, um beim nächsten Mal noch besser zu sein. \nJeden Tag und jeden Moment haben wir die Chance, zu wählen. Heute ist mein bester Tag*!",
+          "image": "/media/service_erfolgefeiern.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/kontakt"
+          },
+          "side": "R",
+          "color": "#dfeaf8",
+          "quote": "*Buch von Arthur Lassen"
+        }
+      ]
     }
   },
-  "services": {
-    "title": "Marketingreise zu Wachstum und Erfolg",
-    "services": [
-      {
-        "title": "Erstgespräch",
-        "id": "erstgespraech",
-        "text": "Wir freuen uns darauf, dich und dein Team kennenzulernen, um mehr über euer Marketing Set-Up und eure Herausforderungen zu erfahren. \nIm initialen Gespräch finden wir heraus, wo wir mit unseren Kernkompetenzen bereichernd und erfolgsversprechend gestalten und euer Marketingwachstum nachhaltig mit- und weiterentwickeln können.",
-        "image": "/media/service_erstgespraech.jpg",
-        "cta": {
-          "text": "Starte deine Marketingreise",
-          "url": "/kontakt"
-        },
-        "side": "R",
-        "color": "#45b5cf"
-      },
-      {
-        "title": "Strategieworkshop",
-        "id": "strategieworkshop",
-        "text": "Unsere Reise startet mit einem tiefen Verständnis eures Status quo, der Geschäftsziele, eurer globalen und regionalen Marketingziele und aktuellen Herausforderungen. \nMit deiner Erlaubnis werfen wir einen Blick auf eure bestehende Marketingstrategie sowie die Marketingpläne und Kampagnen, um Stärken, Schwächen, Chancen und Risiken zu erkennen.",
-        "image": "/media/service_strategieworkshop.jpg",
-        "cta": {
-          "text": "Starte deine Marketingreise",
-          "url": "/workshop"
-        },
-        "side": "L",
-        "color": "#00adea"
-      },
-      {
-        "title": "Marketingstrategie",
-        "id": "marketingstrategie",
-        "text": "Die Ergebnisse des Strategieworkshops fassen wir im Nachgang zu unserer Landkarte zusammen. Sie dient uns zur Priorisierung der Next Steps, Quick Wins und als Rahmen für die weitere Zusammenarbeit. \nBasierend auf unserem Strategieworkshop und dem vereinbarten Rahmen entwickeln wir Marketingkampagnen für dich und dein Team.",
-        "image": "/media/service_marketingstrategie.jpg",
-        "cta": {
-          "text": "Starte deine Marketingreise",
-          "url": "/b2bmarketingstrategie"
-        },
-        "side": "L",
-        "color": "#2a7fc2"
-      },
-      {
-        "title": "Sales & Marketing Funnel",
-        "id": "sales-and-marketing-funnel",
-        "text": "An welchem Punkt benötigt eure Marketing-Pipeline einen echten Push? \nAn dieser Stelle benötigen wir einen Vertrauensvorschuss, denn Einblicke und Transparenz sind extrem relevant, um Schätze zu finden und Potenziale zu heben. Wir begrüßen und schätzen deine Offenheit, denn es stellen sich viele Fragen, beispielsweise ob bereits ausreichend Leads zur Zielerreichung generiert werden.",
-        "image": "/media/service_sales_marketing_funnel.jpg",
-        "cta": {
-          "text": "Starte deine Marketingreise",
-          "url": "/marketingfunnel"
-        },
-        "side": "L",
-        "color": "#0f4988"
-      },
-      {
-        "title": "Marketingkampagnen",
-        "id": "marketingkampagnen",
-        "text": "Wir erfassen euren Marktkontext & Status quo und kombinieren neue Erkenntnisse zu Segmenten, Zielgruppen, Verticals und/ oder dem Partner-Ökosystem. Daraus leiten wir zielführende & integrierte Marketingkampagnen ab, verlinkt mit euren Zielen und eurer Strategie.  \nAuf Wunsch fokussieren wir uns auf definierte Teilaspekte der Gesamtstrategie und des Marketingplans.",
-        "image": "/media/service_marketingkampagnen.jpg",
-        "cta": {
-          "text": "Starte deine Marketingreise",
-          "url": "/marketingkampagnen"
-        },
-        "side": "L",
-        "color": "#0f4988"
-      },
-      {
-        "title": "Projektmanagement",
-        "id": "projektmanagement",
-        "text": "Support der Extraklasse mit unserem Team, Partneragenturen & Experten oder gemeinsam mit eurer bevorzugten Full-Service-Agentur. \nInnerhalb eines vordefinierten Zeitrahmens und mit enger Erfolgskontrolle.",
-        "image": "/media/service_projektmanagement.jpg",
-        "cta": {
-          "text": "Starte deine Marketingreise",
-          "url": "/kontakt"
-        },
-        "side": "R",
-        "color": "#162259"
-      },
-      {
-        "title": "Erfolge feiern",
-        "id": "erfolge-feiern",
-        "text": "In unserer schnelllebigen Zeit und in der IT-Branche ist es uns sehr wichtig, Erfolge zu feiern. Nimm dir einen Moment zum Feiern, Reflektieren und Genießen – gerne zusammen mit uns! \nDie Reflexion gibt uns die großartige Möglichkeit, zu optimieren und anzureichern, um beim nächsten Mal noch besser zu sein. \nJeden Tag und jeden Moment haben wir die Chance, zu wählen. Heute ist mein bester Tag*!",
-        "image": "/media/service_erfolgefeiern.jpg",
-        "cta": {
-          "text": "Starte deine Marketingreise",
-          "url": "/kontakt"
-        },
-        "side": "R",
-        "color": "#dfeaf8",
-        "quote": "*Buch von Arthur Lassen"
+  "en": {
+    "meta": {
+      "title": "Services",
+      "description": "Suchst du B2B-Marketing Services in der Tech-Industrie und DACH-Region? Dort liegt unser Fokus: Ganzheitliche Marketingstrategien - & kampagnen.",
+      "keywords": "b2b marketing, b2b marketing strategie, b2b marketing strategien, b2b marketing agentur, b2b tech marketing, integriertes marketing, business marketing, funnelstrategien"
+    },
+    "header": {
+      "image": "/media/bluestar_marketing_services.jpg",
+      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "cta": {
+        "text": "Jetzt Erstgespräch vereinbaren",
+        "url": "/kontakt"
       }
-    ]
+    },
+    "start": {
+      "title": "Wir lassen dich strahlen",
+      "text": "Entdecke die Potenziale, sichere dir mit der passenden Marketingstrategie und integrierten Kampagnen mit verlinkten Kampagnenelementen deinen Erfolg und Wachstumschancen. \nWir spüren Potenziale gemeinsam auf, verbinden und erarbeiten für dich und dein Team partnerschaftlich die Strategie und passgenaue Kampagnen innerhalb der Buyer’s Journey und für die Bereicherung eures Sales- und Marketing-Funnels. \nDer Schulterschluss von Marketing und Vertrieb auf allen Hierarchieebenen ist einer der wichtigsten Schlüssel zu Wachstum und Erfolg! \nSchlank aufgestellt, reagieren wir agil und prompt auf kurzfristige Anforderungen in der agilen IT-Branche. \nNutze gerne die strategischen Insights unseres leidenschaftlichen und spezialisierten Teams für langfristiges Wachstum!",
+      "cta": {
+        "text": "Potenziale entdecken – Kontakt aufnehmen",
+        "url": "/kontakt"
+      },
+      "links": [
+        {
+          "text": "Erstgespräch",
+          "url": "#erstgespraech"
+        },
+        {
+          "text": "Strategieworkshop",
+          "url": "#strategieworkshop"
+        },
+        {
+          "text": "Marketingstrategie",
+          "url": "#marketingstrategie"
+        },
+        {
+          "text": "Marketingkampagnen",
+          "url": "#marketingkampagnen"
+        },
+        {
+          "text": "Projektmanagement",
+          "url": "#projektmanagement"
+        }
+      ]
+    },
+    "services": {
+      "title": "Marketingreise zu Wachstum und Erfolg",
+      "services": [
+        {
+          "title": "Erstgespräch",
+          "id": "erstgespraech",
+          "text": "Wir freuen uns darauf, dich und dein Team kennenzulernen, um mehr über euer Marketing Set-Up und eure Herausforderungen zu erfahren. \nIm initialen Gespräch finden wir heraus, wo wir mit unseren Kernkompetenzen bereichernd und erfolgsversprechend gestalten und euer Marketingwachstum nachhaltig mit- und weiterentwickeln können.",
+          "image": "/media/service_erstgespraech.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/kontakt"
+          },
+          "side": "R",
+          "color": "#45b5cf"
+        },
+        {
+          "title": "Strategieworkshop",
+          "id": "strategieworkshop",
+          "text": "Unsere Reise startet mit einem tiefen Verständnis eures Status quo, der Geschäftsziele, eurer globalen und regionalen Marketingziele und aktuellen Herausforderungen. \nMit deiner Erlaubnis werfen wir einen Blick auf eure bestehende Marketingstrategie sowie die Marketingpläne und Kampagnen, um Stärken, Schwächen, Chancen und Risiken zu erkennen.",
+          "image": "/media/service_strategieworkshop.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/workshop"
+          },
+          "side": "L",
+          "color": "#00adea"
+        },
+        {
+          "title": "Marketingstrategie",
+          "id": "marketingstrategie",
+          "text": "Die Ergebnisse des Strategieworkshops fassen wir im Nachgang zu unserer Landkarte zusammen. Sie dient uns zur Priorisierung der Next Steps, Quick Wins und als Rahmen für die weitere Zusammenarbeit. \nBasierend auf unserem Strategieworkshop und dem vereinbarten Rahmen entwickeln wir Marketingkampagnen für dich und dein Team.",
+          "image": "/media/service_marketingstrategie.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/b2bmarketingstrategie"
+          },
+          "side": "L",
+          "color": "#2a7fc2"
+        },
+        {
+          "title": "Sales & Marketing Funnel",
+          "id": "sales-and-marketing-funnel",
+          "text": "An welchem Punkt benötigt eure Marketing-Pipeline einen echten Push? \nAn dieser Stelle benötigen wir einen Vertrauensvorschuss, denn Einblicke und Transparenz sind extrem relevant, um Schätze zu finden und Potenziale zu heben. Wir begrüßen und schätzen deine Offenheit, denn es stellen sich viele Fragen, beispielsweise ob bereits ausreichend Leads zur Zielerreichung generiert werden.",
+          "image": "/media/service_sales_marketing_funnel.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/marketingfunnel"
+          },
+          "side": "L",
+          "color": "#0f4988"
+        },
+        {
+          "title": "Marketingkampagnen",
+          "id": "marketingkampagnen",
+          "text": "Wir erfassen euren Marktkontext & Status quo und kombinieren neue Erkenntnisse zu Segmenten, Zielgruppen, Verticals und/ oder dem Partner-Ökosystem. Daraus leiten wir zielführende & integrierte Marketingkampagnen ab, verlinkt mit euren Zielen und eurer Strategie.  \nAuf Wunsch fokussieren wir uns auf definierte Teilaspekte der Gesamtstrategie und des Marketingplans.",
+          "image": "/media/service_marketingkampagnen.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/marketingkampagnen"
+          },
+          "side": "L",
+          "color": "#0f4988"
+        },
+        {
+          "title": "Projektmanagement",
+          "id": "projektmanagement",
+          "text": "Support der Extraklasse mit unserem Team, Partneragenturen & Experten oder gemeinsam mit eurer bevorzugten Full-Service-Agentur. \nInnerhalb eines vordefinierten Zeitrahmens und mit enger Erfolgskontrolle.",
+          "image": "/media/service_projektmanagement.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/kontakt"
+          },
+          "side": "R",
+          "color": "#162259"
+        },
+        {
+          "title": "Erfolge feiern",
+          "id": "erfolge-feiern",
+          "text": "In unserer schnelllebigen Zeit und in der IT-Branche ist es uns sehr wichtig, Erfolge zu feiern. Nimm dir einen Moment zum Feiern, Reflektieren und Genießen – gerne zusammen mit uns! \nDie Reflexion gibt uns die großartige Möglichkeit, zu optimieren und anzureichern, um beim nächsten Mal noch besser zu sein. \nJeden Tag und jeden Moment haben wir die Chance, zu wählen. Heute ist mein bester Tag*!",
+          "image": "/media/service_erfolgefeiern.jpg",
+          "cta": {
+            "text": "Starte deine Marketingreise",
+            "url": "/kontakt"
+          },
+          "side": "R",
+          "color": "#dfeaf8",
+          "quote": "*Buch von Arthur Lassen"
+        }
+      ]
+    },
+    "customers": {
+      "title": "DAS SAGEN UNSERE KUND:INNEN",
+      "text": "Gemeinsam auf Reisen mit Blue Star Marketing: Seit mein Verantwortungs- und Aufgabenbereich meinen zur Verfügung stehenden Zeitrahmen bereits 2019 wie auch aktuell durch die zunehmende Reisetätigkeit sprengte, suchte ich eine Lösung, um das Channel-Marketing nachhaltig und mit Lernkurve auf Wachstumskurs zu bringen. \nMit Silke habe ich jemanden gefunden, die mir mit Ideenreichtum, Begeisterung und einer enorm schnellen Auffassungsgabe Projekte vollumfänglich abnimmt. Egal, ob sie bei einem Job die Stafette übernimmt oder ob sie ein Konzept entwirft und umsetzt: Die Arbeit ist immer geprägt durch tiefgreifendes, aktuelles Marketing-Know-how in unserem Marktumfeld. Dadurch fühle ich mich besonders individuell und gut beraten und lasse mich gerne davon überzeugen, neue Wege zu gehen. Die Resultate sind überzeugend und von außergewöhnlicher Qualität. Mit Silke konnte ich die Ergebnisse meiner Aufgaben auf ein neues Level bringen und wachsen. In wenigen Worten: schnell, strukturiert, zuverlässig, begeistert und begeisternd. \nSo macht Zusammenarbeit Spaß.",
+      "customer": "Claudia Loche",
+      "company": "Senior Marketing Manager Germany Channel & Distribution, Trend Micro GmbH",
+      "cta": {
+        "text": "Mehr über unsere Kund:innen",
+        "url": "/kunden"
+      }
+    }
   }
 }

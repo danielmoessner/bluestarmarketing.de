@@ -3,31 +3,56 @@ var meta = {
   label: "Meta",
   name: "meta",
   widget: "object",
+  i18n: true,
   fields: [
-    { label: "Titel", name: "title", widget: "string" },
-    { label: "Beschreibung", name: "description", widget: "text" },
-    { label: "Bild", name: "image", widget: "image", required: false },
+    { label: "Titel", name: "title", widget: "string", i18n: true },
+    { label: "Beschreibung", name: "description", widget: "text", i18n: true },
+    {
+      label: "Bild",
+      name: "image",
+      widget: "image",
+      required: false,
+      i18n: true
+    },
     {
       label: "Keywords",
       name: "keywords",
       widget: "markdown",
-      required: false
+      required: false,
+      i18n: true
     }
   ]
 };
 var meta_default = meta;
 
 // cms/symbols/link.ts
+var externalLinkFields = [
+  {
+    label: "Text",
+    i18n: true,
+    name: "text",
+    widget: "string"
+  },
+  {
+    label: "url",
+    i18n: true,
+    name: "url",
+    widget: "string",
+    hint: "Die URL sollte nicht auf die selbe Seite zeigen, kann aber alles enthalten. Beispiele: mailto:kontakt@tortuga-webdesign.de oder https://tortuga-webdesign.de/referenzen/"
+  }
+];
 var internalLinkFields = [
   {
     label: "Text",
     name: "text",
-    type: "string"
+    i18n: true,
+    widget: "string"
   },
   {
     label: "url",
     name: "url",
-    type: "string",
+    i18n: true,
+    widget: "string",
     hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf oder /kontakt"
   }
 ];
@@ -36,13 +61,15 @@ var internalLinkFields = [
 var header = {
   label: "Header",
   name: "header",
+  i18n: true,
   widget: "object",
   fields: [
-    { label: "Bild", name: "image", widget: "image" },
-    { label: "Text", name: "text", widget: "text" },
+    { label: "Bild", name: "image", i18n: true, widget: "image" },
+    { label: "Text", name: "text", i18n: true, widget: "text" },
     {
       label: "CTA",
       name: "cta",
+      i18n: true,
       widget: "object",
       fields: internalLinkFields
     }
@@ -51,15 +78,30 @@ var header = {
 var header_default = header;
 
 // cms/symbols/title.ts
-var title = { label: "Titel", name: "title", widget: "string" };
+var title = {
+  label: "Titel",
+  name: "title",
+  widget: "string",
+  i18n: true
+};
 var title_default = title;
 
 // cms/symbols/image.ts
-var image = { label: "Bild", name: "image", widget: "image" };
+var image = {
+  label: "Bild",
+  name: "image",
+  widget: "image",
+  i18n: true
+};
 var image_default = image;
 
 // cms/symbols/text.ts
-var text = { label: "Text", name: "text", widget: "text" };
+var text = {
+  label: "Text",
+  name: "text",
+  widget: "text",
+  i18n: true
+};
 var text_default = text;
 
 // cms/page/contact.ts
@@ -67,42 +109,54 @@ var contact = {
   file: "content/page/contact.json",
   label: "Kontakt",
   name: "contact",
+  i18n: true,
   fields: [
     meta_default,
     header_default,
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title_default, image_default, text_default]
     },
     {
       label: "Benefits",
       name: "benefits",
+      i18n: true,
       widget: "object",
       fields: [
         title_default,
-        { label: "Untertitel", name: "subtitle", widget: "string" },
+        { label: "Untertitel", name: "subtitle", i18n: true, widget: "string" },
         {
           label: "Textbild",
           name: "textimage",
+          i18n: true,
           widget: "image",
           required: false
         },
         {
           label: "Text Vorher",
           name: "pretext",
+          i18n: true,
           widget: "text"
         },
         {
           label: "Punkte",
           name: "points",
+          i18n: true,
           widget: "list",
-          field: { label: "Punkt", name: "punkt", widget: "string" }
+          field: {
+            label: "Punkt",
+            name: "punkt",
+            i18n: true,
+            widget: "string"
+          }
         },
         {
           label: "Text Nachher",
           name: "aftertext",
+          i18n: true,
           widget: "text"
         },
         image_default
@@ -111,6 +165,7 @@ var contact = {
     {
       label: "Formular",
       name: "form",
+      i18n: true,
       widget: "object",
       fields: [
         title_default,
@@ -118,11 +173,13 @@ var contact = {
         {
           label: "E-Mail Text",
           name: "emailtext",
+          i18n: true,
           widget: "string"
         },
         {
           label: "Telefon Text",
           name: "phonetext",
+          i18n: true,
           widget: "string"
         }
       ]
@@ -135,6 +192,7 @@ var contact_default = contact;
 var cta = {
   label: "CTA",
   name: "cta",
+  i18n: true,
   widget: "object",
   fields: internalLinkFields
 };
@@ -144,6 +202,7 @@ var cta_default = cta;
 var customers = {
   file: "content/page/customers.json",
   label: "Unsere Kunden",
+  i18n: true,
   name: "customers",
   fields: [
     meta_default,
@@ -151,6 +210,7 @@ var customers = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [
         title_default,
@@ -159,16 +219,19 @@ var customers = {
         {
           label: "Text Vorher",
           name: "pretext",
+          i18n: true,
           widget: "text"
         },
         {
           label: "Text Nachher",
           name: "aftertext",
+          i18n: true,
           widget: "text"
         },
         {
           label: "Textbild",
           name: "textimage",
+          i18n: true,
           widget: "image",
           required: false
         },
@@ -178,6 +241,7 @@ var customers = {
     {
       label: "Kundenstimmen",
       name: "customers",
+      i18n: true,
       widget: "object",
       fields: [title_default]
     }
@@ -189,14 +253,16 @@ var customers_default = customers;
 var customersSection = {
   label: "Kunden",
   name: "customers",
+  i18n: true,
   widget: "object",
   fields: [
     title_default,
     text_default,
-    { label: "Kunde", name: "customer", widget: "string" },
+    { label: "Kunde", name: "customer", i18n: true, widget: "string" },
     {
       label: "Unternehmen",
       name: "company",
+      i18n: true,
       widget: "string",
       required: false
     },
@@ -209,18 +275,25 @@ var customersSection_default = customersSection;
 var markdown = {
   label: "Markdown",
   name: "markdown",
+  i18n: true,
   widget: "markdown"
 };
 var markdown_default = markdown;
 
 // cms/symbols/svg.ts
-var svg = { label: "SVG", name: "svg", widget: "string" };
+var svg = {
+  label: "SVG",
+  name: "svg",
+  widget: "string",
+  i18n: true
+};
 var svg_default = svg;
 
 // cms/page/home.ts
 var service = (n) => ({
   label: "Service",
   name: `service${n}`,
+  i18n: true,
   widget: "object",
   fields: [title_default, text_default, cta_default]
 });
@@ -228,23 +301,26 @@ var home = {
   file: "content/page/home.json",
   label: "Startseite",
   name: "home",
+  i18n: true,
   fields: [
     meta_default,
     header_default,
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title_default, text_default, cta_default, svg_default]
     },
     {
       label: "Wir sind",
       name: "about",
+      i18n: true,
       widget: "object",
       fields: [
-        { label: "Textbild", name: "textimage", widget: "image" },
+        { label: "Textbild", name: "textimage", i18n: true, widget: "image" },
         title_default,
-        { label: "Untertitel", name: "subtitle", widget: "string" },
+        { label: "Untertitel", name: "subtitle", i18n: true, widget: "string" },
         markdown_default,
         cta_default,
         image_default
@@ -253,12 +329,14 @@ var home = {
     {
       label: "Marketingreise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [
         title_default,
         {
           label: "Links",
           name: "links",
+          i18n: true,
           widget: "list",
           fields: internalLinkFields
         },
@@ -269,6 +347,7 @@ var home = {
     {
       label: "Services",
       name: "services",
+      i18n: true,
       widget: "object",
       fields: [title_default, service(1), service(2), service(3)]
     },
@@ -281,6 +360,7 @@ var home_default = home;
 var forYou = {
   file: "content/page/forYou.json",
   label: "F\xFCr dich",
+  i18n: true,
   name: "forYou",
   fields: [
     meta_default,
@@ -288,17 +368,20 @@ var forYou = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title_default, image_default, text_default]
     },
     {
       label: "\xDCber uns",
       name: "about",
+      i18n: true,
       widget: "object",
       fields: [
         {
           label: "Textbild",
           name: "textimage",
+          i18n: true,
           widget: "image",
           required: false
         },
@@ -308,16 +391,19 @@ var forYou = {
         {
           label: "Zitat",
           name: "quote1",
+          i18n: true,
           widget: "text"
         },
         {
           label: "Zitat",
           name: "quote2",
+          i18n: true,
           widget: "text"
         },
         {
           label: "Nach Zitat",
           name: "afterquote",
+          i18n: true,
           widget: "text"
         },
         cta_default
@@ -326,6 +412,7 @@ var forYou = {
     {
       label: "CTA",
       name: "cta",
+      i18n: true,
       widget: "object",
       fields: [title_default, text_default, cta_default]
     }
@@ -337,6 +424,7 @@ var forYou_default = forYou;
 var services = {
   file: "content/page/services.json",
   label: "Services",
+  i18n: true,
   name: "services",
   fields: [
     meta_default,
@@ -344,12 +432,14 @@ var services = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [
         title_default,
         {
           label: "Links",
           name: "links",
+          i18n: true,
           widget: "list",
           fields: internalLinkFields
         },
@@ -360,19 +450,22 @@ var services = {
     {
       label: "Services",
       name: "services",
+      i18n: true,
       widget: "object",
       fields: [
         title_default,
         {
           label: "Services",
           name: "services",
+          i18n: true,
           widget: "list",
           fields: [
             title_default,
-            { label: "ID", name: "id", widget: "string" },
+            { label: "ID", name: "id", i18n: true, widget: "string" },
             {
               label: "Seite",
               name: "side",
+              i18n: true,
               widget: "select",
               options: ["L", "R"]
             },
@@ -380,6 +473,7 @@ var services = {
             {
               label: "Zitat",
               name: "quote",
+              i18n: true,
               widget: "string",
               required: false
             },
@@ -388,6 +482,7 @@ var services = {
             {
               label: "Balkenfarbe",
               name: "color",
+              i18n: true,
               widget: "string"
             }
           ]
@@ -403,10 +498,16 @@ var services_default = services;
 var headerSmall = {
   label: "Header",
   name: "header",
+  i18n: true,
   widget: "object",
   fields: [
-    { label: "Bild", name: "image", widget: "image" },
-    { label: "Balkenfarbe", name: "color", widget: "string" }
+    { label: "Bild", name: "image", i18n: "translate", widget: "image" },
+    {
+      label: "Balkenfarbe",
+      name: "color",
+      widget: "string",
+      i18n: "translate"
+    }
   ]
 };
 var headerSmall_default = headerSmall;
@@ -415,6 +516,7 @@ var headerSmall_default = headerSmall;
 var strategyworkshop = {
   file: "content/page/strategyworkshop.json",
   label: "Strategieworkshop",
+  i18n: true,
   name: "strategyworkshop",
   fields: [
     meta_default,
@@ -422,11 +524,12 @@ var strategyworkshop = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [
         title_default,
         text_default,
-        { label: "Text Fett", name: "boldtext", widget: "text" },
+        { label: "Text Fett", name: "boldtext", i18n: true, widget: "text" },
         image_default,
         cta_default
       ]
@@ -434,6 +537,7 @@ var strategyworkshop = {
     {
       label: "Reise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [title_default, svg_default, cta_default]
     }
@@ -446,18 +550,21 @@ var marketingstrategy = {
   file: "content/page/marketingstrategy.json",
   label: "Marketingstrategie",
   name: "marketingstrategy",
+  i18n: true,
   fields: [
     meta_default,
     headerSmall_default,
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title_default, markdown_default, image_default, cta_default]
     },
     {
       label: "Reise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [title_default, svg_default, cta_default]
     }
@@ -469,6 +576,7 @@ var marketingstrategy_default = marketingstrategy;
 var salesmarketing = {
   file: "content/page/salesmarketing.json",
   label: "Sales- & Marketingfunnel",
+  i18n: true,
   name: "salesmarketing",
   fields: [
     meta_default,
@@ -476,12 +584,14 @@ var salesmarketing = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title_default, markdown_default, image_default, cta_default, svg_default]
     },
     {
       label: "Reise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [title_default, svg_default, cta_default]
     }
@@ -494,18 +604,21 @@ var marketingcampaign = {
   file: "content/page/marketingcampaign.json",
   label: "Marketingkampagnen",
   name: "marketingcampaign",
+  i18n: true,
   fields: [
     meta_default,
     headerSmall_default,
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title_default, markdown_default, image_default, svg_default, cta_default]
     },
     {
       label: "Reise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [title_default, svg_default, cta_default]
     }
@@ -518,11 +631,13 @@ var starnews = {
   file: "content/page/starnews.json",
   label: "Star News",
   name: "starnews",
+  i18n: true,
   fields: [
     meta_default,
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [
         title_default,
@@ -530,6 +645,7 @@ var starnews = {
         {
           label: "Artikel",
           name: "article",
+          i18n: true,
           widget: "relation",
           collection: "article",
           value_field: "slug",
@@ -539,6 +655,7 @@ var starnews = {
         {
           label: "Button",
           name: "button",
+          i18n: true,
           widget: "string"
         }
       ]
@@ -546,9 +663,15 @@ var starnews = {
     {
       label: "Seite",
       name: "aside",
+      i18n: true,
       widget: "object",
       fields: [
-        { label: "Titel Kategorien", name: "categories", widget: "string" },
+        {
+          label: "Titel Kategorien",
+          name: "categories",
+          i18n: true,
+          widget: "string"
+        },
         image_default,
         title_default,
         text_default,
@@ -565,6 +688,10 @@ var config = {
   label: "Seiten",
   label_singular: "Seite",
   delete: false,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
   editor: {
     preview: false
   },
@@ -592,6 +719,7 @@ var category = {
   editor: {
     preview: false
   },
+  i18n: true,
   folder: "content/category",
   slug: "{{slug}}",
   create: true,
@@ -600,55 +728,33 @@ var category = {
     {
       label: "Slug",
       name: "slug",
-      widget: "string"
+      widget: "string",
+      i18n: true
     }
   ]
 };
 var category_default = category;
 
 // cms/setting/footer.ts
-var linkFields = [
-  {
-    label: "Text",
-    name: "text",
-    type: "string"
-  },
-  {
-    label: "url",
-    name: "url",
-    type: "string",
-    hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf/ oder /kontakt/"
-  }
-];
 var link = {
   label: "Interner Link",
   name: "link",
+  i18n: true,
   widget: "object",
-  fields: linkFields,
+  fields: internalLinkFields,
   collapsed: false
 };
 var text2 = {
   label: "Text",
   name: "text",
+  i18n: true,
   widget: "object",
-  fields: [{ label: "Text", name: "text", widget: "text" }]
+  fields: [{ label: "Text", name: "text", i18n: true, widget: "text" }]
 };
-var externalLinkFields = [
-  {
-    label: "Text",
-    name: "text",
-    type: "string"
-  },
-  {
-    label: "url",
-    name: "url",
-    type: "string",
-    hint: "Die URL sollte nicht auf die selbe Seite zeigen, kann aber alles enthalten. Beispiele: mailto:kontakt@tortuga-webdesign.de oder https://tortuga-webdesign.de/referenzen/"
-  }
-];
 var externalLink = {
   label: "Externer Link",
   name: "externalLink",
+  i18n: true,
   widget: "object",
   fields: externalLinkFields,
   collapsed: false
@@ -657,24 +763,28 @@ var footer = {
   file: "content/setting/footer.json",
   label: "Footer",
   name: "footer",
+  i18n: true,
   fields: [
     {
       label: "Bilder",
       name: "images",
+      i18n: true,
       widget: "list",
       collapsed: false,
-      field: { label: "Bild", name: "image", widget: "image" }
+      field: { label: "Bild", name: "image", i18n: true, widget: "image" }
     },
     {
       label: "Zeile 1",
       name: "row1",
+      i18n: true,
       widget: "object",
       collapsed: false,
       fields: [
-        { label: "Copyright", name: "copyright", widget: "string" },
+        { label: "Copyright", name: "copyright", i18n: true, widget: "string" },
         {
           label: "Inhalt",
           name: "content",
+          i18n: true,
           widget: "list",
           types: [link, externalLink, text2]
         }
@@ -683,6 +793,7 @@ var footer = {
     {
       label: "Zeile 2",
       name: "row2",
+      i18n: true,
       widget: "list",
       collapsed: false,
       types: [link, externalLink, text2]
@@ -696,31 +807,37 @@ var global = {
   file: "content/setting/global.json",
   label: "Global",
   name: "global",
+  i18n: true,
   fields: [
-    { label: "Favicon", name: "favicon", widget: "image" },
+    { label: "Favicon", name: "favicon", i18n: "translate", widget: "image" },
     {
       label: "E-Mail",
       name: "email",
+      i18n: true,
       widget: "string"
     },
     {
       label: "Handy",
       name: "mobile",
+      i18n: "translate",
       widget: "string"
     },
     {
       label: "Festnetz",
       name: "phone",
+      i18n: "translate",
       widget: "string"
     },
     {
       label: "LinkedIn",
       name: "linkedin",
+      i18n: "translate",
       widget: "string"
     },
     {
       label: "WhatsApp",
       name: "whatsapp",
+      i18n: "translate",
       widget: "string"
     }
   ]
@@ -728,53 +845,46 @@ var global = {
 var global_default = global;
 
 // cms/setting/navigation.ts
-var linkFields2 = [
-  {
-    label: "Text",
-    name: "text",
-    type: "string"
-  },
-  {
-    label: "url",
-    name: "url",
-    type: "string",
-    hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf/ oder /kontakt/"
-  }
-];
 var link2 = {
   label: "Normales Item",
   name: "link",
+  i18n: true,
   widget: "object",
-  fields: linkFields2,
+  fields: internalLinkFields,
   collapsed: false
 };
 var links = {
   label: "Dropdown Item",
   name: "links",
+  i18n: true,
   widget: "object",
   collapsed: false,
   fields: [
     {
       label: "Text",
       name: "text",
+      i18n: true,
       widget: "string"
     },
     {
       label: "Links",
       name: "links",
+      i18n: true,
       widget: "list",
-      fields: linkFields2
+      fields: internalLinkFields
     }
   ]
 };
 var navigation = {
   file: "content/setting/navigation.json",
   label: "Navigation",
+  i18n: true,
   name: "navigation",
   fields: [
     {
       label: "Links",
       name: "links",
+      i18n: true,
       widget: "list",
       collapsed: false,
       types: [link2, links]
@@ -789,6 +899,10 @@ var setting = {
   label: "Einstellungen",
   label_singular: "Einstellung",
   delete: false,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
   editor: {
     preview: false
   },
@@ -807,11 +921,12 @@ var legal = {
   },
   folder: "content/legal",
   slug: "{{fields.slug}}",
+  i18n: true,
   create: true,
   fields: [
-    { label: "Titel", name: "title", widget: "string" },
-    { label: "Slug", name: "slug", widget: "string" },
-    { label: "Inhalt", name: "body", widget: "markdown" }
+    { label: "Titel", name: "title", i18n: true, widget: "string" },
+    { label: "Slug", name: "slug", i18n: true, widget: "string" },
+    { label: "Inhalt", name: "body", i18n: true, widget: "markdown" }
   ]
 };
 var legal_default = legal;
@@ -824,16 +939,18 @@ var customer = {
   editor: {
     preview: false
   },
+  i18n: true,
   extension: "json",
   folder: "content/customer",
   slug: "{{fields.customer}}",
   create: true,
   fields: [
-    { label: "Text", name: "text", widget: "text" },
-    { label: "Kunde", name: "customer", widget: "string" },
+    { label: "Text", name: "text", i18n: true, widget: "text" },
+    { label: "Kunde", name: "customer", i18n: true, widget: "string" },
     {
       label: "Unternehmen",
       name: "company",
+      i18n: true,
       widget: "string",
       required: false
     }
@@ -846,6 +963,7 @@ var article = {
   name: "article",
   label: "Artikel",
   label_singular: "Artikel",
+  i18n: true,
   editor: {
     preview: false
   },
@@ -858,24 +976,37 @@ var article = {
     {
       label: "Bildnachweis",
       name: "credit",
+      i18n: true,
       widget: "string",
       required: false
     },
-    { label: "Preview Bild", name: "previewimage", widget: "image" },
+    {
+      label: "Preview Bild",
+      name: "previewimage",
+      i18n: true,
+      widget: "image"
+    },
     title_default,
-    { label: "Slug", name: "slug", widget: "string" },
-    { label: "Datum", name: "date", widget: "datetime", time_format: false },
+    { label: "Slug", name: "slug", i18n: true, widget: "string" },
+    {
+      label: "Datum",
+      name: "date",
+      i18n: true,
+      widget: "datetime",
+      time_format: false
+    },
     {
       label: "Kategorien",
       name: "categories",
+      i18n: true,
       widget: "relation",
       multiple: true,
       collection: "category",
       search_fields: ["title"],
       value_field: "title"
     },
-    { label: "Auszug", name: "excerpt", widget: "text" },
-    { label: "Inhalt", name: "markdown", widget: "markdown" }
+    { label: "Auszug", name: "excerpt", i18n: true, widget: "text" },
+    { label: "Inhalt", name: "markdown", i18n: true, widget: "markdown" }
   ]
 };
 var article_default = article;
@@ -883,6 +1014,11 @@ var article_default = article;
 // cms/config.ts
 var config2 = {
   publish_mode: "editorial_workflow",
+  i18n: {
+    structure: "multiple_folders",
+    locales: ["de", "en"],
+    default_locale: "de"
+  },
   backend: {
     name: "git-gateway",
     branch: "main",

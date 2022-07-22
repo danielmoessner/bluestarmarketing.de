@@ -43,18 +43,18 @@ function Page({ articleData, pageData, categoryData, footerData }) {
 
 export default Page;
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
   const { slug } = params;
 
-  const items = getAllJson("article");
+  const items = getAllJson("article", locale);
 
   const articleDataSource = items.find((i) => i.slug === slug);
   const articleData = await renderContent(articleDataSource);
 
-  const pageData = await renderContent(pageSource);
-  const categoryData = getAllJson("category");
+  const pageData = await renderContent(pageSource[locale]);
+  const categoryData = getAllJson("category", locale);
 
-  const footerData = await renderContent(footerSource);
+  const footerData = await renderContent(footerSource[locale]);
 
   return {
     props: {
@@ -66,8 +66,8 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths() {
-  const items = getAllJson("article");
+export async function getStaticPaths({ locales }) {
+  const items = locales.map((locale) => getAllJson("article", locale)).flat();
 
   return {
     paths: items.map((i) => {
@@ -75,6 +75,7 @@ export async function getStaticPaths() {
         params: {
           slug: i.slug,
         },
+        locale: i._locale,
       };
     }),
     fallback: false,

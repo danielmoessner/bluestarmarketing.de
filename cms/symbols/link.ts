@@ -1,15 +1,17 @@
-import { CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
+import { CmsField, CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
 
-const externalLinkFields = [
+export const externalLinkFields: CmsField[] = [
   {
     label: "Text",
+    i18n: true,
     name: "text",
-    type: "string",
+    widget: "string",
   },
   {
     label: "url",
+    i18n: true,
     name: "url",
-    type: "string",
+    widget: "string",
     hint: "Die URL sollte nicht auf die selbe Seite zeigen, kann aber alles enthalten. Beispiele: mailto:kontakt@tortuga-webdesign.de oder https://tortuga-webdesign.de/referenzen/",
   },
 ];
@@ -18,20 +20,23 @@ export const externalLink: CmsFieldBase & CmsFieldObject = {
   label: "Externer Link",
   name: "externalLink",
   widget: "object",
+  i18n: true,
   fields: externalLinkFields,
   collapsed: false,
 };
 
-export const internalLinkFields = [
+export const internalLinkFields: CmsField[] = [
   {
     label: "Text",
     name: "text",
-    type: "string",
+    i18n: true,
+    widget: "string",
   },
   {
     label: "url",
     name: "url",
-    type: "string",
+    i18n: true,
+    widget: "string",
     hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf oder /kontakt",
   },
 ];
@@ -39,6 +44,7 @@ export const internalLinkFields = [
 export const internalLink: CmsFieldBase & CmsFieldObject = {
   label: "Interner Link",
   name: "link",
+  i18n: true,
   widget: "object",
   fields: internalLinkFields,
   collapsed: false,

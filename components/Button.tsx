@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Link from "next/link";
+import Link from "./TranslatedLink";
 import ChildrenData from "../types/ChildrenData";
 import { useRef } from "react";
 

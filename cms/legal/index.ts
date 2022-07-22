@@ -10,11 +10,12 @@ const legal: CmsCollection = {
   },
   folder: "content/legal",
   slug: "{{fields.slug}}",
+  i18n: true,
   create: true,
   fields: [
-    { label: "Titel", name: "title", widget: "string" },
-    { label: "Slug", name: "slug", widget: "string" },
-    { label: "Inhalt", name: "body", widget: "markdown" },
+    { label: "Titel", name: "title", i18n: true, widget: "string" },
+    { label: "Slug", name: "slug", i18n: true, widget: "string" },
+    { label: "Inhalt", name: "body", i18n: true, widget: "markdown" },
   ],
 };
 

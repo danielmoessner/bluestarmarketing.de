@@ -78,9 +78,9 @@ function Page({ pageData, footerData }) {
   );
 }
 
-export async function getStaticProps() {
-  const pageData = await renderContent(pageSource);
-  const footerData = await renderContent(footerSource);
+export async function getStaticProps({ locale }) {
+  const pageData = await renderContent(pageSource[locale]);
+  const footerData = await renderContent(footerSource[locale]);
 
   return {
     props: {

@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
-import pageSource from "../content/page/home.json";
+import pageSource from "../content/page/home.de.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
 import Footer from "../components/Footer";
@@ -51,9 +51,9 @@ function Page({ pageData, footerData }) {
   );
 }
 
-export async function getStaticProps() {
-  const pageData = await renderContent(pageSource);
-  const footerData = await renderContent(footerSource);
+export async function getStaticProps({locale}) {
+  const pageData = await renderContent(pageSource[locale]);
+  const footerData = await renderContent(footerSource[locale]);
 
   return {
     props: {

@@ -11,6 +11,7 @@ import customersSection from "cms/symbols/customersSection";
 const services: CmsCollectionFile = {
   file: "content/page/services.json",
   label: "Services",
+  i18n: true,
   name: "services",
   fields: [
     meta,
@@ -18,12 +19,14 @@ const services: CmsCollectionFile = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [
         title,
         {
           label: "Links",
           name: "links",
+          i18n: true,
           widget: "list",
           fields: internalLinkFields,
         },
@@ -34,19 +37,22 @@ const services: CmsCollectionFile = {
     {
       label: "Services",
       name: "services",
+      i18n: true,
       widget: "object",
       fields: [
         title,
         {
           label: "Services",
           name: "services",
+          i18n: true,
           widget: "list",
           fields: [
             title,
-            { label: "ID", name: "id", widget: "string" },
+            { label: "ID", name: "id", i18n: true, widget: "string" },
             {
               label: "Seite",
               name: "side",
+              i18n: true,
               widget: "select",
               options: ["L", "R"],
             },
@@ -54,6 +60,7 @@ const services: CmsCollectionFile = {
             {
               label: "Zitat",
               name: "quote",
+              i18n: true,
               widget: "string",
               required: false,
             },
@@ -62,6 +69,7 @@ const services: CmsCollectionFile = {
             {
               label: "Balkenfarbe",
               name: "color",
+              i18n: true,
               widget: "string",
             },
           ],

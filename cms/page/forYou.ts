@@ -9,6 +9,7 @@ import cta from "cms/symbols/cta";
 const forYou: CmsCollectionFile = {
   file: "content/page/forYou.json",
   label: "Für dich",
+  i18n: true,
   name: "forYou",
   fields: [
     meta,
@@ -16,17 +17,20 @@ const forYou: CmsCollectionFile = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title, image, text],
     },
     {
       label: "Über uns",
       name: "about",
+      i18n: true,
       widget: "object",
       fields: [
         {
           label: "Textbild",
           name: "textimage",
+          i18n: true,
           widget: "image",
           required: false,
         },
@@ -36,16 +40,19 @@ const forYou: CmsCollectionFile = {
         {
           label: "Zitat",
           name: "quote1",
+          i18n: true,
           widget: "text",
         },
         {
           label: "Zitat",
           name: "quote2",
+          i18n: true,
           widget: "text",
         },
         {
           label: "Nach Zitat",
           name: "afterquote",
+          i18n: true,
           widget: "text",
         },
         cta,
@@ -54,6 +61,7 @@ const forYou: CmsCollectionFile = {
     {
       label: "CTA",
       name: "cta",
+      i18n: true,
       widget: "object",
       fields: [title, text, cta],
     },

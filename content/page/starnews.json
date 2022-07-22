@@ -1,22 +1,46 @@
 {
-  "meta": {
-    "description": "Star News: B2B Marketing News für dich von uns: wir lassen dich strahlen! Happy reading für alle Marketingsterne",
-    "title": "Star News"
-  },
-  "start": {
-    "title": "Star News",
-    "image": "/media/bluestar_birthday_2_rocket.jpg",
-    "article": "konfettieregen-trommelwirbel-und-wunderkerzen",
-    "button": "Mehr erfahren"
-  },
-  "aside": {
-    "image": "/media/bluestar_marketing_starnews.jpg",
-    "title": "Wir sind Blue Star Marketing, der B2B-Marketingpartner an deiner Seite",
-    "text": "Wir gestalten und entwickeln zielgerichtete, und integrierte B2B-Marketingstrategien und -pläne für dich – verlinkt und passgenau zugeschnitten auf euren Marketing- und Geschäftserfolg. ",
-    "cta": {
-      "text": "Mehr über uns",
-      "url": "/kontakt"
+  "de": {
+    "meta": {
+      "description": "Star News: B2B Marketing News für dich von uns: wir lassen dich strahlen! Happy reading für alle Marketingsterne",
+      "title": "Star News"
     },
-    "categories": "Kategorien"
+    "start": {
+      "title": "Star News",
+      "image": "/media/bluestar_birthday_2_rocket.jpg",
+      "article": "konfettieregen-trommelwirbel-und-wunderkerzen",
+      "button": "Mehr erfahren"
+    },
+    "aside": {
+      "image": "/media/bluestar_marketing_starnews.jpg",
+      "title": "Wir sind Blue Star Marketing, der B2B-Marketingpartner an deiner Seite",
+      "text": "Wir gestalten und entwickeln zielgerichtete, und integrierte B2B-Marketingstrategien und -pläne für dich – verlinkt und passgenau zugeschnitten auf euren Marketing- und Geschäftserfolg. ",
+      "cta": {
+        "text": "Mehr über uns",
+        "url": "/kontakt"
+      },
+      "categories": "Kategorien"
+    }
+  },
+  "en": {
+    "meta": {
+      "description": "Star News: B2B Marketing News für dich von uns: wir lassen dich strahlen! Happy reading für alle Marketingsterne",
+      "title": "Star News"
+    },
+    "start": {
+      "title": "Star News",
+      "image": "/media/bluestar_birthday_2_rocket.jpg",
+      "article": "english",
+      "button": "Mehr erfahren"
+    },
+    "aside": {
+      "image": "/media/bluestar_marketing_starnews.jpg",
+      "title": "Wir sind Blue Star Marketing, der B2B-Marketingpartner an deiner Seite",
+      "text": "Wir gestalten und entwickeln zielgerichtete, und integrierte B2B-Marketingstrategien und -pläne für dich – verlinkt und passgenau zugeschnitten auf euren Marketing- und Geschäftserfolg. ",
+      "cta": {
+        "text": "Mehr über uns",
+        "url": "/kontakt"
+      },
+      "categories": "Kategorien"
+    }
   }
 }

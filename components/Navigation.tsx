@@ -1,18 +1,22 @@
 import { Fragment } from "react";
-import Link from "next/link";
+import Link from "./TranslatedLink";
+import NextLink from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Container from "./Container";
 import NavigationDropdown from "./NavigationDropdown";
 import NavigationLink from "./NavigationLink";
-import data from "../content/setting/navigation.json";
+import navigationSource from "../content/setting/navigation.json";
 import Image from "next/image";
 import imageSrc from "../public/logo_bluestar_300px.svg";
 import globalSource from "../content/setting/global.json";
+import { useRouter } from "next/router";
 
 function Component() {
-  const navigation = data;
-  const global = globalSource;
+  const { asPath, locale } = useRouter();
+  const languagePath = asPath.split("/").slice(0, 2).join("/");
+  const navigation = navigationSource[locale];
+  const global = globalSource[locale];
 
   return (
     <nav className="border-b shadow-sm">
@@ -49,6 +53,20 @@ function Component() {
                           );
                         return "?";
                       })}
+
+                    <div className="hidden">
+                      <NextLink href={languagePath} locale="de">
+                        <a className="hover:underline" href="">
+                          DE
+                        </a>
+                      </NextLink>
+                      /
+                      <NextLink href={languagePath} locale="en">
+                        <a className="hover:underline" href="">
+                          EN
+                        </a>
+                      </NextLink>
+                    </div>
                     <div className="flex pl-3 space-x-4">
                       <a
                         href={global.linkedin}
@@ -63,6 +81,7 @@ function Component() {
                           alt="LinkedIn Icon"
                         />
                       </a>
+
                       <a
                         href={global.whatsapp}
                         className="block"

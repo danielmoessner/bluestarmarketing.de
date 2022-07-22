@@ -11,18 +11,21 @@ const marketingcampaign: CmsCollectionFile = {
   file: "content/page/marketingcampaign.json",
   label: "Marketingkampagnen",
   name: "marketingcampaign",
+  i18n: true,
   fields: [
     meta,
     headerSmall,
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title, markdown, image, svg, cta],
     },
     {
       label: "Reise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [title, svg, cta],
     },

@@ -13,6 +13,7 @@ import svg from "cms/symbols/svg";
 const service = (n: number): CmsField => ({
   label: "Service",
   name: `service${n}`,
+  i18n: true,
   widget: "object",
   fields: [title, text, cta],
 });
@@ -21,23 +22,26 @@ const home: CmsCollectionFile = {
   file: "content/page/home.json",
   label: "Startseite",
   name: "home",
+  i18n: true,
   fields: [
     meta,
     header,
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title, text, cta, svg],
     },
     {
       label: "Wir sind",
       name: "about",
+      i18n: true,
       widget: "object",
       fields: [
-        { label: "Textbild", name: "textimage", widget: "image" },
+        { label: "Textbild", name: "textimage", i18n: true, widget: "image" },
         title,
-        { label: "Untertitel", name: "subtitle", widget: "string" },
+        { label: "Untertitel", name: "subtitle", i18n: true, widget: "string" },
         markdown,
         cta,
         image,
@@ -46,12 +50,14 @@ const home: CmsCollectionFile = {
     {
       label: "Marketingreise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [
         title,
         {
           label: "Links",
           name: "links",
+          i18n: true,
           widget: "list",
           fields: internalLinkFields,
         },
@@ -62,6 +68,7 @@ const home: CmsCollectionFile = {
     {
       label: "Services",
       name: "services",
+      i18n: true,
       widget: "object",
       fields: [title, service(1), service(2), service(3)],
     },

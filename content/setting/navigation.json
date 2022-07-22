@@ -1,31 +1,62 @@
 {
-  "collection": "setting",
-  "slug": "navigation",
-  "links": [
-    {
-      "type": "link",
-      "text": "Services",
-      "url": "/services"
-    },
-    {
-      "type": "link",
-      "text": "Für dich",
-      "url": "/fuerdich"
-    },
-    {
-      "type": "link",
-      "text": "Unsere Kunden",
-      "url": "/kunden"
-    },
-    {
-      "type": "link",
-      "text": "Star News",
-      "url": "/starnews"
-    },
-    {
-      "type": "link",
-      "text": "Kontakt",
-      "url": "/kontakt"
-    }
-  ]
+  "de": {
+    "collection": "setting",
+    "slug": "navigation",
+    "links": [
+      {
+        "type": "link",
+        "text": "Services",
+        "url": "/services"
+      },
+      {
+        "type": "link",
+        "text": "Für dich",
+        "url": "/fuerdich"
+      },
+      {
+        "type": "link",
+        "text": "Unsere Kunden",
+        "url": "/kunden"
+      },
+      {
+        "type": "link",
+        "text": "Star News",
+        "url": "/starnews"
+      },
+      {
+        "type": "link",
+        "text": "Kontakt",
+        "url": "/kontakt"
+      }
+    ]
+  },
+  "en": {
+    "links": [
+      {
+        "type": "link",
+        "text": "Services",
+        "url": "/services"
+      },
+      {
+        "type": "link",
+        "text": "Für dich",
+        "url": "/fuerdich"
+      },
+      {
+        "type": "link",
+        "text": "Unsere Kunden",
+        "url": "/kunden"
+      },
+      {
+        "type": "link",
+        "text": "Star News",
+        "url": "/starnews"
+      },
+      {
+        "type": "link",
+        "text": "Kontakt",
+        "url": "/kontakt"
+      }
+    ]
+  }
 }

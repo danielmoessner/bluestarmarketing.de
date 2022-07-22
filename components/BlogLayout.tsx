@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "../components/Button";
-import Link from "next/link";
+import Link from "./TranslatedLink";
 
 function Component({ children, categories, aside, current = "---" }) {
   return (
@@ -15,7 +15,9 @@ function Component({ children, categories, aside, current = "---" }) {
             <ul className="mt-4 space-y-2">
               {categories.map((category) => (
                 <li key={category.title}>
-                  <Link href={`/starnews?c=${category.title}`}>
+                  <Link
+                    href={`/starnews?c=${encodeURIComponent(category.title)}`}
+                  >
                     <a
                       className={
                         category.title.includes(current) ? "underline" : ""

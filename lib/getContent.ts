@@ -12,49 +12,64 @@ export type MarkdownLoaded<T> = T & { markdown: string; _path: string };
 
 export type JsonLoaded<T> = T & { _path: string };
 
-function readFile(collection: string, filename: string) {
-  const fullPath = join(process.cwd(), "content", collection, filename);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  return { content: fileContents, path: fullPath };
+function readFile(filename: string) {
+  const fileContents = fs.readFileSync(filename, "utf8");
+  return { content: fileContents, path: filename };
 }
 
 function loadMarkdown<T extends CmsObject>(
-  collection,
-  filename
+  filename,
+  attrs = {}
 ): MarkdownLoaded<T> {
-  const { content, path } = readFile(collection, filename);
+  const { content, path } = readFile(filename);
   const { data, content: markdown } = matter(content);
 
-  return { ...data, markdown, _path: path } as MarkdownLoaded<T>;
+  return { ...data, markdown, _path: path, ...attrs } as MarkdownLoaded<T>;
 }
 
-function loadJson<T extends CmsObject>(
-  collection,
-  filename
-): T & { _path: string } {
-  const { content, path } = readFile(collection, filename);
+function loadJson<T extends CmsObject, A extends Record<string, string>>(
+  filename,
+  attrs: A = null
+): T & { _path: string } & A {
+  const { content, path } = readFile(filename);
   const data = JSON.parse(content);
-  return { ...data, _path: path } as T & { _path: string };
+  return { ...data, _path: path, ...attrs } as T & { _path: string } & A;
 }
 
 export function getAllMarkdown<T extends CmsObject>(
-  collection: string
+  collection: string,
+  locale = ""
 ): MarkdownLoaded<T>[] {
-  const collectionDirectory = join(process.cwd(), "content", collection);
+  const collectionDirectory = join(
+    process.cwd(),
+    "content",
+    collection,
+    locale
+  );
   const filenames = fs.readdirSync(collectionDirectory);
   const items = filenames.map((filename) =>
-    loadMarkdown<T>(collection, filename)
+    loadMarkdown<T>(`${collectionDirectory}/${filename}`, { _locale: locale })
   );
 
   return items;
 }
 
 export function getAllJson<T extends CmsObject>(
-  collection: string
+  collection: string,
+  locale = ""
 ): JsonLoaded<T>[] {
-  const collectionDirectory = join(process.cwd(), "content", collection);
+  const collectionDirectory = join(
+    process.cwd(),
+    "content",
+    collection,
+    locale
+  );
   const filenames = fs.readdirSync(collectionDirectory);
-  const items = filenames.map((filename) => loadJson<T>(collection, filename));
+  const items = filenames.map((filename) =>
+    loadJson<T, { _locale: string }>(`${collectionDirectory}/${filename}`, {
+      _locale: locale,
+    })
+  );
 
   return items;
 }

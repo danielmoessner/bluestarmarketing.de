@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-import Link from "next/link";
+import Link from "./TranslatedLink";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import NavigationLink from "./NavigationLink";

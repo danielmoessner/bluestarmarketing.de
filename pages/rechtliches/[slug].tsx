@@ -43,11 +43,11 @@ function Page({ legalData, footerData }: Props) {
 
 export default Page;
 
-export async function getStaticProps({ params }) {
-  const legalData1 = getAllMarkdown("legal");
+export async function getStaticProps({ params, locale }) {
+  const legalData1 = getAllMarkdown("legal", locale);
   const legalData2 = legalData1.find((i) => i.slug === params.slug);
   const legalData = await renderContent(legalData2);
-  const footerData = await renderContent(footerSource);
+  const footerData = await renderContent(footerSource[locale]);
 
   return {
     props: {
@@ -57,8 +57,10 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths() {
-  const items = getAllMarkdown("legal");
+export async function getStaticPaths(locales) {
+  const items = locales
+    .map((locale) => getAllMarkdown("article", locale))
+    .flat();
 
   return {
     paths: items.map((i) => {

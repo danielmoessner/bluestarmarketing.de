@@ -9,11 +9,13 @@ const starnews: CmsCollectionFile = {
   file: "content/page/starnews.json",
   label: "Star News",
   name: "starnews",
+  i18n: true,
   fields: [
     meta,
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [
         title,
@@ -21,6 +23,7 @@ const starnews: CmsCollectionFile = {
         {
           label: "Artikel",
           name: "article",
+          i18n: true,
           widget: "relation",
           collection: "article",
           value_field: "slug",
@@ -30,6 +33,7 @@ const starnews: CmsCollectionFile = {
         {
           label: "Button",
           name: "button",
+          i18n: true,
           widget: "string",
         },
       ],
@@ -37,9 +41,15 @@ const starnews: CmsCollectionFile = {
     {
       label: "Seite",
       name: "aside",
+      i18n: true,
       widget: "object",
       fields: [
-        { label: "Titel Kategorien", name: "categories", widget: "string" },
+        {
+          label: "Titel Kategorien",
+          name: "categories",
+          i18n: true,
+          widget: "string",
+        },
         image,
         title,
         text,

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "./TranslatedLink";
 import { PlusIcon } from "@heroicons/react/outline";
 
 function Component({ links }) {

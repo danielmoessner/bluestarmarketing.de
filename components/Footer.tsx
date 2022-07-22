@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Link from "./TranslatedLink";
 import Container from "./Container";
 // import footerSource from "../content/setting/footer.json";
 import Image from "next/image";

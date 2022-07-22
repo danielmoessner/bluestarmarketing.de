@@ -9,6 +9,7 @@ const category: CmsCollection = {
   editor: {
     preview: false,
   },
+  i18n: true,
   folder: "content/category",
   slug: "{{slug}}",
   create: true,
@@ -18,6 +19,7 @@ const category: CmsCollection = {
       label: "Slug",
       name: "slug",
       widget: "string",
+      i18n: true,
     },
   ],
 };

@@ -59,5 +59,3 @@ export type Rendered<T> = RenderedMarkdown<RenderedImage<T>>;
 //     html: "test",
 //   } as RenderedMarkdown,
 // };
-
-// console.log(o.src);
