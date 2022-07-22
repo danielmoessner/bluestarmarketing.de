@@ -34,9 +34,9 @@ const nextConfig = {
   async rewrites() {
     return translationRewrites;
   },
-  async redirects() {
-    return translationRedirects;
-  },
+  // async redirects() {
+  //   return translationRedirects;
+  // },
 };
 
 module.exports = nextConfig;
