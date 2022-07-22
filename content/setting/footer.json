@@ -1,47 +1,96 @@
 {
-  "row1": {
-    "copyright": "© 2022 Blue Star Marketing GmbH & Co. KG",
-    "content": [
+  "de": {
+    "row1": {
+      "copyright": "© 2022 Blue Star Marketing GmbH & Co. KG",
+      "content": [
+        {
+          "type": "externalLink",
+          "text": "Web Creation: Daniel Mössner",
+          "url": "https://tortuga-webdesign.de"
+        },
+        {
+          "type": "externalLink",
+          "text": "Design: Annika Lind",
+          "url": "https://annikalind-grafikdesign.de"
+        },
+        {
+          "type": "externalLink",
+          "text": "Fotos: Kitty Fried",
+          "url": "https://www.kitty-fried.de"
+        }
+      ]
+    },
+    "row2": [
       {
-        "type": "externalLink",
-        "text": "Web Creation: Daniel Mössner",
-        "url": "https://tortuga-webdesign.de"
+        "type": "link",
+        "text": "Impressum",
+        "url": "/rechtliches/impressum/"
       },
       {
-        "type": "externalLink",
-        "text": "Design: Annika Lind",
-        "url": "https://annikalind-grafikdesign.de"
+        "type": "link",
+        "text": "Datenschutzerklärung",
+        "url": "/rechtliches/datenschutz/"
       },
       {
-        "type": "externalLink",
-        "text": "Fotos: Kitty Fried",
-        "url": "https://www.kitty-fried.de"
+        "type": "link",
+        "text": "Kontakt",
+        "url": "/#kontakt"
       }
+    ],
+    "images": [
+      "/media/bluestar_footer_1.jpg",
+      "/media/bluestar_footer_2.jpg",
+      "/media/bluestar_footer_3.jpg",
+      "/media/bluestar_footer_4.jpg",
+      "/media/bluestar_footer_5.jpg",
+      "/media/bluestar_footer_6.jpg"
     ]
   },
-  "row2": [
-    {
-      "type": "link",
-      "text": "Impressum",
-      "url": "/rechtliches/impressum/"
+  "en": {
+    "images": [
+      "/media/bluestar_footer_1.jpg",
+      "/media/bluestar_footer_2.jpg",
+      "/media/bluestar_footer_3.jpg",
+      "/media/bluestar_footer_4.jpg",
+      "/media/bluestar_footer_5.jpg",
+      "/media/bluestar_footer_6.jpg"
+    ],
+    "row1": {
+      "copyright": "© 2022 Blue Star Marketing GmbH & Co. KG",
+      "content": [
+        {
+          "type": "externalLink",
+          "text": "Web Creation: Daniel Mössner",
+          "url": "https://tortuga-webdesign.de"
+        },
+        {
+          "type": "externalLink",
+          "text": "Design: Annika Lind",
+          "url": "https://annikalind-grafikdesign.de"
+        },
+        {
+          "type": "externalLink",
+          "text": "Fotos: Kitty Fried",
+          "url": "https://www.kitty-fried.de"
+        }
+      ]
     },
-    {
-      "type": "link",
-      "text": "Datenschutzerklärung",
-      "url": "/rechtliches/datenschutz/"
-    },
-    {
-      "type": "link",
-      "text": "Kontakt",
-      "url": "/#kontakt"
-    }
-  ],
-  "images": [
-    "/media/bluestar_footer_1.jpg",
-    "/media/bluestar_footer_2.jpg",
-    "/media/bluestar_footer_3.jpg",
-    "/media/bluestar_footer_4.jpg",
-    "/media/bluestar_footer_5.jpg",
-    "/media/bluestar_footer_6.jpg"
-  ]
+    "row2": [
+      {
+        "type": "link",
+        "text": "Impressum",
+        "url": "/rechtliches/impressum/"
+      },
+      {
+        "type": "link",
+        "text": "Datenschutzerklärung",
+        "url": "/rechtliches/datenschutz/"
+      },
+      {
+        "type": "link",
+        "text": "Kontakt",
+        "url": "/#kontakt"
+      }
+    ]
+  }
 }

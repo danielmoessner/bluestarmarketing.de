@@ -8,6 +8,10 @@ const setting: CmsCollection = {
   label: "Einstellungen",
   label_singular: "Einstellung",
   delete: false,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"],
+  },
   editor: {
     preview: false,
   },

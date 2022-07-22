@@ -10,6 +10,7 @@ import svg from "cms/symbols/svg";
 const strategyworkshop: CmsCollectionFile = {
   file: "content/page/strategyworkshop.json",
   label: "Strategieworkshop",
+  i18n: true,
   name: "strategyworkshop",
   fields: [
     meta,
@@ -17,11 +18,12 @@ const strategyworkshop: CmsCollectionFile = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [
         title,
         text,
-        { label: "Text Fett", name: "boldtext", widget: "text" },
+        { label: "Text Fett", name: "boldtext", i18n: true, widget: "text" },
         image,
         cta,
       ],
@@ -29,6 +31,7 @@ const strategyworkshop: CmsCollectionFile = {
     {
       label: "Reise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [title, svg, cta],
     },

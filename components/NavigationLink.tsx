@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 // import { Link } from "gatsby";
-import Link from "next/link";
+import Link from "./TranslatedLink";
 // import { Transition } from '@headlessui/react';
 
 function Component({ link }) {

@@ -8,6 +8,12 @@ import article from "./article";
 
 const config: CmsConfig = {
   publish_mode: "editorial_workflow",
+  // See https://www.netlifycms.org/docs/beta-features/#i18n-support
+  i18n: {
+    structure: "multiple_folders",
+    locales: ["de", "en"],
+    default_locale: "de",
+  },
   // See https://www.netlifycms.org/docs/configuration-options/#backend
   backend: {
     name: "git-gateway",

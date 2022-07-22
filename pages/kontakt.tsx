@@ -17,9 +17,9 @@ import Animate from "../components/Animate";
 //   footerData: typeof footerSource;
 // }
 
-function Page({ pageData, footerData }) {
+function Page({ pageData, footerData, globalData }) {
   const page = pageData;
-  const global = globalSource;
+  const global = globalData;
 
   const fields = [
     {
@@ -214,14 +214,16 @@ function Page({ pageData, footerData }) {
   );
 }
 
-export async function getStaticProps() {
-  const pageData = await renderContent(pageSource);
-  const footerData = await renderContent(footerSource);
+export async function getStaticProps({ locale }) {
+  const pageData = await renderContent(pageSource[locale]);
+  const footerData = await renderContent(footerSource[locale]);
+  const globalData = await renderContent(globalSource[locale]);
 
   return {
     props: {
       pageData,
       footerData,
+      globalData,
     },
   };
 }

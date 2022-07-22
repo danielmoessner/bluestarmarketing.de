@@ -1,41 +1,84 @@
 {
-  "meta": {
-    "title": "Für dich",
-    "description": "Der B2B-Marketingpartner für Tech-Unternehmen: erstklassig verlinkte Kampagnen für Wachstum & Erfolg.",
-    "keywords": "Marketingerfolg, Marketingwachstum, Zielerreichung, Marketingpartner                                                     "
-  },
-  "header": {
-    "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
-    "image": "/media/bluestar_fuer_dich.jpg",
+  "de": {
+    "meta": {
+      "title": "Für dich",
+      "description": "Der B2B-Marketingpartner für Tech-Unternehmen: erstklassig verlinkte Kampagnen für Wachstum & Erfolg.",
+      "keywords": "Marketingerfolg, Marketingwachstum, Zielerreichung, Marketingpartner                                                     "
+    },
+    "header": {
+      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "image": "/media/bluestar_fuer_dich.jpg",
+      "cta": {
+        "text": "Jetzt Erstgespräch vereinbaren",
+        "url": "/kontakt"
+      }
+    },
+    "start": {
+      "title": "Wir lassen dich strahlen",
+      "text": "Im Marktkontext, in Kundensegmenten, im Partner-Ökosystem und in Verticals wie Manufacturing und Public sprechen wir genauso gerne über die Bedrohungslandschaft oder die Netzwerkinfrastruktur wie über Marketingstrategien und -kampagnen. Ganz egal, ob Cloud, SaaS, IoT, IT-Monitoring oder Cybersicherheit, wir kennen das Umfeld. \nWir sind analytisch, schnell und gleichzeitig intuitiv. Und wir bringen die Dinge gerne auf den Punkt. Dabei sprühen wir vor Freude und Begeisterung und bieten dir und deinem Team mehr als 20 Jahre B2B-Marketingexpertise in allen Field-Marketing-Disziplinen, inklusive Channel- & Alliance-Marketing im IT-Sektor. ",
+      "image": "/media/wir_sind_bluestarmarketing_1.jpg"
+    },
+    "about": {
+      "title": "Blue Star Marketing",
+      "text": "DER B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen!\nWir bringen ein tiefgreifendes Verständnis deiner individuellen Situation in unsere Partnerschaft & Zusammenarbeit ein und schöpfen aus einem Fundus an Erfahrung auf Herstellerseite des Schreibtisches zurück.\nAus diesem Erfahrungsschatz heraus gestalten und entwickeln wir zielgerichtete, und integrierte B2B-Marketingstrategien und -pläne für dich – verlinkt und passgenau zugeschnitten auf euren Marketing- und Geschäftserfolg.",
+      "quote1": "„Begeisterung ist der Zunder in uns, der Funken schlagen will.“*",
+      "quote2": "„Die Idee, der Plan, die Strategie allein reichen nicht. Sie sind lediglich das Holz. Erst deine Begeisterung erweckt das Feuer zum Leben.“ **",
+      "afterquote": "* Johann Gottfried Herder\n** Franz X. Bühler in Mehr… vom Kopf ins Herz",
+      "cta": {
+        "text": "Lerne uns kennen",
+        "url": "/kontakt"
+      },
+      "image": "/media/wir_sind_bluestarmarketing_2.jpg",
+      "textimage": "/media/wir_sind_219px.png"
+    },
     "cta": {
-      "text": "Jetzt Erstgespräch vereinbaren",
-      "url": "/kontakt"
+      "title": "Auf deiner Marketingreise an deiner Seite",
+      "text": "Unsere Erfolgsgeschichte sowie unsere Kernkompetenzen und Stärken im Marketingmanagement werden zu unserer Freude von unseren zufriedenen Kunden bestätigt.",
+      "cta": {
+        "text": "Das sagen unsere Kund:innen",
+        "url": "/kunden"
+      }
     }
   },
-  "start": {
-    "title": "Wir lassen dich strahlen",
-    "text": "Im Marktkontext, in Kundensegmenten, im Partner-Ökosystem und in Verticals wie Manufacturing und Public sprechen wir genauso gerne über die Bedrohungslandschaft oder die Netzwerkinfrastruktur wie über Marketingstrategien und -kampagnen. Ganz egal, ob Cloud, SaaS, IoT, IT-Monitoring oder Cybersicherheit, wir kennen das Umfeld. \nWir sind analytisch, schnell und gleichzeitig intuitiv. Und wir bringen die Dinge gerne auf den Punkt. Dabei sprühen wir vor Freude und Begeisterung und bieten dir und deinem Team mehr als 20 Jahre B2B-Marketingexpertise in allen Field-Marketing-Disziplinen, inklusive Channel- & Alliance-Marketing im IT-Sektor. ",
-    "image": "/media/wir_sind_bluestarmarketing_1.jpg"
-  },
-  "about": {
-    "title": "Blue Star Marketing",
-    "text": "DER B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen!\nWir bringen ein tiefgreifendes Verständnis deiner individuellen Situation in unsere Partnerschaft & Zusammenarbeit ein und schöpfen aus einem Fundus an Erfahrung auf Herstellerseite des Schreibtisches zurück.\nAus diesem Erfahrungsschatz heraus gestalten und entwickeln wir zielgerichtete, und integrierte B2B-Marketingstrategien und -pläne für dich – verlinkt und passgenau zugeschnitten auf euren Marketing- und Geschäftserfolg.",
-    "quote1": "„Begeisterung ist der Zunder in uns, der Funken schlagen will.“*",
-    "quote2": "„Die Idee, der Plan, die Strategie allein reichen nicht. Sie sind lediglich das Holz. Erst deine Begeisterung erweckt das Feuer zum Leben.“ **",
-    "afterquote": "* Johann Gottfried Herder\n** Franz X. Bühler in Mehr… vom Kopf ins Herz",
-    "cta": {
-      "text": "Lerne uns kennen",
-      "url": "/kontakt"
+  "en": {
+    "meta": {
+      "title": "Für dich",
+      "description": "Der B2B-Marketingpartner für Tech-Unternehmen: erstklassig verlinkte Kampagnen für Wachstum & Erfolg.",
+      "keywords": "Marketingerfolg, Marketingwachstum, Zielerreichung, Marketingpartner                                                     "
     },
-    "image": "/media/wir_sind_bluestarmarketing_2.jpg",
-    "textimage": "/media/wir_sind_219px.png"
-  },
-  "cta": {
-    "title": "Auf deiner Marketingreise an deiner Seite",
-    "text": "Unsere Erfolgsgeschichte sowie unsere Kernkompetenzen und Stärken im Marketingmanagement werden zu unserer Freude von unseren zufriedenen Kunden bestätigt.",
+    "header": {
+      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "image": "/media/bluestar_fuer_dich.jpg",
+      "cta": {
+        "text": "Jetzt Erstgespräch vereinbaren",
+        "url": "/kontakt"
+      }
+    },
+    "start": {
+      "title": "Wir lassen dich strahlen",
+      "text": "Im Marktkontext, in Kundensegmenten, im Partner-Ökosystem und in Verticals wie Manufacturing und Public sprechen wir genauso gerne über die Bedrohungslandschaft oder die Netzwerkinfrastruktur wie über Marketingstrategien und -kampagnen. Ganz egal, ob Cloud, SaaS, IoT, IT-Monitoring oder Cybersicherheit, wir kennen das Umfeld. \nWir sind analytisch, schnell und gleichzeitig intuitiv. Und wir bringen die Dinge gerne auf den Punkt. Dabei sprühen wir vor Freude und Begeisterung und bieten dir und deinem Team mehr als 20 Jahre B2B-Marketingexpertise in allen Field-Marketing-Disziplinen, inklusive Channel- & Alliance-Marketing im IT-Sektor. ",
+      "image": "/media/wir_sind_bluestarmarketing_1.jpg"
+    },
+    "about": {
+      "title": "Blue Star Marketing",
+      "text": "DER B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen!\nWir bringen ein tiefgreifendes Verständnis deiner individuellen Situation in unsere Partnerschaft & Zusammenarbeit ein und schöpfen aus einem Fundus an Erfahrung auf Herstellerseite des Schreibtisches zurück.\nAus diesem Erfahrungsschatz heraus gestalten und entwickeln wir zielgerichtete, und integrierte B2B-Marketingstrategien und -pläne für dich – verlinkt und passgenau zugeschnitten auf euren Marketing- und Geschäftserfolg.",
+      "quote1": "„Begeisterung ist der Zunder in uns, der Funken schlagen will.“*",
+      "quote2": "„Die Idee, der Plan, die Strategie allein reichen nicht. Sie sind lediglich das Holz. Erst deine Begeisterung erweckt das Feuer zum Leben.“ **",
+      "afterquote": "* Johann Gottfried Herder\n** Franz X. Bühler in Mehr… vom Kopf ins Herz",
+      "cta": {
+        "text": "Lerne uns kennen",
+        "url": "/kontakt"
+      },
+      "image": "/media/wir_sind_bluestarmarketing_2.jpg",
+      "textimage": "/media/wir_sind_219px.png"
+    },
     "cta": {
-      "text": "Das sagen unsere Kund:innen",
-      "url": "/kunden"
+      "title": "Auf deiner Marketingreise an deiner Seite",
+      "text": "Unsere Erfolgsgeschichte sowie unsere Kernkompetenzen und Stärken im Marketingmanagement werden zu unserer Freude von unseren zufriedenen Kunden bestätigt.",
+      "cta": {
+        "text": "Das sagen unsere Kund:innen",
+        "url": "/kunden"
+      }
     }
   }
 }

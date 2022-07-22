@@ -15,6 +15,10 @@ const config: CmsCollection = {
   label: "Seiten",
   label_singular: "Seite",
   delete: false,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"],
+  },
   editor: {
     preview: false,
   },

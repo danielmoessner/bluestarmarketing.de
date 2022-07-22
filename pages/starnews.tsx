@@ -88,12 +88,12 @@ function Page({
   );
 }
 
-export async function getStaticProps() {
-  const pageData = await renderContent(pageSource);
-  const footerData = await renderContent(footerSource);
-  const categoryData = getAllJson("category");
+export async function getStaticProps({ locale }) {
+  const pageData = await renderContent(pageSource[locale]);
+  const footerData = await renderContent(footerSource[locale]);
+  const categoryData = getAllJson("category", locale);
+  const articleData1 = getAllJson("article", locale);
 
-  const articleData1 = getAllJson("article");
   const articleData2 = await renderContent(articleData1);
 
   const mainArticleData = articleData2.find(

@@ -1,30 +1,62 @@
 {
-  "meta": {
-    "title": "Unsere Kunden",
-    "description": "Unsere Kunden? Dein Gewinn! Wir unterstützen global agierende Technologieunternehmen mit Expertise: bekannte Brands & Scale-Ups. ",
-    "keywords": "scale-ups, IT Unternehmen, IT player, Tech-Unternehmen, IT Firmen, tech marketing, B2b marketing"
-  },
-  "header": {
-    "image": "/media/bluestarmarketing_kunden_1.jpeg",
-    "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
-    "cta": {
-      "text": "Jetzt Erstgespräch vereinbaren",
-      "url": "/kontakt"
+  "de": {
+    "meta": {
+      "title": "Unsere Kunden",
+      "description": "Unsere Kunden? Dein Gewinn! Wir unterstützen global agierende Technologieunternehmen mit Expertise: bekannte Brands & Scale-Ups. ",
+      "keywords": "scale-ups, IT Unternehmen, IT player, Tech-Unternehmen, IT Firmen, tech marketing, B2b marketing"
+    },
+    "header": {
+      "image": "/media/bluestarmarketing_kunden_1.jpeg",
+      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "cta": {
+        "text": "Jetzt Erstgespräch vereinbaren",
+        "url": "/kontakt"
+      }
+    },
+    "start": {
+      "title": "Unsere Kunden",
+      "text": "Zu unseren Kunden zählen ausschließlich global agierende Technologieunternehmen, darunter bekannte Brands und Scale-Ups. \nIm Marktkontext, in Kundensegmenten, im Partner-Ökosystem und in Verticals wie Manufacturing und Public sprechen wir genauso gerne über die Bedrohungslandschaft oder die Netzwerkinfrastruktur wie über Marketingstrategien und -kampagnen.\nGanz egal, ob Cloud, SaaS, IoT, IT-Monitoring oder Cybersicherheit, wir kennen das Umfeld. ",
+      "pretext": "EIN GEWINN FÜR DICH?",
+      "aftertext": "Dann bist du bei uns",
+      "textimage": "/media/genau_richtig.png",
+      "cta": {
+        "text": "Lerne uns kennen",
+        "url": "/kontakt"
+      },
+      "image": "/media/bluestarmarketing_kunden_2.jpeg"
+    },
+    "customers": {
+      "title": "Das sagen unsere Kund:innen"
     }
   },
-  "start": {
-    "title": "Unsere Kunden",
-    "text": "Zu unseren Kunden zählen ausschließlich global agierende Technologieunternehmen, darunter bekannte Brands und Scale-Ups. \nIm Marktkontext, in Kundensegmenten, im Partner-Ökosystem und in Verticals wie Manufacturing und Public sprechen wir genauso gerne über die Bedrohungslandschaft oder die Netzwerkinfrastruktur wie über Marketingstrategien und -kampagnen.\nGanz egal, ob Cloud, SaaS, IoT, IT-Monitoring oder Cybersicherheit, wir kennen das Umfeld. ",
-    "pretext": "EIN GEWINN FÜR DICH?",
-    "aftertext": "Dann bist du bei uns",
-    "textimage": "/media/genau_richtig.png",
-    "cta": {
-      "text": "Lerne uns kennen",
-      "url": "/kontakt"
+  "en": {
+    "meta": {
+      "title": "Unsere Kunden",
+      "description": "Unsere Kunden? Dein Gewinn! Wir unterstützen global agierende Technologieunternehmen mit Expertise: bekannte Brands & Scale-Ups. ",
+      "keywords": "scale-ups, IT Unternehmen, IT player, Tech-Unternehmen, IT Firmen, tech marketing, B2b marketing"
     },
-    "image": "/media/bluestarmarketing_kunden_2.jpeg"
-  },
-  "customers": {
-    "title": "Das sagen unsere Kund:innen"
+    "header": {
+      "image": "/media/bluestarmarketing_kunden_1.jpeg",
+      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "cta": {
+        "text": "Jetzt Erstgespräch vereinbaren",
+        "url": "/kontakt"
+      }
+    },
+    "start": {
+      "title": "Unsere Kunden",
+      "text": "Zu unseren Kunden zählen ausschließlich global agierende Technologieunternehmen, darunter bekannte Brands und Scale-Ups. \nIm Marktkontext, in Kundensegmenten, im Partner-Ökosystem und in Verticals wie Manufacturing und Public sprechen wir genauso gerne über die Bedrohungslandschaft oder die Netzwerkinfrastruktur wie über Marketingstrategien und -kampagnen.\nGanz egal, ob Cloud, SaaS, IoT, IT-Monitoring oder Cybersicherheit, wir kennen das Umfeld. ",
+      "pretext": "EIN GEWINN FÜR DICH?",
+      "aftertext": "Dann bist du bei uns",
+      "textimage": "/media/genau_richtig.png",
+      "cta": {
+        "text": "Lerne uns kennen",
+        "url": "/kontakt"
+      },
+      "image": "/media/bluestarmarketing_kunden_2.jpeg"
+    },
+    "customers": {
+      "title": "Das sagen unsere Kund:innen"
+    }
   }
 }

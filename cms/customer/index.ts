@@ -7,16 +7,18 @@ const customer: CmsCollection = {
   editor: {
     preview: false,
   },
+  i18n: true,
   extension: "json",
   folder: "content/customer",
   slug: "{{fields.customer}}",
   create: true,
   fields: [
-    { label: "Text", name: "text", widget: "text" },
-    { label: "Kunde", name: "customer", widget: "string" },
+    { label: "Text", name: "text", i18n: true, widget: "text" },
+    { label: "Kunde", name: "customer", i18n: true, widget: "string" },
     {
       label: "Unternehmen",
       name: "company",
+      i18n: true,
       widget: "string",
       required: false,
     },

@@ -10,6 +10,7 @@ import markdown from "cms/symbols/markdown";
 const salesmarketing: CmsCollectionFile = {
   file: "content/page/salesmarketing.json",
   label: "Sales- & Marketingfunnel",
+  i18n: true,
   name: "salesmarketing",
   fields: [
     meta,
@@ -17,12 +18,14 @@ const salesmarketing: CmsCollectionFile = {
     {
       label: "Start",
       name: "start",
+      i18n: true,
       widget: "object",
       fields: [title, markdown, image, cta, svg],
     },
     {
       label: "Reise",
       name: "travel",
+      i18n: true,
       widget: "object",
       fields: [title, svg, cta],
     },
