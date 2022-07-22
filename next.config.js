@@ -15,14 +15,14 @@ const translationRewrites = Object.entries(pathTranslations["en"]).map((k) => ({
   locale: false,
 }));
 
-const translationRedirects = Object.entries(pathTranslations["en"]).map(
-  (k) => ({
-    source: `/en${k[0]}`,
-    destination: `/en${k[1]}`,
-    locale: false,
-    permanent: true,
-  })
-);
+// const translationRedirects = Object.entries(pathTranslations["en"]).map(
+//   (k) => ({
+//     source: `/en${k[0]}`,
+//     destination: `/en${k[1]}`,
+//     locale: false,
+//     permanent: true,
+//   })
+// );
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
