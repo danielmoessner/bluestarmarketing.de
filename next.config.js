@@ -5,6 +5,7 @@ const pathTranslations = {
     "/marketingkampagnen": "/marketingcampaigns",
     "/fuerdich": "/foryou",
     "/kunden": "/customers",
+    "/rechtliches/:slug*": "/legal/:slug*",
   },
 };
 
@@ -13,6 +14,15 @@ const translationRewrites = Object.entries(pathTranslations["en"]).map((k) => ({
   destination: `/en${k[0]}`,
   locale: false,
 }));
+
+const translationRedirects = Object.entries(pathTranslations["en"]).map(
+  (k) => ({
+    source: `/en${k[0]}`,
+    destination: `/en${k[1]}`,
+    locale: false,
+    permanent: true,
+  })
+);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -23,6 +33,9 @@ const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
     return translationRewrites;
+  },
+  async redirects() {
+    return translationRedirects;
   },
 };
 

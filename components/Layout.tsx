@@ -1,11 +1,10 @@
 import React from "react";
 import Navigation from "./Navigation";
-import OldNavigation from "./OldNavigation";
 
-function Layout({ children, hide = false }) {
+function Layout({ children }) {
   return (
     <>
-      {hide ? <OldNavigation /> : <Navigation />}
+      <Navigation />
       <main>{children}</main>
     </>
   );
