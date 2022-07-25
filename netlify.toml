@@ -12,8 +12,8 @@ status = 200
 force = true
 
 [[redirects]]
-from = "/en/kontakt"
-to = "/en/contact"
+from = "/en/contact"
+to = "/en/kontakt"
 status = 200
 force = true
 

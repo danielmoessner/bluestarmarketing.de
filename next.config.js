@@ -31,9 +31,9 @@ const nextConfig = {
     defaultLocale: "de",
   },
   reactStrictMode: true,
-  async rewrites() {
-    return translationRewrites;
-  },
+  // async rewrites() {
+  //   return translationRewrites;
+  // },
   // async redirects() {
   //   return translationRedirects;
   // },
