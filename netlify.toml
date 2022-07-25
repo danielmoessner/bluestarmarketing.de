@@ -4,3 +4,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+from = "/en/foryou"
+to = "/en/fuerdich"
+status = 200
+force = true
