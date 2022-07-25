@@ -1,0 +1,26 @@
+{
+  "de": {
+    "rewrites": [
+      {
+        "from": "/en/contact",
+        "to": "/en/kontakt"
+      },
+      {
+        "from": "/en/b2bmarketingstrategy",
+        "to": "/en/b2bmarketingstrategie"
+      },
+      {
+        "from": "/en/marketingcampaigns",
+        "to": "/en/marketingkampagnen"
+      },
+      {
+        "from": "/en/foryou",
+        "to": "/en/fuerdich"
+      },
+      {
+        "from": "/en/customers",
+        "to": "/en/kunden"
+      }
+    ]
+  }
+}

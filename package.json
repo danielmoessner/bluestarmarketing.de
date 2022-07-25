@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
-    "build": "npm run cms:build && next build",
+    "redirects": "node redirects.js",
+    "build": "npm run redirects && npm run cms:build && next build",
     "start": "next start",
     "lint": "next lint",
     "cms": "npm run cms:watch & npx netlify-cms-proxy-server",
