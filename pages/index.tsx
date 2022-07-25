@@ -15,6 +15,7 @@ import Prose from "../components/Prose";
 import Image from "next/image";
 import SmallBox from "../components/SmallBox";
 import ServiceLinks from "../components/ServiceLinks";
+import Script from "next/script";
 
 // interface Props {
 //   pageData: typeof pageSource;
@@ -28,6 +29,7 @@ function Page({ pageData, footerData }) {
     <Layout>
       <Seo meta={page.meta} />
       <Header header={page.header} />
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
