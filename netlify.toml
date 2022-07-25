@@ -10,3 +10,28 @@ from = "/en/foryou"
 to = "/en/fuerdich"
 status = 200
 force = true
+
+from = "/en/kontakt"
+to = "/en/contact"
+status = 200
+force = true
+
+from = "/en/b2bmarketingstrategy"
+to = "/en/b2bmarketingstrategie"
+status = 200
+force = true
+
+from = "/en/marketingcampaigns"
+to = "/en/marketingkampagnen"
+status = 200
+force = true
+
+from = "/en/customers"
+to = "/en/kunden"
+status = 200
+force = true
+
+from = "/legal/*"
+to = "/rechtliches/:splat"
+status = 200
+force = true
