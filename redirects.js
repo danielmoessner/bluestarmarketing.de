@@ -2,7 +2,7 @@
 var fs = require("fs");
 var rewrites = require("./content/setting/rewrites.json");
 
-var filename = __dirname + "/_redirects";
+var filename = __dirname + "/public/_redirects";
 
 let content = "";
 rewrites["de"]["rewrites"].forEach(function (item) {
