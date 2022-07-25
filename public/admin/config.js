@@ -893,6 +893,31 @@ var navigation = {
 };
 var navigation_default = navigation;
 
+// cms/setting/rewrites.ts
+var rewrites = {
+  file: "content/setting/rewrites.json",
+  label: "Rewrites",
+  i18n: {
+    structure: "single_file",
+    locales: ["de"]
+  },
+  name: "rewrites",
+  fields: [
+    {
+      label: "Rewrites",
+      name: "rewrites",
+      i18n: false,
+      widget: "list",
+      collapsed: false,
+      fields: [
+        { label: "From", name: "from", widget: "string", i18n: "duplicate" },
+        { label: "To", name: "to", widget: "string", i18n: false }
+      ]
+    }
+  ]
+};
+var rewrites_default = rewrites;
+
 // cms/setting/index.ts
 var setting = {
   name: "setting",
@@ -906,7 +931,7 @@ var setting = {
   editor: {
     preview: false
   },
-  files: [global_default, navigation_default, footer_default]
+  files: [global_default, navigation_default, footer_default, rewrites_default]
 };
 var setting_default = setting;
 

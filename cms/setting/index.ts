@@ -2,6 +2,7 @@ import { CmsCollection } from "netlify-cms-core";
 import footer from "./footer";
 import global from "./global";
 import navigation from "./navigation";
+import rewrites from "./rewrites";
 
 const setting: CmsCollection = {
   name: "setting",
@@ -15,7 +16,7 @@ const setting: CmsCollection = {
   editor: {
     preview: false,
   },
-  files: [global, navigation, footer],
+  files: [global, navigation, footer, rewrites],
 };
 
 export default setting;
