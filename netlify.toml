@@ -5,38 +5,8 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[redirects]]
-from = "/en/foryou"
-to = "/en/fuerdich"
-status = 200
-force = true
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
 
-[[redirects]]
-from = "/en/contact"
-to = "/en/kontakt"
-status = 200
-force = true
-
-[[redirects]]
-from = "/en/b2bmarketingstrategy"
-to = "/en/b2bmarketingstrategie"
-status = 200
-force = true
-
-[[redirects]]
-from = "/en/marketingcampaigns"
-to = "/en/marketingkampagnen"
-status = 200
-force = true
-
-[[redirects]]
-from = "/en/customers"
-to = "/en/kunden"
-status = 200
-force = true
-
-[[redirects]]
-from = "/legal/*"
-to = "/rechtliches/:splat"
-status = 200
-force = true
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
