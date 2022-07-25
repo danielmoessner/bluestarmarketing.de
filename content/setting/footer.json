@@ -34,7 +34,7 @@
       {
         "type": "link",
         "text": "Kontakt",
-        "url": "/#kontakt"
+        "url": "/kontakt"
       }
     ],
     "images": [
@@ -89,7 +89,7 @@
       {
         "type": "link",
         "text": "Kontakt",
-        "url": "/#kontakt"
+        "url": "/kontakt"
       }
     ]
   }
