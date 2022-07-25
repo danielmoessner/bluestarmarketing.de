@@ -11,26 +11,31 @@ to = "/en/fuerdich"
 status = 200
 force = true
 
+[[redirects]]
 from = "/en/kontakt"
 to = "/en/contact"
 status = 200
 force = true
 
+[[redirects]]
 from = "/en/b2bmarketingstrategy"
 to = "/en/b2bmarketingstrategie"
 status = 200
 force = true
 
+[[redirects]]
 from = "/en/marketingcampaigns"
 to = "/en/marketingkampagnen"
 status = 200
 force = true
 
+[[redirects]]
 from = "/en/customers"
 to = "/en/kunden"
 status = 200
 force = true
 
+[[redirects]]
 from = "/legal/*"
 to = "/rechtliches/:splat"
 status = 200
