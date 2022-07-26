@@ -37,26 +37,26 @@
     },
     "header": {
       "image": "/media/bluestarmarketing_kunden_1.jpeg",
-      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "text": "The B2B marketing partner for tech companies that appreciate top-notch, well connected strategies & campaigns.",
       "cta": {
-        "text": "Jetzt Erstgespräch vereinbaren",
+        "text": "Talk to us today!",
         "url": "/kontakt"
       }
     },
     "start": {
-      "title": "Unsere Kunden",
-      "text": "Zu unseren Kunden zählen ausschließlich global agierende Technologieunternehmen, darunter bekannte Brands und Scale-Ups. \nIm Marktkontext, in Kundensegmenten, im Partner-Ökosystem und in Verticals wie Manufacturing und Public sprechen wir genauso gerne über die Bedrohungslandschaft oder die Netzwerkinfrastruktur wie über Marketingstrategien und -kampagnen.\nGanz egal, ob Cloud, SaaS, IoT, IT-Monitoring oder Cybersicherheit, wir kennen das Umfeld. ",
-      "pretext": "EIN GEWINN FÜR DICH?",
-      "aftertext": "Dann bist du bei uns",
+      "title": "Our clients",
+      "text": "Our list of customers is made of global technology companies, including well-known brands and scale-ups.\n\nWithin market context or customer segments, partner ecosystems and verticals such as Manufacturing and Public, we’ll be happy to talk to you about marketing strategies and campaigns as well as about the threat landscape or network infrastructures.\n\nWhether it’s cloud, SaaS, IoT, IT monitoring or cybersecurity, we know the environment.",
+      "pretext": "COULD THIS BE A WIN FOR YOU?",
+      "aftertext": "Then you‘ve come to the",
       "textimage": "/media/genau_richtig.png",
       "cta": {
-        "text": "Lerne uns kennen",
+        "text": "Learn more about us",
         "url": "/kontakt"
       },
       "image": "/media/bluestarmarketing_kunden_2.jpeg"
     },
     "customers": {
-      "title": "Das sagen unsere Kund:innen"
+      "title": "Our Customer´s Voice"
     }
   }
 }
