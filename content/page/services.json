@@ -152,76 +152,76 @@
     },
     "header": {
       "image": "/media/bluestar_marketing_services.jpg",
-      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "text": "The B2B marketing partner for tech companies that appreciate top-notch, well connected strategies & campaigns.",
       "cta": {
-        "text": "Jetzt Erstgespräch vereinbaren",
+        "text": "Arrange your first interview now",
         "url": "/kontakt"
       }
     },
     "start": {
-      "title": "Wir lassen dich strahlen",
-      "text": "Entdecke die Potenziale, sichere dir mit der passenden Marketingstrategie und integrierten Kampagnen mit verlinkten Kampagnenelementen deinen Erfolg und Wachstumschancen. \nWir spüren Potenziale gemeinsam auf, verbinden und erarbeiten für dich und dein Team partnerschaftlich die Strategie und passgenaue Kampagnen innerhalb der Buyer’s Journey und für die Bereicherung eures Sales- und Marketing-Funnels. \nDer Schulterschluss von Marketing und Vertrieb auf allen Hierarchieebenen ist einer der wichtigsten Schlüssel zu Wachstum und Erfolg! \nSchlank aufgestellt, reagieren wir agil und prompt auf kurzfristige Anforderungen in der agilen IT-Branche. \nNutze gerne die strategischen Insights unseres leidenschaftlichen und spezialisierten Teams für langfristiges Wachstum!",
+      "title": "We will let you shine",
+      "text": "Discover the full potential, secure your success and seize all growth opportunities – with the right marketing strategy and integrated campaigns with perfectly connected campaign elements!\n\nWe‘ll track down potentials together, connect all the dots to establish a strategy for you and your team, and create tailor-made campaigns for the buyer‘s journey and for the enrichment of your sales and marketing funnel.\n\nJoining the forces of marketing and sales at all levels is an important key to growth and success!\n\nWith our lean structure, we are extremely agile and react immediately to short-term requirements of the fast-paced IT industry.\n\nLeverage the strategic insights of our passionate team of experts and achieve sustainable growth!",
       "cta": {
-        "text": "Potenziale entdecken – Kontakt aufnehmen",
+        "text": "Explore potentials – get in touch",
         "url": "/kontakt"
       },
       "links": [
         {
-          "text": "Erstgespräch",
+          "text": "First interview",
           "url": "#erstgespraech"
         },
         {
-          "text": "Strategieworkshop",
+          "text": "Strategy workshop",
           "url": "#strategieworkshop"
         },
         {
-          "text": "Marketingstrategie",
+          "text": "Marketing strategy",
           "url": "#marketingstrategie"
         },
         {
-          "text": "Marketingkampagnen",
+          "text": "Marketing campaigns",
           "url": "#marketingkampagnen"
         },
         {
-          "text": "Projektmanagement",
+          "text": "Project management",
           "url": "#projektmanagement"
         }
       ]
     },
     "services": {
-      "title": "Marketingreise zu Wachstum und Erfolg",
+      "title": "Your marketing journey to growth and success",
       "services": [
         {
-          "title": "Erstgespräch",
+          "title": "GETTING TO KNOW EACH OTHER",
           "id": "erstgespraech",
-          "text": "Wir freuen uns darauf, dich und dein Team kennenzulernen, um mehr über euer Marketing Set-Up und eure Herausforderungen zu erfahren. \nIm initialen Gespräch finden wir heraus, wo wir mit unseren Kernkompetenzen bereichernd und erfolgsversprechend gestalten und euer Marketingwachstum nachhaltig mit- und weiterentwickeln können.",
+          "text": "We are looking forward to meeting you and your team, and to learn more about your marketing setup and your challenges.\n\nIn our first conversation, we want to find out how we can enrich your marketing growth and extend it further in a sustainable way",
           "image": "/media/service_erstgespraech.jpg",
           "cta": {
-            "text": "Starte deine Marketingreise",
+            "text": "Start your marketing journey",
             "url": "/kontakt"
           },
           "side": "R",
           "color": "#45b5cf"
         },
         {
-          "title": "Strategieworkshop",
+          "title": "Strategy Workshop",
           "id": "strategieworkshop",
-          "text": "Unsere Reise startet mit einem tiefen Verständnis eures Status quo, der Geschäftsziele, eurer globalen und regionalen Marketingziele und aktuellen Herausforderungen. \nMit deiner Erlaubnis werfen wir einen Blick auf eure bestehende Marketingstrategie sowie die Marketingpläne und Kampagnen, um Stärken, Schwächen, Chancen und Risiken zu erkennen.",
+          "text": "Our journey starts with a deep understanding of your current status, business goals, global and regional marketing objectives and current challenges.\n\nWith your permission, we take a look at your existing marketing strategy, marketing plans and campaigns to identify strengths, weak spots, opportunities and threats.",
           "image": "/media/service_strategieworkshop.jpg",
           "cta": {
-            "text": "Starte deine Marketingreise",
+            "text": "Start your marketing journey",
             "url": "/workshop"
           },
           "side": "L",
           "color": "#00adea"
         },
         {
-          "title": "Marketingstrategie",
+          "title": "Marketing Strategy",
           "id": "marketingstrategie",
-          "text": "Die Ergebnisse des Strategieworkshops fassen wir im Nachgang zu unserer Landkarte zusammen. Sie dient uns zur Priorisierung der Next Steps, Quick Wins und als Rahmen für die weitere Zusammenarbeit. \nBasierend auf unserem Strategieworkshop und dem vereinbarten Rahmen entwickeln wir Marketingkampagnen für dich und dein Team.",
+          "text": "We summarize the results of the strategy workshop in our roadmap which helps us to prioritize the next steps and quick wins, and serves as a framework for our further collaboration.\n\nBased on our strategy workshop and within the agreed framework, we’ll deliver marketing campaigns to you and your team.",
           "image": "/media/service_marketingstrategie.jpg",
           "cta": {
-            "text": "Starte deine Marketingreise",
+            "text": "Start your marketing journey",
             "url": "/b2bmarketingstrategie"
           },
           "side": "L",
@@ -230,61 +230,61 @@
         {
           "title": "Sales & Marketing Funnel",
           "id": "sales-and-marketing-funnel",
-          "text": "An welchem Punkt benötigt eure Marketing-Pipeline einen echten Push? \nAn dieser Stelle benötigen wir einen Vertrauensvorschuss, denn Einblicke und Transparenz sind extrem relevant, um Schätze zu finden und Potenziale zu heben. Wir begrüßen und schätzen deine Offenheit, denn es stellen sich viele Fragen, beispielsweise ob bereits ausreichend Leads zur Zielerreichung generiert werden.",
+          "text": "Your marketing pipeline needs a real push?\n\nAt this point, we need you to take a leap of faith. Why? Because insights and transparency are extremely important for finding any hidden treasures and leveraging the full potential. We appreciate your trust and welcome your openness, because many questions need to be answered, for example: Are you generating enough leads to reach your goals?",
           "image": "/media/service_sales_marketing_funnel.jpg",
           "cta": {
-            "text": "Starte deine Marketingreise",
+            "text": "Start your marketing journey",
             "url": "/marketingfunnel"
           },
           "side": "L",
           "color": "#0f4988"
         },
         {
-          "title": "Marketingkampagnen",
+          "title": "Marketing Campaigns",
           "id": "marketingkampagnen",
-          "text": "Wir erfassen euren Marktkontext & Status quo und kombinieren neue Erkenntnisse zu Segmenten, Zielgruppen, Verticals und/ oder dem Partner-Ökosystem. Daraus leiten wir zielführende & integrierte Marketingkampagnen ab, verlinkt mit euren Zielen und eurer Strategie.  \nAuf Wunsch fokussieren wir uns auf definierte Teilaspekte der Gesamtstrategie und des Marketingplans.",
+          "text": "We capture your market context and status quo and combine new insights on segments, target groups, verticals and/or the partner ecosystem. Based on this, we develop targeted, integrated marketing campaigns that are connected to your goals and your strategy.\n\nOn request, we can focus on defined sub-aspects of the overall strategy and marketing plan.",
           "image": "/media/service_marketingkampagnen.jpg",
           "cta": {
-            "text": "Starte deine Marketingreise",
+            "text": "Start your marketing journey",
             "url": "/marketingkampagnen"
           },
           "side": "L",
           "color": "#0f4988"
         },
         {
-          "title": "Projektmanagement",
+          "title": "Project Management",
           "id": "projektmanagement",
-          "text": "Support der Extraklasse mit unserem Team, Partneragenturen & Experten oder gemeinsam mit eurer bevorzugten Full-Service-Agentur. \nInnerhalb eines vordefinierten Zeitrahmens und mit enger Erfolgskontrolle.",
+          "text": "Taking support & service to the next level with our team, partner agencies &\nexperts or together with your preferred full-service agency\n\nWithin a predefined timeframe and with close success monitoring.\n",
           "image": "/media/service_projektmanagement.jpg",
           "cta": {
-            "text": "Starte deine Marketingreise",
+            "text": "Start your marketing journey",
             "url": "/kontakt"
           },
           "side": "R",
           "color": "#162259"
         },
         {
-          "title": "Erfolge feiern",
+          "title": "Celebrate Success",
           "id": "erfolge-feiern",
-          "text": "In unserer schnelllebigen Zeit und in der IT-Branche ist es uns sehr wichtig, Erfolge zu feiern. Nimm dir einen Moment zum Feiern, Reflektieren und Genießen – gerne zusammen mit uns! \nDie Reflexion gibt uns die großartige Möglichkeit, zu optimieren und anzureichern, um beim nächsten Mal noch besser zu sein. \nJeden Tag und jeden Moment haben wir die Chance, zu wählen. Heute ist mein bester Tag*!",
+          "text": "In today’s fast-paced world and specifically in the agile IT industry, we should never forget to celebrate success. So take a moment to celebrate, enjoy and reflect what you have achieved – preferably with us!\n\nReflection gives us a great opportunity to optimize, to enrich and to be even better next time.\n\nEvery day and every moment we have the chance to choose. Today is my best day*!",
           "image": "/media/service_erfolgefeiern.jpg",
           "cta": {
-            "text": "Starte deine Marketingreise",
+            "text": "Start your marketing journey",
             "url": "/kontakt"
           },
           "side": "R",
           "color": "#dfeaf8",
-          "quote": "*Buch von Arthur Lassen"
+          "quote": "*Book by Arthur Lassen"
         }
       ]
     },
     "customers": {
-      "title": "DAS SAGEN UNSERE KUND:INNEN",
-      "text": "Gemeinsam auf Reisen mit Blue Star Marketing: Seit mein Verantwortungs- und Aufgabenbereich meinen zur Verfügung stehenden Zeitrahmen bereits 2019 wie auch aktuell durch die zunehmende Reisetätigkeit sprengte, suchte ich eine Lösung, um das Channel-Marketing nachhaltig und mit Lernkurve auf Wachstumskurs zu bringen. \nMit Silke habe ich jemanden gefunden, die mir mit Ideenreichtum, Begeisterung und einer enorm schnellen Auffassungsgabe Projekte vollumfänglich abnimmt. Egal, ob sie bei einem Job die Stafette übernimmt oder ob sie ein Konzept entwirft und umsetzt: Die Arbeit ist immer geprägt durch tiefgreifendes, aktuelles Marketing-Know-how in unserem Marktumfeld. Dadurch fühle ich mich besonders individuell und gut beraten und lasse mich gerne davon überzeugen, neue Wege zu gehen. Die Resultate sind überzeugend und von außergewöhnlicher Qualität. Mit Silke konnte ich die Ergebnisse meiner Aufgaben auf ein neues Level bringen und wachsen. In wenigen Worten: schnell, strukturiert, zuverlässig, begeistert und begeisternd. \nSo macht Zusammenarbeit Spaß.",
+      "title": "OUR CUSTOMER‘S VOICE",
+      "text": "My journey with Blue Star Marketing: Since my responsibilities and tasks exceeded my available time frame in 2019 already, and still do today due to increasing travel activities, I was looking for a solution to bring our channel marketing on a sustainable path of growth while profiting from a learning curve.\n\nWith Silke, I have found someone who, with her wealth of ideas, enthusiasm and extremely quick wits and skills, takes projects off my hands in their entirety. No matter if she takes over the lead on a certain job or if she designs and implements a concept: The work is always characterized by profound, up-to-date marketing know-how in our market environment. This makes me feel very well and individually advised, and I am easily convinced to explore new ways. The results are impressive and of exceptional quality. With Silke, I was able to take the results of my tasks to a new level and to grow. Simply put: fast, structured, reliable, enthusiastic and inspiring – this is what makes the collaboration with Silke fun!",
       "customer": "Claudia Loche",
       "company": "Senior Marketing Manager Germany Channel & Distribution, Trend Micro GmbH",
       "cta": {
-        "text": "Mehr über unsere Kund:innen",
+        "text": "More about our customers",
         "url": "/kunden"
       }
     }
