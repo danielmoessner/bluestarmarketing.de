@@ -36,6 +36,7 @@ function Page({ pageData, footerData }) {
                 </div>
                 <div>
                   <Multiline text={page.start.text} />
+                  <p className="mt-2 font-bold">{page.start.boldtext}</p>
                 </div>
               </div>
               <div className="flex justify-center mt-6 lg:mt-8">
