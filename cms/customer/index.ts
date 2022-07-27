@@ -22,6 +22,7 @@ const customer: CmsCollection = {
       widget: "string",
       required: false,
     },
+    { label: "Reihenfolge", name: "ordering", i18n: true, widget: "number" },
   ],
 };
 

@@ -53,7 +53,7 @@ function Component({
 
   const bClassName =
     className ||
-    `inline-flex text-center items-center border-2 border-transparent font-medium ${ring} ${ringOffset} ${size} ${bColor} group-hover:pl-3 group-hover:pr-9 transition-all duration-500 outline-none focus:outline-none !shadow-none`;
+    `inline-flex text-center items-center border-2 border-transparent w-full font-medium block text-center ${ring} ${ringOffset} ${size} ${bColor} group-hover:pl-3 group-hover:pr-9 transition-all duration-500 outline-none focus:outline-none !shadow-none`;
 
   const button = useRef(null);
 
