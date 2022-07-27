@@ -24,12 +24,12 @@
       {
         "type": "link",
         "text": "Impressum",
-        "url": "/rechtliches/impressum/"
+        "url": "/rechtliches/impressum"
       },
       {
         "type": "link",
         "text": "Datenschutzerklärung",
-        "url": "/rechtliches/datenschutz/"
+        "url": "/rechtliches/datenschutz"
       },
       {
         "type": "link",
@@ -80,12 +80,12 @@
       {
         "type": "link",
         "text": "Imprint",
-        "url": "/rechtliches/impressum/"
+        "url": "/rechtliches/impressum"
       },
       {
         "type": "link",
         "text": "Privacy Policy",
-        "url": "/rechtliches/datenschutz/"
+        "url": "/rechtliches/privacy"
       },
       {
         "type": "link",

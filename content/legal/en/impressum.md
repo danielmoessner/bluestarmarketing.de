@@ -1,6 +1,6 @@
 ---
 title: Impressum
-slug: impressum
+slug: imprint
 ---
 ## Angaben gemäß § 5 TMG
 
