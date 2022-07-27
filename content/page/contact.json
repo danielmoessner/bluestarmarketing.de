@@ -53,25 +53,25 @@
       }
     },
     "start": {
-      "title": "Kontakt",
+      "title": "Contact",
       "image": "/media/kontakt_1.jpg",
-      "text": "Im Marktkontext, in Kundensegmenten, im Partner-Ökosystem und in Verticals wie Manufacturing und Public sprechen wir genauso gerne über die Bedrohungslandschaft oder die Netzwerkinfrastruktur wie über Marketingstrategien und -kampagnen. Ganz egal, ob Cloud, SaaS, IoT, IT-Monitoring oder Cybersicherheit, wir kennen das Umfeld.\nWir sind analytisch, schnell und gleichzeitig intuitiv. Und wir bringen die Dinge gerne auf den Punkt. Dabei sprühen wir vor Freude und Begeisterung und bieten dir und deinem Team darüber hinaus mehr als 20 Jahre B2B-Marketingexpertise in allen Field-Marketing-Disziplinen, inklusive Channel- & Alliance-Marketing im IT-Sektor. "
+      "text": "Within market context or customer segments, partner ecosystems and verticals such as Manufacturing and Public, we’ll be happy to talk to you about marketing strategies and campaigns as well as about the threat landscape or network infrastructures. Whether it’s cloud, SaaS, IoT, IT monitoring or cybersecurity, we know the environment.\nWe are analytical, fast and intuitive at the same time. And we like to get to the heart of things. We are full of joy and enthusiasm and offer you and your team more than 20 years of B2B marketing expertise in all field marketing disciplines, including channel and alliance marketing in the IT sector."
     },
     "benefits": {
-      "title": "Ein Gewinn für dich?",
-      "subtitle": "Dann bist du bei uns",
+      "title": "Could this be a win for you?",
+      "subtitle": "Then you‘ve come to the",
       "textimage": "/media/genau_richtig.png",
-      "pretext": "Gemeinsam mit DIR verbinden WIR",
+      "pretext": "Together with YOU WE connect",
       "points": [
-        "globale & lokale Marketingstrategien, -ziele & -kampagnen",
-        "Vertriebs- & Marketingziele",
-        "Menschen, Ideen & Konzepte"
+        "global & local marketing strategies, targets & campaigns",
+        "Sales & Marketing Goals",
+        "People, Ideas & Concepts"
       ],
-      "aftertext": "Behalte deine Ziele zusammen mit uns fest im Blick – wachse und gewinne!\n\nWir verbinden die Sterne für dich.",
+      "aftertext": "Keep your eyes on the prize – win and grow with our support!\n\nWe connect the stars for you.",
       "image": "/media/wir_sind_bluestarmarketing.jpg"
     },
     "form": {
-      "title": "Jetzt Kontaktformular absenden und Erstgespräch vereinbaren!",
+      "title": "Get in touch today! Just complete the contact form to arrange a conversation about your plans, goals and ideas with us.",
       "image": "/media/kontakt_silke_tolkmitt.jpg",
       "emailtext": "E-Mail:",
       "phonetext": "Telefon:"
