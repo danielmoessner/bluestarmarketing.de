@@ -64,10 +64,9 @@ function Page({ pageData, footerData }) {
             </Heading>
           </div>
           <div className="mt-12">
-            <div
-              className="max-w-3xl mx-auto"
-              dangerouslySetInnerHTML={{ __html: page.travel.svg }}
-            ></div>
+            <div className="max-w-3xl mx-auto">
+              <Image {...page.travel.image} alt={page.travel.title} />
+            </div>
           </div>
           <div className="flex justify-center mt-12">
             <Button href={page.travel.cta.url}>{page.travel.cta.text}</Button>

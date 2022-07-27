@@ -27,7 +27,7 @@ const marketingcampaign: CmsCollectionFile = {
       name: "travel",
       i18n: true,
       widget: "object",
-      fields: [title, svg, cta],
+      fields: [title, image, cta],
     },
   ],
 };
