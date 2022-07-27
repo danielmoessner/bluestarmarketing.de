@@ -10,7 +10,7 @@
       "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
       "cta": {
         "text": "Jetzt Erstgespräch vereinbaren",
-        "url": "/kontakt"
+        "url": "#k"
       }
     },
     "start": {
@@ -49,7 +49,7 @@
       "text": "The B2B marketing partner for tech companies that appreciate top-notch, well connected strategies & campaigns.",
       "cta": {
         "text": "Talk to us today!",
-        "url": "/en/contact"
+        "url": "#k"
       }
     },
     "start": {
@@ -59,7 +59,7 @@
     },
     "benefits": {
       "title": "Could this be a win for you?",
-      "subtitle": "Then you‘ve come to the",
+      "subtitle": "Then you've come to the",
       "textimage": "/media/right_place.png",
       "pretext": "Together with YOU WE connect",
       "points": [

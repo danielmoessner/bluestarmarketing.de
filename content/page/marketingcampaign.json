@@ -5,7 +5,7 @@
       "description": "Du suchst Marketing für mehr Erfolg & Wachstum? Wir bieten zielführende & integrierte Marketingkampagnen verlinkt mit Zielen & Plänen.",
       "keywords": "Lead Generierung, Lead Generieungskampagnen, Nurturing campaings, channel marketing campaigns, channel marketing , IT marketing, IT partner marketing, Sequence campaigns , Marketingkonzepte, B2b Marketingkampagnen, Integrierte Kampagnen, content marketing, value proposition, digital marketing, email marketing"
     },
-    "header": { 
+    "header": {
       "image": "/media/marketingkampagnen.jpg",
       "color": "#0f4988"
     },
@@ -25,7 +25,7 @@
         "text": "Starte deine Marketingreise",
         "url": "/kontakt"
       },
-      "image": "/media/s_grafik_marketingkampagnen.png"
+      "image": "/media/s_grafik_marketingkampagnen_de.png"
     }
   },
   "en": {
