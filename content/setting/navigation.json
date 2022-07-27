@@ -39,12 +39,12 @@
       },
       {
         "type": "link",
-        "text": "Für dich",
+        "text": "For You",
         "url": "/fuerdich"
       },
       {
         "type": "link",
-        "text": "Unsere Kunden",
+        "text": "Our Customers",
         "url": "/kunden"
       },
       {
@@ -54,7 +54,7 @@
       },
       {
         "type": "link",
-        "text": "Kontakt",
+        "text": "Contact",
         "url": "/kontakt"
       }
     ]

@@ -54,7 +54,7 @@ function Component() {
                         return "?";
                       })}
 
-                    <div className="hidden">
+                    <div className="">
                       <NextLink href="/" locale="de">
                         <a className="hover:underline" href="">
                           DE
@@ -148,6 +148,19 @@ function Component() {
                                 );
                               return "?";
                             })}
+                          <div className="">
+                            <NextLink href="/" locale="de">
+                              <a className="hover:underline" href="">
+                                DE
+                              </a>
+                            </NextLink>
+                            /
+                            <NextLink href="/" locale="en">
+                              <a className="hover:underline" href="">
+                                EN
+                              </a>
+                            </NextLink>
+                          </div>
                         </div>
                       </div>
                     </div>

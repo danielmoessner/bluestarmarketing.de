@@ -42,9 +42,9 @@
   },
   "en": {
     "meta": {
-      "title": "Für dich",
-      "description": "Der B2B-Marketingpartner für Tech-Unternehmen: erstklassig verlinkte Kampagnen für Wachstum & Erfolg.",
-      "keywords": "Marketingerfolg, Marketingwachstum, Zielerreichung, Marketingpartner                                                     "
+      "title": "For You",
+      "description": "The B2B marketing partner for tech companies: top-notch, interlinked campaigns for your growth & success",
+      "keywords": "Marketing success, growth, target achievement, Marketingpartner                                                     "
     },
     "header": {
       "text": "The B2B marketing partner for tech companies that appreciate top-notch, well connected strategies & campaigns.",
@@ -70,7 +70,7 @@
         "url": "/kontakt"
       },
       "image": "/media/wir_sind_bluestarmarketing_2.jpg",
-      "textimage": "/media/wir_sind_219px.png"
+      "textimage": "/media/we_are.png"
     },
     "cta": {
       "title": "Partner with us on your marketing journey",

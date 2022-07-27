@@ -1,13 +1,7 @@
 import React from "react";
 import Link from "./TranslatedLink";
 import Container from "./Container";
-// import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
-// import { Rendered } from "../types/shared";
-
-// interface Props {
-//   data: Rendered<typeof footerSource>;
-// }
 
 function Component({ data }) {
   return (
@@ -25,7 +19,7 @@ function Component({ data }) {
           <div className="flex flex-col justify-between lg:items-center lg:flex-row">
             <div>{data.row1.copyright}</div>
             <div>
-              <div className="flex hidden space-x-5">
+              <div className="flex space-x-5">
                 {data.row1.content.map((item) => {
                   let element = <div>?</div>;
                   if (item.type === "text")
@@ -68,7 +62,7 @@ function Component({ data }) {
                   window.CCM.openWidget();
                 }}
               >
-                Cookie-Einstellungen
+                {data.cookie}
               </button>
               {data.row2.map((item) => {
                 let element = <div>?</div>;

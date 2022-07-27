@@ -8,7 +8,6 @@ import text from "cms/symbols/text";
 import { internalLinkFields } from "cms/symbols/link";
 import markdown from "cms/symbols/markdown";
 import image from "cms/symbols/image";
-import svg from "cms/symbols/svg";
 
 const service = (n: number): CmsField => ({
   label: "Service",
@@ -31,7 +30,7 @@ const home: CmsCollectionFile = {
       name: "start",
       i18n: true,
       widget: "object",
-      fields: [title, text, cta, svg],
+      fields: [title, text, cta, image],
     },
     {
       label: "Wir sind",
