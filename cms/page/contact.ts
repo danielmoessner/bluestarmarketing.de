@@ -82,6 +82,12 @@ const contact: CmsCollectionFile = {
           i18n: true,
           widget: "string",
         },
+        {
+          label: "Datenschutz Text",
+          name: "markdown",
+          i18n: true,
+          widget: "markdown",
+        },
       ],
     },
   ],

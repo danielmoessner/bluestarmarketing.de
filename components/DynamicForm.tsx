@@ -102,9 +102,10 @@ function Component({
                   />
                 </div>
                 <div className="ml-3">
-                  <Switch.Label className="text-base text-gray-500">
-                    {dataProtectionText}
-                  </Switch.Label>
+                  <Switch.Label
+                    className="text-base prose text-gray-500 prose-a:text-bsm-faince"
+                    dangerouslySetInnerHTML={{ __html: dataProtectionText }}
+                  ></Switch.Label>
                 </div>
               </div>
             </Switch.Group>

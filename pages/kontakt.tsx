@@ -206,11 +206,7 @@ function Page({ pageData, footerData, globalData }) {
             <DynamicForm
               fields={fields}
               submitText={locale === "de" ? "Absenden" : "Send"}
-              dataProtectionText={
-                locale === "de"
-                  ? "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden."
-                  : "I agree that my data will be stored temporarily to process this request."
-              }
+              dataProtectionText={page.form.markdown.html}
             />
           </div>
         </Container>
