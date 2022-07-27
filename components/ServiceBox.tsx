@@ -43,7 +43,7 @@ function Component({ service }: Props) {
             <div className="relative">
               <Multiline text={service.text} />
               {service.quote && (
-                <div className="absolute bottom-0 right-0">
+                <div className="absolute right-0 -bottom-3">
                   <span className="text-xs">{service.quote}</span>
                 </div>
               )}
