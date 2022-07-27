@@ -17,11 +17,6 @@ import SmallBox from "../components/SmallBox";
 import ServiceLinks from "../components/ServiceLinks";
 import Script from "next/script";
 
-// interface Props {
-//   pageData: typeof pageSource;
-//   footerData: typeof footerSource;
-// }
-
 function Page({ pageData, footerData }) {
   const page = pageData;
 
@@ -51,10 +46,9 @@ function Page({ pageData, footerData }) {
                   </div>
                 </div>
                 <div>
-                  <div
-                    className="max-w-full mx-auto"
-                    dangerouslySetInnerHTML={{ __html: page.start.svg }}
-                  ></div>
+                  <div className="max-w-full mx-auto">
+                    <Image {...page.start.image} alt={page.start.title} />
+                  </div>
                 </div>
               </div>
             </Animate>
@@ -125,10 +119,7 @@ function Page({ pageData, footerData }) {
         </Container>
       </section>
 
-      <section
-        className="relative py-16 bg-no-repeat bg-cover bg-bsm-matt"
-        // style={{ background: "url()" }}
-      >
+      <section className="relative py-16 bg-no-repeat bg-cover bg-bsm-matt">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <svg
             className="absolute top-0 bottom-0 left-0 right-0 mx-auto my-auto"

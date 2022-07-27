@@ -12,14 +12,13 @@ import Multiline from "../components/Multiline";
 import DynamicForm from "../components/DynamicForm";
 import globalSource from "../content/setting/global.json";
 import Animate from "../components/Animate";
-// interface Props {
-//   pageData: typeof pageSource;
-//   footerData: typeof footerSource;
-// }
+import { useRouter } from "next/router";
 
 function Page({ pageData, footerData, globalData }) {
   const page = pageData;
   const global = globalData;
+
+  const { locale } = useRouter();
 
   const fields = [
     {
@@ -28,7 +27,7 @@ function Page({ pageData, footerData, globalData }) {
       required: true,
     },
     {
-      label: "Unternehmen",
+      label: locale === "de" ? "Unternehmen" : "Company",
       name: "company",
       required: false,
     },
@@ -39,13 +38,13 @@ function Page({ pageData, footerData, globalData }) {
       required: true,
     },
     {
-      label: "Telefon",
+      label: locale === "de" ? "Telefon" : "Phone",
       name: "phone",
       type: "tel",
       required: false,
     },
     {
-      label: "Nachricht",
+      label: locale === "de" ? "Nachricht" : "Message",
       name: "message",
       element: "textarea",
       required: true,
@@ -204,7 +203,15 @@ function Page({ pageData, footerData, globalData }) {
             </div>
           </div>
           <div className="mt-10">
-            <DynamicForm fields={fields} />
+            <DynamicForm
+              fields={fields}
+              submitText={locale === "de" ? "Absenden" : "Send"}
+              dataProtectionText={
+                locale === "de"
+                  ? "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden."
+                  : "I agree that my data will be stored temporarily to process this request."
+              }
+            />
           </div>
         </Container>
       </section>

@@ -14,10 +14,11 @@ const convertedFormEntries = (formData: FormData) =>
 
 function Component({
   fields,
-  dataProtectionText,
+  dataProtectionText = "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden.",
   name,
   successText,
   successHeading,
+  submitText = "Absenden",
 }) {
   const [formSent, setFormSent] = useState(false);
 
@@ -116,7 +117,7 @@ function Component({
 
           <div className="sm:col-span-2">
             <Button element="button" type="submit" ringOffset="white">
-              Absenden
+              {submitText}
             </Button>
           </div>
         </form>
@@ -127,8 +128,6 @@ function Component({
 
 Component.defaultProps = {
   name: "standardformular",
-  dataProtectionText:
-    "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden.",
   successHeading: "Vielen Dank",
   successText:
     "Vielen Dank für deine Anfrage wir werden uns schnellstmöglich bei dir melden.",

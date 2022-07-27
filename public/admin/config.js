@@ -280,15 +280,6 @@ var markdown = {
 };
 var markdown_default = markdown;
 
-// cms/symbols/svg.ts
-var svg = {
-  label: "SVG",
-  name: "svg",
-  widget: "string",
-  i18n: true
-};
-var svg_default = svg;
-
 // cms/page/home.ts
 var service = (n) => ({
   label: "Service",
@@ -310,7 +301,7 @@ var home = {
       name: "start",
       i18n: true,
       widget: "object",
-      fields: [title_default, text_default, cta_default, svg_default]
+      fields: [title_default, text_default, cta_default, image_default]
     },
     {
       label: "Wir sind",
@@ -511,6 +502,15 @@ var headerSmall = {
   ]
 };
 var headerSmall_default = headerSmall;
+
+// cms/symbols/svg.ts
+var svg = {
+  label: "SVG",
+  name: "svg",
+  widget: "string",
+  i18n: true
+};
+var svg_default = svg;
 
 // cms/page/strategyworkshop.ts
 var strategyworkshop = {
@@ -789,6 +789,12 @@ var footer = {
           types: [link, externalLink, text2]
         }
       ]
+    },
+    {
+      label: "Cookie-Button",
+      name: "cookie",
+      widget: "string",
+      i18n: true
     },
     {
       label: "Zeile 2",

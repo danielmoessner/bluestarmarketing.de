@@ -31,9 +31,9 @@
   },
   "en": {
     "meta": {
-      "title": "Unsere Kunden",
-      "description": "Unsere Kunden? Dein Gewinn! Wir unterstützen global agierende Technologieunternehmen mit Expertise: bekannte Brands & Scale-Ups. ",
-      "keywords": "scale-ups, IT Unternehmen, IT player, Tech-Unternehmen, IT Firmen, tech marketing, B2b marketing"
+      "title": "Our Customers",
+      "description": "Our customers, your win! We support global technology companies with our expertise: Well-known Brands & Scale-ups.",
+      "keywords": "scale-ups, IT companies, tech companies, it player, tech marketing, B2b marketing"
     },
     "header": {
       "image": "/media/bluestarmarketing_kunden_1.jpeg",
@@ -48,7 +48,7 @@
       "text": "Our list of customers is made of global technology companies, including well-known brands and scale-ups.\nWithin market context or customer segments, partner ecosystems and verticals such as Manufacturing and Public, we’ll be happy to talk to you about marketing strategies and campaigns as well as about the threat landscape or network infrastructures.\nWhether it’s cloud, SaaS, IoT, IT monitoring or cybersecurity, we know the environment.",
       "pretext": "COULD THIS BE A WIN FOR YOU?",
       "aftertext": "Then you‘ve come to the",
-      "textimage": "/media/genau_richtig.png",
+      "textimage": "/media/right_place.png",
       "cta": {
         "text": "Learn more about us",
         "url": "/kontakt"

@@ -44,7 +44,8 @@
       "/media/bluestar_footer_4.jpg",
       "/media/bluestar_footer_5.jpg",
       "/media/bluestar_footer_6.jpg"
-    ]
+    ],
+    "cookie": "Cookie-Richtline"
   },
   "en": {
     "images": [
@@ -78,19 +79,20 @@
     "row2": [
       {
         "type": "link",
-        "text": "Impressum",
+        "text": "Imprint",
         "url": "/rechtliches/impressum/"
       },
       {
         "type": "link",
-        "text": "Datenschutzerklärung",
+        "text": "Privacy Policy",
         "url": "/rechtliches/datenschutz/"
       },
       {
         "type": "link",
-        "text": "Kontakt",
+        "text": "Contact",
         "url": "/kontakt"
       }
-    ]
+    ],
+    "cookie": "Cookie Settings"
   }
 }

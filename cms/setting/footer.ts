@@ -63,7 +63,12 @@ const footer: CmsCollectionFile = {
         },
       ],
     },
-
+    {
+      label: "Cookie-Button",
+      name: "cookie",
+      widget: "string",
+      i18n: true,
+    },
     {
       label: "Zeile 2",
       name: "row2",

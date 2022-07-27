@@ -41,8 +41,8 @@
   "en": {
     "meta": {
       "title": "Contact",
-      "description": "20 Jahre+ Marketingexpertise in allen Field-Marketing-Disziplinen sind ein Gewinn für Dich? Dann buche dein Erstgespräch :-)",
-      "keywords": "Kontakt, Erstgespräch, B2B Marketing Field Marketing, Marketingexpertise"
+      "description": "20+ years of marketing expertise in all field marketing disciplines could be a win for you? Then talk to us today! :-)",
+      "keywords": "contact, initial meeting, B2B Marketing, Field Marketing, Marketing expertise"
     },
     "header": {
       "image": "/media/bluestar_kontakt.jpg",
@@ -60,7 +60,7 @@
     "benefits": {
       "title": "Could this be a win for you?",
       "subtitle": "Then you‘ve come to the",
-      "textimage": "/media/genau_richtig.png",
+      "textimage": "/media/right_place.png",
       "pretext": "Together with YOU WE connect",
       "points": [
         "global & local marketing strategies, targets & campaigns",
@@ -74,7 +74,7 @@
       "title": "Get in touch today! Just complete the contact form to arrange a conversation about your plans, goals and ideas with us.",
       "image": "/media/kontakt_silke_tolkmitt.jpg",
       "emailtext": "E-Mail:",
-      "phonetext": "Telefon:"
+      "phonetext": "Phone:"
     }
   }
 }
