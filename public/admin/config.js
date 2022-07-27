@@ -984,7 +984,8 @@ var customer = {
       i18n: true,
       widget: "string",
       required: false
-    }
+    },
+    { label: "Reihenfolge", name: "ordering", i18n: true, widget: "number" }
   ]
 };
 var customer_default = customer;

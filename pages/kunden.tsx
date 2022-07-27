@@ -136,7 +136,8 @@ export async function getStaticProps({ locale }) {
   const pageData = await renderContent(pageSource[locale]);
   const footerData = await renderContent(footerSource[locale]);
 
-  const reviews = getAllJson("customer", locale);
+  const reviews1 = getAllJson("customer", locale);
+  const reviews = reviews1.sort((a, b) => a.ordering - b.ordering);
 
   return {
     props: {
