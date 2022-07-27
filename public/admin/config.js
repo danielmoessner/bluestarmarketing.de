@@ -503,15 +503,6 @@ var headerSmall = {
 };
 var headerSmall_default = headerSmall;
 
-// cms/symbols/svg.ts
-var svg = {
-  label: "SVG",
-  name: "svg",
-  widget: "string",
-  i18n: true
-};
-var svg_default = svg;
-
 // cms/page/strategyworkshop.ts
 var strategyworkshop = {
   file: "content/page/strategyworkshop.json",
@@ -539,7 +530,7 @@ var strategyworkshop = {
       name: "travel",
       i18n: true,
       widget: "object",
-      fields: [title_default, svg_default, cta_default]
+      fields: [title_default, image_default, cta_default]
     }
   ]
 };
@@ -566,11 +557,20 @@ var marketingstrategy = {
       name: "travel",
       i18n: true,
       widget: "object",
-      fields: [title_default, svg_default, cta_default]
+      fields: [title_default, image_default, cta_default]
     }
   ]
 };
 var marketingstrategy_default = marketingstrategy;
+
+// cms/symbols/svg.ts
+var svg = {
+  label: "SVG",
+  name: "svg",
+  widget: "string",
+  i18n: true
+};
+var svg_default = svg;
 
 // cms/page/salesmarketing.ts
 var salesmarketing = {
@@ -593,7 +593,7 @@ var salesmarketing = {
       name: "travel",
       i18n: true,
       widget: "object",
-      fields: [title_default, svg_default, cta_default]
+      fields: [title_default, image_default, cta_default]
     }
   ]
 };
@@ -620,7 +620,7 @@ var marketingcampaign = {
       name: "travel",
       i18n: true,
       widget: "object",
-      fields: [title_default, svg_default, cta_default]
+      fields: [title_default, image_default, cta_default]
     }
   ]
 };

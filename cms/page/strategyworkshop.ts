@@ -5,7 +5,6 @@ import text from "cms/symbols/text";
 import cta from "cms/symbols/cta";
 import image from "cms/symbols/image";
 import headerSmall from "cms/symbols/headerSmall";
-import svg from "cms/symbols/svg";
 
 const strategyworkshop: CmsCollectionFile = {
   file: "content/page/strategyworkshop.json",
@@ -33,7 +32,7 @@ const strategyworkshop: CmsCollectionFile = {
       name: "travel",
       i18n: true,
       widget: "object",
-      fields: [title, svg, cta],
+      fields: [title, image, cta],
     },
   ],
 };
