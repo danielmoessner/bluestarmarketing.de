@@ -35,7 +35,8 @@
       "title": "Jetzt Kontaktformular absenden und Erstgespräch vereinbaren!",
       "image": "/media/kontakt_silke_tolkmitt.jpg",
       "emailtext": "E-Mail:",
-      "phonetext": "Telefon:"
+      "phonetext": "Telefon:",
+      "markdown": "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden. [Zum Datenschutz](/rechtliches/datenschutz)"
     }
   },
   "en": {
@@ -74,7 +75,8 @@
       "title": "Get in touch today! Just complete the contact form to arrange a conversation about your plans, goals and ideas with us.",
       "image": "/media/kontakt_silke_tolkmitt.jpg",
       "emailtext": "E-Mail:",
-      "phonetext": "Phone:"
+      "phonetext": "Phone:",
+      "markdown": "I agree that my data will be stored temporarily to process this request. [Privacy Policy](/legal/privacy)"
     }
   }
 }
