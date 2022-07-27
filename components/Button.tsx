@@ -80,7 +80,7 @@ function Component({
   return (
     <div
       ref={button}
-      className="relative table group button-svg--wrapper"
+      className="relative table whitespace-pre group button-svg--wrapper"
       onMouseEnter={mouseEnterHandler}
       onMouseLeave={mouseLeaveHandler}
     >
