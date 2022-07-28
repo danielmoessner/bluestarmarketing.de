@@ -15,7 +15,7 @@
     },
     "start": {
       "title": "Wir lassen dich strahlen",
-      "text": "Entdecke die Potenziale, sichere dir mit der passenden Marketingstrategie und integrierten Kampagnen mit verlinkten Kampagnenelementen deinen Erfolg und Wachstumschancen. \nWir spüren Potenziale gemeinsam auf, verbinden und erarbeiten für dich und dein Team partnerschaftlich die Strategie und passgenaue Kampagnen innerhalb der Buyer’s Journey und für die Bereicherung eures Sales- und Marketing-Funnels. \nDer Schulterschluss von Marketing und Vertrieb auf allen Hierarchieebenen ist einer der wichtigsten Schlüssel zu Wachstum und Erfolg! \nSchlank aufgestellt, reagieren wir agil und prompt auf kurzfristige Anforderungen in der agilen IT-Branche. \nNutze gerne die strategischen Insights unseres leidenschaftlichen und spezialisierten Teams für langfristiges Wachstum!",
+      "text": "Entdecke die Potenziale, sichere dir mit der passenden Marketingstrategie und integrierten Kampagnen mit verlinkten Kampagnenelementen deinen Erfolg und Wachstumschancen. \nWir spüren Potenziale gemeinsam auf, verbinden und erarbeiten für dich und dein Team partnerschaftlich die Strategie und passgenaue Kampagnen innerhalb der Buyer's Journey und für die Bereicherung eures Sales- und Marketing-Funnels. \nDer Schulterschluss von Marketing und Vertrieb auf allen Hierarchieebenen ist einer der wichtigsten Schlüssel zu Wachstum und Erfolg! \nSchlank aufgestellt, reagieren wir agil und prompt auf kurzfristige Anforderungen in der agilen IT-Branche. \nNutze gerne die strategischen Insights unseres leidenschaftlichen und spezialisierten Teams für langfristiges Wachstum!",
       "cta": {
         "text": "Potenziale entdecken – Kontakt aufnehmen",
         "url": "/kontakt"
@@ -59,7 +59,7 @@
         {
           "title": "Erstgespräch",
           "id": "erstgespraech",
-          "text": "Wir freuen uns darauf, dich und dein Team kennenzulernen, um mehr über euer Marketing Set-Up und eure Herausforderungen zu erfahren. \nIm initialen Gespräch finden wir heraus, wo wir mit unseren Kernkompetenzen bereichernd und erfolgsversprechend gestalten und euer Marketingwachstum nachhaltig mit- und weiterentwickeln können.",
+          "markdown": "Wir freuen uns darauf, dich und dein Team kennenzulernen, um mehr über euer Marketing Set-Up und eure Herausforderungen zu erfahren. \n\nIm initialen Gespräch finden wir heraus, wo wir mit unseren Kernkompetenzen bereichernd und erfolgsversprechend gestalten und euer Marketingwachstum nachhaltig mit- und weiterentwickeln können.",
           "image": "/media/service_erstgespraech.jpg",
           "cta": {
             "text": "Starte deine Marketingreise",
@@ -71,7 +71,7 @@
         {
           "title": "Strategieworkshop",
           "id": "strategieworkshop",
-          "text": "Unsere Reise startet mit einem tiefen Verständnis eures Status quo, der Geschäftsziele, eurer globalen und regionalen Marketingziele und aktuellen Herausforderungen. \nMit deiner Erlaubnis werfen wir einen Blick auf eure bestehende Marketingstrategie sowie die Marketingpläne und Kampagnen, um Stärken, Schwächen, Chancen und Risiken zu erkennen.",
+          "markdown": "Unsere Reise startet mit einem tiefen Verständnis eures Status quo, der Geschäftsziele, eurer globalen und regionalen Marketingziele und aktuellen Herausforderungen. \n\nMit deiner Erlaubnis werfen wir einen Blick auf eure bestehende Marketingstrategie sowie die Marketingpläne und Kampagnen, um Stärken, Schwächen, Chancen und Risiken zu erkennen.",
           "image": "/media/service_strategieworkshop.jpg",
           "cta": {
             "text": "Starte deine Marketingreise",
@@ -83,7 +83,7 @@
         {
           "title": "Marketingstrategie",
           "id": "marketingstrategie",
-          "text": "Die Ergebnisse des Strategieworkshops fassen wir im Nachgang zu unserer Landkarte zusammen. Sie dient uns zur Priorisierung der Next Steps, Quick Wins und als Rahmen für die weitere Zusammenarbeit. \nBasierend auf unserem Strategieworkshop und dem vereinbarten Rahmen entwickeln wir Marketingkampagnen für dich und dein Team.",
+          "markdown": "Die Ergebnisse des Strategieworkshops fassen wir im Nachgang zu unserer Landkarte zusammen. Sie dient uns zur Priorisierung der Next Steps, Quick Wins und als Rahmen für die weitere Zusammenarbeit. \n\nBasierend auf unserem Strategieworkshop und dem vereinbarten Rahmen entwickeln wir Marketingkampagnen für dich und dein Team.",
           "image": "/media/service_marketingstrategie.jpg",
           "cta": {
             "text": "Starte deine Marketingreise",
@@ -95,7 +95,7 @@
         {
           "title": "Sales & Marketing Funnel",
           "id": "sales-and-marketing-funnel",
-          "text": "An welchem Punkt benötigt eure Marketing-Pipeline einen echten Push? \nAn dieser Stelle benötigen wir einen Vertrauensvorschuss, denn Einblicke und Transparenz sind extrem relevant, um Schätze zu finden und Potenziale zu heben. Wir begrüßen und schätzen deine Offenheit, denn es stellen sich viele Fragen, beispielsweise ob bereits ausreichend Leads zur Zielerreichung generiert werden.",
+          "markdown": "An welchem Punkt benötigt eure Marketing-Pipeline einen echten Push? \n\nAn dieser Stelle benötigen wir einen Vertrauensvorschuss, denn Einblicke und Transparenz sind extrem relevant, um Schätze zu finden und Potenziale zu heben. Wir begrüßen und schätzen deine Offenheit, denn es stellen sich viele Fragen, beispielsweise ob bereits ausreichend Leads zur Zielerreichung generiert werden.",
           "image": "/media/service_sales_marketing_funnel.jpg",
           "cta": {
             "text": "Starte deine Marketingreise",
@@ -107,7 +107,7 @@
         {
           "title": "Marketingkampagnen",
           "id": "marketingkampagnen",
-          "text": "Wir erfassen euren Marktkontext & Status quo und kombinieren neue Erkenntnisse zu Segmenten, Zielgruppen, Verticals und/ oder dem Partner-Ökosystem. Daraus leiten wir zielführende & integrierte Marketingkampagnen ab, verlinkt mit euren Zielen und eurer Strategie.  \nAuf Wunsch fokussieren wir uns auf definierte Teilaspekte der Gesamtstrategie und des Marketingplans.",
+          "markdown": "Wir erfassen euren Marktkontext & Status quo und kombinieren neue Erkenntnisse zu Segmenten, Zielgruppen, Verticals und/ oder dem Partner-Ökosystem. Daraus leiten wir zielführende & integrierte Marketingkampagnen ab, verlinkt mit euren Zielen und eurer Strategie.\n\nAuf Wunsch fokussieren wir uns auf definierte Teilaspekte der Gesamtstrategie und des Marketingplans.",
           "image": "/media/service_marketingkampagnen.jpg",
           "cta": {
             "text": "Starte deine Marketingreise",
@@ -119,7 +119,7 @@
         {
           "title": "Projektmanagement",
           "id": "projektmanagement",
-          "text": "Support der Extraklasse mit unserem Team, Partneragenturen & Experten oder gemeinsam mit eurer bevorzugten Full-Service-Agentur. \nInnerhalb eines vordefinierten Zeitrahmens und mit enger Erfolgskontrolle.",
+          "markdown": "Support der Extraklasse \n\n* mit unserem Team, Partneragenturen & Experten \n* oder gemeinsam mit eurer bevorzugten Full-Service-Agentur.\n\nInnerhalb eines vordefinierten Zeitrahmens und mit enger Erfolgskontrolle.",
           "image": "/media/service_projektmanagement.jpg",
           "cta": {
             "text": "Starte deine Marketingreise",
@@ -131,7 +131,7 @@
         {
           "title": "Erfolge feiern",
           "id": "erfolge-feiern",
-          "text": "In unserer schnelllebigen Zeit und in der IT-Branche ist es uns sehr wichtig, Erfolge zu feiern. Nimm dir einen Moment zum Feiern, Reflektieren und Genießen – gerne zusammen mit uns! \nDie Reflexion gibt uns die großartige Möglichkeit, zu optimieren und anzureichern, um beim nächsten Mal noch besser zu sein. \nJeden Tag und jeden Moment haben wir die Chance, zu wählen. Heute ist mein bester Tag*!",
+          "markdown": "In unserer schnelllebigen Zeit und in der IT-Branche ist es uns sehr wichtig, Erfolge zu feiern. Nimm dir einen Moment zum Feiern, Reflektieren und Genießen – gerne zusammen mit uns! \n\nDie Reflexion gibt uns die großartige Möglichkeit, zu optimieren und anzureichern, um beim nächsten Mal noch besser zu sein. \n\nJeden Tag und jeden Moment haben wir die Chance, zu wählen. Heute ist mein bester Tag*!",
           "image": "/media/service_erfolgefeiern.jpg",
           "cta": {
             "text": "Starte deine Marketingreise",
@@ -194,7 +194,7 @@
         {
           "title": "Getting to know each other",
           "id": "erstgespraech",
-          "text": "We are looking forward to meeting you and your team, and to learn more about your marketing setup and your challenges.\n\nIn our first conversation, we want to find out how we can enrich your marketing growth and extend it further in a sustainable way",
+          "markdown": "We are looking forward to meeting you and your team, and to learn more about your marketing setup and your challenges.\n\nIn our first conversation, we want to find out how we can enrich your marketing growth and extend it further in a sustainable way",
           "image": "/media/service_erstgespraech.jpg",
           "cta": {
             "text": "Start your marketing journey",
@@ -206,7 +206,7 @@
         {
           "title": "Strategy Workshop",
           "id": "strategieworkshop",
-          "text": "Our journey starts with a deep understanding of your current status, business goals, global and regional marketing objectives and current challenges.\n\nWith your permission, we take a look at your existing marketing strategy, marketing plans and campaigns to identify strengths, weak spots, opportunities and threats.",
+          "markdown": "Our journey starts with a deep understanding of your current status, business goals, global and regional marketing objectives and current challenges.\n\nWith your permission, we take a look at your existing marketing strategy, marketing plans and campaigns to identify strengths, weak spots, opportunities and threats.",
           "image": "/media/service_strategieworkshop.jpg",
           "cta": {
             "text": "Start your marketing journey",
@@ -218,7 +218,7 @@
         {
           "title": "Marketing Strategy",
           "id": "marketingstrategie",
-          "text": "We summarize the results of the strategy workshop in our roadmap which helps us to prioritize the next steps and quick wins, and serves as a framework for our further collaboration.\n\nBased on our strategy workshop and within the agreed framework, we’ll deliver marketing campaigns to you and your team.",
+          "markdown": "We summarize the results of the strategy workshop in our roadmap which helps us to prioritize the next steps and quick wins, and serves as a framework for our further collaboration.\n\nBased on our strategy workshop and within the agreed framework, we'll deliver marketing campaigns to you and your team.",
           "image": "/media/service_marketingstrategie.jpg",
           "cta": {
             "text": "Start your marketing journey",
@@ -230,7 +230,7 @@
         {
           "title": "Sales & Marketing Funnel",
           "id": "sales-and-marketing-funnel",
-          "text": "Your marketing pipeline needs a real push?\n\nAt this point, we need you to take a leap of faith. Why? Because insights and transparency are extremely important for finding any hidden treasures and leveraging the full potential. We appreciate your trust and welcome your openness, because many questions need to be answered, for example: Are you generating enough leads to reach your goals?",
+          "markdown": "Your marketing pipeline needs a real push?\n\nAt this point, we need you to take a leap of faith. Why? Because insights and transparency are extremely important for finding any hidden treasures and leveraging the full potential. We appreciate your trust and welcome your openness, because many questions need to be answered, for example: Are you generating enough leads to reach your goals?",
           "image": "/media/service_sales_marketing_funnel.jpg",
           "cta": {
             "text": "Start your marketing journey",
@@ -242,7 +242,7 @@
         {
           "title": "Marketing Campaigns",
           "id": "marketingkampagnen",
-          "text": "We capture your market context and status quo and combine new insights on segments, target groups, verticals and/or the partner ecosystem. Based on this, we develop targeted, integrated marketing campaigns that are connected to your goals and your strategy.\n\nOn request, we can focus on defined sub-aspects of the overall strategy and marketing plan.",
+          "markdown": "We capture your market context and status quo and combine new insights on segments, target groups, verticals and/or the partner ecosystem. Based on this, we develop targeted, integrated marketing campaigns that are connected to your goals and your strategy.\n\nOn request, we can focus on defined sub-aspects of the overall strategy and marketing plan.",
           "image": "/media/service_marketingkampagnen.jpg",
           "cta": {
             "text": "Start your marketing journey",
@@ -254,7 +254,7 @@
         {
           "title": "Project Management",
           "id": "projektmanagement",
-          "text": "Taking support & service to the next level with our team, partner agencies &\nexperts or together with your preferred full-service agency\n\nWithin a predefined timeframe and with close success monitoring.\n",
+          "markdown": "Taking support & service to the next level \n\n* with our team, partner agencies &\n  experts\n* or together with your preferred full-service agency\n\nWithin a predefined timeframe and with close success monitoring.",
           "image": "/media/service_projektmanagement.jpg",
           "cta": {
             "text": "Start your marketing journey",
@@ -266,7 +266,7 @@
         {
           "title": "Celebrate Success",
           "id": "erfolge-feiern",
-          "text": "In today’s fast-paced world and specifically in the agile IT industry, we should never forget to celebrate success. So take a moment to celebrate, enjoy and reflect what you have achieved – preferably with us!\n\nReflection gives us a great opportunity to optimize, to enrich and to be even better next time.\n\nEvery day and every moment we have the chance to choose. Today is my best day*!",
+          "markdown": "In today's fast-paced world and specifically in the agile IT industry, we should never forget to celebrate success. So take a moment to celebrate, enjoy and reflect what you have achieved – preferably with us!\n\nReflection gives us a great opportunity to optimize, to enrich and to be even better next time.\n\nEvery day and every moment we have the chance to choose. Today is my best day*!",
           "image": "/media/service_erfolgefeiern.jpg",
           "cta": {
             "text": "Start your marketing journey",

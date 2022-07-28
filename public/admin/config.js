@@ -466,7 +466,7 @@ var services = {
               widget: "select",
               options: ["L", "R"]
             },
-            text_default,
+            markdown_default,
             {
               label: "Zitat",
               name: "quote",
