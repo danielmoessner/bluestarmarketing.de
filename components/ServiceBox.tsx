@@ -1,14 +1,17 @@
 import Image from "next/image";
 import { ImageRendered } from "types/shared";
 import Heading from "./Heading";
-import Multiline from "./Multiline";
+// import Multiline from "./Multiline";
 import Button from "./Button";
+import Prose from "./Prose";
 
 interface Props {
   service: {
     title: string;
     id: string;
-    text: string;
+    markdown: {
+      html: string;
+    };
     image: ImageRendered;
     cta: {
       text: string;
@@ -41,7 +44,7 @@ function Component({ service }: Props) {
         <div className="mt-6 lg:mt-10">
           <div className="grid gap-6 sm:grid-cols-2">
             <div className="relative">
-              <Multiline text={service.text} />
+              <Prose html={service.markdown.html} />
               {service.quote && (
                 <div className="absolute right-0 -bottom-3">
                   <span className="text-xs">{service.quote}</span>

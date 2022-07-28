@@ -58,7 +58,7 @@ function Page({ pageData, footerData, globalData }) {
   return (
     <Layout>
       <Seo meta={page.meta} />
-      <Header header={page.header} />
+      <Header position="left" header={page.header} />
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
