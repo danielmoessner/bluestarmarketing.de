@@ -663,6 +663,12 @@ var starnews = {
           name: "button",
           i18n: true,
           widget: "string"
+        },
+        {
+          label: "Archiviert",
+          name: "is_archived",
+          widget: "boolean",
+          required: false
         }
       ]
     },
