@@ -100,6 +100,10 @@ export async function getStaticProps({ locale }) {
     (a) => a.slug === pageData.start.article
   );
 
+  const isArchived = articleData2.filter(
+    (a) => a.slug !== pageData.start.is_archived
+  );
+
   const articleData = articleData2.filter(
     (a) => a.slug !== pageData.start.article
   );
@@ -111,6 +115,7 @@ export async function getStaticProps({ locale }) {
       footerData,
       articleData,
       mainArticleData,
+      isArchived,
     },
   };
 }

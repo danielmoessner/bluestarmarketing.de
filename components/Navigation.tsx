@@ -55,16 +55,20 @@ function Component() {
                       })}
 
                     <div className="">
-                      <NextLink href="/" locale="de">
-                        <a className="hover:underline" href="">
-                          DE
-                        </a>
+                      <NextLink
+                        href="/"
+                        locale="de"
+                        className="hover:underline"
+                      >
+                        DE
                       </NextLink>
                       /
-                      <NextLink href="/" locale="en">
-                        <a className="hover:underline" href="">
-                          EN
-                        </a>
+                      <NextLink
+                        href="/"
+                        locale="en"
+                        className="hover:underline"
+                      >
+                        EN
                       </NextLink>
                     </div>
                     <div className="flex pl-3 space-x-4">

@@ -158,7 +158,13 @@ function Page({ pageData, footerData, globalData }) {
           </div>
           <div className="grid gap-8 mt-12 sm:grid-cols-2">
             <div className="leading-[0px]">
-              <Image {...page.form.image} alt={page.form.title} />
+              <div>
+                <Image
+                  {...page.form.image}
+                  alt={page.form.title}
+                  className="max-h-[335px] w-auto"
+                />
+              </div>
             </div>
             <div>
               <h3 className="text-2xl font-bold">{page.form.emailtext}</h3>
