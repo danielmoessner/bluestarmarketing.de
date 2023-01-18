@@ -3,8 +3,28 @@ import Image from "next/image";
 import Button from "./Button";
 import Heading from "./Heading";
 import Animate from "./Animate";
+import { ImageRendered } from "types/shared";
 
-function Component({ header, position = "bottom" }) {
+interface Header1 {
+  text: string;
+  image: ImageRendered;
+  cta: {
+    text: string;
+    url: string;
+  };
+}
+
+interface Header2 {
+  image: ImageRendered;
+  color: string;
+}
+
+interface Props {
+  header: Header1 | Header2;
+  position?: "bottom" | "top" | "left";
+}
+
+function Component({ header, position = "bottom" }: Props) {
   let positionClass = "";
   if (position === "top") positionClass = "lg:top-10 lg:right-10";
   else if (position === "left") positionClass = "lg:left-10 lg:bottom-10";
@@ -18,13 +38,13 @@ function Component({ header, position = "bottom" }) {
             <div className="leading-[0px]">
               <Image
                 {...header.image}
-                alt={header.title}
+                alt={"text" in header ? header.text : "Header"}
                 priority
                 placeholder="empty"
                 className="w-full"
               />
             </div>
-            {header.text && header.cta && (
+            {"text" in header && "cta" in header && (
               <div
                 className={`relative z-10 lg:w-5/12 lg:absolute  ${positionClass}`}
               >
@@ -42,7 +62,7 @@ function Component({ header, position = "bottom" }) {
                 </Animate>
               </div>
             )}
-            {!(header.text && header.cta) && (
+            {!("text" in header && "cta" in header) && (
               <div
                 className="w-full h-5"
                 style={{ backgroundColor: header.color }}
@@ -55,28 +75,4 @@ function Component({ header, position = "bottom" }) {
   );
 }
 
-// Component.defaultProps = {};
-
-// Component.propTypes = {
-//   header: PropTypes.shape({
-//     title: PropTypes.string,
-//     text: PropTypes.string,
-//   }).isRequired,
-// };
-
 export default Component;
-
-// export const headerFragment = graphql`
-//   fragment header on PageYaml {
-//     header {
-//       title
-//       text
-//     }
-//   }
-//   fragment headerMarkdown on MarkdownRemarkFrontmatter {
-//     header {
-//       title
-//       text
-//     }
-//   }
-// `;

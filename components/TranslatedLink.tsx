@@ -12,7 +12,7 @@ const TranslatedLink = ({ href, children }) => {
   const translatedPath = rewritesDict[`/${locale}${href}`];
 
   return (
-    <Link href={href} as={translatedPath}>
+    <Link href={href} as={translatedPath} legacyBehavior>
       {children}
     </Link>
   );

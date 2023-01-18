@@ -29,9 +29,9 @@ function Component({ children, categories, aside, current = "---" }) {
                 </li>
               ))}
             </ul>
-            <div className="mt-2">
+            {/* <div className="mt-2">
               <Link href={"/starnews"}>Archiv</Link>
-            </div>
+            </div> */}
           </div>
 
           <div className="hidden mt-20 md:block">
