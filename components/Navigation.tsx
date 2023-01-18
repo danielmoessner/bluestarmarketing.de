@@ -29,7 +29,11 @@ function Component() {
                   <div className="flex justify-start h-12 md:w-0 md:flex-1">
                     <Link href="/">
                       <a className="w-40 focus:outline-none">
-                        <Image src={imageSrc} alt="Blue Star Marketing Logo" />
+                        <Image
+                          priority
+                          src={imageSrc}
+                          alt="Blue Star Marketing Logo"
+                        />
                       </a>
                     </Link>
                   </div>
@@ -55,16 +59,20 @@ function Component() {
                       })}
 
                     <div className="">
-                      <NextLink href="/" locale="de">
-                        <a className="hover:underline" href="">
-                          DE
-                        </a>
+                      <NextLink
+                        href="/"
+                        locale="de"
+                        className="hover:underline"
+                      >
+                        DE
                       </NextLink>
                       /
-                      <NextLink href="/" locale="en">
-                        <a className="hover:underline" href="">
-                          EN
-                        </a>
+                      <NextLink
+                        href="/"
+                        locale="en"
+                        className="hover:underline"
+                      >
+                        EN
                       </NextLink>
                     </div>
                     <div className="flex pl-3 space-x-4">
