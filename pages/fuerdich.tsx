@@ -23,7 +23,7 @@ function Page({ pageData, footerData }) {
   return (
     <Layout>
       <Seo meta={page.meta} />
-      <Header header={page.header} position="bottom" />
+      <Header header={page.header} position="bottom-right" />
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
