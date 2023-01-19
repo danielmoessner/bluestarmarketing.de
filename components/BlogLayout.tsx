@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Button from "../components/Button";
 import Link from "./TranslatedLink";
+import { useRouter } from "next/router";
+import category from "cms/category";
 
 function Component({ children, categories, aside, current = "---" }) {
   return (
@@ -29,9 +31,11 @@ function Component({ children, categories, aside, current = "---" }) {
                 </li>
               ))}
             </ul>
-            {/* <div className="mt-2">
-              <Link href={"/starnews"}>Archiv</Link>
-            </div> */}
+
+            {/*  archiv link */}
+            <div className="mt-2">
+              <Link href={"/starnews?archiv"}>Archiv</Link>
+            </div>
           </div>
 
           <div className="hidden mt-20 md:block">
