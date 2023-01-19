@@ -21,14 +21,17 @@ interface Header2 {
 
 interface Props {
   header: Header1 | Header2;
-  position?: "bottom" | "top" | "left";
+  position?: "top-right" | "bottom-right" | "bottom-left" | "top-left";
 }
 
-function Component({ header, position = "bottom" }: Props) {
+function Component({ header, position = "bottom-right" }: Props) {
   let positionClass = "";
-  if (position === "top") positionClass = "lg:top-10 lg:right-10";
-  else if (position === "left") positionClass = "lg:left-10 lg:bottom-10";
-  else positionClass = "lg:bottom-10 lg:right-10";
+  if (position === "top-right") positionClass = "lg:top-10 lg:right-10";
+  else if (position === "bottom-left")
+    positionClass = "lg:left-10 lg:bottom-10";
+  else if (position === "bottom-right")
+    positionClass = "lg:bottom-10 lg:right-10";
+  else if (position === "top-left") positionClass = "lg:top-10 lg:left-10";
 
   return (
     <header>
