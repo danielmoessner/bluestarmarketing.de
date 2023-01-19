@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Button from "../components/Button";
 import Link from "./TranslatedLink";
-import { useRouter } from "next/router";
-import category from "cms/category";
 
 function Component({ children, categories, aside, current = "---" }) {
   return (
