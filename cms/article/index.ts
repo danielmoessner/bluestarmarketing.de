@@ -48,6 +48,13 @@ const article: CmsCollection = {
       search_fields: ["title"],
       value_field: "title",
     },
+    // is archived article
+    {
+      label: "Archiviert",
+      name: "is_archived",
+      widget: "boolean",
+      required: false,
+    },
     { label: "Auszug", name: "excerpt", i18n: true, widget: "text" },
     { label: "Inhalt", name: "markdown", i18n: true, widget: "markdown" },
   ],
