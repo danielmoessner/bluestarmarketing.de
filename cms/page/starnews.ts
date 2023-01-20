@@ -36,13 +36,6 @@ const starnews: CmsCollectionFile = {
           i18n: true,
           widget: "string",
         },
-        // is archived blog page
-        // {
-        //   label: "Archiviert",
-        //   name: "is_archived",
-        //   widget: "boolean",
-        //   required: false,
-        // },
       ],
     },
     {

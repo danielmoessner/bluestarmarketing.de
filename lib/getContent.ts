@@ -29,11 +29,17 @@ function loadMarkdown<T extends CmsObject>(
 
 function loadJson<T extends CmsObject, A extends Record<string, string>>(
   filename,
-  attrs: A = null
+  locale: "de" | "en" | "" = ""
 ): T & { _path: string } & A {
   const { content, path } = readFile(filename);
-  const data = JSON.parse(content);
-  return { ...data, _path: path, ...attrs } as T & { _path: string } & A;
+  let data = JSON.parse(content);
+  if (locale) {
+    data = data[locale];
+    Object.keys(data).forEach((key) => {
+      data = Object.assign(data, data[key], data);
+    });
+  }
+  return { ...data, _path: path, _locale: locale } as T & { _path: string } & A;
 }
 
 export function getAllMarkdown<T extends CmsObject>(
@@ -56,19 +62,15 @@ export function getAllMarkdown<T extends CmsObject>(
 
 export function getAllJson<T extends CmsObject>(
   collection: string,
-  locale = ""
+  locale: "de" | "en" | "" = ""
 ): JsonLoaded<T>[] {
-  const collectionDirectory = join(
-    process.cwd(),
-    "content",
-    collection,
-    locale
-  );
+  const collectionDirectory = join(process.cwd(), "content", collection);
   const filenames = fs.readdirSync(collectionDirectory);
   const items = filenames.map((filename) =>
-    loadJson<T, { _locale: string }>(`${collectionDirectory}/${filename}`, {
-      _locale: locale,
-    })
+    loadJson<T, { _locale: string }>(
+      `${collectionDirectory}/${filename}`,
+      locale
+    )
   );
 
   return items;

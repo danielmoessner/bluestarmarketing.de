@@ -23,7 +23,7 @@ function Component() {
       <Container layout="sm">
         <div className="">
           <Popover className="relative bg-white">
-            {({ open }) => (
+            {({ open, close }) => (
               <>
                 <div className="flex items-center justify-between py-3 md:justify-start md:space-x-10">
                   <div className="flex justify-start h-12 md:w-0 md:flex-1">
@@ -130,10 +130,14 @@ function Component() {
                             </a>
                           </Link>
                           <div className="">
-                            <Popover.Button className="bg-white rounded-md border-2 border-gray-100 px-2 py-1.5 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                            <button
+                              type="button"
+                              onClick={close}
+                              className="bg-white rounded-md border-2 border-gray-100 px-2 py-1.5 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+                            >
                               <span className="sr-only">Menü schließen</span>
                               <XIcon className="w-6 h-6" aria-hidden="true" />
-                            </Popover.Button>
+                            </button>
                           </div>
                         </div>
                         <div className="mt-6 space-y-4">
@@ -153,16 +157,20 @@ function Component() {
                               return "?";
                             })}
                           <div className="">
-                            <NextLink href="/" locale="de">
-                              <a className="hover:underline" href="">
-                                DE
-                              </a>
+                            <NextLink
+                              href="/"
+                              locale="de"
+                              className="hover:underline"
+                            >
+                              DE
                             </NextLink>
                             /
-                            <NextLink href="/" locale="en">
-                              <a className="hover:underline" href="">
-                                EN
-                              </a>
+                            <NextLink
+                              href="/"
+                              locale="en"
+                              className="hover:underline"
+                            >
+                              EN
                             </NextLink>
                           </div>
                         </div>

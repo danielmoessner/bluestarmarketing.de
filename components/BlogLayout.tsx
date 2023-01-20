@@ -1,8 +1,29 @@
 import Image from "next/image";
+import { IButton, ImageRendered } from "types/shared";
 import Button from "../components/Button";
 import Link from "./TranslatedLink";
 
-function Component({ children, categories, aside, current, archiv = "---" }) {
+interface Props {
+  children: React.ReactNode;
+  categories: { title: string }[];
+  aside: {
+    categories: string;
+    title: string;
+    image: ImageRendered;
+    text: string;
+    cta: IButton;
+  };
+  current?: string;
+  showArchived?: boolean;
+}
+
+function Component({
+  children,
+  categories,
+  aside,
+  current = "---",
+  showArchived = false,
+}: Props) {
   return (
     <div className="grid grid-cols-4 gap-16">
       <div className="col-span-4 md:col-span-3">{children}</div>
@@ -29,15 +50,12 @@ function Component({ children, categories, aside, current, archiv = "---" }) {
                 </li>
               ))}
             </ul>
-
-            {/*  archiv link */}
             <div className="mt-2">
-              <a
-                href={"/starnews?archiv"}
-                className={archiv.includes(current) ? "underline" : ""}
-              >
-                Archiv
-              </a>
+              <Link href={"/starnews?show-archived"}>
+                <a href="" className={showArchived ? "underline" : ""}>
+                  Archiv
+                </a>
+              </Link>
             </div>
           </div>
 

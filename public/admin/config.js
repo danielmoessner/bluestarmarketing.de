@@ -725,7 +725,10 @@ var category = {
   editor: {
     preview: false
   },
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
   folder: "content/category",
   slug: "{{slug}}",
   create: true,
@@ -976,7 +979,10 @@ var customer = {
   editor: {
     preview: false
   },
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
   extension: "json",
   folder: "content/customer",
   slug: "{{fields.customer}}",
@@ -1001,7 +1007,10 @@ var article = {
   name: "article",
   label: "Artikel",
   label_singular: "Artikel",
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
   editor: {
     preview: false
   },
@@ -1010,7 +1019,13 @@ var article = {
   slug: "{{fields.slug}}",
   create: true,
   fields: [
-    image_default,
+    {
+      label: "Bild",
+      name: "image",
+      widget: "image",
+      i18n: true,
+      hint: "Erscheint auf der Detailseite, auf der der ganze Artikel zu sehen ist."
+    },
     {
       label: "Bildnachweis",
       name: "credit",
@@ -1022,7 +1037,8 @@ var article = {
       label: "Preview Bild",
       name: "previewimage",
       i18n: true,
-      widget: "image"
+      widget: "image",
+      hint: "Erscheint auf der Starnews Seite, auf der alle Artikel sind als Preview."
     },
     title_default,
     { label: "Slug", name: "slug", i18n: true, widget: "string" },
@@ -1043,9 +1059,10 @@ var article = {
       search_fields: ["title"],
       value_field: "title"
     },
+    // is archived article
     {
       label: "Archiviert",
-      name: "is_archived",
+      name: "isArchived",
       widget: "boolean",
       required: false
     },
@@ -1058,23 +1075,33 @@ var article_default = article;
 // cms/config.ts
 var config2 = {
   publish_mode: "editorial_workflow",
+  // See https://www.netlifycms.org/docs/beta-features/#i18n-support
   i18n: {
     structure: "multiple_folders",
     locales: ["de", "en"],
     default_locale: "de"
   },
+  // See https://www.netlifycms.org/docs/configuration-options/#backend
   backend: {
     name: "git-gateway",
     branch: "main",
     repo: "danielmoessner/bluestarmarketing.de"
   },
+  // See https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
   local_backend: true,
+  // See https://www.netlifycms.org/docs/configuration-options/#locale
   locale: "de",
+  // See https://www.netlifycms.org/docs/configuration-options/#display-url
   display_url: "https://bluestarmarketing.de",
+  // See https://www.netlifycms.org/docs/configuration-options/#site-url
   site_url: "https://bluestarmarketing.de",
+  // See https://www.netlifycms.org/docs/configuration-options/#media-folder
   media_folder: "/public/media",
+  // See https://www.netlifycms.org/docs/configuration-options/#public-folder
   public_folder: "/media",
+  // See https://www.netlifycms.org/docs/beta-features/#manual-initialization
   load_config_file: false,
+  // See https://www.netlifycms.org/docs/collection-types/
   collections: [page_default, article_default, category_default, customer_default, setting_default, legal_default]
 };
 var config_default = config2;

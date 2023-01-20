@@ -9,7 +9,10 @@ const category: CmsCollection = {
   editor: {
     preview: false,
   },
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"],
+  },
   folder: "content/category",
   slug: "{{slug}}",
   create: true,
