@@ -13,6 +13,7 @@ import Article from "../components/Article";
 import BlogLayout from "../components/BlogLayout";
 import ArticleMeta from "../components/ArticleMeta";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 function Page({
   pageData,
@@ -32,9 +33,9 @@ function Page({
   const current = router.query.c || "---";
 
   if (router.query.archiv) {
-    articles = articles.filter((i) => i.isArchived);
+    articles = articles.filter((i) => i.is_archived);
   } else {
-    articles = articles.filter((i) => !i.isArchived);
+    articles = articles.filter((i) => !i.is_archived);
   }
 
   return (

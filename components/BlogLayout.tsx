@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "../components/Button";
 import Link from "./TranslatedLink";
 
-function Component({ children, categories, aside, current = "---" }) {
+function Component({ children, categories, aside, current, archiv = "---" }) {
   return (
     <div className="grid grid-cols-4 gap-16">
       <div className="col-span-4 md:col-span-3">{children}</div>
@@ -32,7 +32,12 @@ function Component({ children, categories, aside, current = "---" }) {
 
             {/*  archiv link */}
             <div className="mt-2">
-              <Link href={"/starnews?archiv"}>Archiv</Link>
+              <a
+                href={"/starnews?archiv"}
+                className={archiv.includes(current) ? "underline" : ""}
+              >
+                Archiv
+              </a>
             </div>
           </div>
 
