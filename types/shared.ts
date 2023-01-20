@@ -1,3 +1,8 @@
+export interface IButton {
+  text: string;
+  url: string;
+}
+
 export type ImageRendered = {
   placeholder: "blur";
   src: string;
