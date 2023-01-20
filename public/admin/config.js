@@ -663,12 +663,6 @@ var starnews = {
           name: "button",
           i18n: true,
           widget: "string"
-        },
-        {
-          label: "Archiviert",
-          name: "is_archived",
-          widget: "boolean",
-          required: false
         }
       ]
     },
@@ -731,7 +725,10 @@ var category = {
   editor: {
     preview: false
   },
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
   folder: "content/category",
   slug: "{{slug}}",
   create: true,
@@ -982,7 +979,10 @@ var customer = {
   editor: {
     preview: false
   },
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
   extension: "json",
   folder: "content/customer",
   slug: "{{fields.customer}}",
@@ -1007,7 +1007,10 @@ var article = {
   name: "article",
   label: "Artikel",
   label_singular: "Artikel",
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
   editor: {
     preview: false
   },
@@ -1016,7 +1019,13 @@ var article = {
   slug: "{{fields.slug}}",
   create: true,
   fields: [
-    image_default,
+    {
+      label: "Bild",
+      name: "image",
+      widget: "image",
+      i18n: true,
+      hint: "Erscheint auf der Detailseite, auf der der ganze Artikel zu sehen ist."
+    },
     {
       label: "Bildnachweis",
       name: "credit",
@@ -1028,7 +1037,8 @@ var article = {
       label: "Preview Bild",
       name: "previewimage",
       i18n: true,
-      widget: "image"
+      widget: "image",
+      hint: "Erscheint auf der Starnews Seite, auf der alle Artikel sind als Preview."
     },
     title_default,
     { label: "Slug", name: "slug", i18n: true, widget: "string" },
@@ -1048,6 +1058,13 @@ var article = {
       collection: "category",
       search_fields: ["title"],
       value_field: "title"
+    },
+    // is archived article
+    {
+      label: "Archiviert",
+      name: "isArchived",
+      widget: "boolean",
+      required: false
     },
     { label: "Auszug", name: "excerpt", i18n: true, widget: "text" },
     { label: "Inhalt", name: "markdown", i18n: true, widget: "markdown" }

@@ -21,6 +21,7 @@ function Page({
   articleData,
   mainArticleData,
 }) {
+  //
   const page = pageData;
 
   let articles = articleData;
@@ -29,6 +30,13 @@ function Page({
     articles = articles.filter((i) => i.categories.includes(router.query.c));
   }
   const current = router.query.c || "---";
+  const showArchived = "show-archived" in router.query;
+
+  if (showArchived) {
+    articles = articles.filter((i) => i.isArchived);
+  } else {
+    articles = articles.filter((i) => !i.isArchived);
+  }
 
   return (
     <Layout>
@@ -45,6 +53,7 @@ function Page({
               aside={page.aside}
               categories={categoryData}
               current={current as string}
+              showArchived={showArchived}
             >
               <article>
                 <Article article={mainArticleData} image={page.start.image}>
@@ -58,6 +67,7 @@ function Page({
                   </Button>
                 </div>
               </article>
+
               <div className="grid grid-cols-2 gap-8 mt-20">
                 {articles.map((article) => (
                   <article key={article.slug}>
@@ -100,10 +110,6 @@ export async function getStaticProps({ locale }) {
     (a) => a.slug === pageData.start.article
   );
 
-  const isArchived = articleData2.filter(
-    (a) => a.slug !== pageData.start.is_archived
-  );
-
   const articleData = articleData2.filter(
     (a) => a.slug !== pageData.start.article
   );
@@ -115,7 +121,6 @@ export async function getStaticProps({ locale }) {
       footerData,
       articleData,
       mainArticleData,
-      isArchived,
     },
   };
 }
