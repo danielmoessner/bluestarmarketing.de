@@ -1,4 +1,3 @@
-import image from "cms/symbols/image";
 import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
 
@@ -6,7 +5,10 @@ const article: CmsCollection = {
   name: "article",
   label: "Artikel",
   label_singular: "Artikel",
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"],
+  },
   editor: {
     preview: false,
   },
@@ -15,7 +17,13 @@ const article: CmsCollection = {
   slug: "{{fields.slug}}",
   create: true,
   fields: [
-    image,
+    {
+      label: "Bild",
+      name: "image",
+      widget: "image",
+      i18n: true,
+      hint: "Erscheint auf der Detailseite, auf der der ganze Artikel zu sehen ist.",
+    },
     {
       label: "Bildnachweis",
       name: "credit",
@@ -28,6 +36,7 @@ const article: CmsCollection = {
       name: "previewimage",
       i18n: true,
       widget: "image",
+      hint: "Erscheint auf der Starnews Seite, auf der alle Artikel sind als Preview.",
     },
     title,
     { label: "Slug", name: "slug", i18n: true, widget: "string" },
@@ -51,7 +60,7 @@ const article: CmsCollection = {
     // is archived article
     {
       label: "Archiviert",
-      name: "is_archived",
+      name: "isArchived",
       widget: "boolean",
       required: false,
     },

@@ -7,7 +7,10 @@ const customer: CmsCollection = {
   editor: {
     preview: false,
   },
-  i18n: true,
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"],
+  },
   extension: "json",
   folder: "content/customer",
   slug: "{{fields.customer}}",

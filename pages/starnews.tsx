@@ -30,11 +30,12 @@ function Page({
     articles = articles.filter((i) => i.categories.includes(router.query.c));
   }
   const current = router.query.c || "---";
+  const showArchived = "show-archived" in router.query;
 
-  if (router.query.archiv) {
-    articles = articles.filter((i) => i.is_archived);
+  if (showArchived) {
+    articles = articles.filter((i) => i.isArchived);
   } else {
-    articles = articles.filter((i) => !i.is_archived);
+    articles = articles.filter((i) => !i.isArchived);
   }
 
   return (
@@ -52,6 +53,7 @@ function Page({
               aside={page.aside}
               categories={categoryData}
               current={current as string}
+              showArchived={showArchived}
             >
               <article>
                 <Article article={mainArticleData} image={page.start.image}>

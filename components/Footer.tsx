@@ -9,9 +9,21 @@ function Component({ data }) {
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
-      <div className="flex">
+      <div className="flex w-full">
         {data.images.map((image, index) => (
-          <Image key={index} {...image} alt={`Footer Bild ${index}`} />
+          <div key={index} className="relative w-full aspect-square">
+            <Image
+              src={image.src}
+              placeholder="blur"
+              sizes="(max-width: 600px) 33vw,
+              (max-width: 600) 50vw,
+              100vw"
+              blurDataURL={image.blurDataURL}
+              fill
+              alt={`Footer Bild ${index}`}
+              className="w-full"
+            />
+          </div>
         ))}
       </div>
       <Container layout="sm">
