@@ -32,9 +32,9 @@ function Page({
   const current = router.query.c || "---";
 
   if (router.query.archiv) {
-    articles = articles.filter((i) => i.is_archived);
-  } else {
     articles = articles.filter((i) => !i.is_archived);
+  } else {
+    articles = articles.filter((i) => i.is_archived);
   }
 
   return (
