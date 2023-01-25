@@ -36,7 +36,7 @@ function loadJson<T extends CmsObject, A extends Record<string, string>>(
   if (locale) {
     data = data[locale];
     Object.keys(data).forEach((key) => {
-      data = Object.assign(data, data[key], data);
+      data = Object.assign({}, data[key], data);
     });
   }
   return { ...data, _path: path, _locale: locale } as T & { _path: string } & A;

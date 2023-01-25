@@ -117,7 +117,7 @@ function Component({
           </div>
 
           <div className="sm:col-span-2">
-            <Button element="button" type="submit" ringOffset="white">
+            <Button element="button" type="submit">
               {submitText}
             </Button>
           </div>

@@ -1,11 +1,11 @@
-import Container from "../components/Container";
-import Layout from "../components/Layout";
+import Container from "@/components/Container";
+import Layout from "@/components/Layout";
 
 function Page() {
   return (
     <Layout>
       <Container layout="md">
-        <div>Page test </div>
+        <div>Page test event</div>
       </Container>
     </Layout>
   );
