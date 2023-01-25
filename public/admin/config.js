@@ -1059,7 +1059,6 @@ var article = {
       search_fields: ["title"],
       value_field: "title"
     },
-    // is archived article
     {
       label: "Archiviert",
       name: "isArchived",
@@ -1071,6 +1070,136 @@ var article = {
   ]
 };
 var article_default = article;
+
+// cms/event/index.ts
+var event = {
+  name: "event",
+  label: "Events",
+  label_singular: "Event",
+  editor: {
+    preview: false
+  },
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
+  extension: "json",
+  folder: "content/event",
+  slug: "{{fields.title}}",
+  create: true,
+  fields: [
+    title_default,
+    {
+      label: "Slug",
+      name: "slug",
+      i18n: true,
+      widget: "string",
+      hint: "Bitte nicht mehr ver\xE4ndern. Ansonsten k\xF6nnten Verkn\xFCpfungsfehler entstehen."
+    }
+  ]
+};
+var event_default = event;
+
+// cms/meeting/index.ts
+var meeting = {
+  name: "meeting",
+  label: "Termine",
+  label_singular: "Termin",
+  editor: {
+    preview: false
+  },
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
+  extension: "json",
+  folder: "content/meeting",
+  slug: "{{fields.header.title}}",
+  create: true,
+  fields: [
+    {
+      label: "Event",
+      name: "event",
+      widget: "relation",
+      multiple: false,
+      collection: "event",
+      display_fields: ["title"],
+      search_fields: ["title"],
+      value_field: "slug"
+    },
+    title_default,
+    {
+      label: "Allgemein",
+      name: "general",
+      widget: "object",
+      fields: [
+        { label: "Icon", name: "image", widget: "image" },
+        {
+          label: "Tag",
+          name: "day",
+          widget: "datetime",
+          time_format: false,
+          format: "YYYYMMDD",
+          date_format: "DD.MM.YYYY"
+        },
+        {
+          label: "Von",
+          name: "from",
+          widget: "datetime",
+          time_format: "HH:mm",
+          format: "HH:mm",
+          date_format: false
+        },
+        {
+          label: "Bis",
+          name: "to",
+          widget: "datetime",
+          format: "HH:mm",
+          time_format: "HH:mm",
+          date_format: false
+        }
+      ]
+    },
+    {
+      label: "Listenansicht",
+      name: "list",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Text",
+          name: "text",
+          i18n: true,
+          widget: "markdown"
+        }
+      ]
+    },
+    {
+      label: "Detailansicht",
+      name: "detail",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image",
+          i18n: false
+        },
+        title_default,
+        markdown_default,
+        text_default,
+        {
+          label: "Formulartext",
+          name: "markdownForm",
+          i18n: true,
+          widget: "markdown"
+        }
+      ]
+    }
+  ]
+};
+var meeting_default = meeting;
 
 // cms/config.ts
 var config2 = {
@@ -1102,7 +1231,16 @@ var config2 = {
   // See https://www.netlifycms.org/docs/beta-features/#manual-initialization
   load_config_file: false,
   // See https://www.netlifycms.org/docs/collection-types/
-  collections: [page_default, article_default, category_default, customer_default, setting_default, legal_default]
+  collections: [
+    page_default,
+    event_default,
+    meeting_default,
+    article_default,
+    category_default,
+    customer_default,
+    setting_default,
+    legal_default
+  ]
 };
 var config_default = config2;
 export {

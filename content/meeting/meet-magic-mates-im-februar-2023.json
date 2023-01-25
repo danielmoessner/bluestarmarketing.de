@@ -1,0 +1,30 @@
+{
+  "de": {
+    "title": "Meet Magic Mates im Februar 2023",
+    "general": {
+      "day": "20230228",
+      "from": "17:00",
+      "to": "19:00",
+      "image": "/media/magic_mates_logos.png"
+    },
+    "event": "meetmagicmates",
+    "list": {
+      "text": "**Wie gestaltest du die neue Zeit?**\n**Was kommt, was geht, was bleibt im Marketing?**\n\nVernetze dich mit neuen und bekannten Marketer:innen, schöpfe\naus gebündelter Marketing Expertise, Power & Spirit, ..."
+    },
+    "detail": {
+      "image": "/media/wunschrakete.jpg",
+      "title": "Wie gestaltest du die neue Zeit?",
+      "markdown": "Was bewegt dich zum Jahresanfang, im Business, im Team, in deiner Welt und mit welchen Herausforderungen, unabhängig von Hierarchieebenen, Verantwortlichkeiten und der Vielzahl von Projekten, wirst du als Marketer:in konfrontiert?\n\nWir sind davon überzeugt, dass in jeder Herausforderung ein Schatz liegt und dass es immer einen Weg zur Optimierung, für Erfolg und zum Erreichen von Zielen gibt.\n\n**Lass uns gemeinsam Gestaltungsräume finden und Schätze heben.**",
+      "text": "Lass dich inspirieren, inspiriere selbst und feiere mit uns deinen Tag!\nIch freue mich sehr auf dich!",
+      "markdownForm": "**Wir freuen uns auf deine Anmeldung zu Meet Magic Mates!**\n\nZwischen dir und deiner Teilnahme liegen nur noch wenige Schritte. Nach der Übermittlung des Formulars prüfen wir die Daten. Mit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung."
+    }
+  },
+  "en": {
+    "general": {
+      "day": "2023-01-25T11:27:18.691Z",
+      "from": "2023-01-25T11:27:18.710Z",
+      "to": "2023-01-25T11:27:18.759Z"
+    },
+    "event": "meetmagicmates"
+  }
+}
