@@ -3,7 +3,6 @@ import fs from "fs";
 import { join } from "path";
 
 interface CmsObject {
-  slug: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
@@ -27,6 +26,21 @@ function loadMarkdown<T extends CmsObject>(
   return { ...data, markdown, _path: path, ...attrs } as MarkdownLoaded<T>;
 }
 
+export function localizeJson<T extends CmsObject>(
+  data: T,
+  locale: "de" | "en" | "" = ""
+) {
+  let fullData;
+  if (locale) {
+    fullData = data[locale];
+    Object.keys(data).forEach((key) => {
+      fullData = Object.assign({}, data[key], fullData);
+    });
+  } else fullData = data;
+
+  return fullData;
+}
+
 function loadJson<T extends CmsObject, A extends Record<string, string>>(
   filename,
   locale: "de" | "en" | "" = ""
@@ -34,14 +48,7 @@ function loadJson<T extends CmsObject, A extends Record<string, string>>(
   const { content, path } = readFile(filename);
   const data = JSON.parse(content);
 
-  let fullData;
-
-  if (locale) {
-    fullData = data[locale];
-    Object.keys(data).forEach((key) => {
-      fullData = Object.assign({}, data[key], fullData);
-    });
-  } else fullData = data;
+  const fullData = localizeJson(data, locale);
 
   return { ...fullData, _path: path, _locale: locale } as T & {
     _path: string;
