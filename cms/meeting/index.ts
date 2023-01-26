@@ -15,8 +15,8 @@ const meeting: CmsCollection = {
     locales: ["de", "en"],
   },
   extension: "json",
-  folder: "content/meeting",
   slug: "{{fields.title}}",
+  folder: "content/meeting",
   create: true,
   fields: [
     {
@@ -25,6 +25,7 @@ const meeting: CmsCollection = {
       widget: "relation",
       multiple: false,
       collection: "event",
+      i18n: false,
       display_fields: ["title"],
       search_fields: ["title"],
       value_field: "slug",
@@ -41,6 +42,7 @@ const meeting: CmsCollection = {
           widget: "datetime",
           time_format: false,
           format: "YYYY-MM-DD",
+          i18n: "duplicate",
           date_format: "DD.MM.YYYY",
         },
         {
@@ -49,6 +51,7 @@ const meeting: CmsCollection = {
           widget: "datetime",
           time_format: "HH:mm",
           format: "HH:mm",
+          i18n: "duplicate",
           date_format: false,
         },
         {
@@ -56,6 +59,7 @@ const meeting: CmsCollection = {
           name: "to",
           widget: "datetime",
           format: "HH:mm",
+          i18n: "duplicate",
           time_format: "HH:mm",
           date_format: false,
         },
