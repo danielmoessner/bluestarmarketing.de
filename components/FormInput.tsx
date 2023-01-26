@@ -22,7 +22,7 @@ function FormInput({
   return (
     <div className={className}>
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label htmlFor={name} className="block text-sm font-medium text-gray-700">
+      <label htmlFor={name} className="block text-sm font-medium">
         {label}
         {required && <span>*</span>}
         <div className="mt-1">

@@ -1,11 +1,10 @@
 import React, { useState, useRef } from "react";
-import PropTypes from "prop-types";
-import FormInput, { InputProps } from "./FormInput";
+import FormInput from "./FormInput";
 import Button from "./Button";
-import Heading from "./Heading";
 import { useForm } from "react-hook-form";
 import FormTextarea from "./FormTextarea";
 import FormCheckbox from "./FormCheckbox";
+import FormMultiple from "./FormMultiple";
 
 const convertedFormEntries = (formData: FormData) =>
   Array.from(formData, ([key, value]) => [
@@ -15,9 +14,9 @@ const convertedFormEntries = (formData: FormData) =>
 
 function Form({
   fields,
-  name,
-  successText,
-  successHeading,
+  name = "standardformular",
+  successText = "Vielen Dank für deine Anfrage wir werden uns schnellstmöglich bei dir melden.",
+  requiredFieldsText = "Erforderliche Felder sind mit * markiert.",
   submitText = "Absenden",
 }) {
   const [formSent, setFormSent] = useState(false);
@@ -49,11 +48,8 @@ function Form({
   return (
     <div className="max-w-none">
       <div className={`${formSent ? "block" : "hidden"}`}>
-        <div className="pt-24">
-          <Heading element="div" size="h3">
-            {successHeading}
-          </Heading>
-          <p className="mt-2 prose">{successText}</p>
+        <div className="py-24">
+          <p className="mx-auto mt-2 prose text-center">{successText}</p>
         </div>
       </div>
 
@@ -70,7 +66,16 @@ function Form({
           <input type="hidden" name="form-name" value={name} />
 
           {fields.map((field) => {
-            if (field.type === "textarea")
+            if (field.type === "multiple")
+              return (
+                <FormMultiple
+                  key={field.name}
+                  {...field}
+                  error={errors[field.name]}
+                  register={register}
+                />
+              );
+            else if (field.type === "textarea")
               return (
                 <FormTextarea
                   key={field.name}
@@ -98,31 +103,19 @@ function Form({
                 />
               );
           })}
+          <div className="text-sm sm:col-span-2">{requiredFieldsText}</div>
 
           <div className="sm:col-span-2">
-            <Button element="button" type="submit">
-              {submitText}
-            </Button>
+            <div className="flex justify-center">
+              <Button element="button" type="submit" kind="pink">
+                {submitText}
+              </Button>
+            </div>
           </div>
         </form>
       </div>
     </div>
   );
 }
-
-Form.defaultProps = {
-  name: "standardformular",
-  successHeading: "Vielen Dank",
-  successText:
-    "Vielen Dank für deine Anfrage wir werden uns schnellstmöglich bei dir melden.",
-};
-
-Form.propTypes = {
-  fields: PropTypes.arrayOf(PropTypes.shape(InputProps)).isRequired,
-  dataProtectionText: PropTypes.string,
-  name: PropTypes.string,
-  successHeading: PropTypes.string,
-  successText: PropTypes.string,
-};
 
 export default Form;

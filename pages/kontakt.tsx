@@ -54,7 +54,7 @@ function Page({ pageData, footerData, globalData }) {
       },
     },
     {
-      label: page.form.markdown.html,
+      label: page.form.privacy,
       type: "checkbox",
       name: "privacy_check",
       required: true,
@@ -218,7 +218,6 @@ function Page({ pageData, footerData, globalData }) {
             <DynamicForm
               fields={fields}
               submitText={locale === "de" ? "Absenden" : "Send"}
-              dataProtectionText={page.form.markdown.html}
             />
           </div>
         </Container>

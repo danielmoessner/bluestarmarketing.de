@@ -184,9 +184,9 @@ var contact = {
         },
         {
           label: "Datenschutz Text",
-          name: "markdown",
+          name: "privacy",
           i18n: true,
-          widget: "markdown"
+          widget: "text"
         }
       ]
     }
@@ -688,6 +688,173 @@ var starnews = {
 };
 var starnews_default = starnews;
 
+// cms/page/startimes.ts
+var startimes = {
+  file: "content/page/startimes.json",
+  label: "Star Times",
+  name: "startimes",
+  i18n: true,
+  fields: [
+    meta_default,
+    header_default,
+    {
+      label: "Start",
+      name: "start",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image"
+        },
+        title_default,
+        markdown_default,
+        cta_default
+      ]
+    },
+    {
+      label: "Unten",
+      name: "bottom",
+      i18n: true,
+      widget: "object",
+      fields: [text_default]
+    }
+  ]
+};
+var startimes_default = startimes;
+
+// cms/page/startimesmeetings.ts
+var startimesmeetings = {
+  file: "content/page/startimesmeetings.json",
+  label: "Star Times Termine",
+  name: "startimesmeetings",
+  i18n: true,
+  fields: [
+    meta_default,
+    header_default,
+    {
+      label: "Start",
+      name: "start",
+      i18n: true,
+      widget: "object",
+      fields: [
+        title_default,
+        markdown_default,
+        cta_default,
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image"
+        }
+      ]
+    },
+    {
+      label: "Termine",
+      name: "meetings",
+      i18n: true,
+      widget: "object",
+      fields: [title_default]
+    },
+    {
+      label: "Unten",
+      name: "bottom",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Titel Links",
+          name: "titleLeft",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Text Links",
+          name: "markdownLeft",
+          widget: "markdown",
+          i18n: true
+        },
+        {
+          label: "Titel Rechts",
+          name: "titleRight",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Text Rechts",
+          name: "markdownRight",
+          widget: "markdown",
+          i18n: true
+        },
+        cta_default
+      ]
+    }
+  ]
+};
+var startimesmeetings_default = startimesmeetings;
+
+// cms/page/startimesmeeting.ts
+var startimesmeeting = {
+  file: "content/page/startimesmeeting.json",
+  label: "Star Times Anmeldung",
+  name: "startimesmeeting",
+  i18n: true,
+  fields: [
+    {
+      label: "Intro",
+      name: "intro",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Wir treffen uns text",
+          name: "meeting",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Button",
+          name: "button",
+          widget: "string",
+          i18n: true
+        }
+      ]
+    },
+    {
+      label: "Formular",
+      name: "form",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image"
+        },
+        {
+          label: "Erforderliche Felder",
+          name: "requiredFields",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Button",
+          name: "button",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Erfolgstext",
+          name: "successText",
+          widget: "text",
+          i18n: true
+        }
+      ]
+    }
+  ]
+};
+var startimesmeeting_default = startimesmeeting;
+
 // cms/page/index.ts
 var config = {
   name: "pages",
@@ -711,6 +878,9 @@ var config = {
     forYou_default,
     customers_default,
     starnews_default,
+    startimes_default,
+    startimesmeetings_default,
+    startimesmeeting_default,
     contact_default
   ]
 };
@@ -1095,6 +1265,11 @@ var event = {
       i18n: true,
       widget: "string",
       hint: "Bitte nicht mehr ver\xE4ndern. Ansonsten k\xF6nnten Verkn\xFCpfungsfehler entstehen."
+    },
+    {
+      label: "Icon",
+      name: "image",
+      widget: "image"
     }
   ]
 };
@@ -1114,7 +1289,7 @@ var meeting = {
   },
   extension: "json",
   folder: "content/meeting",
-  slug: "{{fields.header.title}}",
+  slug: "{{fields.title}}",
   create: true,
   fields: [
     {
@@ -1133,13 +1308,12 @@ var meeting = {
       name: "general",
       widget: "object",
       fields: [
-        { label: "Icon", name: "image", widget: "image" },
         {
           label: "Tag",
           name: "day",
           widget: "datetime",
           time_format: false,
-          format: "YYYYMMDD",
+          format: "YYYY-MM-DD",
           date_format: "DD.MM.YYYY"
         },
         {

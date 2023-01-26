@@ -25,6 +25,11 @@ const event: CmsCollection = {
       widget: "string",
       hint: "Bitte nicht mehr verändern. Ansonsten könnten Verknüpfungsfehler entstehen.",
     },
+    {
+      label: "Icon",
+      name: "image",
+      widget: "image",
+    },
   ],
 };
 
