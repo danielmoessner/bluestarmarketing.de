@@ -1288,8 +1288,8 @@ var meeting = {
     locales: ["de", "en"]
   },
   extension: "json",
-  folder: "content/meeting",
   slug: "{{fields.title}}",
+  folder: "content/meeting",
   create: true,
   fields: [
     {
@@ -1298,6 +1298,7 @@ var meeting = {
       widget: "relation",
       multiple: false,
       collection: "event",
+      i18n: false,
       display_fields: ["title"],
       search_fields: ["title"],
       value_field: "slug"
@@ -1314,6 +1315,7 @@ var meeting = {
           widget: "datetime",
           time_format: false,
           format: "YYYY-MM-DD",
+          i18n: "duplicate",
           date_format: "DD.MM.YYYY"
         },
         {
@@ -1322,6 +1324,7 @@ var meeting = {
           widget: "datetime",
           time_format: "HH:mm",
           format: "HH:mm",
+          i18n: "duplicate",
           date_format: false
         },
         {
@@ -1329,6 +1332,7 @@ var meeting = {
           name: "to",
           widget: "datetime",
           format: "HH:mm",
+          i18n: "duplicate",
           time_format: "HH:mm",
           date_format: false
         }
