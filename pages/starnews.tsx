@@ -55,20 +55,22 @@ function Page({
               current={current as string}
               showArchived={showArchived}
             >
-              <article>
-                <Article article={mainArticleData} image={page.start.image}>
-                  <div className="mt-4">
-                    <p>{mainArticleData.excerpt}</p>
+              {!showArchived && (
+                <article className="mb-20">
+                  <Article article={mainArticleData} image={page.start.image}>
+                    <div className="mt-4">
+                      <p>{mainArticleData.excerpt}</p>
+                    </div>
+                  </Article>
+                  <div className="mt-5">
+                    <Button href={`/starnews/${mainArticleData.slug}`}>
+                      {page.start.button}
+                    </Button>
                   </div>
-                </Article>
-                <div className="mt-5">
-                  <Button href={`/starnews/${mainArticleData.slug}`}>
-                    {page.start.button}
-                  </Button>
-                </div>
-              </article>
+                </article>
+              )}
 
-              <div className="grid grid-cols-2 gap-8 mt-20">
+              <div className="grid grid-cols-2 gap-8">
                 {articles.map((article) => (
                   <article key={article.slug}>
                     <Image {...article.previewimage} alt="test" />
