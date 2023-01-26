@@ -1,0 +1,29 @@
+{
+  "de": {
+    "general": {
+      "day": "2023-04-27",
+      "from": "17:00",
+      "to": "19:00"
+    },
+    "event": "meetmagicmates",
+    "title": "Meet Magic Mates im April",
+    "list": {
+      "text": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen nach dem ersten Meet Magic Mates im Februar und veröffentlichen es dann hier für dich im März 2023."
+    },
+    "detail": {
+      "title": "-",
+      "markdown": "\\-",
+      "text": "-",
+      "markdownForm": "\\-",
+      "image": "/media/wunschrakete.jpg"
+    }
+  },
+  "en": {
+    "general": {
+      "day": "2023-01-26",
+      "from": "13:44",
+      "to": "13:44"
+    },
+    "event": "meetmagicmates"
+  }
+}

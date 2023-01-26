@@ -32,14 +32,20 @@ function loadJson<T extends CmsObject, A extends Record<string, string>>(
   locale: "de" | "en" | "" = ""
 ): T & { _path: string } & A {
   const { content, path } = readFile(filename);
-  let data = JSON.parse(content);
+  const data = JSON.parse(content);
+
+  let fullData;
+
   if (locale) {
-    data = data[locale];
+    fullData = data[locale];
     Object.keys(data).forEach((key) => {
-      data = Object.assign({}, data[key], data);
+      fullData = Object.assign({}, data[key], fullData);
     });
-  }
-  return { ...data, _path: path, _locale: locale } as T & { _path: string } & A;
+  } else fullData = data;
+
+  return { ...fullData, _path: path, _locale: locale } as T & {
+    _path: string;
+  } & A;
 }
 
 export function getAllMarkdown<T extends CmsObject>(

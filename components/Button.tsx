@@ -31,17 +31,11 @@ function Button({
     };
   }
 
-  let hoverStroke = "#000000";
-  let stroke = "#000000";
   let bClassName = `inline-flex text-center items-center border-2 border-transparent w-full font-medium block text-center ${size} text-bsm-nightblue bg-transparent hover:bg-transparent transition-all duration-500 outline-none focus:outline-none !shadow-none `;
   if (kind === "blue") {
     bClassName += ` text-bsm-nightblue group-hover:pl-3 group-hover:pr-9`;
-    hoverStroke = "#00adea";
-    stroke = "#162259";
   } else if (kind === "pink") {
-    bClassName += ` text-bsm-nightblue w-72 justify-center`;
-    hoverStroke = "#e50069";
-    stroke = "#e50069";
+    bClassName += ` text-bsm-nightblue md:w-72 pink justify-center`;
   }
 
   const button = useRef(null);
@@ -76,13 +70,13 @@ function Button({
       <style jsx global>
         {`
           .button-svg--rect {
-            stroke: ${stroke};
+            stroke: #162259;
             stroke-width: 3;
             stroke-dasharray: 422, 0;
             transition: all 0.45s linear 0s;
           }
           .button-svg--wrapper:hover .button-svg--rect {
-            stroke: ${hoverStroke};
+            stroke: #00adea;
             stroke-dasharray: 15, 610;
             // stroke-dasharray: 15, 741;
             stroke-dashoffset: 190;
@@ -90,11 +84,17 @@ function Button({
             stroke-width: 4;
             transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
           }
+          .button-svg--rect.pink {
+            stroke: #e50069;
+          }
+          .button-svg--wrapper:hover .button-svg--rect.pink {
+            stroke: #e50069;
+          }
         `}
       </style>
       <svg className="absolute top-0 left-0 z-0 w-full h-full pointer-events-none button-svg">
         <rect
-          className="button-svg--rect"
+          className={`button-svg--rect ${kind === "pink" && "pink"}`}
           x="0"
           y="0"
           fill="none"

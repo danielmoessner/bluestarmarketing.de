@@ -16,7 +16,7 @@ const meeting: CmsCollection = {
   },
   extension: "json",
   folder: "content/meeting",
-  slug: "{{fields.header.title}}",
+  slug: "{{fields.title}}",
   create: true,
   fields: [
     {
@@ -35,13 +35,12 @@ const meeting: CmsCollection = {
       name: "general",
       widget: "object",
       fields: [
-        { label: "Icon", name: "image", widget: "image" },
         {
           label: "Tag",
           name: "day",
           widget: "datetime",
           time_format: false,
-          format: "YYYYMMDD",
+          format: "YYYY-MM-DD",
           date_format: "DD.MM.YYYY",
         },
         {

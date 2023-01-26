@@ -2,7 +2,7 @@ import React from "react";
 
 function FormCheckbox({ name, label, required, register, error }) {
   return (
-    <div className="col-span-2">
+    <div className="sm:col-span-2">
       <style jsx global>
         {`
           input[type="checkbox"]:checked {
@@ -24,10 +24,10 @@ function FormCheckbox({ name, label, required, register, error }) {
           </div>
           <div className="ml-3 text-base">
             <label htmlFor={name} className="flex font-medium cursor-pointer">
-              <div className="flex text-base [&_a]:text-bsm-faince [&_a]:underline">
-                <div dangerouslySetInnerHTML={{ __html: label }} />
+              <p className="text-base [&_a]:text-bsm-faince [&_a]:underline">
+                <span dangerouslySetInnerHTML={{ __html: label }} />
                 {required && <span>*</span>}
-              </div>
+              </p>
             </label>
           </div>
         </div>
