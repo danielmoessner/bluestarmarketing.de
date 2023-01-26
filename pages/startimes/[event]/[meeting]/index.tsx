@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import Layout from "@/components/Layout";
-import { getAllJson } from "@/lib/getContent";
+import { getAllJson, localizeJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
 import footerSource from "@/content/setting/footer.json";
 import Heading from "@/components/Heading";
@@ -192,7 +192,7 @@ export async function getStaticProps({ params, locale }) {
   const eventData = await renderContent(foundEvent);
   const meetingData = await renderContent(foundMeeting);
 
-  const pageData = await renderContent(pageSource[locale]);
+  const pageData = await renderContent(localizeJson(pageSource, locale));
   const footerData = await renderContent(footerSource[locale]);
 
   const availableMeetings = meetings
