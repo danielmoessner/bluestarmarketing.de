@@ -27,19 +27,33 @@ function loadMarkdown<T extends CmsObject>(
   return { ...data, markdown, _path: path, ...attrs } as MarkdownLoaded<T>;
 }
 
+export function localizeJson<T extends CmsObject>(
+  data: T,
+  locale: "de" | "en" | "" = ""
+) {
+  let fullData;
+  if (locale) {
+    fullData = data[locale];
+    Object.keys(data).forEach((key) => {
+      fullData = Object.assign({}, data[key], fullData);
+    });
+  } else fullData = data;
+
+  return fullData;
+}
+
 function loadJson<T extends CmsObject, A extends Record<string, string>>(
   filename,
   locale: "de" | "en" | "" = ""
 ): T & { _path: string } & A {
   const { content, path } = readFile(filename);
-  let data = JSON.parse(content);
-  if (locale) {
-    data = data[locale];
-    Object.keys(data).forEach((key) => {
-      data = Object.assign(data, data[key], data);
-    });
-  }
-  return { ...data, _path: path, _locale: locale } as T & { _path: string } & A;
+  const data = JSON.parse(content);
+
+  const fullData = localizeJson(data, locale);
+
+  return { ...fullData, _path: path, _locale: locale } as T & {
+    _path: string;
+  } & A;
 }
 
 export function getAllMarkdown<T extends CmsObject>(
