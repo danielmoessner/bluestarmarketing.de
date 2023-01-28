@@ -147,7 +147,7 @@ function Page({
         </Container>
       </section>
 
-      <section className="py-16">
+      <section className="py-16  bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]">
         <Container layout="sm">
           <div className="grid gap-8 md:grid-cols-12">
             <div className="md:col-span-4">
