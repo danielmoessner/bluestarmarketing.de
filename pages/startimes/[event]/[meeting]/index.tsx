@@ -31,7 +31,10 @@ function Page({
 
   const fields = [
     {
-      label: locale === "de" ? "Termine" : "Days",
+      label:
+        locale === "de"
+          ? "Für diese Termine melde ich mich an"
+          : "I register for the following meetings",
       type: "multiple",
       name: "meetings",
       options: availableMeetings.map((m) => ({
@@ -72,7 +75,7 @@ function Page({
       required: true,
     },
     {
-      label: locale === "de" ? "Telefon" : "Phone",
+      label: locale === "de" ? "Mobilnummer" : "Mobile",
       name: "phone",
       type: "tel",
       required: true,
