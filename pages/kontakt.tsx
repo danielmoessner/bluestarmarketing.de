@@ -216,6 +216,7 @@ function Page({ pageData, footerData, globalData }) {
           </div>
           <div className="mt-10">
             <DynamicForm
+              name="contactform"
               fields={fields}
               submitText={locale === "de" ? "Absenden" : "Send"}
             />
