@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import global from "../content/setting/global.json";
 
-function SEO({ meta }) {
+function Seo({ meta }) {
   const { title, description, image, keywords } = meta;
 
   return (
@@ -38,49 +38,4 @@ function SEO({ meta }) {
   );
 }
 
-// SEO.defaultProps = {};
-
-// SEO.propTypes = {
-//   meta: PropTypes.shape({
-//     title: PropTypes.string.isRequired,
-//     description: PropTypes.string.isRequired,
-//     image: PropTypes.shape({
-//       childImageSharp: PropTypes.shape({
-//         resize: PropTypes.shape({
-//           src: PropTypes.string,
-//         }),
-//       }),
-//     }),
-//   }).isRequired,
-// };
-
-export default SEO;
-
-// export const metaFragment = graphql`
-//   fragment meta on PageYaml {
-//     meta {
-//       image {
-//         childImageSharp {
-//           resize(width: 1200) {
-//             src
-//           }
-//         }
-//       }
-//       title
-//       description
-//     }
-//   }
-//   fragment metaMarkdown on MarkdownRemarkFrontmatter {
-//     meta {
-//       image {
-//         childImageSharp {
-//           resize(width: 1200) {
-//             src
-//           }
-//         }
-//       }
-//       title
-//       description
-//     }
-//   }
-// `;
+export default Seo;

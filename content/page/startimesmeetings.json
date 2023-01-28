@@ -1,4 +1,8 @@
 {
-    "de": {},
-    "en": {}
+  "de": {
+    "meetings": {
+      "title": "Die nächsten Termine:"
     }
+  },
+  "en": {}
+}
