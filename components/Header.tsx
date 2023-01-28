@@ -19,8 +19,12 @@ interface Header2 {
   color: string;
 }
 
+interface Header3 {
+  image: ImageRendered;
+}
+
 interface Props {
-  header: Header1 | Header2;
+  header: Header1 | Header2 | Header3;
   position?: "top-right" | "bottom-right" | "bottom-left" | "top-left";
 }
 
@@ -65,10 +69,10 @@ function Component({ header, position = "bottom-right" }: Props) {
                 </Animate>
               </div>
             )}
-            {!("text" in header && "cta" in header) && (
+            {"color" in header && (
               <div
                 className="w-full h-5"
-                style={{ backgroundColor: header.color }}
+                style={{ backgroundColor: header.color as string }}
               ></div>
             )}
           </div>

@@ -1,9 +1,7 @@
 import meta from "../symbols/meta";
 import { CmsCollectionFile } from "netlify-cms-core";
-import title from "cms/symbols/title";
 import text from "cms/symbols/text";
 import cta from "cms/symbols/cta";
-import header from "../symbols/header";
 import markdown from "../symbols/markdown";
 
 const startimes: CmsCollectionFile = {
@@ -13,7 +11,12 @@ const startimes: CmsCollectionFile = {
   i18n: true,
   fields: [
     meta,
-    header,
+    {
+      label: "Header",
+      name: "header",
+      widget: "object",
+      fields: [{ label: "Bild", name: "image", widget: "image" }],
+    },
     {
       label: "Start",
       name: "start",
@@ -21,11 +24,22 @@ const startimes: CmsCollectionFile = {
       widget: "object",
       fields: [
         {
+          label: "Titel 1",
+          name: "title1",
+          widget: "string",
+          i18n: true,
+        },
+        {
           label: "Bild",
           name: "image",
           widget: "image",
         },
-        title,
+        {
+          label: "Titel 2",
+          name: "title2",
+          widget: "string",
+          i18n: true,
+        },
         markdown,
         cta,
       ],

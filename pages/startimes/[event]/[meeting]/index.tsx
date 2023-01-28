@@ -111,7 +111,7 @@ function Page({
         </Container>
       </section>
 
-      <section className="pb-12 pt-6 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
+      <section className="pb-12 pt-6 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat bg-center">
         <Container layout="sm">
           <div className="">
             <Animate>

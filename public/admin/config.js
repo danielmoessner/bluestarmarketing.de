@@ -696,7 +696,12 @@ var startimes = {
   i18n: true,
   fields: [
     meta_default,
-    header_default,
+    {
+      label: "Header",
+      name: "header",
+      widget: "object",
+      fields: [{ label: "Bild", name: "image", widget: "image" }]
+    },
     {
       label: "Start",
       name: "start",
@@ -704,11 +709,22 @@ var startimes = {
       widget: "object",
       fields: [
         {
+          label: "Titel 1",
+          name: "title1",
+          widget: "string",
+          i18n: true
+        },
+        {
           label: "Bild",
           name: "image",
           widget: "image"
         },
-        title_default,
+        {
+          label: "Titel 2",
+          name: "title2",
+          widget: "string",
+          i18n: true
+        },
         markdown_default,
         cta_default
       ]
@@ -731,63 +747,12 @@ var startimesmeetings = {
   name: "startimesmeetings",
   i18n: true,
   fields: [
-    meta_default,
-    header_default,
-    {
-      label: "Start",
-      name: "start",
-      i18n: true,
-      widget: "object",
-      fields: [
-        title_default,
-        markdown_default,
-        cta_default,
-        {
-          label: "Bild",
-          name: "image",
-          widget: "image"
-        }
-      ]
-    },
     {
       label: "Termine",
       name: "meetings",
       i18n: true,
       widget: "object",
       fields: [title_default]
-    },
-    {
-      label: "Unten",
-      name: "bottom",
-      i18n: true,
-      widget: "object",
-      fields: [
-        {
-          label: "Titel Links",
-          name: "titleLeft",
-          widget: "string",
-          i18n: true
-        },
-        {
-          label: "Text Links",
-          name: "markdownLeft",
-          widget: "markdown",
-          i18n: true
-        },
-        {
-          label: "Titel Rechts",
-          name: "titleRight",
-          widget: "string",
-          i18n: true
-        },
-        {
-          label: "Text Rechts",
-          name: "markdownRight",
-          widget: "markdown",
-          i18n: true
-        },
-        cta_default
-      ]
     }
   ]
 };
@@ -1270,6 +1235,72 @@ var event = {
       label: "Icon",
       name: "image",
       widget: "image"
+    },
+    meta_default,
+    {
+      label: "Header",
+      name: "header",
+      widget: "object",
+      fields: [{ label: "Bild", name: "image", widget: "image" }]
+    },
+    {
+      label: "Start",
+      name: "start",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Titel 1",
+          name: "title1",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Titel 2",
+          name: "title2",
+          widget: "string",
+          i18n: true
+        },
+        markdown_default,
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image"
+        }
+      ]
+    },
+    {
+      label: "Unten",
+      name: "bottom",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Titel Links",
+          name: "titleLeft",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Text Links",
+          name: "markdownLeft",
+          widget: "markdown",
+          i18n: true
+        },
+        {
+          label: "Titel Rechts",
+          name: "titleRight",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Text Rechts",
+          name: "markdownRight",
+          widget: "markdown",
+          i18n: true
+        }
+        // cta,
+      ]
     }
   ]
 };

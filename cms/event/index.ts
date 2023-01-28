@@ -1,5 +1,8 @@
 import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
+import cta from "../symbols/cta";
+import markdown from "../symbols/markdown";
+import meta from "../symbols/meta";
 
 const event: CmsCollection = {
   name: "event",
@@ -29,6 +32,72 @@ const event: CmsCollection = {
       label: "Icon",
       name: "image",
       widget: "image",
+    },
+    meta,
+    {
+      label: "Header",
+      name: "header",
+      widget: "object",
+      fields: [{ label: "Bild", name: "image", widget: "image" }],
+    },
+    {
+      label: "Start",
+      name: "start",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Titel 1",
+          name: "title1",
+          widget: "string",
+          i18n: true,
+        },
+        {
+          label: "Titel 2",
+          name: "title2",
+          widget: "string",
+          i18n: true,
+        },
+        markdown,
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image",
+        },
+      ],
+    },
+    {
+      label: "Unten",
+      name: "bottom",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Titel Links",
+          name: "titleLeft",
+          widget: "string",
+          i18n: true,
+        },
+        {
+          label: "Text Links",
+          name: "markdownLeft",
+          widget: "markdown",
+          i18n: true,
+        },
+        {
+          label: "Titel Rechts",
+          name: "titleRight",
+          widget: "string",
+          i18n: true,
+        },
+        {
+          label: "Text Rechts",
+          name: "markdownRight",
+          widget: "markdown",
+          i18n: true,
+        },
+        // cta,
+      ],
     },
   ],
 };
