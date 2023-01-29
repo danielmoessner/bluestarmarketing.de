@@ -87,18 +87,18 @@ function Page({
       type: "checkbox",
       name: "storage_of_the_data",
     },
-    {
-      label: "Ich möchte Informationen zu Meet Magic Mates erhalten.",
-      name: "receive_information",
-      type: "checkbox",
-      required: false,
-    },
-    {
-      label: "Ich möchte die Star News erhalten.",
-      name: "receive_starnews",
-      required: false,
-      type: "checkbox",
-    },
+    // {
+    //   label: "Ich möchte Informationen zu Meet Magic Mates erhalten.",
+    //   name: "receive_information",
+    //   type: "checkbox",
+    //   required: false,
+    // },
+    // {
+    //   label: "Ich möchte die Star News erhalten.",
+    //   name: "receive_starnews",
+    //   required: false,
+    //   type: "checkbox",
+    // },
   ];
 
   return (
