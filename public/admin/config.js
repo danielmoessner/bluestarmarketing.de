@@ -752,7 +752,11 @@ var startimesmeetings = {
       name: "meetings",
       i18n: true,
       widget: "object",
-      fields: [title_default]
+      fields: [
+        title_default,
+        { label: "Uhr", name: "time", widget: "string", i18n: true },
+        { label: "Button", name: "button", widget: "string", i18n: true }
+      ]
     }
   ]
 };
@@ -1377,7 +1381,7 @@ var meeting = {
       fields: [
         {
           label: "Text",
-          name: "text",
+          name: "markdown",
           i18n: true,
           widget: "markdown"
         }
