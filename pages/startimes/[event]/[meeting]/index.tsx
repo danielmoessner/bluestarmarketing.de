@@ -13,6 +13,7 @@ import { formatDate } from "@/lib/date";
 import DynamicForm from "@/components/Form";
 import pageSource from "@/content/page/startimesmeeting.json";
 import { useRouter } from "next/router";
+import Seo from "@/components/Seo";
 
 function Page({
   eventData,
@@ -104,8 +105,17 @@ function Page({
     // },
   ];
 
+  const meta = {
+    title: meeting.title,
+    description: `${page.intro.meeting}: ${formattedDate} ${meeting.general.from} - ${meeting.general.to} Uhr`,
+    image: event.meta.image,
+    keywords: event.meta.keywords,
+  };
+
   return (
     <Layout>
+      <Seo meta={meta} />
+
       <section className="py-8 md:py-16">
         <Container layout="sm">
           <div className="text-center">
