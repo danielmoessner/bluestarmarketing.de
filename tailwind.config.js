@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
+        rose: ["Rosefield", ...defaultTheme.fontFamily.serif],
       },
       maxWidth: {
         // "6xl": "71.5rem",

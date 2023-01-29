@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ChildrenData from "../types/ChildrenData";
 
-function Component({
+function FormInput({
   name,
   autoComplete,
   type,
@@ -22,8 +22,9 @@ function Component({
   return (
     <div className={className}>
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label htmlFor={name} className="block text-sm font-medium text-gray-700">
+      <label htmlFor={name} className="block text-sm font-medium">
         {label}
+        {required && <span>*</span>}
         <div className="mt-1">
           <Tag
             {...register(name, { required: required })}
@@ -41,7 +42,7 @@ function Component({
             {children}
           </Tag>
           {error && (
-            <span className="block mt-1 font-bold text-red-600">
+            <span className="block mt-1 text-sm font-bold text-red-600">
               Dieses Feld ist benötigt.
             </span>
           )}
@@ -51,7 +52,7 @@ function Component({
   );
 }
 
-Component.defaultProps = {
+FormInput.defaultProps = {
   autoComplete: "",
   type: "text",
   element: "input",
@@ -79,6 +80,6 @@ export const InputProps = {
   attrs: PropTypes.object,
 };
 
-Component.propTypes = InputProps;
+FormInput.propTypes = InputProps;
 
-export default Component;
+export default FormInput;

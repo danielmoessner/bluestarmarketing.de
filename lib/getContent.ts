@@ -3,7 +3,6 @@ import fs from "fs";
 import { join } from "path";
 
 interface CmsObject {
-  slug: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }

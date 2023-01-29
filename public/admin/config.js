@@ -184,9 +184,9 @@ var contact = {
         },
         {
           label: "Datenschutz Text",
-          name: "markdown",
+          name: "privacy",
           i18n: true,
-          widget: "markdown"
+          widget: "text"
         }
       ]
     }
@@ -688,6 +688,138 @@ var starnews = {
 };
 var starnews_default = starnews;
 
+// cms/page/startimes.ts
+var startimes = {
+  file: "content/page/startimes.json",
+  label: "Star Times",
+  name: "startimes",
+  i18n: true,
+  fields: [
+    meta_default,
+    {
+      label: "Header",
+      name: "header",
+      widget: "object",
+      fields: [{ label: "Bild", name: "image", widget: "image" }]
+    },
+    {
+      label: "Start",
+      name: "start",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Titel 1",
+          name: "title1",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image"
+        },
+        {
+          label: "Titel 2",
+          name: "title2",
+          widget: "string",
+          i18n: true
+        },
+        markdown_default,
+        cta_default
+      ]
+    },
+    {
+      label: "Unten",
+      name: "bottom",
+      i18n: true,
+      widget: "object",
+      fields: [text_default]
+    }
+  ]
+};
+var startimes_default = startimes;
+
+// cms/page/startimesmeetings.ts
+var startimesmeetings = {
+  file: "content/page/startimesmeetings.json",
+  label: "Star Times Termine",
+  name: "startimesmeetings",
+  i18n: true,
+  fields: [
+    {
+      label: "Termine",
+      name: "meetings",
+      i18n: true,
+      widget: "object",
+      fields: [title_default]
+    }
+  ]
+};
+var startimesmeetings_default = startimesmeetings;
+
+// cms/page/startimesmeeting.ts
+var startimesmeeting = {
+  file: "content/page/startimesmeeting.json",
+  label: "Star Times Anmeldung",
+  name: "startimesmeeting",
+  i18n: true,
+  fields: [
+    {
+      label: "Intro",
+      name: "intro",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Wir treffen uns text",
+          name: "meeting",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Button",
+          name: "button",
+          widget: "string",
+          i18n: true
+        }
+      ]
+    },
+    {
+      label: "Formular",
+      name: "form",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image"
+        },
+        {
+          label: "Erforderliche Felder",
+          name: "requiredFields",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Button",
+          name: "button",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Erfolgstext",
+          name: "successText",
+          widget: "text",
+          i18n: true
+        }
+      ]
+    }
+  ]
+};
+var startimesmeeting_default = startimesmeeting;
+
 // cms/page/index.ts
 var config = {
   name: "pages",
@@ -711,6 +843,9 @@ var config = {
     forYou_default,
     customers_default,
     starnews_default,
+    startimes_default,
+    startimesmeetings_default,
+    startimesmeeting_default,
     contact_default
   ]
 };
@@ -1059,7 +1194,6 @@ var article = {
       search_fields: ["title"],
       value_field: "title"
     },
-    // is archived article
     {
       label: "Archiviert",
       name: "isArchived",
@@ -1071,6 +1205,210 @@ var article = {
   ]
 };
 var article_default = article;
+
+// cms/event/index.ts
+var event = {
+  name: "event",
+  label: "Events",
+  label_singular: "Event",
+  editor: {
+    preview: false
+  },
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
+  extension: "json",
+  folder: "content/event",
+  slug: "{{fields.title}}",
+  create: true,
+  fields: [
+    title_default,
+    {
+      label: "Slug",
+      name: "slug",
+      i18n: true,
+      widget: "string",
+      hint: "Bitte nicht mehr ver\xE4ndern. Ansonsten k\xF6nnten Verkn\xFCpfungsfehler entstehen."
+    },
+    {
+      label: "Icon",
+      name: "image",
+      widget: "image"
+    },
+    meta_default,
+    {
+      label: "Header",
+      name: "header",
+      widget: "object",
+      fields: [{ label: "Bild", name: "image", widget: "image" }]
+    },
+    {
+      label: "Start",
+      name: "start",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Titel 1",
+          name: "title1",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Titel 2",
+          name: "title2",
+          widget: "string",
+          i18n: true
+        },
+        markdown_default,
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image"
+        }
+      ]
+    },
+    {
+      label: "Unten",
+      name: "bottom",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Titel Links",
+          name: "titleLeft",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Text Links",
+          name: "markdownLeft",
+          widget: "markdown",
+          i18n: true
+        },
+        {
+          label: "Titel Rechts",
+          name: "titleRight",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Text Rechts",
+          name: "markdownRight",
+          widget: "markdown",
+          i18n: true
+        }
+        // cta,
+      ]
+    }
+  ]
+};
+var event_default = event;
+
+// cms/meeting/index.ts
+var meeting = {
+  name: "meeting",
+  label: "Termine",
+  label_singular: "Termin",
+  editor: {
+    preview: false
+  },
+  i18n: {
+    structure: "single_file",
+    locales: ["de", "en"]
+  },
+  extension: "json",
+  slug: "{{fields.title}}",
+  folder: "content/meeting",
+  create: true,
+  fields: [
+    {
+      label: "Event",
+      name: "event",
+      widget: "relation",
+      multiple: false,
+      collection: "event",
+      i18n: false,
+      display_fields: ["title"],
+      search_fields: ["title"],
+      value_field: "slug"
+    },
+    title_default,
+    {
+      label: "Allgemein",
+      name: "general",
+      widget: "object",
+      fields: [
+        {
+          label: "Tag",
+          name: "day",
+          widget: "datetime",
+          time_format: false,
+          format: "YYYY-MM-DD",
+          i18n: "duplicate",
+          date_format: "DD.MM.YYYY"
+        },
+        {
+          label: "Von",
+          name: "from",
+          widget: "datetime",
+          time_format: "HH:mm",
+          format: "HH:mm",
+          i18n: "duplicate",
+          date_format: false
+        },
+        {
+          label: "Bis",
+          name: "to",
+          widget: "datetime",
+          format: "HH:mm",
+          i18n: "duplicate",
+          time_format: "HH:mm",
+          date_format: false
+        }
+      ]
+    },
+    {
+      label: "Listenansicht",
+      name: "list",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Text",
+          name: "text",
+          i18n: true,
+          widget: "markdown"
+        }
+      ]
+    },
+    {
+      label: "Detailansicht",
+      name: "detail",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image",
+          i18n: false
+        },
+        title_default,
+        markdown_default,
+        text_default,
+        {
+          label: "Formulartext",
+          name: "markdownForm",
+          i18n: true,
+          widget: "markdown"
+        }
+      ]
+    }
+  ]
+};
+var meeting_default = meeting;
 
 // cms/config.ts
 var config2 = {
@@ -1102,7 +1440,16 @@ var config2 = {
   // See https://www.netlifycms.org/docs/beta-features/#manual-initialization
   load_config_file: false,
   // See https://www.netlifycms.org/docs/collection-types/
-  collections: [page_default, article_default, category_default, customer_default, setting_default, legal_default]
+  collections: [
+    page_default,
+    event_default,
+    meeting_default,
+    article_default,
+    category_default,
+    customer_default,
+    setting_default,
+    legal_default
+  ]
 };
 var config_default = config2;
 export {

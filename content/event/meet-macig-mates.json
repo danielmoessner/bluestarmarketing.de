@@ -1,0 +1,27 @@
+{
+  "de": {
+    "title": "Meet Magic Mates",
+    "slug": "meetmagicmates",
+    "image": "/media/magic_mates_logos.png",
+    "header": {
+      "image": "/media/magic_mates.jpg"
+    },
+    "start": {
+      "title1": "Meet Magic Mates",
+      "title2": "Wie gestaltest du die neue Zeit?",
+      "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
+      "image": "/media/haende_mit_sternenkonfetti.jpg"
+    },
+    "bottom": {
+      "titleLeft": "Was bringst du mit?",
+      "titleRight": "Was nimmst du mit?",
+      "markdownLeft": "Dich – einfach nur dich!\n\nSei da, sei neugierig & offen, stelle dich vor, höre zu und fühle dich willkommen.\n\nSehr gerne dein Magic Marketing Mate.",
+      "markdownRight": "Das entscheidest du individuell für dich!\n\nMein Wunsch ist es, für dich einen Raum und eine erfüllte Zeit mit neuen und bekannten Gesichtern, spannende Impulse, neue Kontakte, Lachen & \\*\\*Freude\\*\\* zu gestalten."
+    },
+    "meta": {
+      "title": "Meet Magic Mates",
+      "description": "todo"
+    }
+  },
+  "en": {}
+}

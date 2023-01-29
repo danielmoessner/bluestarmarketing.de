@@ -9,6 +9,9 @@ import marketingstrategy from "./marketingstrategy";
 import salesmarketing from "./salesmarketing";
 import marketingcampaign from "./marketingcampaign";
 import starnews from "./starnews";
+import startimes from "./startimes";
+import startimesmeetings from "./startimesmeetings";
+import startimesmeeting from "./startimesmeeting";
 
 const config: CmsCollection = {
   name: "pages",
@@ -32,6 +35,9 @@ const config: CmsCollection = {
     forYou,
     customers,
     starnews,
+    startimes,
+    startimesmeetings,
+    startimesmeeting,
     contact,
   ],
 };

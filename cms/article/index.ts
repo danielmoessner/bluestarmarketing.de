@@ -57,7 +57,6 @@ const article: CmsCollection = {
       search_fields: ["title"],
       value_field: "title",
     },
-    // is archived article
     {
       label: "Archiviert",
       name: "isArchived",
