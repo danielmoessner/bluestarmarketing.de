@@ -1,0 +1,26 @@
+{
+  "de": {
+    "meta": {
+      "title": "Star Times",
+      "description": "todo"
+    },
+    "header": {
+      "image": "/media/star_times_titelbild.jpg"
+    },
+    "start": {
+      "image": "/media/drei-raketen.jpeg",
+      "title": "Aktuelle Star Times-Formate für dich",
+      "markdown": "**Meet Magic Mates**\n* für Impulse, Austausch, Ideen & Freude unter Marketern:innen\n\n**Business Workshops für dich & dein Team**\n* für Alignment, Fokus & Empowerment bei Herausforderungen, Fragestellungen, Aufgaben & Projekten, die für dich und dein Unternehmen essentiell für Wachstum, Retention und Erfolgs-KPIs sind.\n* für alle Themen & Fragen, die dir keine Ruhe lassen und bei denen du weißt, ein „Weiter so“ ist nicht zielführend, erfolgreich und sinnvoll\n* mit euren Brilliant Minds in Co-Creation etwas bewegen und Lösungsansätze finden",
+      "cta": {
+        "text": "Starte deine Anfrage",
+        "url": "#"
+      },
+      "title1": "Star Times",
+      "title2": "Aktuelle Star Times-Formate für dich"
+    },
+    "bottom": {
+      "text": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com | White vertical paper sheet Mockup: customdesigner – stock.adobe.com"
+    }
+  },
+  "en": {}
+}

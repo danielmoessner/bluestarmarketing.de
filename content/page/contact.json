@@ -36,7 +36,8 @@
       "image": "/media/bluestar_kontakt_silke_tolkmitt.jpg",
       "emailtext": "E-Mail:",
       "phonetext": "Telefon:",
-      "markdown": "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden. [Zum Datenschutz](/rechtliches/datenschutz)"
+      "markdown": "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden. [Zum Datenschutz](/rechtliches/datenschutz)",
+      "privacy": "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden. <a href=\"/rechtliches/datenschutz\">Zum Datenschutz</a>"
     }
   },
   "en": {
@@ -76,7 +77,8 @@
       "image": "/media/bluestar_kontakt_silke_tolkmitt.jpg",
       "emailtext": "E-Mail:",
       "phonetext": "Phone:",
-      "markdown": "I agree that my data will be stored temporarily to process this request. [Privacy Policy](/en/legal/privacy)"
+      "markdown": "I agree that my data will be stored temporarily to process this request. [Privacy Policy](/en/legal/privacy)",
+      "privacy": "Ich stimme zu, dass meine Daten zum Bearbeiten dieser Anfrage vorrübergehend gespeichert werden. <a href=\"/en/legal/privacy\">Zum Datenschutz</a>"
     }
   }
 }

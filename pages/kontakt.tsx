@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
 import Multiline from "../components/Multiline";
-import DynamicForm from "../components/DynamicForm";
+import DynamicForm from "../components/Form";
 import globalSource from "../content/setting/global.json";
 import Animate from "../components/Animate";
 import { useRouter } from "next/router";
@@ -52,6 +52,12 @@ function Page({ pageData, footerData, globalData }) {
       attrs: {
         rows: 7,
       },
+    },
+    {
+      label: page.form.privacy,
+      type: "checkbox",
+      name: "privacy_check",
+      required: true,
     },
   ];
 
@@ -210,9 +216,9 @@ function Page({ pageData, footerData, globalData }) {
           </div>
           <div className="mt-10">
             <DynamicForm
+              name="contactform"
               fields={fields}
               submitText={locale === "de" ? "Absenden" : "Send"}
-              dataProtectionText={page.form.markdown.html}
             />
           </div>
         </Container>
