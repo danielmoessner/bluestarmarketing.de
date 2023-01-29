@@ -115,7 +115,7 @@ function Page({
         <Container layout="sm">
           <div className="">
             <Animate>
-              <div className="grid gap-8 lg:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2">
                 <div className="leading-[0px]">
                   <Image {...meeting.detail.image} alt={meeting.detail.title} />
                 </div>
