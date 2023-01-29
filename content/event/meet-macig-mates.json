@@ -21,6 +21,14 @@
     "meta": {
       "title": "Meet Magic Mates",
       "description": "todo"
+    },
+    "listing": {
+      "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
+      "why": "Wir lieben die Power von Brilliant Minds, den Austausch, das Miteinander, Co-Creation & Freude und sind davon schon immer überzeugt und inspiriert – heute mehr denn je, dass wir jetzt gemeinsam starten.",
+      "who": "Für Marketer:innen",
+      "titleNormal": "Meet",
+      "titleRose": "Magic Mates",
+      "color": "#e50069"
     }
   },
   "en": {}

@@ -730,6 +730,23 @@ var startimes = {
       ]
     },
     {
+      label: "Auflistung",
+      name: "listing",
+      widget: "object",
+      i18n: true,
+      fields: [
+        { label: "Warum?", name: "why", widget: "string", i18n: true },
+        { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true },
+        {
+          label: "N\xE4chster Termin",
+          name: "next",
+          widget: "string",
+          i18n: true
+        },
+        { label: "Button", name: "button", widget: "string", i18n: true }
+      ]
+    },
+    {
       label: "Unten",
       name: "bottom",
       i18n: true,
@@ -1239,6 +1256,30 @@ var event = {
       label: "Icon",
       name: "image",
       widget: "image"
+    },
+    {
+      label: "Auflistung",
+      name: "listing",
+      widget: "object",
+      i18n: true,
+      fields: [
+        { label: "Farbe", name: "color", widget: "string" },
+        {
+          label: "Titel Normal",
+          name: "titleNormal",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Titel Rose",
+          name: "titleRose",
+          widget: "string",
+          i18n: true
+        },
+        markdown_default,
+        { label: "Warum", name: "why", widget: "text", i18n: true },
+        { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true }
+      ]
     },
     meta_default,
     {
