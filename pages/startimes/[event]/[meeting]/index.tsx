@@ -19,11 +19,14 @@ function Page({
   meetingData,
   footerData,
   pageData,
-  availableMeetings,
+  availableMeetingsData,
 }) {
   const event = eventData;
   const page = pageData;
   const meeting = meetingData;
+  const availableMeetings = availableMeetingsData.filter(
+    (m) => new Date() <= new Date(m.general.day)
+  );
 
   const formattedDate = formatDate(meeting.general.day, "full");
 
@@ -199,9 +202,8 @@ export async function getStaticProps({ params, locale }) {
   const pageData = await renderContent(localizeJson(pageSource, locale));
   const footerData = await renderContent(footerSource[locale]);
 
-  const availableMeetings = meetings
+  const availableMeetingsData = meetings
     .filter((m) => m.event === event)
-    .filter((m) => new Date() <= new Date(m.general.day))
     .sort(
       (m1, m2) =>
         new Date(m1.general.day).getTime() - new Date(m2.general.day).getTime()
@@ -209,7 +211,7 @@ export async function getStaticProps({ params, locale }) {
 
   return {
     props: {
-      availableMeetings,
+      availableMeetingsData,
       eventData,
       pageData,
       meetingData,

@@ -14,7 +14,10 @@ import footerSource from "@/content/setting/footer.json";
 import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
 
-function Page({ pageData, footerData, eventData, meetings }) {
+function Page({ pageData, footerData, eventData, meetingsData }) {
+  const meetings = meetingsData.filter(
+    (m) => new Date() <= new Date(m.general.day)
+  );
   const page = pageData;
   const event = eventData;
 
@@ -136,19 +139,17 @@ export async function getStaticProps({ locale, params }) {
 
   const foundEvent = events.find((e) => e.slug === event);
   const meetings2 = meetings1.filter((m) => m.event === event);
-  const meetings3 = meetings2
-    .filter((m) => new Date() <= new Date(m.general.day))
-    .sort(
-      (m1, m2) =>
-        new Date(m1.general.day).getTime() - new Date(m2.general.day).getTime()
-    );
+  const meetings3 = meetings2.sort(
+    (m1, m2) =>
+      new Date(m1.general.day).getTime() - new Date(m2.general.day).getTime()
+  );
   const meetings4 = await renderContent(meetings3);
 
   const eventData = await renderContent(foundEvent);
 
   return {
     props: {
-      meetings: meetings4,
+      meetingsData: meetings4,
       pageData,
       footerData,
       eventData,
