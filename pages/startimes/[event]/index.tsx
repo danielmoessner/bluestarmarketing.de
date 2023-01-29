@@ -21,14 +21,9 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
   const page = pageData;
   const event = eventData;
 
-  const meta = {
-    title: event.title,
-    description: "",
-  };
-
   return (
     <Layout>
-      <Seo meta={meta} />
+      <Seo meta={event.meta} />
       <Header header={event.header} />
 
       <section className="pt-16 pb-16 lg:pb-20">
