@@ -149,7 +149,7 @@ function Page({
                 </div>
               </div>
               <div className="flex justify-center mt-6 lg:mt-10">
-                <Button href="#" kind="pink">
+                <Button href="#form" kind="pink">
                   {page.intro.button}
                 </Button>
               </div>
@@ -163,7 +163,10 @@ function Page({
         </Container>
       </section>
 
-      <section className="py-16  bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]">
+      <section
+        className="py-16 bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]"
+        id="form"
+      >
         <Container layout="sm">
           <div className="grid gap-8 md:grid-cols-12">
             <div className="md:col-span-4">
