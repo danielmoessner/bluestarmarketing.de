@@ -42,7 +42,10 @@ function Page({
       type: "multiple",
       name: "meetings",
       options: availableMeetings.map((m) => ({
-        label: `${m.title} - ${formatDate(m.general.day)}`,
+        label: `${event.title} ${page.form.on} ${formatDate(
+          m.general.day,
+          "short"
+        )}`,
         name: `meeting_${m.event}_${m.general.day}`,
         checked: m.general.day === meeting.general.day,
       })),

@@ -818,6 +818,12 @@ var startimesmeeting = {
           widget: "image"
         },
         {
+          label: "Am",
+          name: "on",
+          widget: "string",
+          i18n: true
+        },
+        {
           label: "Erforderliche Felder",
           name: "requiredFields",
           widget: "string",
