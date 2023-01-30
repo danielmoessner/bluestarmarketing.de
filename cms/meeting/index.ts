@@ -73,7 +73,7 @@ const meeting: CmsCollection = {
       fields: [
         {
           label: "Text",
-          name: "text",
+          name: "markdown",
           i18n: true,
           widget: "markdown",
         },

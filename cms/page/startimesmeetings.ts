@@ -12,7 +12,11 @@ const startimesmeetings: CmsCollectionFile = {
       name: "meetings",
       i18n: true,
       widget: "object",
-      fields: [title],
+      fields: [
+        title,
+        { label: "Uhr", name: "time", widget: "string", i18n: true },
+        { label: "Button", name: "button", widget: "string", i18n: true },
+      ],
     },
   ],
 };

@@ -13,17 +13,21 @@ import { formatDate } from "@/lib/date";
 import DynamicForm from "@/components/Form";
 import pageSource from "@/content/page/startimesmeeting.json";
 import { useRouter } from "next/router";
+import Seo from "@/components/Seo";
 
 function Page({
   eventData,
   meetingData,
   footerData,
   pageData,
-  availableMeetings,
+  availableMeetingsData,
 }) {
   const event = eventData;
   const page = pageData;
   const meeting = meetingData;
+  const availableMeetings = availableMeetingsData.filter(
+    (m) => new Date() <= new Date(m.general.day)
+  );
 
   const formattedDate = formatDate(meeting.general.day, "full");
 
@@ -38,7 +42,10 @@ function Page({
       type: "multiple",
       name: "meetings",
       options: availableMeetings.map((m) => ({
-        label: `${m.title} - ${formatDate(m.general.day)}`,
+        label: `${event.title} ${page.form.on} ${formatDate(
+          m.general.day,
+          "short"
+        )}`,
         name: `meeting_${m.event}_${m.general.day}`,
         checked: m.general.day === meeting.general.day,
       })),
@@ -101,8 +108,17 @@ function Page({
     // },
   ];
 
+  const meta = {
+    title: meeting.title,
+    description: `${page.intro.meeting}: ${formattedDate} ${meeting.general.from} - ${meeting.general.to} Uhr`,
+    image: event.meta.image,
+    keywords: event.meta.keywords,
+  };
+
   return (
     <Layout>
+      <Seo meta={meta} />
+
       <section className="py-8 md:py-16">
         <Container layout="sm">
           <div className="text-center">
@@ -115,7 +131,7 @@ function Page({
         <Container layout="sm">
           <div className="">
             <Animate>
-              <div className="grid gap-8 lg:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2">
                 <div className="leading-[0px]">
                   <Image {...meeting.detail.image} alt={meeting.detail.title} />
                 </div>
@@ -136,7 +152,7 @@ function Page({
                 </div>
               </div>
               <div className="flex justify-center mt-6 lg:mt-10">
-                <Button href="#" kind="pink">
+                <Button href="#form" kind="pink">
                   {page.intro.button}
                 </Button>
               </div>
@@ -150,7 +166,10 @@ function Page({
         </Container>
       </section>
 
-      <section className="py-16  bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]">
+      <section
+        className="py-16 bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]"
+        id="form"
+      >
         <Container layout="sm">
           <div className="grid gap-8 md:grid-cols-12">
             <div className="md:col-span-4">
@@ -199,9 +218,8 @@ export async function getStaticProps({ params, locale }) {
   const pageData = await renderContent(localizeJson(pageSource, locale));
   const footerData = await renderContent(footerSource[locale]);
 
-  const availableMeetings = meetings
+  const availableMeetingsData = meetings
     .filter((m) => m.event === event)
-    .filter((m) => new Date() <= new Date(m.general.day))
     .sort(
       (m1, m2) =>
         new Date(m1.general.day).getTime() - new Date(m2.general.day).getTime()
@@ -209,7 +227,7 @@ export async function getStaticProps({ params, locale }) {
 
   return {
     props: {
-      availableMeetings,
+      availableMeetingsData,
       eventData,
       pageData,
       meetingData,

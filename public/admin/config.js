@@ -730,6 +730,23 @@ var startimes = {
       ]
     },
     {
+      label: "Auflistung",
+      name: "listing",
+      widget: "object",
+      i18n: true,
+      fields: [
+        { label: "Warum?", name: "why", widget: "string", i18n: true },
+        { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true },
+        {
+          label: "N\xE4chster Termin",
+          name: "next",
+          widget: "string",
+          i18n: true
+        },
+        { label: "Button", name: "button", widget: "string", i18n: true }
+      ]
+    },
+    {
       label: "Unten",
       name: "bottom",
       i18n: true,
@@ -752,7 +769,11 @@ var startimesmeetings = {
       name: "meetings",
       i18n: true,
       widget: "object",
-      fields: [title_default]
+      fields: [
+        title_default,
+        { label: "Uhr", name: "time", widget: "string", i18n: true },
+        { label: "Button", name: "button", widget: "string", i18n: true }
+      ]
     }
   ]
 };
@@ -795,6 +816,12 @@ var startimesmeeting = {
           label: "Bild",
           name: "image",
           widget: "image"
+        },
+        {
+          label: "Am",
+          name: "on",
+          widget: "string",
+          i18n: true
         },
         {
           label: "Erforderliche Felder",
@@ -1236,6 +1263,30 @@ var event = {
       name: "image",
       widget: "image"
     },
+    {
+      label: "Auflistung",
+      name: "listing",
+      widget: "object",
+      i18n: true,
+      fields: [
+        { label: "Farbe", name: "color", widget: "string" },
+        {
+          label: "Titel Normal",
+          name: "titleNormal",
+          widget: "string",
+          i18n: true
+        },
+        {
+          label: "Titel Rose",
+          name: "titleRose",
+          widget: "string",
+          i18n: true
+        },
+        markdown_default,
+        { label: "Warum", name: "why", widget: "text", i18n: true },
+        { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true }
+      ]
+    },
     meta_default,
     {
       label: "Header",
@@ -1377,7 +1428,7 @@ var meeting = {
       fields: [
         {
           label: "Text",
-          name: "text",
+          name: "markdown",
           i18n: true,
           widget: "markdown"
         }
