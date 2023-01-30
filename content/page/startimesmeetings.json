@@ -1,7 +1,9 @@
 {
   "de": {
     "meetings": {
-      "title": "Die nächsten Termine:"
+      "title": "Die nächsten Termine:",
+      "time": "Uhr",
+      "button": "Erfahre mehr"
     }
   },
   "en": {}
