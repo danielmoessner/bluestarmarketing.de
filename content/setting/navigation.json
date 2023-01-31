@@ -54,6 +54,11 @@
       },
       {
         "type": "link",
+        "text": "Star Times",
+        "url": "/startimes"
+      },
+      {
+        "type": "link",
         "text": "Star News",
         "url": "/starnews"
       },
