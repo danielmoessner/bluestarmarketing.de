@@ -2,7 +2,7 @@
   "de": {
     "meta": {
       "title": "Star Times",
-      "description": "todo"
+      "description": "Die Events von Blue Star Marketing."
     },
     "header": {
       "image": "/media/star_times_titelbild.jpg"
@@ -20,6 +20,12 @@
     },
     "bottom": {
       "text": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com | White vertical paper sheet Mockup: customdesigner – stock.adobe.com"
+    },
+    "listing": {
+      "button": "Details anzeigen",
+      "why": "Warum?",
+      "who": "Für Wen?",
+      "next": "Nächster Termin"
     }
   },
   "en": {}
