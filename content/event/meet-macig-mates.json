@@ -16,11 +16,19 @@
       "titleLeft": "Was bringst du mit?",
       "titleRight": "Was nimmst du mit?",
       "markdownLeft": "Dich – einfach nur dich!\n\nSei da, sei neugierig & offen, stelle dich vor, höre zu und fühle dich willkommen.\n\nSehr gerne dein Magic Marketing Mate.",
-      "markdownRight": "Das entscheidest du individuell für dich!\n\nMein Wunsch ist es, für dich einen Raum und eine erfüllte Zeit mit neuen und bekannten Gesichtern, spannende Impulse, neue Kontakte, Lachen & \\*\\*Freude\\*\\* zu gestalten."
+      "markdownRight": "Das entscheidest du individuell für dich!\n\nMein Wunsch ist es, für dich einen Raum und eine erfüllte Zeit mit neuen und bekannten Gesichtern, spannende Impulse, neue Kontakte, Lachen & **Freude** zu gestalten."
     },
     "meta": {
       "title": "Meet Magic Mates",
-      "description": "todo"
+      "description": "Vernetze dich mit neuen und bekannten Marketer:innen."
+    },
+    "listing": {
+      "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
+      "why": "Wir lieben die Power von Brilliant Minds, den Austausch, das Miteinander, Co-Creation & Freude und sind davon schon immer überzeugt und inspiriert – heute mehr denn je, sodass wir jetzt gemeinsam starten.",
+      "who": "Für Marketer:innen",
+      "titleNormal": "Meet",
+      "titleRose": "Magic Mates",
+      "color": "#e50069"
     }
   },
   "en": {}
