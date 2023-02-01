@@ -2,16 +2,14 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
-import pageSource from "../content/page/customers.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
 import Footer from "../components/Footer";
-import footerSource from "../content/setting/footer.json";
 import Animate from "../components/Animate";
 import Image from "next/image";
 import Multiline from "../components/Multiline";
 import Button from "../components/Button";
-import { getAllJson } from "lib/getContent";
+import { getAllJson, getSingleJson } from "lib/getContent";
 
 // interface Props {
 //   pageData: typeof pageSource;
@@ -133,8 +131,12 @@ function Page({ pageData, footerData, reviews }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const pageData = await renderContent(pageSource[locale]);
-  const footerData = await renderContent(footerSource[locale]);
+  const pageData = await renderContent(
+    getSingleJson("page", "customers", locale)
+  );
+  const footerData = await renderContent(
+    getSingleJson("setting", "footer", locale)
+  );
 
   const reviews1 = getAllJson("customer", locale);
   const reviews = reviews1.sort((a, b) => a.ordering - b.ordering);

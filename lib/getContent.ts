@@ -1,64 +1,47 @@
 import matter from "gray-matter";
 import fs from "fs";
 import { join } from "path";
+import { mergeDeep } from "./utils";
 
 interface CmsObject {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
-export type MarkdownLoaded<T> = T & { markdown: string; _path: string };
-
-export type JsonLoaded<T> = T & { _path: string };
-
-function readFile(filename: string) {
+function readFile(filename: string): { content: string; path: string } {
   const fileContents = fs.readFileSync(filename, "utf8");
   return { content: fileContents, path: filename };
 }
 
-function loadMarkdown<T extends CmsObject>(
-  filename,
-  attrs = {}
-): MarkdownLoaded<T> {
+function loadMarkdown(filename: string, attrs = {}) {
   const { content, path } = readFile(filename);
   const { data, content: markdown } = matter(content);
 
-  return { ...data, markdown, _path: path, ...attrs } as MarkdownLoaded<T>;
+  return { ...data, markdown, _path: path, ...attrs };
 }
 
-export function localizeJson<T extends CmsObject>(
-  data: T,
-  locale: "de" | "en" | "" = ""
-) {
-  let fullData;
-  if (locale) {
-    fullData = data[locale];
-    Object.keys(data).forEach((key) => {
-      fullData = Object.assign({}, data[key], fullData);
-    });
-  } else fullData = data;
+function localizeJson(data: CmsObject, locale?: string) {
+  if (!locale) return data;
 
-  return fullData;
+  const original = JSON.parse(JSON.stringify(data));
+  let ret = original[locale];
+  Object.keys(data).forEach((key) => {
+    ret = mergeDeep(original[key], ret);
+  });
+
+  return { ...ret, _original: data };
 }
 
-function loadJson<T extends CmsObject, A extends Record<string, string>>(
-  filename,
-  locale: "de" | "en" | "" = ""
-): T & { _path: string } & A {
+function loadJson(filename: string, locale?: string) {
   const { content, path } = readFile(filename);
+
   const data = JSON.parse(content);
+  const localizedData = localizeJson(data, locale);
 
-  const fullData = localizeJson(data, locale);
-
-  return { ...fullData, _path: path, _locale: locale } as T & {
-    _path: string;
-  } & A;
+  return { ...localizedData, _path: path, _locale: locale };
 }
 
-export function getAllMarkdown<T extends CmsObject>(
-  collection: string,
-  locale = ""
-): MarkdownLoaded<T>[] {
+export function getAllMarkdown(collection: string, locale?: string) {
   const collectionDirectory = join(
     process.cwd(),
     "content",
@@ -67,23 +50,28 @@ export function getAllMarkdown<T extends CmsObject>(
   );
   const filenames = fs.readdirSync(collectionDirectory);
   const items = filenames.map((filename) =>
-    loadMarkdown<T>(`${collectionDirectory}/${filename}`, { _locale: locale })
+    loadMarkdown(`${collectionDirectory}/${filename}`, { _locale: locale })
   );
 
   return items;
 }
 
-export function getAllJson<T extends CmsObject>(
+export function getSingleJson(
   collection: string,
-  locale: "de" | "en" | "" = ""
-): JsonLoaded<T>[] {
+  item: string,
+  locale?: string
+): CmsObject {
+  const filename = join(process.cwd(), "content", collection, item) + ".json";
+  const data = loadJson(filename, locale);
+
+  return data;
+}
+
+export function getAllJson(collection: string, locale?: string): CmsObject {
   const collectionDirectory = join(process.cwd(), "content", collection);
   const filenames = fs.readdirSync(collectionDirectory);
   const items = filenames.map((filename) =>
-    loadJson<T, { _locale: string }>(
-      `${collectionDirectory}/${filename}`,
-      locale
-    )
+    loadJson(`${collectionDirectory}/${filename}`, locale)
   );
 
   return items;

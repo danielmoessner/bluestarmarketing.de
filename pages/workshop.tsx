@@ -2,15 +2,14 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
 import Header from "../components/Header";
-import pageSource from "../content/page/strategyworkshop.json";
 import Heading from "../components/Heading";
 import { renderContent } from "lib/renderContent";
 import Footer from "../components/Footer";
-import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
 import Multiline from "../components/Multiline";
 import Animate from "../components/Animate";
 import Button from "../components/Button";
+import { getSingleJson } from "@/lib/getContent";
 
 function Page({ pageData, footerData }) {
   const page = pageData;
@@ -71,8 +70,12 @@ function Page({ pageData, footerData }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const pageData = await renderContent(pageSource[locale]);
-  const footerData = await renderContent(footerSource[locale]);
+  const pageData = await renderContent(
+    getSingleJson("page", "strategyworkshop", locale)
+  );
+  const footerData = await renderContent(
+    getSingleJson("setting", "footer", locale)
+  );
 
   return {
     props: {

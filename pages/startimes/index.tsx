@@ -1,8 +1,7 @@
 import Container from "@/components/Container";
 import Layout from "@/components/Layout";
-import { getAllJson, localizeJson } from "@/lib/getContent";
+import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
-import pageSource from "@/content/page/startimes.json";
 import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import Heading from "@/components/Heading";
@@ -10,7 +9,6 @@ import Animate from "@/components/Animate";
 import Image from "next/image";
 import Prose from "@/components/Prose";
 import Footer from "@/components/Footer";
-import footerSource from "@/content/setting/footer.json";
 import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
 
@@ -123,8 +121,12 @@ function Page({ pageData, footerData, events, meetingsData }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const pageData = await renderContent(localizeJson(pageSource, locale));
-  const footerData = await renderContent(footerSource[locale]);
+  const pageData = await renderContent(
+    getSingleJson("page", "startimes", locale)
+  );
+  const footerData = await renderContent(
+    getSingleJson("setting", "footer", locale)
+  );
 
   const events1 = getAllJson("event", locale);
   const events2 = await renderContent(events1);

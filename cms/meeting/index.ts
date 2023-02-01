@@ -1,5 +1,3 @@
-import markdown from "cms/symbols/markdown";
-import text from "cms/symbols/text";
 import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
 
@@ -91,14 +89,26 @@ const meeting: CmsCollection = {
           widget: "image",
           i18n: false,
         },
-        title,
-        markdown,
-        text,
         {
-          label: "Formulartext",
-          name: "markdownForm",
+          label: "Titel",
+          name: "title",
+          widget: "string",
+          i18n: true,
+          required: false,
+        },
+        {
+          label: "Markdown",
+          name: "markdown",
           i18n: true,
           widget: "markdown",
+          required: false,
+        },
+        {
+          label: "Text",
+          name: "text",
+          widget: "text",
+          i18n: true,
+          required: false,
         },
       ],
     },
