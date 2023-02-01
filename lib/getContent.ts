@@ -41,7 +41,10 @@ function loadJson(filename: string, locale?: string) {
   return { ...localizedData, _path: path, _locale: locale };
 }
 
-export function getAllMarkdown(collection: string, locale?: string) {
+export function getAllMarkdown(
+  collection: string,
+  locale?: string
+): CmsObject[] {
   const collectionDirectory = join(
     process.cwd(),
     "content",
@@ -67,7 +70,7 @@ export function getSingleJson(
   return data;
 }
 
-export function getAllJson(collection: string, locale?: string): CmsObject {
+export function getAllJson(collection: string, locale?: string): CmsObject[] {
   const collectionDirectory = join(process.cwd(), "content", collection);
   const filenames = fs.readdirSync(collectionDirectory);
   const items = filenames.map((filename) =>
