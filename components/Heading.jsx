@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ChildrenData from "../types/ChildrenData";
+import ChildrenData from "@/types/ChildrenData";
 import HeadingStar from "./HeadingStar";
 
 function Component({ element, size, color, children, classes, showStar }) {

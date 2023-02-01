@@ -1,14 +1,14 @@
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
-import Container from "../components/Container";
-import Header from "../components/Header";
-import Heading from "../components/Heading";
+import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
+import Container from "@/components/Container";
+import Header from "@/components/Header";
+import Heading from "@/components/Heading";
 import { renderContent } from "lib/renderContent";
-import Footer from "../components/Footer";
-import Animate from "../components/Animate";
+import Footer from "@/components/Footer";
+import Animate from "@/components/Animate";
 import Image from "next/image";
-import Multiline from "../components/Multiline";
-import Button from "../components/Button";
+import Multiline from "@/components/Multiline";
+import Button from "@/components/Button";
 import { getAllJson, getSingleJson } from "lib/getContent";
 
 // interface Props {

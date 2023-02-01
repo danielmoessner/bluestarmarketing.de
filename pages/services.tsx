@@ -1,16 +1,16 @@
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
-import Container from "../components/Container";
-import Header from "../components/Header";
-import Heading from "../components/Heading";
+import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
+import Container from "@/components/Container";
+import Header from "@/components/Header";
+import Heading from "@/components/Heading";
 import { renderContent } from "lib/renderContent";
-import Footer from "../components/Footer";
-import Animate from "../components/Animate";
-import Multiline from "../components/Multiline";
-import Button from "../components/Button";
-import ServiceBox from "../components/ServiceBox";
-import ServiceLinks from "../components/ServiceLinks";
-import SectionCustomers from "../components/SectionCustomers";
+import Footer from "@/components/Footer";
+import Animate from "@/components/Animate";
+import Multiline from "@/components/Multiline";
+import Button from "@/components/Button";
+import ServiceBox from "@/components/ServiceBox";
+import ServiceLinks from "@/components/ServiceLinks";
+import SectionCustomers from "@/components/SectionCustomers";
 import { getSingleJson } from "@/lib/getContent";
 
 // interface Props {

@@ -1,14 +1,14 @@
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
-import Container from "../components/Container";
-import Header from "../components/Header";
-import Heading from "../components/Heading";
+import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
+import Container from "@/components/Container";
+import Header from "@/components/Header";
+import Heading from "@/components/Heading";
 import { renderContent } from "lib/renderContent";
-import Footer from "../components/Footer";
+import Footer from "@/components/Footer";
 import Image from "next/image";
-import Multiline from "../components/Multiline";
-import DynamicForm from "../components/Form";
-import Animate from "../components/Animate";
+import Multiline from "@/components/Multiline";
+import DynamicForm from "@/components/Form";
+import Animate from "@/components/Animate";
 import { useRouter } from "next/router";
 import { getSingleJson } from "@/lib/getContent";
 

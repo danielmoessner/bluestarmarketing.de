@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { IButton, ImageRendered } from "types/shared";
-import Button from "../components/Button";
+import Button from "@/components/Button";
 import Link from "./TranslatedLink";
 
 interface Props {
