@@ -122,6 +122,21 @@ const event: CmsCollection = {
         // cta,
       ],
     },
+    {
+      label: "Anmeldeseite",
+      name: "register",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Formulartext",
+          name: "markdownForm",
+          i18n: true,
+          widget: "markdown",
+          required: false,
+        },
+      ],
+    },
   ],
 };
 

@@ -1,8 +1,7 @@
 import Container from "@/components/Container";
 import Layout from "@/components/Layout";
-import { getAllJson, localizeJson } from "@/lib/getContent";
+import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
-import footerSource from "@/content/setting/footer.json";
 import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
 import Image from "next/image";
@@ -11,7 +10,6 @@ import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
 import DynamicForm from "@/components/Form";
-import pageSource from "@/content/page/startimesmeeting.json";
 import { useRouter } from "next/router";
 import Seo from "@/components/Seo";
 
@@ -178,7 +176,7 @@ function Page({
             <div className="md:col-span-6">
               <Image className="w-40" {...event.image} alt={meeting.event} />
               <div className="mt-5">
-                <Prose html={meeting.detail.markdownForm.html} />
+                <Prose html={event.register.markdownForm.html} />
               </div>
             </div>
           </div>
@@ -215,8 +213,12 @@ export async function getStaticProps({ params, locale }) {
   const eventData = await renderContent(foundEvent);
   const meetingData = await renderContent(foundMeeting);
 
-  const pageData = await renderContent(localizeJson(pageSource, locale));
-  const footerData = await renderContent(footerSource[locale]);
+  const pageData = await renderContent(
+    getSingleJson("page", "startimesmeeting", locale)
+  );
+  const footerData = await renderContent(
+    getSingleJson("setting", "footer", locale)
+  );
 
   const availableMeetingsData = meetings
     .filter((m) => m.event === event)

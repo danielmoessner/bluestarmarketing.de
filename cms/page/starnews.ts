@@ -19,11 +19,14 @@ const starnews: CmsCollectionFile = {
       widget: "object",
       fields: [
         title,
-        image,
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image",
+        },
         {
           label: "Artikel",
           name: "article",
-          i18n: true,
           widget: "relation",
           collection: "article",
           value_field: "slug",

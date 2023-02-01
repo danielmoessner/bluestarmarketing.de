@@ -5,13 +5,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        {/* font */}
-        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
-          rel="stylesheet"
-        /> */}
         {/* ccm19 */}
         <Script
           strategy="beforeInteractive"

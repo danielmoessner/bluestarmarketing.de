@@ -647,11 +647,14 @@ var starnews = {
       widget: "object",
       fields: [
         title_default,
-        image_default,
+        {
+          label: "Bild",
+          name: "image",
+          widget: "image"
+        },
         {
           label: "Artikel",
           name: "article",
-          i18n: true,
           widget: "relation",
           collection: "article",
           value_field: "slug",
@@ -1185,36 +1188,32 @@ var article = {
       label: "Bild",
       name: "image",
       widget: "image",
-      i18n: true,
-      hint: "Erscheint auf der Detailseite, auf der der ganze Artikel zu sehen ist."
+      hint: "Gro\xDFes Bild"
     },
     {
       label: "Bildnachweis",
       name: "credit",
-      i18n: true,
       widget: "string",
       required: false
     },
     {
       label: "Preview Bild",
       name: "previewimage",
-      i18n: true,
       widget: "image",
-      hint: "Erscheint auf der Starnews Seite, auf der alle Artikel sind als Preview."
+      hint: "Kleines Bild Quadrat"
     },
     title_default,
     { label: "Slug", name: "slug", i18n: true, widget: "string" },
     {
       label: "Datum",
       name: "date",
-      i18n: true,
+      i18n: "duplicate",
       widget: "datetime",
       time_format: false
     },
     {
       label: "Kategorien",
       name: "categories",
-      i18n: true,
       widget: "relation",
       multiple: true,
       collection: "category",
@@ -1352,6 +1351,21 @@ var event = {
         }
         // cta,
       ]
+    },
+    {
+      label: "Anmeldeseite",
+      name: "register",
+      i18n: true,
+      widget: "object",
+      fields: [
+        {
+          label: "Formulartext",
+          name: "markdownForm",
+          i18n: true,
+          widget: "markdown",
+          required: false
+        }
+      ]
     }
   ]
 };
@@ -1446,14 +1460,26 @@ var meeting = {
           widget: "image",
           i18n: false
         },
-        title_default,
-        markdown_default,
-        text_default,
         {
-          label: "Formulartext",
-          name: "markdownForm",
+          label: "Titel",
+          name: "title",
+          widget: "string",
           i18n: true,
-          widget: "markdown"
+          required: false
+        },
+        {
+          label: "Markdown",
+          name: "markdown",
+          i18n: true,
+          widget: "markdown",
+          required: false
+        },
+        {
+          label: "Text",
+          name: "text",
+          widget: "text",
+          i18n: true,
+          required: false
         }
       ]
     }

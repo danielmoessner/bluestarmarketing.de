@@ -1,17 +1,15 @@
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
-import pageSource from "../content/page/starnews.json";
 import Heading from "../components/Heading";
 import Footer from "../components/Footer";
-import footerSource from "../content/setting/footer.json";
 import Image from "next/image";
 import Button from "../components/Button";
 import Article from "../components/Article";
 import BlogLayout from "../components/BlogLayout";
 import ArticleMeta from "../components/ArticleMeta";
 import { useRouter } from "next/router";
-import { getAllJson } from "../lib/getContent";
+import { getAllJson, getSingleJson } from "../lib/getContent";
 import { renderContent } from "../lib/renderContent";
 
 function Page({
@@ -101,19 +99,24 @@ function Page({
 }
 
 export async function getStaticProps({ locale }) {
-  const pageData = await renderContent(pageSource[locale]);
-  const footerData = await renderContent(footerSource[locale]);
+  const pageData = await renderContent(
+    getSingleJson("page", "starnews", locale)
+  );
+  const footerData = await renderContent(
+    getSingleJson("setting", "footer", locale)
+  );
+
   const categoryData = getAllJson("category", locale);
   const articleData1 = getAllJson("article", locale);
 
   const articleData2 = await renderContent(articleData1);
 
   const mainArticleData = articleData2.find(
-    (a) => a.slug === pageData.start.article
+    (a) => a._original.de.slug === pageData._original.de.start.article
   );
 
   const articleData = articleData2.filter(
-    (a) => a.slug !== pageData.start.article
+    (a) => a._original.de.slug !== pageData._original.de.start.article
   );
 
   return {
