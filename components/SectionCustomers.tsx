@@ -1,8 +1,8 @@
-import Container from "../components/Container";
-import Heading from "../components/Heading";
-import Animate from "../components/Animate";
-import Multiline from "../components/Multiline";
-import Button from "../components/Button";
+import Container from "@/components/Container";
+import Heading from "@/components/Heading";
+import Animate from "@/components/Animate";
+import Multiline from "@/components/Multiline";
+import Button from "@/components/Button";
 
 function Component({ customers }) {
   return (

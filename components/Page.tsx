@@ -1,5 +1,5 @@
-import Container from "../components/Container";
-import Layout from "../components/Layout";
+import Container from "@/components/Container";
+import Layout from "@/components/Layout";
 
 function Page() {
   return (

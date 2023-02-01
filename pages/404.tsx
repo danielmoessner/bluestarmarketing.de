@@ -1,6 +1,6 @@
-import Container from "../components/Container";
-import Layout from "../components/Layout";
-import Button from "../components/Button";
+import Container from "@/components/Container";
+import Layout from "@/components/Layout";
+import Button from "@/components/Button";
 import { useRouter } from "next/router";
 
 function Page() {

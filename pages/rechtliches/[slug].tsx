@@ -1,20 +1,12 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import Seo from "../../components/Seo";
-import Container from "../../components/Container";
+import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
+import Container from "@/components/Container";
 import { renderContent } from "lib/renderContent";
 import { getAllMarkdown, getSingleJson } from "lib/getContent";
-import footerSource from "../../content/setting/footer.json";
-import Footer from "../../components/Footer";
-import { Rendered } from "types/shared";
-import { Legal } from "types/legal";
+import Footer from "@/components/Footer";
 
-interface Props {
-  legalData: Rendered<Legal>;
-  footerData: Rendered<typeof footerSource>;
-}
-
-function Page({ legalData, footerData }: Props) {
+function Page({ legalData, footerData }) {
   const legal = legalData;
 
   const meta = {

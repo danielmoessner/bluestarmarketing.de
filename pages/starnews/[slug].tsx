@@ -1,13 +1,13 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import Seo from "../../components/Seo";
-import Container from "../../components/Container";
+import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
+import Container from "@/components/Container";
 import { getAllJson, getSingleJson } from "lib/getContent";
-import Article from "../../components/Article";
-import BlogLayout from "../../components/BlogLayout";
+import Article from "@/components/Article";
+import BlogLayout from "@/components/BlogLayout";
 import { renderContent } from "lib/renderContent";
-import Prose from "../../components/Prose";
-import Footer from "../../components/Footer";
+import Prose from "@/components/Prose";
+import Footer from "@/components/Footer";
 
 function Page({ articleData, pageData, categoryData, footerData }) {
   const page = pageData;

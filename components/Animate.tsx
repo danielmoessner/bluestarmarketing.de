@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import ChildrenData from "../types/ChildrenData";
+import ChildrenData from "@/types/ChildrenData";
 
 function Animate({ children, className, delay, duration, from, to }) {
   const [show, setShow] = useState(false);
