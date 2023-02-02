@@ -15,7 +15,8 @@
       "markdown": "",
       "text": "",
       "markdownForm": "",
-      "image": "/media/wunschrakete.jpg"
+      "image": "/media/wunschrakete.jpg",
+      "imgCredits": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com"
     }
   },
   "en": {
@@ -23,6 +24,7 @@
       "day": "2023-09-28",
       "from": "17:00",
       "to": "19:00"
-    }
+    },
+    "event": "meetmagicmates"
   }
 }

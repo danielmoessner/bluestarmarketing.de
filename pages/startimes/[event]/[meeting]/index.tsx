@@ -192,6 +192,14 @@ function Page({
         </Container>
       </section>
 
+      {meeting.detail.imgCredits && (
+        <section className="py-12">
+          <Container layout="sm">
+            <p className="text-xs">{meeting.detail.imgCredits}</p>
+          </Container>
+        </section>
+      )}
+
       <Footer data={footerData} />
     </Layout>
   );
