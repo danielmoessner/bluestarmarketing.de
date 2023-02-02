@@ -1461,6 +1461,13 @@ var meeting = {
           i18n: false
         },
         {
+          label: "Bildnachweis",
+          name: "imgCredits",
+          widget: "string",
+          i18n: true,
+          required: false
+        },
+        {
           label: "Titel",
           name: "title",
           widget: "string",
