@@ -1266,6 +1266,7 @@ var event = {
       label: "Seiten",
       name: "pages",
       widget: "list",
+      i18n: true,
       types: [
         {
           label: "Auflistung",
@@ -1332,17 +1333,29 @@ var event = {
               name: "title",
               widget: "string",
               i18n: true
+            },
+            {
+              label: "Sektionen",
+              name: "sections",
+              widget: "list",
+              i18n: true,
+              types: [
+                {
+                  label: "Title Text Button Image",
+                  name: "titleTextButtonImage",
+                  widget: "object",
+                  fields: [
+                    title_default,
+                    markdown_default,
+                    cta_default,
+                    { label: "Bild", name: "image", widget: "image" }
+                  ]
+                }
+              ]
             }
           ]
         }
       ]
-    },
-    meta_default,
-    {
-      label: "Header",
-      name: "header",
-      widget: "object",
-      fields: [{ label: "Bild", name: "image", widget: "image" }]
     },
     {
       label: "Start",

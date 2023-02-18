@@ -1,5 +1,6 @@
 import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
+import cta from "../symbols/cta";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
 
@@ -36,6 +37,7 @@ const event: CmsCollection = {
       label: "Seiten",
       name: "pages",
       widget: "list",
+      i18n: true,
       types: [
         {
           label: "Auflistung",
@@ -103,16 +105,28 @@ const event: CmsCollection = {
               widget: "string",
               i18n: true,
             },
+            {
+              label: "Sektionen",
+              name: "sections",
+              widget: "list",
+              i18n: true,
+              types: [
+                {
+                  label: "Title Text Button Image",
+                  name: "titleTextButtonImage",
+                  widget: "object",
+                  fields: [
+                    title,
+                    markdown,
+                    cta,
+                    { label: "Bild", name: "image", widget: "image" },
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],
-    },
-    meta,
-    {
-      label: "Header",
-      name: "header",
-      widget: "object",
-      fields: [{ label: "Bild", name: "image", widget: "image" }],
     },
     {
       label: "Start",
