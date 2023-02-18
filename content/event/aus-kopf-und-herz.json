@@ -1,0 +1,41 @@
+{
+  "de": {
+    "start": {
+      "title1": "--",
+      "title2": "--",
+      "markdown": "\\-﻿-",
+      "image": "/media/logo_auskopfundherz_277.png"
+    },
+    "register": {
+      "markdownForm": "\\-﻿-"
+    },
+    "pages": [
+      {
+        "type": "listing",
+        "color": "#641462",
+        "titleNormal": "Aus",
+        "titleRose": "Kopf & Herz",
+        "markdown": "Schenke dir Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt \n* zum Nachdenken\n* zum Verändern\n* zum Gestalten\n* für mehr Klarheit und Fokus",
+        "why": "--",
+        "who": "--"
+      }
+    ],
+    "meta": {
+      "title": "--",
+      "description": "--d"
+    },
+    "bottom": {
+      "titleLeft": "--",
+      "markdownLeft": "\\-﻿-",
+      "titleRight": "--",
+      "markdownRight": "\\-﻿-"
+    },
+    "slug": "kopfundherz",
+    "header": {
+      "image": "/media/logo_auskopfundherz_277.png"
+    },
+    "title": "Aus Kopf und Herz",
+    "image": "/media/logo_auskopfundherz_277.png"
+  },
+  "en": {}
+}
