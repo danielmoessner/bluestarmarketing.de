@@ -33,6 +33,34 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
         </Container>
       </section>
 
+      {detail.sections.map((section) => {
+        if (section.type === "titleTextButtonImage")
+          return (
+            <section key={section.title} className="py-16">
+              <Container layout="sm">
+                <div className="flex justify-center">
+                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-8">
+                    {section.title}
+                  </h2>
+                </div>
+                <div className="grid gap-8 md:grid-cols-2">
+                  <div className="flex flex-col justify-between">
+                    <div className="">
+                      <Prose html={section.markdown.html} />
+                    </div>
+                    <div className="">
+                      <Button>{section.cta.text}</Button>
+                    </div>
+                  </div>
+                  <div className="">
+                    <Image {...section.image} alt={section.title} />
+                  </div>
+                </div>
+              </Container>
+            </section>
+          );
+      })}
+
       <section className="pt-12 pb-16 lg:pb-20">
         <Container layout="sm">
           <div className="">

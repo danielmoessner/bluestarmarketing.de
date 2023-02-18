@@ -35,13 +35,21 @@
         "header": {
           "image": "/media/aus_kopf_und_herz_titelbild_silke_348.png"
         },
-        "title": "Aus Kopf & Herz in deine Hände"
+        "title": "Aus Kopf & Herz in deine Hände",
+        "sections": [
+          {
+            "type": "titleTextButtonImage",
+            "title": "Schenke dir Raum für deine Wünsche und Ziele",
+            "markdown": "Sei es dir wert, dein Leben – egal ob privat und oder beruflich – so auszurichten, zu gestalten & wieder in deine Hände zu nehmen wie du es möchtest.\n\nSammle dich, richte dich neu aus, fokussiere und finde Antworten & Lösungen, die sich für dich gut anfühlen und zu dir passen. So kommst du deiner Selbstbestimmtheit näher. Das macht dich fröhlicher & zufriedener.\n\nGeht nicht? Doch, denn wir zaubern nicht, sondern entfesseln mit dir nur das, was schon längst in dir steckt!",
+            "cta": {
+              "text": "Details anfragen",
+              "url": "#"
+            },
+            "image": "/media/visionboard.jpg"
+          }
+        ]
       }
     ],
-    "meta": {
-      "title": "--",
-      "description": "--d"
-    },
     "bottom": {
       "titleLeft": "--",
       "markdownLeft": "\\-﻿-",
