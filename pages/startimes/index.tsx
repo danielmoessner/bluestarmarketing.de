@@ -137,11 +137,20 @@ export async function getStaticProps({ locale }) {
     getSingleJson("setting", "footer", locale)
   );
 
+  const getOrderingOfEvent = (event) => {
+    const listing = event.pages.find((p) => p.type === "listing");
+    if (listing) return listing.ordering;
+    return 0;
+  };
+
   const events1 = getAllJson("event", locale);
   const events2 = events1.filter(
     (e) => e.pages.filter((p) => p.type === "listing").length
   );
   const events3 = await renderContent(events2);
+  const events4 = events3.sort(
+    (a, b) => getOrderingOfEvent(b) - getOrderingOfEvent(a)
+  );
 
   const meetings1 = getAllJson("meeting", locale);
   const meetings2 = meetings1.map((m) => ({
@@ -155,7 +164,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       meetingsData: meetings3,
-      events: events3,
+      events: events4,
       pageData,
       footerData,
     },
