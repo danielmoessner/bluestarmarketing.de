@@ -9,14 +9,17 @@
     "register": {
       "markdownForm": "Für Marketer:innen aus Tech-Unternehmen\n\n**Wir freuen uns auf deine Anmeldung zu Meet Magic Mates!**\n\nZwischen dir und deiner Teilnahme liegen nur noch wenige Schritte. \\\nNach der Übermittlung des Formulars prüfen wir die Daten. \\\nMit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung."
     },
-    "listing": {
-      "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
+    "pages": [
+      {
+        "type": "listing",
+        "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
       "why": "Wir lieben die Power von Brilliant Minds, den Austausch, das Miteinander, Co-Creation & Freude und sind davon schon immer überzeugt und inspiriert – heute mehr denn je, sodass wir jetzt gemeinsam starten.",
       "who": "Für Marketer:innen",
       "titleNormal": "Meet",
       "titleRose": "Magic Mates",
       "color": "#e50069"
-    },
+      }
+    ],
     "meta": {
       "title": "Meet Magic Mates",
       "description": "Vernetze dich mit neuen und bekannten Marketer:innen."

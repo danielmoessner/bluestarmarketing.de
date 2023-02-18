@@ -1263,27 +1263,34 @@ var event = {
       widget: "image"
     },
     {
-      label: "Auflistung",
-      name: "listing",
-      widget: "object",
-      i18n: true,
-      fields: [
-        { label: "Farbe", name: "color", widget: "string" },
+      label: "Seiten",
+      name: "pages",
+      widget: "list",
+      types: [
         {
-          label: "Titel Normal",
-          name: "titleNormal",
-          widget: "string",
-          i18n: true
-        },
-        {
-          label: "Titel Rose",
-          name: "titleRose",
-          widget: "string",
-          i18n: true
-        },
-        markdown_default,
-        { label: "Warum", name: "why", widget: "text", i18n: true },
-        { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true }
+          label: "Auflistung",
+          name: "listing",
+          widget: "object",
+          i18n: true,
+          fields: [
+            { label: "Farbe", name: "color", widget: "string" },
+            {
+              label: "Titel Normal",
+              name: "titleNormal",
+              widget: "string",
+              i18n: true
+            },
+            {
+              label: "Titel Rose",
+              name: "titleRose",
+              widget: "string",
+              i18n: true
+            },
+            markdown_default,
+            { label: "Warum", name: "why", widget: "text", i18n: true },
+            { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true }
+          ]
+        }
       ]
     },
     meta_default,
