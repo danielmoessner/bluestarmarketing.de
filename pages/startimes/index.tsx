@@ -138,7 +138,10 @@ export async function getStaticProps({ locale }) {
   );
 
   const events1 = getAllJson("event", locale);
-  const events2 = await renderContent(events1);
+  const events2 = events1.filter(
+    (e) => e.pages.filter((p) => p.type === "listing").length
+  );
+  const events3 = await renderContent(events2);
 
   const meetings1 = getAllJson("meeting", locale);
   const meetings2 = meetings1.map((m) => ({
@@ -152,7 +155,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       meetingsData: meetings3,
-      events: events2,
+      events: events3,
       pageData,
       footerData,
     },
