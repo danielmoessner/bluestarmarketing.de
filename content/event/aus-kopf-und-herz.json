@@ -25,6 +25,17 @@
         "image": "/media/papierblatt_quer.png",
         "titleNormalAfter": "in deine Hände",
         "titleNormal": "Aus"
+      },
+      {
+        "type": "detail",
+        "meta": {
+          "title": "Aus Kopf & Herz in deine Hände",
+          "description": "Schenke dir Raum für deine Wünsche und Ziele"
+        },
+        "header": {
+          "image": "/media/aus_kopf_und_herz_titelbild_silke_348.png"
+        },
+        "title": "Aus Kopf & Herz in deine Hände"
       }
     ],
     "meta": {
