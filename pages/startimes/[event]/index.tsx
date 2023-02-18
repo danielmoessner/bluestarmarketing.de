@@ -18,16 +18,17 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
   );
   const page = pageData;
   const event = eventData;
+  const detail = event.pages.find((p) => p.type === "detail");
 
   return (
     <Layout>
-      <Seo meta={event.meta} />
-      <Header header={event.header} />
+      <Seo meta={detail.meta} />
+      <Header header={detail.header} />
 
       <section className="pt-16 pb-16 lg:pb-20">
         <Container layout="sm">
           <div className="text-center">
-            <Heading size="h1">{event.start.title1}</Heading>
+            <Heading size="h1">{detail.title}</Heading>
           </div>
           <div className="mt-14 md:mt-14 lg:mt-22">
             <Animate>

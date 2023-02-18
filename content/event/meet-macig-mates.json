@@ -28,11 +28,22 @@
         ],
         "image": "/media/magic_mates.jpg",
         "ordering": 100
+      },
+      {
+        "type": "detail",
+        "meta": {
+          "description": "Vernetze dich mit neuen und bekannten Marketer:innen.",
+          "title": "Meet Magic Mates"
+        },
+        "header": {
+          "image": "/media/magic_mates.jpg"
+        },
+        "title": "Meet Magic Mates"
       }
     ],
     "meta": {
-      "title": "Meet Magic Mates",
-      "description": "Vernetze dich mit neuen und bekannten Marketer:innen."
+      "title": "sdf",
+      "description": "sdf"
     },
     "bottom": {
       "titleLeft": "Was bringst du mit?",

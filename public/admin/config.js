@@ -1313,6 +1313,27 @@ var event = {
               ]
             }
           ]
+        },
+        {
+          label: "Detail",
+          name: "detail",
+          widget: "object",
+          i18n: true,
+          fields: [
+            meta_default,
+            {
+              label: "Header",
+              name: "header",
+              widget: "object",
+              fields: [{ label: "Bild", name: "image", widget: "image" }]
+            },
+            {
+              label: "Titel",
+              name: "title",
+              widget: "string",
+              i18n: true
+            }
+          ]
         }
       ]
     },

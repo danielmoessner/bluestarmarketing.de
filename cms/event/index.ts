@@ -84,6 +84,27 @@ const event: CmsCollection = {
             },
           ],
         },
+        {
+          label: "Detail",
+          name: "detail",
+          widget: "object",
+          i18n: true,
+          fields: [
+            meta,
+            {
+              label: "Header",
+              name: "header",
+              widget: "object",
+              fields: [{ label: "Bild", name: "image", widget: "image" }],
+            },
+            {
+              label: "Titel",
+              name: "title",
+              widget: "string",
+              i18n: true,
+            },
+          ],
+        },
       ],
     },
     meta,
