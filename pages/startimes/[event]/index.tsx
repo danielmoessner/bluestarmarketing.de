@@ -25,11 +25,15 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
       <Seo meta={detail.meta} />
       <Header header={detail.header} />
 
-      <section className="pt-16 pb-16 lg:pb-20">
+      <section className="pt-16 ">
         <Container layout="sm">
           <div className="text-center">
             <Heading size="h1">{detail.title}</Heading>
           </div>
+        </Container>
+      </section>
+      <section className="pb-16 lg:pb-20">
+        <Container layout="sm">
           <div className="mt-14 md:mt-14 lg:mt-22">
             <Animate>
               <div className="grid gap-8 md:grid-cols-2">
