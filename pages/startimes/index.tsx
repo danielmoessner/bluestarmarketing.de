@@ -65,20 +65,21 @@ function Page({ pageData, footerData, events, meetingsData }) {
                         <h2 className="text-5xl text-center uppercase">
                           {listing.titleNormal}{" "}
                           <span className="normal-case font-rose">
-                            {listing.titleRose}
+                            {listing.titleRose}{" "}
                           </span>
+                          {listing.titleNormalAfter}
                         </h2>
                         <div className="grid gap-8 mt-8 lg:grid-cols-2">
                           <div>
                             <Prose html={listing.markdown.html} />
-                            <h3 className="mt-5 text-4xl font-rose">
-                              {page.listing.why}
-                            </h3>
-                            <p>{listing.why}</p>
-                            <h3 className="mt-5 text-4xl font-rose">
-                              {page.listing.who}
-                            </h3>
-                            <p>{listing.who}</p>
+                            {listing.properties.map((p) => (
+                              <div key={p.title}>
+                                <h3 className="mt-5 text-4xl font-rose">
+                                  {p.title}
+                                </h3>
+                                <Prose html={p.markdown.html} />
+                              </div>
+                            ))}
                             {nextMeeting(event) && (
                               <>
                                 <h3 className="mt-5 text-4xl font-rose">
@@ -93,7 +94,7 @@ function Page({ pageData, footerData, events, meetingsData }) {
                           <div className="flex flex-col justify-between">
                             <div className="leading-[0px]">
                               <Image
-                                {...event.header.image}
+                                {...listing.image}
                                 alt={listing.titleRose}
                               />
                             </div>

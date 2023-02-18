@@ -1274,21 +1274,38 @@ var event = {
           i18n: true,
           fields: [
             { label: "Farbe", name: "color", widget: "string" },
+            { label: "Bild", name: "image", widget: "image" },
             {
-              label: "Titel Normal",
+              label: "Titel Normal Vorher",
               name: "titleNormal",
               widget: "string",
-              i18n: true
+              i18n: true,
+              required: false
             },
             {
               label: "Titel Rose",
               name: "titleRose",
               widget: "string",
-              i18n: true
+              i18n: true,
+              required: false
+            },
+            {
+              label: "Titel Normal Nachher",
+              name: "titleNormalAfter",
+              widget: "string",
+              i18n: true,
+              required: false
             },
             markdown_default,
-            { label: "Warum", name: "why", widget: "text", i18n: true },
-            { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true }
+            {
+              label: "Eigenschaften",
+              name: "properties",
+              widget: "list",
+              fields: [
+                { label: "Titel", name: "title", widget: "string" },
+                markdown_default
+              ]
+            }
           ]
         }
       ]

@@ -16,8 +16,14 @@
         "titleNormal": "Aus",
         "titleRose": "Kopf & Herz",
         "markdown": "Schenke dir Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt \n* zum Nachdenken\n* zum Verändern\n* zum Gestalten\n* für mehr Klarheit und Fokus",
-        "why": "--",
-        "who": "--"
+        "properties": [
+          {
+            "title": "Für Wen?",
+            "markdown": "* für dich und deine Wünsche und Ziele * unabhängig davon, was du beruflich machst \n* und wo du jetzt gerade in deinem Alltag stehst"
+          }
+        ],
+        "titleNormalAfter": "in deine Hände",
+        "image": "/media/papierblatt_quer.png"
       }
     ],
     "meta": {
