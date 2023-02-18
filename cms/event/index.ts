@@ -43,6 +43,12 @@ const event: CmsCollection = {
           widget: "object",
           i18n: true,
           fields: [
+            {
+              label: "Sortierung",
+              name: "ordering",
+              widget: "number",
+              hint: "Die größte Nummer erscheint zuerst.",
+            },
             { label: "Farbe", name: "color", widget: "string" },
             { label: "Bild", name: "image", widget: "image" },
             {

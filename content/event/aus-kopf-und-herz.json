@@ -11,9 +11,7 @@
     },
     "pages": [
       {
-        "type": "listing",
         "color": "#641462",
-        "titleNormal": "Aus",
         "titleRose": "Kopf & Herz",
         "markdown": "Schenke dir Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt \n* zum Nachdenken\n* zum Verändern\n* zum Gestalten\n* für mehr Klarheit und Fokus",
         "properties": [
@@ -22,8 +20,11 @@
             "markdown": "* für dich und deine Wünsche und Ziele * unabhängig davon, was du beruflich machst \n* und wo du jetzt gerade in deinem Alltag stehst"
           }
         ],
+        "ordering": 10,
+        "type": "listing",
+        "image": "/media/papierblatt_quer.png",
         "titleNormalAfter": "in deine Hände",
-        "image": "/media/papierblatt_quer.png"
+        "titleNormal": "Aus"
       }
     ],
     "meta": {

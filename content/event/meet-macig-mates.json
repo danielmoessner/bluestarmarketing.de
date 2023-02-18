@@ -26,7 +26,8 @@
             "markdown": "Für Marketer:innen"
           }
         ],
-        "image": "/media/magic_mates.jpg"
+        "image": "/media/magic_mates.jpg",
+        "ordering": 100
       }
     ],
     "meta": {

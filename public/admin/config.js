@@ -1273,6 +1273,12 @@ var event = {
           widget: "object",
           i18n: true,
           fields: [
+            {
+              label: "Sortierung",
+              name: "ordering",
+              widget: "number",
+              hint: "Die gr\xF6\xDFte Nummer erscheint zuerst."
+            },
             { label: "Farbe", name: "color", widget: "string" },
             { label: "Bild", name: "image", widget: "image" },
             {
