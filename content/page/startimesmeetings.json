@@ -4,6 +4,13 @@
       "title": "Die nächsten Termine:",
       "time": "Uhr",
       "button": "Erfahre mehr"
+    },
+    "form": {
+      "successText": "Vielen Dank für deine Anmeldung zu Meet Magic Mates! Wir prüfen deine Daten. Mit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung.",
+      "requiredFields": "Erforderliche Felder sind mit * markiert.",
+      "button": "Anmeldung abschicken",
+      "image": "/media/bluestar_linkedin_1920_quadrat_silke_b.jpg",
+      "on": "am"
     }
   },
   "en": {}

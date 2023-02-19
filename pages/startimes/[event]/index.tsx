@@ -11,6 +11,7 @@ import Prose from "@/components/Prose";
 import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
+import RegisterForm from "@/components/RegisterForm";
 
 function Page({ pageData, footerData, eventData, meetingsData }) {
   const meetings = meetingsData.filter(
@@ -249,6 +250,28 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                     </div>
                   ))}
                 </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "form")
+          return (
+            <section
+              className="py-16 bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]"
+              id="form"
+            >
+              <Container layout="sm">
+                <RegisterForm
+                  image={page.form.image}
+                  eventTitle={event.title}
+                  htmlText={event.register.markdownForm.html}
+                  onText={page.form.on}
+                  eventImage={event.image}
+                  meetings={meetings}
+                  submitText={page.form.button}
+                  successText={page.form.successText}
+                  requiredFieldsText={page.form.requiredFields}
+                  fields={event.register.fields}
+                />
               </Container>
             </section>
           );
