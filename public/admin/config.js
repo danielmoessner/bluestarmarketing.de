@@ -1399,44 +1399,42 @@ var event = {
                     markdown_default,
                     { label: "Bild", name: "image", widget: "image" }
                   ]
+                },
+                {
+                  label: "Zwei-Spalten",
+                  name: "twoColumns",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Titel Links",
+                      name: "titleLeft",
+                      widget: "string",
+                      i18n: true
+                    },
+                    {
+                      label: "Text Links",
+                      name: "markdownLeft",
+                      widget: "markdown",
+                      i18n: true
+                    },
+                    {
+                      label: "Titel Rechts",
+                      name: "titleRight",
+                      widget: "string",
+                      i18n: true
+                    },
+                    {
+                      label: "Text Rechts",
+                      name: "markdownRight",
+                      widget: "markdown",
+                      i18n: true
+                    }
+                  ]
                 }
               ]
             }
           ]
         }
-      ]
-    },
-    {
-      label: "Unten",
-      name: "bottom",
-      i18n: true,
-      widget: "object",
-      fields: [
-        {
-          label: "Titel Links",
-          name: "titleLeft",
-          widget: "string",
-          i18n: true
-        },
-        {
-          label: "Text Links",
-          name: "markdownLeft",
-          widget: "markdown",
-          i18n: true
-        },
-        {
-          label: "Titel Rechts",
-          name: "titleRight",
-          widget: "string",
-          i18n: true
-        },
-        {
-          label: "Text Rechts",
-          name: "markdownRight",
-          widget: "markdown",
-          i18n: true
-        }
-        // cta,
       ]
     },
     {

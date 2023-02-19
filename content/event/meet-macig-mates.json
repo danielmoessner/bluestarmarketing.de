@@ -39,16 +39,17 @@
             "title": "Wie gestaltest du die neue Zeit?",
             "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
             "image": "/media/bluestar_marketing_services.jpg"
+          },
+          {
+            "type": "twoColumns",
+            "titleLeft": "Was bringst du mit?",
+            "titleRight": "Was nimmst du mit?",
+            "markdownLeft": "Dich – einfach nur dich!\n\nSei da, sei neugierig & offen, stelle dich vor, höre zu und fühle dich willkommen.\n\nSehr gerne dein Magic Marketing Mate.",
+            "markdownRight": "Das entscheidest du individuell für dich!\n\nMein Wunsch ist es, für dich einen Raum und eine erfüllte Zeit mit neuen und bekannten Gesichtern, spannende Impulse, neue Kontakte, Lachen & **Freude** zu gestalten."
           }
         ]
       }
     ],
-    "bottom": {
-      "titleLeft": "Was bringst du mit?",
-      "titleRight": "Was nimmst du mit?",
-      "markdownLeft": "Dich – einfach nur dich!\n\nSei da, sei neugierig & offen, stelle dich vor, höre zu und fühle dich willkommen.\n\nSehr gerne dein Magic Marketing Mate.",
-      "markdownRight": "Das entscheidest du individuell für dich!\n\nMein Wunsch ist es, für dich einen Raum und eine erfüllte Zeit mit neuen und bekannten Gesichtern, spannende Impulse, neue Kontakte, Lachen & **Freude** zu gestalten."
-    },
     "slug": "meetmagicmates",
     "header": {
       "image": "/media/magic_mates.jpg"
