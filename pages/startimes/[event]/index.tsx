@@ -59,6 +59,41 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
+        if (section.type === "titleImage")
+          return (
+            <section key={section.title} className="py-20">
+              <Container layout="sm">
+                <div className="flex justify-center">
+                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-12">
+                    {section.title}
+                  </h2>
+                </div>
+                <div className="">
+                  <Image {...section.image} alt={section.title} />
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "titleImageButton")
+          return (
+            <section key={section.title} className="py-20">
+              <Container layout="sm">
+                <div className="flex justify-center">
+                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-14">
+                    {section.title}
+                  </h2>
+                </div>
+                <div className="">
+                  <Image {...section.image} alt={section.title} />
+                </div>
+                <div className="flex justify-center mt-12">
+                  <Button kind={section.cta.kind} href={section.cta.href}>
+                    {section.cta.text}
+                  </Button>
+                </div>
+              </Container>
+            </section>
+          );
       })}
 
       <section className="pt-12 pb-16 lg:pb-20">

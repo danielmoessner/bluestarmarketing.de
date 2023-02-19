@@ -1232,6 +1232,20 @@ var article = {
 };
 var article_default = article;
 
+// cms/symbols/kind.ts
+var kind = {
+  label: "Art",
+  name: "kind",
+  widget: "select",
+  options: [
+    { label: "Nachtblau", value: "blue" },
+    { label: "Pink", value: "pink" },
+    { label: "Dunkelviolett", value: "purple" }
+  ],
+  i18n: false
+};
+var kind_default = kind;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -1341,7 +1355,7 @@ var event = {
               i18n: true,
               types: [
                 {
-                  label: "Title Text Button Image",
+                  label: "Titel-Text-Button-Bild",
                   name: "titleTextButtonImage",
                   widget: "object",
                   fields: [
@@ -1349,6 +1363,31 @@ var event = {
                     markdown_default,
                     cta_default,
                     { label: "Bild", name: "image", widget: "image" }
+                  ]
+                },
+                {
+                  label: "Titel-Bild",
+                  name: "titleImage",
+                  widget: "object",
+                  fields: [
+                    title_default,
+                    { label: "Bild", name: "image", widget: "image" }
+                  ]
+                },
+                {
+                  label: "Titel-Bild-Button",
+                  name: "titleImageButton",
+                  widget: "object",
+                  fields: [
+                    title_default,
+                    { label: "Bild", name: "image", widget: "image" },
+                    {
+                      label: "CTA",
+                      name: "cta",
+                      i18n: true,
+                      widget: "object",
+                      fields: [...internalLinkFields, kind_default]
+                    }
                   ]
                 }
               ]
