@@ -1430,6 +1430,12 @@ var event = {
                       i18n: true
                     }
                   ]
+                },
+                {
+                  label: "Termine",
+                  name: "meetings",
+                  widget: "object",
+                  fields: [title_default]
                 }
               ]
             }

@@ -139,57 +139,58 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
-      })}
-
-      <section className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
-        <Container layout="sm">
-          <div className="">
-            <Animate>
-              <h2 className="mx-auto text-5xl text-center font-rose">
-                {page.meetings.title}
-              </h2>
-            </Animate>
-            <div className="grid gap-8 mt-6 md:mt-10 md:grid-cols-2">
-              {meetings.map((meeting) => (
-                <Animate key={meeting.general.day}>
-                  <div className="flex flex-col justify-between h-full p-5 bg-white">
-                    <div>
-                      <div className="flex justify-between">
-                        <div className="w-24">
-                          <Image {...event.image} alt={event.title} />
+        if (section.type === "meetings")
+          return (
+            <section className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
+              <Container layout="sm">
+                <div className="">
+                  <Animate>
+                    <h2 className="mx-auto text-5xl text-center font-rose">
+                      {page.meetings.title}
+                    </h2>
+                  </Animate>
+                  <div className="grid gap-8 mt-6 md:mt-10 md:grid-cols-2">
+                    {meetings.map((meeting) => (
+                      <Animate key={meeting.general.day}>
+                        <div className="flex flex-col justify-between h-full p-5 bg-white">
+                          <div>
+                            <div className="flex justify-between">
+                              <div className="w-24">
+                                <Image {...event.image} alt={event.title} />
+                              </div>
+                              <div>
+                                <p className="text-bsm-pink">
+                                  {formatDate(meeting.general.day, "full")}
+                                </p>
+                                <p className="text-bsm-pink">
+                                  {meeting.general.from}-{meeting.general.to}{" "}
+                                  {page.meetings.time}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="mt-5">
+                              <Prose html={meeting.list.markdown.html} />
+                            </div>
+                          </div>
+                          <div className="flex justify-center pt-5">
+                            <Button
+                              kind="pink"
+                              href={`/startimes/${
+                                meeting.event
+                              }/${meeting.general.day.replaceAll("-", "")}`}
+                            >
+                              {page.meetings.button}
+                            </Button>
+                          </div>
                         </div>
-                        <div>
-                          <p className="text-bsm-pink">
-                            {formatDate(meeting.general.day, "full")}
-                          </p>
-                          <p className="text-bsm-pink">
-                            {meeting.general.from}-{meeting.general.to}{" "}
-                            {page.meetings.time}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="mt-5">
-                        <Prose html={meeting.list.markdown.html} />
-                      </div>
-                    </div>
-                    <div className="flex justify-center pt-5">
-                      <Button
-                        kind="pink"
-                        href={`/startimes/${
-                          meeting.event
-                        }/${meeting.general.day.replaceAll("-", "")}`}
-                      >
-                        {page.meetings.button}
-                      </Button>
-                    </div>
+                      </Animate>
+                    ))}
                   </div>
-                </Animate>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
+                </div>
+              </Container>
+            </section>
+          );
+      })}
       <Footer data={footerData} />
     </Layout>
   );

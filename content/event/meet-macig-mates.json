@@ -41,6 +41,10 @@
             "image": "/media/bluestar_marketing_services.jpg"
           },
           {
+            "type": "meetings",
+            "title": "Die nächsten Termine:"
+          },
+          {
             "type": "twoColumns",
             "titleLeft": "Was bringst du mit?",
             "titleRight": "Was nimmst du mit?",
