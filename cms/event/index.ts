@@ -190,6 +190,12 @@ const event: CmsCollection = {
                     },
                   ],
                 },
+                {
+                  label: "Termine",
+                  name: "meetings",
+                  widget: "object",
+                  fields: [title],
+                },
               ],
             },
           ],
