@@ -1389,36 +1389,20 @@ var event = {
                       fields: [...internalLinkFields, kind_default]
                     }
                   ]
+                },
+                {
+                  label: "Titel-Text-Bild",
+                  name: "titleTextImage",
+                  widget: "object",
+                  fields: [
+                    title_default,
+                    markdown_default,
+                    { label: "Bild", name: "image", widget: "image" }
+                  ]
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      label: "Start",
-      name: "start",
-      i18n: true,
-      widget: "object",
-      fields: [
-        {
-          label: "Titel 1",
-          name: "title1",
-          widget: "string",
-          i18n: true
-        },
-        {
-          label: "Titel 2",
-          name: "title2",
-          widget: "string",
-          i18n: true
-        },
-        markdown_default,
-        {
-          label: "Bild",
-          name: "image",
-          widget: "image"
         }
       ]
     },

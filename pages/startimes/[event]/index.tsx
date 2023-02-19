@@ -94,29 +94,31 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
+        if (section.type === "titleTextImage")
+          return (
+            <section className="pt-12 pb-16 lg:pb-20">
+              <Container layout="sm">
+                <div className="">
+                  <Animate>
+                    <div className="grid gap-8 md:grid-cols-2">
+                      <div>
+                        <h2 className="text-3xl md:text-5xl font-rose">
+                          {section.title}
+                        </h2>
+                        <div className="mt-4 md:mt-6">
+                          <Prose html={section.markdown.html} />
+                        </div>
+                      </div>
+                      <div className="leading-[0px]">
+                        <Image {...section.image} alt={section.title} />
+                      </div>
+                    </div>
+                  </Animate>
+                </div>
+              </Container>
+            </section>
+          );
       })}
-
-      <section className="pt-12 pb-16 lg:pb-20">
-        <Container layout="sm">
-          <div className="">
-            <Animate>
-              <div className="grid gap-8 md:grid-cols-2">
-                <div>
-                  <h2 className="text-3xl md:text-5xl font-rose">
-                    {event.start.title2}
-                  </h2>
-                  <div className="mt-4 md:mt-6">
-                    <Prose html={event.start.markdown.html} />
-                  </div>
-                </div>
-                <div className="leading-[0px]">
-                  <Image {...event.start.image} alt={event.start.title2} />
-                </div>
-              </div>
-            </Animate>
-          </div>
-        </Container>
-      </section>
 
       <section className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
         <Container layout="sm">
