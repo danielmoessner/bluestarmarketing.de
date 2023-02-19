@@ -7,7 +7,73 @@
       "image": "/media/logo_auskopfundherz_277.png"
     },
     "register": {
-      "markdownForm": "\\-﻿-"
+      "markdownForm": "**Du hast Interesse und möchtest dabei sein?**\\\n**Gerne sende ich dir ein Angebot zu.**\n\nBitte fülle dazu das Formular aus, damit direkt alle relevanten Daten zur Erstellung verfügbar sind. **Aus Kopf und Herz** in deine Hände geht ab 4 Teilnehmer:innen je Termin an den Start.",
+      "fields": [
+        {
+          "type": "text",
+          "label": "Anrede",
+          "name": "anrede",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "Titel",
+          "name": "titel"
+        },
+        {
+          "type": "text",
+          "label": "Vorname",
+          "name": "vorname",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "Nachname",
+          "name": "nachname",
+          "required": true
+        },
+        {
+          "type": "tel",
+          "label": "Mobilnummer",
+          "name": "mobil",
+          "required": true
+        },
+        {
+          "type": "email",
+          "label": "E-Mail",
+          "name": "email",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "Unternehmen",
+          "name": "unternehmen"
+        },
+        {
+          "type": "text",
+          "label": "Straße & Nummer",
+          "name": "adresse",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "PLZ",
+          "name": "plz",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "Ort",
+          "name": "ort",
+          "required": true
+        },
+        {
+          "type": "checkbox",
+          "label": "Mit der Speicherung meiner Kontaktdaten zur Weiterverwendung bin ich einverstanden.",
+          "name": "speicherung_der_kontaktdaten",
+          "required": true
+        }
+      ]
     },
     "pages": [
       {
@@ -104,6 +170,10 @@
                 }
               }
             ]
+          },
+          {
+            "type": "form",
+            "placeholder": "---"
           }
         ]
       }

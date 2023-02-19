@@ -1519,6 +1519,21 @@ var event = {
                       ]
                     }
                   ]
+                },
+                {
+                  label: "Formular",
+                  name: "form",
+                  widget: "object",
+                  i18n: false,
+                  fields: [
+                    {
+                      label: "Platzhalter",
+                      name: "placeholder",
+                      widget: "hidden",
+                      default: "---",
+                      hint: "Eingabe wird ignoriert aus technischen Gr\xFCnden notwenig."
+                    }
+                  ]
                 }
               ]
             }
@@ -1538,6 +1553,30 @@ var event = {
           i18n: true,
           widget: "markdown",
           required: false
+        },
+        {
+          label: "Felder",
+          name: "fields",
+          i18n: true,
+          required: true,
+          widget: "list",
+          fields: [
+            { label: "Label", name: "label", widget: "string", i18n: true },
+            { label: "Name", name: "name", widget: "string" },
+            {
+              label: "Typ",
+              name: "type",
+              widget: "select",
+              default: "text",
+              options: ["textarea", "email", "tel", "text", "checkbox"]
+            },
+            {
+              label: "Ben\xF6tigt",
+              name: "required",
+              widget: "boolean",
+              required: false
+            }
+          ]
         }
       ]
     }
