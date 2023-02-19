@@ -73,6 +73,35 @@
                 "title": "VIRTUELLES ONE:ONE",
                 "markdown": "### Was bewegt dich?\n\nWo stehst du aktuell beruflich, privat – in deinem Leben? Welchen Herausforderungen stehst du gegenüber und wie sehen deine Wünsche &\nZiele aus?\n\nWir besprechen deine offenen Punkte, gerne anhand des vorab ausgefüllten Fragebogens oder frei und ungestützt. Du darfst entscheiden.\n\nIch möchte dich einladen, die Zeit nach dem One:One zu nutzen, um dich auf den Gestaltungsprozess einzustimmen. Was wünschst du dir und\nwas möchtest du verändern? Es ist ein Anfang zu wissen, was du nicht möchtest um anschließend herauszufinden, was dich begeistert und wie\ndu dein Leben gestalten möchtest. Hole dir deine Power, Selbstbestimmtheit und Gestaltungsräume zurück.\n\n**Deine Wünsche und Ziele sind wichtig – du bist wichtig!**",
                 "subtitle": "Check-in"
+              },
+              {
+                "numbers": [
+                  "3"
+                ],
+                "title": "GESTALTE DEIN VISIONBOARD",
+                "subtitle": "„Bilder sagen mehr als tausend Worte.“",
+                "markdown": "Nutze die Kraft der Bilder für dich, achte auf Bilder, die dich berühren und wundervolle Emotionen in dir wecken.\n\n### So gestaltest du dein Visionboard\n\n* für dein Leben, deine Ziele & deine Projekte\n* für alles, was dich bewegt, um neue Perspektiven & Möglichkeiten zu finden und neue Wege einzuschlagen\n* in angenehmer Atmosphäre\n* in einer kleinen Gruppe, in der ich dich gerne unterstütze und dir Impulse mitgebe\n\n### Ganz konkret für dich\n\n* Raum & Zeit\n* Anregungen & Materialien zur Gestaltung\n* 4 Stunden Workshop inklusive Pause, kleinem Snack, Tee und Kaltgetränk\n* Im SALON-F in München, zentral zwischen Karlsplatz und Sendlinger Tor\n\n### Was bringst du mit?\n\n* dich, einfach nur dich\n* deine Wünsche und Ziele mit dem ausgefüllten Fragebogen\n* Bilder, Fotos, Notizen, … einfach alles, was du zwischenzeitlich für dich entdeckt hast, was dich emotional anspricht und einen Platz auf deinem Visionboard finden darf "
+              },
+              {
+                "markdown": "### Wie geht es dir?\n### Wo stehst du gerade?\n\nHast du schon Schritte & Fortschritte gemacht zu dem, was du dir vorgenommen hast? \\\\\nGibt es Themen, bei denen du nicht weiterkommst und über die du gerne sprechen möchtest? \\\\\nWie bleibst du an deinen Wünschen und Zielen dran? Welche Routine könnte dir guttun, um weiterzugehen?\n\n**Du bist wichtig, einzigartig und wundervoll!**",
+                "title": "VIRTUELLES ONE:ONE",
+                "numbers": [
+                  "4"
+                ],
+                "subtitle": "Cross-Check"
+              },
+              {
+                "title": "DU MÖCHTEST MEHR?",
+                "numbers": [
+                  "&"
+                ],
+                "subtitle": "Du wünscht dir eine Vertiefung und weitere One:Ones",
+                "markdown": "Du möchtest weitergehen, dranbleiben und wünscht dir Unterstützung? Ich bin gerne für dich da.",
+                "cta": {
+                  "text": "Angebot anfragen",
+                  "url": "#",
+                  "kind": "purple"
+                }
               }
             ]
           }
