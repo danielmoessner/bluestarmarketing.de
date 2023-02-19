@@ -61,6 +61,20 @@
               "url": "#"
             },
             "image": "/media/zeitstrahl_auskopfundherz.png"
+          },
+          {
+            "type": "blocks",
+            "blocks": [
+              {
+                "numbers": [
+                  "1",
+                  "2"
+                ],
+                "title": "VIRTUELLES ONE:ONE",
+                "markdown": "### Was bewegt dich?\n\nWo stehst du aktuell beruflich, privat – in deinem Leben? Welchen Herausforderungen stehst du gegenüber und wie sehen deine Wünsche &\nZiele aus?\n\nWir besprechen deine offenen Punkte, gerne anhand des vorab ausgefüllten Fragebogens oder frei und ungestützt. Du darfst entscheiden.\n\nIch möchte dich einladen, die Zeit nach dem One:One zu nutzen, um dich auf den Gestaltungsprozess einzustimmen. Was wünschst du dir und\nwas möchtest du verändern? Es ist ein Anfang zu wissen, was du nicht möchtest um anschließend herauszufinden, was dich begeistert und wie\ndu dein Leben gestalten möchtest. Hole dir deine Power, Selbstbestimmtheit und Gestaltungsräume zurück.\n\n**Deine Wünsche und Ziele sind wichtig – du bist wichtig!**",
+                "subtitle": "Check-in"
+              }
+            ]
           }
         ]
       }

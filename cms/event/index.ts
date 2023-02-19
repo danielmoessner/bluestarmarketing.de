@@ -117,6 +117,7 @@ const event: CmsCollection = {
                   label: "Titel-Text-Button-Bild",
                   name: "titleTextButtonImage",
                   widget: "object",
+                  i18n: true,
                   fields: [
                     title,
                     markdown,
@@ -128,6 +129,7 @@ const event: CmsCollection = {
                   label: "Titel-Bild",
                   name: "titleImage",
                   widget: "object",
+                  i18n: true,
                   fields: [
                     title,
                     { label: "Bild", name: "image", widget: "image" },
@@ -137,6 +139,7 @@ const event: CmsCollection = {
                   label: "Titel-Bild-Button",
                   name: "titleImageButton",
                   widget: "object",
+                  i18n: true,
                   fields: [
                     title,
                     { label: "Bild", name: "image", widget: "image" },
@@ -153,6 +156,7 @@ const event: CmsCollection = {
                   label: "Titel-Text-Bild",
                   name: "titleTextImage",
                   widget: "object",
+                  i18n: true,
                   fields: [
                     title,
                     markdown,
@@ -163,6 +167,7 @@ const event: CmsCollection = {
                   label: "Zwei-Spalten",
                   name: "twoColumns",
                   widget: "object",
+                  i18n: true,
                   fields: [
                     {
                       label: "Titel Links",
@@ -194,7 +199,84 @@ const event: CmsCollection = {
                   label: "Termine",
                   name: "meetings",
                   widget: "object",
+                  i18n: true,
                   fields: [title],
+                },
+                {
+                  label: "Blöcke",
+                  name: "blocks",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    {
+                      label: "Blöcke",
+                      name: "blocks",
+                      widget: "list",
+                      fields: [
+                        title,
+                        {
+                          label: "Zahlen",
+                          name: "numbers",
+                          widget: "select",
+                          multiple: true,
+                          options: [
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "5",
+                            "6",
+                            "7",
+                            "8",
+                            "9",
+                          ],
+                        },
+                        {
+                          label: "Untertitel",
+                          name: "subtitle",
+                          widget: "string",
+                          i18n: true,
+                        },
+                        markdown,
+                        {
+                          label: "CTA",
+                          name: "cta",
+                          i18n: true,
+                          widget: "object",
+                          required: false,
+                          fields: [
+                            {
+                              label: "Text",
+                              name: "text",
+                              i18n: true,
+                              required: false,
+                              widget: "string",
+                            },
+                            {
+                              label: "url",
+                              name: "url",
+                              i18n: true,
+                              widget: "string",
+                              required: false,
+                              hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf oder /kontakt",
+                            },
+                            {
+                              label: "Art",
+                              name: "kind",
+                              widget: "select",
+                              required: false,
+                              options: [
+                                { label: "Nachtblau", value: "blue" },
+                                { label: "Pink", value: "pink" },
+                                { label: "Dunkelviolett", value: "purple" },
+                              ],
+                              i18n: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
                 },
               ],
             },
