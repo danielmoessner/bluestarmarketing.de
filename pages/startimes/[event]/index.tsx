@@ -190,6 +190,46 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
+        if (section.type === "blocks")
+          return (
+            <section
+              key="blocks"
+              className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat"
+            >
+              <Container layout="sm">
+                <div className="">
+                  {section.blocks.map((block) => (
+                    <div key={block.title} className="px-8 py-5 bg-white">
+                      <div className="flex justify-center">
+                        <h2 className="flex items-center text-4xl font-medium text-bsm-purple md:text-6-xl">
+                          {block.numbers.map((n, i) => (
+                            <div key={n} className="flex items-center">
+                              {i > 0 && <div className="mx-0.5">+</div>}
+                              <div className="flex items-center justify-center w-6 h-6 text-base font-normal text-white rounded-full bg-bsm-purple">
+                                <div>{n}</div>
+                              </div>
+                            </div>
+                          ))}
+                          <span className="ml-3">{block.title}</span>
+                        </h2>
+                      </div>
+                      <div className="flex justify-center mt-5">
+                        <div className="mb-4 text-3xl md:text-5xl font-rose">
+                          {block.subtitle}
+                        </div>
+                      </div>
+                      <div>
+                        <Prose
+                          html={block.markdown.html}
+                          className="prose-h3:font-rose prose-h3:text-4xl prose-h3:font-normal prose-h3:mt-0"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Container>
+            </section>
+          );
       })}
       <Footer data={footerData} />
     </Layout>
