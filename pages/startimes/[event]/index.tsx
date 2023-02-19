@@ -118,6 +118,27 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
+        if (section.type === "twoColumns")
+          return (
+            <section className="pt-16 pb-16">
+              <Container layout="sm">
+                <div className="grid gap-8 md:grid-cols-2">
+                  <Animate>
+                    <h2 className="text-5xl font-rose">{section.titleLeft}</h2>
+                    <div className="mt-5">
+                      <Prose html={section.markdownLeft.html} />
+                    </div>
+                  </Animate>
+                  <Animate>
+                    <h2 className="text-5xl font-rose">{section.titleRight}</h2>
+                    <div className="mt-5">
+                      <Prose html={section.markdownRight.html} />
+                    </div>
+                  </Animate>
+                </div>
+              </Container>
+            </section>
+          );
       })}
 
       <section className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
@@ -165,25 +186,6 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                 </Animate>
               ))}
             </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="pt-16 pb-16">
-        <Container layout="sm">
-          <div className="grid gap-8 md:grid-cols-2">
-            <Animate>
-              <h2 className="text-5xl font-rose">{event.bottom.titleLeft}</h2>
-              <div className="mt-5">
-                <Prose html={event.bottom.markdownLeft.html} />
-              </div>
-            </Animate>
-            <Animate>
-              <h2 className="text-5xl font-rose">{event.bottom.titleRight}</h2>
-              <div className="mt-5">
-                <Prose html={event.bottom.markdownRight.html} />
-              </div>
-            </Animate>
           </div>
         </Container>
       </section>
