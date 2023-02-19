@@ -229,6 +229,7 @@ const event: CmsCollection = {
                             "7",
                             "8",
                             "9",
+                            "&",
                           ],
                         },
                         {

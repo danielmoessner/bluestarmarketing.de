@@ -197,15 +197,27 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat"
             >
               <Container layout="sm">
-                <div className="">
+                <div className="space-y-10">
                   {section.blocks.map((block) => (
                     <div key={block.title} className="px-8 py-5 bg-white">
                       <div className="flex justify-center">
-                        <h2 className="flex items-center text-4xl font-medium text-bsm-purple md:text-6-xl">
+                        <h2
+                          className={`flex items-center text-4xl font-medium ${
+                            block.numbers.includes("&")
+                              ? "text-bsm-pink"
+                              : "text-bsm-purple"
+                          } md:text-6-xl`}
+                        >
                           {block.numbers.map((n, i) => (
                             <div key={n} className="flex items-center">
                               {i > 0 && <div className="mx-0.5">+</div>}
-                              <div className="flex items-center justify-center w-6 h-6 text-base font-normal text-white rounded-full bg-bsm-purple">
+                              <div
+                                className={`flex items-center justify-center w-6 h-6 text-base font-normal text-white rounded-full ${
+                                  block.numbers.includes("&")
+                                    ? "bg-bsm-pink"
+                                    : "bg-bsm-purple"
+                                }`}
+                              >
                                 <div>{n}</div>
                               </div>
                             </div>
@@ -218,12 +230,22 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                           {block.subtitle}
                         </div>
                       </div>
-                      <div>
+                      <div className="mt-8">
                         <Prose
                           html={block.markdown.html}
-                          className="prose-h3:font-rose prose-h3:text-4xl prose-h3:font-normal prose-h3:mt-0"
+                          className="prose-h3:font-rose prose-h3:text-4xl prose-h3:font-normal first:prose-h3:mt-0"
                         />
                       </div>
+                      {block.cta &&
+                        block.cta.text &&
+                        block.cta.url &&
+                        block.cta.kind && (
+                          <div className="flex justify-center mt-10">
+                            <Button kind={block.cta.kind} href={block.cta.url}>
+                              {block.cta.text}
+                            </Button>
+                          </div>
+                        )}
                     </div>
                   ))}
                 </div>
