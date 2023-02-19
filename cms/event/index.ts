@@ -1,6 +1,8 @@
 import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
 import cta from "../symbols/cta";
+import kind from "../symbols/kind";
+import { internalLinkFields } from "../symbols/link";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
 
@@ -112,7 +114,7 @@ const event: CmsCollection = {
               i18n: true,
               types: [
                 {
-                  label: "Title Text Button Image",
+                  label: "Titel-Text-Button-Bild",
                   name: "titleTextButtonImage",
                   widget: "object",
                   fields: [
@@ -120,6 +122,31 @@ const event: CmsCollection = {
                     markdown,
                     cta,
                     { label: "Bild", name: "image", widget: "image" },
+                  ],
+                },
+                {
+                  label: "Titel-Bild",
+                  name: "titleImage",
+                  widget: "object",
+                  fields: [
+                    title,
+                    { label: "Bild", name: "image", widget: "image" },
+                  ],
+                },
+                {
+                  label: "Titel-Bild-Button",
+                  name: "titleImageButton",
+                  widget: "object",
+                  fields: [
+                    title,
+                    { label: "Bild", name: "image", widget: "image" },
+                    {
+                      label: "CTA",
+                      name: "cta",
+                      i18n: true,
+                      widget: "object",
+                      fields: [...internalLinkFields, kind],
+                    },
                   ],
                 },
               ],

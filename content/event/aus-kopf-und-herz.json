@@ -46,6 +46,21 @@
               "url": "#"
             },
             "image": "/media/visionboard.jpg"
+          },
+          {
+            "type": "titleImage",
+            "title": "Gestalte dein Leben",
+            "image": "/media/grafik_auskopfundherz.png"
+          },
+          {
+            "type": "titleImageButton",
+            "title": "Zeitstrahl",
+            "cta": {
+              "text": "Ich bin dabei und melde mich an!",
+              "kind": "purple",
+              "url": "#"
+            },
+            "image": "/media/zeitstrahl_auskopfundherz.png"
           }
         ]
       }
