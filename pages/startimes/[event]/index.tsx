@@ -28,7 +28,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
       <Seo meta={detail.meta} />
       <Header header={detail.header} />
 
-      <section className="pt-16 pb-4 lg:pb-10">
+      <section className="pt-8 pb-0 lg:pt-16 lg:pb-10">
         <Container layout="sm">
           <div className="text-center">
             <Heading size="h1">{detail.title}</Heading>
@@ -39,7 +39,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
       {detail.sections.map((section) => {
         if (section.type === "titleTextButtonImage")
           return (
-            <section key={section.title} className="py-16">
+            <section key={section.title} className="py-8 lg:py-16">
               <Container layout="sm">
                 <div className="flex justify-center">
                   <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-8">
@@ -64,7 +64,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
           );
         if (section.type === "titleImage")
           return (
-            <section key={section.title} className="py-20">
+            <section key={section.title} className="py-8 lg:py-20">
               <Container layout="sm">
                 <div className="flex justify-center">
                   <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-12">
@@ -79,7 +79,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
           );
         if (section.type === "titleImageButton")
           return (
-            <section key={section.title} className="py-20">
+            <section key={section.title} className="py-8 lg:py-20">
               <Container layout="sm">
                 <div className="flex justify-center">
                   <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-14">
@@ -89,7 +89,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                 <div className="">
                   <Image {...section.image} alt={section.title} />
                 </div>
-                <div className="flex justify-center mt-12">
+                <div className="flex justify-center mt-6 lg:mt-12">
                   <Button kind={section.cta.kind} href={section.cta.href}>
                     {section.cta.text}
                   </Button>
@@ -204,11 +204,11 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                   {section.blocks.map((block) => (
                     <div
                       key={block.numbers.join("")}
-                      className="px-8 py-5 bg-white"
+                      className="px-4 py-4 bg-white lg:px-8 lg:py-5"
                     >
                       <div className="flex justify-center">
                         <h2
-                          className={`flex items-center text-4xl font-medium ${
+                          className={`flex items-center text-2xl lg:text-4xl font-medium ${
                             block.numbers.includes("&")
                               ? "text-bsm-pink"
                               : "text-bsm-purple"
