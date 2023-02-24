@@ -1277,6 +1277,31 @@ var event = {
       widget: "image"
     },
     {
+      label: "Termine",
+      name: "meetings",
+      widget: "list",
+      i18n: true,
+      fields: [
+        {
+          label: "Titel",
+          name: "title",
+          widget: "string",
+          i18n: true,
+          required: true
+        },
+        {
+          label: "Tag",
+          name: "day",
+          widget: "datetime",
+          time_format: false,
+          format: "YYYY-MM-DD",
+          i18n: "duplicate",
+          date_format: "DD.MM.YYYY",
+          required: false
+        }
+      ]
+    },
+    {
       label: "Seiten",
       name: "pages",
       widget: "list",
@@ -1542,13 +1567,13 @@ var event = {
       ]
     },
     {
-      label: "Anmeldeseite",
+      label: "Formular",
       name: "register",
       i18n: true,
       widget: "object",
       fields: [
         {
-          label: "Formulartext",
+          label: "Text",
           name: "markdownForm",
           i18n: true,
           widget: "markdown",
