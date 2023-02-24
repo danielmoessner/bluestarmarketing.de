@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Prose from "@/components/Prose";
-import { formatDate } from "@/lib/date";
 import DynamicForm from "@/components/Form";
 import { useRouter } from "next/router";
 import { ImageRendered } from "@/types/shared";
@@ -14,7 +13,7 @@ interface Props {
   submitText: string;
   eventImage: ImageRendered;
   eventTitle: string;
-  meetings: { general: { day: string }; event: string }[];
+  meetings: { day: string; title: string }[];
   onText: string;
 }
 
@@ -28,10 +27,10 @@ function RegisterForm({
   eventImage,
   meetings,
   eventTitle,
-  onText,
 }: Props) {
+  console.log("here", meetings);
   const availableMeetings = meetings.filter(
-    (m) => new Date() <= new Date(m.general.day)
+    (m) => !m.day || new Date() <= new Date(m.day)
   );
 
   const { locale } = useRouter();
@@ -45,8 +44,8 @@ function RegisterForm({
       type: "multiple",
       name: "meetings",
       options: availableMeetings.map((m) => ({
-        label: `${eventTitle} ${onText} ${formatDate(m.general.day, "short")}`,
-        name: `meeting_${m.event}_${m.general.day}`,
+        label: m.title,
+        name: `meeting_${eventTitle}_${m.title}`,
         checked: false,
       })),
     },

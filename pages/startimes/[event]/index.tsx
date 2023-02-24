@@ -21,6 +21,8 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
   const event = eventData;
   const detail = event.pages.find((p) => p.type === "detail");
 
+  const formMeetings = eventData.meetings;
+
   return (
     <Layout>
       <Seo meta={detail.meta} />
@@ -256,6 +258,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
         if (section.type === "form")
           return (
             <section
+              key="form"
               className="py-16 bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]"
               id="form"
             >
@@ -266,7 +269,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                   htmlText={event.register.markdownForm.html}
                   onText={page.form.on}
                   eventImage={event.image}
-                  meetings={meetings}
+                  meetings={formMeetings}
                   submitText={page.form.button}
                   successText={page.form.successText}
                   requiredFieldsText={page.form.requiredFields}
