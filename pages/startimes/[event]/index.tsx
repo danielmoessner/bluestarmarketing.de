@@ -202,7 +202,10 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               <Container layout="sm">
                 <div className="space-y-10">
                   {section.blocks.map((block) => (
-                    <div key={block.title} className="px-8 py-5 bg-white">
+                    <div
+                      key={block.numbers.join("")}
+                      className="px-8 py-5 bg-white"
+                    >
                       <div className="flex justify-center">
                         <h2
                           className={`flex items-center text-4xl font-medium ${

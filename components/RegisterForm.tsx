@@ -28,7 +28,6 @@ function RegisterForm({
   meetings,
   eventTitle,
 }: Props) {
-  console.log("here", meetings);
   const availableMeetings = meetings.filter(
     (m) => !m.day || new Date() <= new Date(m.day)
   );
