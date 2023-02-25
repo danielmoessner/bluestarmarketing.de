@@ -52,7 +52,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                       <Prose html={section.markdown.html} />
                     </div>
                     <div className="">
-                      <Button>{section.cta.text}</Button>
+                      <Button href={section.cta.url}>{section.cta.text}</Button>
                     </div>
                   </div>
                   <div className="">
@@ -90,7 +90,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                   <Image {...section.image} alt={section.title} />
                 </div>
                 <div className="flex justify-center mt-6 lg:mt-12">
-                  <Button kind={section.cta.kind} href={section.cta.href}>
+                  <Button kind={section.cta.kind} href={section.cta.url}>
                     {section.cta.text}
                   </Button>
                 </div>

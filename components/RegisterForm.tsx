@@ -57,7 +57,7 @@ function RegisterForm({
         <div className="md:col-span-4">
           <Image {...image} alt="Form Bild" />
         </div>
-        <div className="md:col-span-6">
+        <div className="md:col-span-8">
           <Image className="w-40" {...eventImage} alt="Event Icon" />
           <div className="mt-10">
             <Prose html={htmlText} />

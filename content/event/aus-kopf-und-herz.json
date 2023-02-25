@@ -111,7 +111,7 @@
             "markdown": "Sei es dir wert, dein Leben – egal ob privat und oder beruflich – so auszurichten, zu gestalten & wieder in deine Hände zu nehmen wie du es möchtest.\n\nSammle dich, richte dich neu aus, fokussiere und finde Antworten & Lösungen, die sich für dich gut anfühlen und zu dir passen. So kommst du deiner Selbstbestimmtheit näher. Das macht dich fröhlicher & zufriedener.\n\nGeht nicht? Doch, denn wir zaubern nicht, sondern entfesseln mit dir nur das, was schon längst in dir steckt!",
             "cta": {
               "text": "Details anfragen",
-              "url": "#"
+              "url": "#form"
             },
             "image": "/media/visionboard.jpg"
           },
@@ -126,7 +126,7 @@
             "cta": {
               "text": "Ich bin dabei und melde mich an!",
               "kind": "purple",
-              "url": "#"
+              "url": "#form"
             },
             "image": "/media/zeitstrahl_auskopfundherz.png"
           },
@@ -167,7 +167,7 @@
                 "markdown": "Du möchtest weitergehen, dranbleiben und wünscht dir Unterstützung? Ich bin gerne für dich da.",
                 "cta": {
                   "text": "Angebot anfragen",
-                  "url": "#",
+                  "url": "#form",
                   "kind": "purple"
                 }
               }
