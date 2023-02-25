@@ -6,7 +6,7 @@ import Animate from "./Animate";
 import { ImageRendered } from "types/shared";
 
 interface Header1 {
-  text: string;
+  markdown: { html: string };
   image: ImageRendered;
   cta: {
     text: string;
@@ -45,20 +45,24 @@ function Component({ header, position = "bottom-right" }: Props) {
             <div className="leading-[0px]">
               <Image
                 {...header.image}
-                alt={"text" in header ? header.text : "Header"}
+                alt="Header"
                 priority
                 placeholder="empty"
                 className="w-full"
               />
             </div>
-            {"text" in header && "cta" in header && (
+            {"markdown" in header && "cta" in header && (
               <div
                 className={`relative z-10 lg:w-5/12 lg:absolute  ${positionClass}`}
               >
                 <Animate>
                   <div className="p-5 bg-bsm-matt/90">
                     <Heading element="h1" size="header">
-                      {header.text}
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: header.markdown.html,
+                        }}
+                      ></div>
                     </Heading>
                     <div className="mt-4">
                       <Button element="Link" href={header.cta.url}>

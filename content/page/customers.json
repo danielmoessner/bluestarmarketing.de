@@ -7,7 +7,7 @@
     },
     "header": {
       "image": "/media/bluestarmarketing_kunden_1.jpeg",
-      "text": "Dein B2B-Marketingpartner \nIntegrale Strategien & Kampagnen für Team-Alignment, Empowerment & Wachstum",
+      "markdown": "**Dein B2B-Marketingpartner**\nIntegrale Strategien & Kampagnen \\\nfür Team-Alignment, \\\nEmpowerment & Wachstum",
       "cta": {
         "text": "Jetzt Erstgespräch vereinbaren",
         "url": "/kontakt"
@@ -37,7 +37,7 @@
     },
     "header": {
       "image": "/media/bluestarmarketing_kunden_1.jpeg",
-      "text": "Your B2B marketing partner \nIntegral strategies & campaigns for team alignment, empowerment & growth",
+      "markdown": "**Your B2B marketing partner** \\\nIntegral strategies & campaigns \\\nfor team alignment, \\\nempowerment & growth",
       "cta": {
         "text": "Talk to us today!",
         "url": "/kontakt"
