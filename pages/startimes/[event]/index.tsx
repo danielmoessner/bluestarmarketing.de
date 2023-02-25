@@ -274,7 +274,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                   eventImage={event.image}
                   meetings={formMeetings}
                   submitText={page.form.button}
-                  successText={page.form.successText}
+                  successText={event.register.successText}
                   requiredFieldsText={page.form.requiredFields}
                   fields={event.register.fields}
                 />

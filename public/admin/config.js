@@ -1567,6 +1567,12 @@ var event = {
           required: false
         },
         {
+          label: "Erfolgstext",
+          name: "successText",
+          widget: "text",
+          i18n: true
+        },
+        {
           label: "Felder",
           name: "fields",
           i18n: true,
