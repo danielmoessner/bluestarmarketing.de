@@ -90,6 +90,14 @@
           }
         ],
         "ordering": 10,
+        "images": [
+          {
+            "image": "/media/papierblatt_quer.png"
+          },
+          {
+            "image": "/media/papierblatt_visionboard.jpg"
+          }
+        ],
         "type": "listing",
         "image": "/media/papierblatt_quer.png",
         "titleNormalAfter": "in deine Hände",
