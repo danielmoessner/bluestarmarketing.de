@@ -64,8 +64,8 @@ var header = {
   i18n: true,
   widget: "object",
   fields: [
-    { label: "Bild", name: "image", i18n: true, widget: "image" },
-    { label: "Text", name: "text", i18n: true, widget: "text" },
+    { label: "Bild", name: "image", i18n: false, widget: "image" },
+    { label: "Text", name: "markdown", i18n: true, widget: "markdown" },
     {
       label: "CTA",
       name: "cta",

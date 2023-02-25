@@ -6,7 +6,7 @@
       "keywords": "Marketingerfolg, Marketingwachstum, Zielerreichung, Marketingpartner                                                     "
     },
     "header": {
-      "text": "Dein B2B-Marketingpartner \nIntegrale Strategien & Kampagnen für Team-Alignment, Empowerment & Wachstum",
+      "markdown": "**Dein B2B-Marketingpartner**\nIntegrale Strategien & Kampagnen \\\nfür Team-Alignment, \\\nEmpowerment & Wachstum",
       "image": "/media/bluestar_fuer_dich.jpg",
       "cta": {
         "text": "Jetzt Erstgespräch vereinbaren",
@@ -20,7 +20,7 @@
     },
     "about": {
       "title": "Blue Star Marketing",
-      "text": "Dein B2B-Marketingpartner \nIntegrale Strategien & Kampagnen für Team-Alignment, Empowerment & Wachstum!\nWir bringen ein tiefgreifendes Verständnis deiner individuellen Situation in unsere Partnerschaft & Zusammenarbeit ein und schöpfen aus einem Fundus an Erfahrung auf Herstellerseite des Schreibtisches zurück.\nAus diesem Erfahrungsschatz heraus gestalten und entwickeln wir zielgerichtete, und integrierte B2B-Marketingstrategien und -pläne für dich – verlinkt und passgenau zugeschnitten auf euren Marketing- und Geschäftserfolg.",
+      "markdown": "Dein B2B-Marketingpartner \nIntegrale Strategien & Kampagnen für Team-Alignment, Empowerment & Wachstum!\nWir bringen ein tiefgreifendes Verständnis deiner individuellen Situation in unsere Partnerschaft & Zusammenarbeit ein und schöpfen aus einem Fundus an Erfahrung auf Herstellerseite des Schreibtisches zurück.\nAus diesem Erfahrungsschatz heraus gestalten und entwickeln wir zielgerichtete, und integrierte B2B-Marketingstrategien und -pläne für dich – verlinkt und passgenau zugeschnitten auf euren Marketing- und Geschäftserfolg.",
       "quote1": "„Begeisterung ist der Zunder in uns, der Funken schlagen will.“*",
       "quote2": "„Die Idee, der Plan, die Strategie allein reichen nicht. Sie sind lediglich das Holz. Erst deine Begeisterung erweckt das Feuer zum Leben.“ **",
       "afterquote": "* Johann Gottfried Herder\n** Franz X. Bühler in Mehr… vom Kopf ins Herz",
@@ -47,7 +47,7 @@
       "keywords": "Marketing success, growth, target achievement, Marketingpartner                                                     "
     },
     "header": {
-      "text": "Your B2B marketing partner \nIntegral strategies & campaigns for team alignment, empowerment & growth",
+      "markdown": "**Your B2B marketing partner** \\\nIntegral strategies & campaigns \\\nfor team alignment, \\\nempowerment & growth",
       "image": "/media/bluestar_fuer_dich.jpg",
       "cta": {
         "text": "Talk to us today!",
