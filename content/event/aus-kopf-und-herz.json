@@ -83,7 +83,7 @@
         "properties": [
           {
             "title": "Für Wen?",
-            "markdown": "* für dich und deine Wünsche und Ziele * unabhängig davon, was du beruflich machst \n* und wo du jetzt gerade in deinem Alltag stehst"
+            "markdown": "* für dich und deine Wünsche und Ziele \n* unabhängig davon, was du beruflich machst \n* und wo du jetzt gerade in deinem Alltag stehst"
           }
         ],
         "ordering": 10,
@@ -191,17 +191,14 @@
     "meetings": [
       {
         "day": "2023-04-01",
-       
         "title": "1. April 2023"
       },
       {
         "day": "2023-08-05",
-       
         "title": "5. August 2023"
       },
       {
         "day": "",
-       
         "title": "One:Ones only"
       },
       {

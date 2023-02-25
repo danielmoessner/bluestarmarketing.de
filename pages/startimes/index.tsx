@@ -24,25 +24,10 @@ function Page({ pageData, footerData, events, meetingsData }) {
       <Seo meta={page.meta} />
       <Header header={page.header} />
 
-      <section className="pt-12 pb-16 lg:pb-20">
+      <section className="pt-12 pb-14 lg:pb-16">
         <Container layout="sm">
           <div className="text-center">
-            <Heading size="h1">{page.start.title1}</Heading>
-          </div>
-          <div className="mt-6 md:mt-10 lg:mt-24">
-            <Animate>
-              <div className="grid gap-8 lg:grid-cols-2">
-                <div className="leading-[0px]">
-                  <Image {...page.start.image} alt={page.start.title2} />
-                </div>
-                <div>
-                  <h2 className="text-5xl font-rose">{page.start.title2}</h2>
-                  <div className="mt-6">
-                    <Prose html={page.start.markdown.html} />
-                  </div>
-                </div>
-              </div>
-            </Animate>
+            <Heading size="h1">{page.start.title}</Heading>
           </div>
         </Container>
       </section>
