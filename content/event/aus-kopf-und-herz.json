@@ -18,7 +18,8 @@
         {
           "type": "text",
           "label": "Titel",
-          "name": "titel"
+          "name": "titel",
+          "required": false
         },
         {
           "type": "text",
@@ -47,7 +48,8 @@
         {
           "type": "text",
           "label": "Unternehmen",
-          "name": "unternehmen"
+          "name": "unternehmen",
+          "required": false
         },
         {
           "type": "text",
