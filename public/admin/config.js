@@ -64,8 +64,8 @@ var header = {
   i18n: true,
   widget: "object",
   fields: [
-    { label: "Bild", name: "image", i18n: true, widget: "image" },
-    { label: "Text", name: "text", i18n: true, widget: "text" },
+    { label: "Bild", name: "image", i18n: false, widget: "image" },
+    { label: "Text", name: "markdown", i18n: true, widget: "markdown" },
     {
       label: "CTA",
       name: "cta",
@@ -712,24 +712,11 @@ var startimes = {
       widget: "object",
       fields: [
         {
-          label: "Titel 1",
-          name: "title1",
+          label: "Titel",
+          name: "title",
           widget: "string",
           i18n: true
-        },
-        {
-          label: "Bild",
-          name: "image",
-          widget: "image"
-        },
-        {
-          label: "Titel 2",
-          name: "title2",
-          widget: "string",
-          i18n: true
-        },
-        markdown_default,
-        cta_default
+        }
       ]
     },
     {
@@ -1232,6 +1219,20 @@ var article = {
 };
 var article_default = article;
 
+// cms/symbols/kind.ts
+var kind = {
+  label: "Art",
+  name: "kind",
+  widget: "select",
+  options: [
+    { label: "Nachtblau", value: "blue" },
+    { label: "Pink", value: "pink" },
+    { label: "Dunkelviolett", value: "purple" }
+  ],
+  i18n: false
+};
+var kind_default = kind;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -1263,107 +1264,343 @@ var event = {
       widget: "image"
     },
     {
-      label: "Auflistung",
-      name: "listing",
-      widget: "object",
+      label: "Termine",
+      name: "meetings",
+      widget: "list",
       i18n: true,
       fields: [
-        { label: "Farbe", name: "color", widget: "string" },
         {
-          label: "Titel Normal",
-          name: "titleNormal",
+          label: "Titel",
+          name: "title",
           widget: "string",
-          i18n: true
+          i18n: true,
+          required: true
         },
         {
-          label: "Titel Rose",
-          name: "titleRose",
-          widget: "string",
-          i18n: true
-        },
-        markdown_default,
-        { label: "Warum", name: "why", widget: "text", i18n: true },
-        { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true }
-      ]
-    },
-    meta_default,
-    {
-      label: "Header",
-      name: "header",
-      widget: "object",
-      fields: [{ label: "Bild", name: "image", widget: "image" }]
-    },
-    {
-      label: "Start",
-      name: "start",
-      i18n: true,
-      widget: "object",
-      fields: [
-        {
-          label: "Titel 1",
-          name: "title1",
-          widget: "string",
-          i18n: true
-        },
-        {
-          label: "Titel 2",
-          name: "title2",
-          widget: "string",
-          i18n: true
-        },
-        markdown_default,
-        {
-          label: "Bild",
-          name: "image",
-          widget: "image"
+          label: "Tag",
+          name: "day",
+          widget: "datetime",
+          time_format: false,
+          format: "YYYY-MM-DD",
+          i18n: "duplicate",
+          date_format: "DD.MM.YYYY",
+          required: false
         }
       ]
     },
     {
-      label: "Unten",
-      name: "bottom",
+      label: "Seiten",
+      name: "pages",
+      widget: "list",
       i18n: true,
-      widget: "object",
-      fields: [
+      types: [
         {
-          label: "Titel Links",
-          name: "titleLeft",
-          widget: "string",
-          i18n: true
+          label: "Auflistung",
+          name: "listing",
+          widget: "object",
+          i18n: true,
+          fields: [
+            {
+              label: "Sortierung",
+              name: "ordering",
+              widget: "number",
+              hint: "Die gr\xF6\xDFte Nummer erscheint zuerst."
+            },
+            { label: "Farbe", name: "color", widget: "string" },
+            {
+              label: "Bilder",
+              name: "images",
+              widget: "list",
+              i18n: false,
+              field: { label: "Bild", name: "image", widget: "image" }
+            },
+            {
+              label: "Titel Normal Vorher",
+              name: "titleNormal",
+              widget: "string",
+              i18n: true,
+              required: false
+            },
+            {
+              label: "Titel Rose",
+              name: "titleRose",
+              widget: "string",
+              i18n: true,
+              required: false
+            },
+            {
+              label: "Titel Normal Nachher",
+              name: "titleNormalAfter",
+              widget: "string",
+              i18n: true,
+              required: false
+            },
+            markdown_default,
+            {
+              label: "Eigenschaften",
+              name: "properties",
+              widget: "list",
+              fields: [
+                { label: "Titel", name: "title", widget: "string" },
+                markdown_default
+              ]
+            }
+          ]
         },
         {
-          label: "Text Links",
-          name: "markdownLeft",
-          widget: "markdown",
-          i18n: true
-        },
-        {
-          label: "Titel Rechts",
-          name: "titleRight",
-          widget: "string",
-          i18n: true
-        },
-        {
-          label: "Text Rechts",
-          name: "markdownRight",
-          widget: "markdown",
-          i18n: true
+          label: "Detail",
+          name: "detail",
+          widget: "object",
+          i18n: true,
+          fields: [
+            meta_default,
+            {
+              label: "Header",
+              name: "header",
+              widget: "object",
+              fields: [{ label: "Bild", name: "image", widget: "image" }]
+            },
+            {
+              label: "Titel",
+              name: "title",
+              widget: "string",
+              i18n: true
+            },
+            {
+              label: "Sektionen",
+              name: "sections",
+              widget: "list",
+              i18n: true,
+              types: [
+                {
+                  label: "Titel-Text-Button-Bild",
+                  name: "titleTextButtonImage",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    title_default,
+                    markdown_default,
+                    cta_default,
+                    { label: "Bild", name: "image", widget: "image" }
+                  ]
+                },
+                {
+                  label: "Titel-Bild",
+                  name: "titleImage",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    title_default,
+                    { label: "Bild", name: "image", widget: "image" }
+                  ]
+                },
+                {
+                  label: "Titel-Bild-Button",
+                  name: "titleImageButton",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    title_default,
+                    { label: "Bild", name: "image", widget: "image" },
+                    {
+                      label: "CTA",
+                      name: "cta",
+                      i18n: true,
+                      widget: "object",
+                      fields: [...internalLinkFields, kind_default]
+                    }
+                  ]
+                },
+                {
+                  label: "Titel-Text-Bild",
+                  name: "titleTextImage",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    title_default,
+                    markdown_default,
+                    { label: "Bild", name: "image", widget: "image" }
+                  ]
+                },
+                {
+                  label: "Zwei-Spalten",
+                  name: "twoColumns",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    {
+                      label: "Titel Links",
+                      name: "titleLeft",
+                      widget: "string",
+                      i18n: true
+                    },
+                    {
+                      label: "Text Links",
+                      name: "markdownLeft",
+                      widget: "markdown",
+                      i18n: true
+                    },
+                    {
+                      label: "Titel Rechts",
+                      name: "titleRight",
+                      widget: "string",
+                      i18n: true
+                    },
+                    {
+                      label: "Text Rechts",
+                      name: "markdownRight",
+                      widget: "markdown",
+                      i18n: true
+                    }
+                  ]
+                },
+                {
+                  label: "Termine",
+                  name: "meetings",
+                  widget: "object",
+                  i18n: true,
+                  fields: [title_default]
+                },
+                {
+                  label: "Bl\xF6cke",
+                  name: "blocks",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    {
+                      label: "Bl\xF6cke",
+                      name: "blocks",
+                      widget: "list",
+                      fields: [
+                        title_default,
+                        {
+                          label: "Zahlen",
+                          name: "numbers",
+                          widget: "select",
+                          multiple: true,
+                          options: [
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "5",
+                            "6",
+                            "7",
+                            "8",
+                            "9",
+                            "&"
+                          ]
+                        },
+                        {
+                          label: "Untertitel",
+                          name: "subtitle",
+                          widget: "string",
+                          i18n: true
+                        },
+                        markdown_default,
+                        {
+                          label: "CTA",
+                          name: "cta",
+                          i18n: true,
+                          widget: "object",
+                          required: false,
+                          fields: [
+                            {
+                              label: "Text",
+                              name: "text",
+                              i18n: true,
+                              required: false,
+                              widget: "string"
+                            },
+                            {
+                              label: "url",
+                              name: "url",
+                              i18n: true,
+                              widget: "string",
+                              required: false,
+                              hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf oder /kontakt"
+                            },
+                            {
+                              label: "Art",
+                              name: "kind",
+                              widget: "select",
+                              required: false,
+                              options: [
+                                { label: "Nachtblau", value: "blue" },
+                                { label: "Pink", value: "pink" },
+                                { label: "Dunkelviolett", value: "purple" }
+                              ],
+                              i18n: false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  label: "Formular",
+                  name: "form",
+                  widget: "object",
+                  i18n: false,
+                  fields: [
+                    {
+                      label: "Platzhalter",
+                      name: "placeholder",
+                      widget: "hidden",
+                      default: "---",
+                      hint: "Eingabe wird ignoriert aus technischen Gr\xFCnden notwenig."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
-        // cta,
       ]
     },
     {
-      label: "Anmeldeseite",
+      label: "Formular",
       name: "register",
       i18n: true,
       widget: "object",
       fields: [
         {
-          label: "Formulartext",
+          label: "Text",
           name: "markdownForm",
           i18n: true,
           widget: "markdown",
           required: false
+        },
+        {
+          label: "Erfolgstext",
+          name: "successText",
+          widget: "text",
+          i18n: true
+        },
+        {
+          label: "Felder",
+          name: "fields",
+          i18n: true,
+          required: true,
+          widget: "list",
+          fields: [
+            { label: "Label", name: "label", widget: "string", i18n: true },
+            { label: "Name", name: "name", widget: "string" },
+            {
+              label: "Typ",
+              name: "type",
+              widget: "select",
+              default: "text",
+              options: ["textarea", "email", "tel", "text", "checkbox"]
+            },
+            {
+              label: "Ben\xF6tigt",
+              name: "required",
+              widget: "boolean",
+              required: false
+            }
+          ]
         }
       ]
     }

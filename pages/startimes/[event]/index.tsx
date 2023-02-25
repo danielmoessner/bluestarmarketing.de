@@ -11,6 +11,7 @@ import Prose from "@/components/Prose";
 import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
+import RegisterForm from "@/components/RegisterForm";
 
 function Page({ pageData, footerData, eventData, meetingsData }) {
   const meetings = meetingsData.filter(
@@ -18,105 +19,269 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
   );
   const page = pageData;
   const event = eventData;
+  const detail = event.pages.find((p) => p.type === "detail");
+
+  const formMeetings = eventData.meetings;
 
   return (
     <Layout>
-      <Seo meta={event.meta} />
-      <Header header={event.header} />
+      <Seo meta={detail.meta} />
+      <Header header={detail.header} />
 
-      <section className="pt-16 pb-16 lg:pb-20">
+      <section className="pt-8 pb-0 lg:pt-16 lg:pb-10">
         <Container layout="sm">
           <div className="text-center">
-            <Heading size="h1">{event.start.title1}</Heading>
+            <Heading size="h1">{detail.title}</Heading>
           </div>
-          <div className="mt-14 md:mt-14 lg:mt-22">
-            <Animate>
-              <div className="grid gap-8 md:grid-cols-2">
-                <div>
-                  <h2 className="text-3xl md:text-5xl font-rose">
-                    {event.start.title2}
+        </Container>
+      </section>
+
+      {detail.sections.map((section) => {
+        if (section.type === "titleTextButtonImage")
+          return (
+            <section key={section.title} className="py-8 lg:py-16">
+              <Container layout="sm">
+                <div className="flex justify-center">
+                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-8">
+                    {section.title}
                   </h2>
-                  <div className="mt-4 md:mt-6">
-                    <Prose html={event.start.markdown.html} />
-                  </div>
                 </div>
-                <div className="leading-[0px]">
-                  <Image {...event.start.image} alt={event.start.title2} />
-                </div>
-              </div>
-            </Animate>
-          </div>
-        </Container>
-      </section>
-
-      <section className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
-        <Container layout="sm">
-          <div className="">
-            <Animate>
-              <h2 className="mx-auto text-5xl text-center font-rose">
-                {page.meetings.title}
-              </h2>
-            </Animate>
-            <div className="grid gap-8 mt-6 md:mt-10 md:grid-cols-2">
-              {meetings.map((meeting) => (
-                <Animate key={meeting.general.day}>
-                  <div className="flex flex-col justify-between h-full p-5 bg-white">
-                    <div>
-                      <div className="flex justify-between">
-                        <div className="w-24">
-                          <Image {...event.image} alt={event.title} />
-                        </div>
-                        <div>
-                          <p className="text-bsm-pink">
-                            {formatDate(meeting.general.day, "full")}
-                          </p>
-                          <p className="text-bsm-pink">
-                            {meeting.general.from}-{meeting.general.to}{" "}
-                            {page.meetings.time}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="mt-5">
-                        <Prose html={meeting.list.markdown.html} />
-                      </div>
+                <div className="grid gap-8 md:grid-cols-2">
+                  <div className="flex flex-col justify-between">
+                    <div className="">
+                      <Prose html={section.markdown.html} />
                     </div>
-                    <div className="flex justify-center pt-5">
-                      <Button
-                        kind="pink"
-                        href={`/startimes/${
-                          meeting.event
-                        }/${meeting.general.day.replaceAll("-", "")}`}
-                      >
-                        {page.meetings.button}
-                      </Button>
+                    <div className="">
+                      <Button href={section.cta.url}>{section.cta.text}</Button>
                     </div>
                   </div>
-                </Animate>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="pt-16 pb-16">
-        <Container layout="sm">
-          <div className="grid gap-8 md:grid-cols-2">
-            <Animate>
-              <h2 className="text-5xl font-rose">{event.bottom.titleLeft}</h2>
-              <div className="mt-5">
-                <Prose html={event.bottom.markdownLeft.html} />
-              </div>
-            </Animate>
-            <Animate>
-              <h2 className="text-5xl font-rose">{event.bottom.titleRight}</h2>
-              <div className="mt-5">
-                <Prose html={event.bottom.markdownRight.html} />
-              </div>
-            </Animate>
-          </div>
-        </Container>
-      </section>
-
+                  <div className="">
+                    <Image {...section.image} alt={section.title} />
+                  </div>
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "titleImage")
+          return (
+            <section key={section.title} className="py-8 lg:py-20">
+              <Container layout="sm">
+                <div className="flex justify-center">
+                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-12">
+                    {section.title}
+                  </h2>
+                </div>
+                <div className="">
+                  <Image {...section.image} alt={section.title} />
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "titleImageButton")
+          return (
+            <section key={section.title} className="py-8 lg:py-20">
+              <Container layout="sm">
+                <div className="flex justify-center">
+                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-14">
+                    {section.title}
+                  </h2>
+                </div>
+                <div className="">
+                  <Image {...section.image} alt={section.title} />
+                </div>
+                <div className="flex justify-center mt-6 lg:mt-12">
+                  <Button kind={section.cta.kind} href={section.cta.url}>
+                    {section.cta.text}
+                  </Button>
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "titleTextImage")
+          return (
+            <section className="pt-12 pb-16 lg:pb-20">
+              <Container layout="sm">
+                <div className="">
+                  <Animate>
+                    <div className="grid gap-8 md:grid-cols-2">
+                      <div>
+                        <h2 className="text-3xl md:text-5xl font-rose">
+                          {section.title}
+                        </h2>
+                        <div className="mt-4 md:mt-6">
+                          <Prose html={section.markdown.html} />
+                        </div>
+                      </div>
+                      <div className="leading-[0px]">
+                        <Image {...section.image} alt={section.title} />
+                      </div>
+                    </div>
+                  </Animate>
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "twoColumns")
+          return (
+            <section className="pt-16 pb-16">
+              <Container layout="sm">
+                <div className="grid gap-8 md:grid-cols-2">
+                  <Animate>
+                    <h2 className="text-5xl font-rose">{section.titleLeft}</h2>
+                    <div className="mt-5">
+                      <Prose html={section.markdownLeft.html} />
+                    </div>
+                  </Animate>
+                  <Animate>
+                    <h2 className="text-5xl font-rose">{section.titleRight}</h2>
+                    <div className="mt-5">
+                      <Prose html={section.markdownRight.html} />
+                    </div>
+                  </Animate>
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "meetings")
+          return (
+            <section className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
+              <Container layout="sm">
+                <div className="">
+                  <Animate>
+                    <h2 className="mx-auto text-5xl text-center font-rose">
+                      {page.meetings.title}
+                    </h2>
+                  </Animate>
+                  <div className="grid gap-8 mt-6 md:mt-10 md:grid-cols-2">
+                    {meetings.map((meeting) => (
+                      <Animate key={meeting.general.day}>
+                        <div className="flex flex-col justify-between h-full p-5 bg-white">
+                          <div>
+                            <div className="flex justify-between">
+                              <div className="w-24">
+                                <Image {...event.image} alt={event.title} />
+                              </div>
+                              <div>
+                                <p className="text-bsm-pink">
+                                  {formatDate(meeting.general.day, "full")}
+                                </p>
+                                <p className="text-bsm-pink">
+                                  {meeting.general.from}-{meeting.general.to}{" "}
+                                  {page.meetings.time}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="mt-5">
+                              <Prose html={meeting.list.markdown.html} />
+                            </div>
+                          </div>
+                          <div className="flex justify-center pt-5">
+                            <Button
+                              kind="pink"
+                              href={`/startimes/${
+                                meeting.event
+                              }/${meeting.general.day.replaceAll("-", "")}`}
+                            >
+                              {page.meetings.button}
+                            </Button>
+                          </div>
+                        </div>
+                      </Animate>
+                    ))}
+                  </div>
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "blocks")
+          return (
+            <section
+              key="blocks"
+              className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat"
+            >
+              <Container layout="sm">
+                <div className="space-y-10">
+                  {section.blocks.map((block) => (
+                    <div
+                      key={block.numbers.join("")}
+                      className="px-4 py-4 bg-white lg:px-8 lg:py-5"
+                    >
+                      <div className="flex justify-center">
+                        <h2
+                          className={`flex items-center text-2xl lg:text-4xl font-medium ${
+                            block.numbers.includes("&")
+                              ? "text-bsm-pink"
+                              : "text-bsm-purple"
+                          } md:text-6-xl`}
+                        >
+                          {block.numbers.map((n, i) => (
+                            <div key={n} className="flex items-center">
+                              {i > 0 && <div className="mx-0.5">+</div>}
+                              <div
+                                className={`flex items-center justify-center w-6 h-6 text-base font-normal text-white rounded-full ${
+                                  block.numbers.includes("&")
+                                    ? "bg-bsm-pink"
+                                    : "bg-bsm-purple"
+                                }`}
+                              >
+                                <div>{n}</div>
+                              </div>
+                            </div>
+                          ))}
+                          <span className="ml-3">{block.title}</span>
+                        </h2>
+                      </div>
+                      <div className="flex justify-center mt-5">
+                        <div className="mb-4 text-3xl md:text-5xl font-rose">
+                          {block.subtitle}
+                        </div>
+                      </div>
+                      <div className="mt-8">
+                        <Prose
+                          html={block.markdown.html}
+                          className="prose-h3:font-rose prose-h3:text-4xl prose-h3:font-normal first:prose-h3:mt-0"
+                        />
+                      </div>
+                      {block.cta &&
+                        block.cta.text &&
+                        block.cta.url &&
+                        block.cta.kind && (
+                          <div className="flex justify-center mt-10">
+                            <Button kind={block.cta.kind} href={block.cta.url}>
+                              {block.cta.text}
+                            </Button>
+                          </div>
+                        )}
+                    </div>
+                  ))}
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "form")
+          return (
+            <section
+              key="form"
+              className="py-16 bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]"
+              id="form"
+            >
+              <Container layout="sm">
+                <RegisterForm
+                  image={page.form.image}
+                  eventTitle={event.title}
+                  htmlText={event.register.markdownForm.html}
+                  onText={page.form.on}
+                  eventImage={event.image}
+                  meetings={formMeetings}
+                  submitText={page.form.button}
+                  successText={event.register.successText}
+                  requiredFieldsText={page.form.requiredFields}
+                  fields={event.register.fields}
+                />
+              </Container>
+            </section>
+          );
+      })}
       <Footer data={footerData} />
     </Layout>
   );

@@ -1,0 +1,219 @@
+{
+  "de": {
+    "start": {
+      "title1": "--",
+      "title2": "--",
+      "markdown": "\\-﻿-",
+      "image": "/media/logo_auskopfundherz_277.png"
+    },
+    "register": {
+      "markdownForm": "**Du hast Interesse und möchtest dabei sein?**\\\n**Gerne sende ich dir ein Angebot zu.**\n\nBitte fülle dazu das Formular aus, damit direkt alle relevanten Daten zur Erstellung verfügbar sind. **Aus Kopf und Herz** in deine Hände geht ab 4 Teilnehmer:innen je Termin an den Start.",
+      "fields": [
+        {
+          "type": "text",
+          "label": "Anrede",
+          "name": "anrede",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "Titel",
+          "name": "titel",
+          "required": false
+        },
+        {
+          "type": "text",
+          "label": "Vorname",
+          "name": "vorname",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "Nachname",
+          "name": "nachname",
+          "required": true
+        },
+        {
+          "type": "tel",
+          "label": "Mobilnummer",
+          "name": "mobil",
+          "required": true
+        },
+        {
+          "type": "email",
+          "label": "E-Mail",
+          "name": "email",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "Unternehmen",
+          "name": "unternehmen",
+          "required": false
+        },
+        {
+          "type": "text",
+          "label": "Straße & Nummer",
+          "name": "adresse",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "PLZ",
+          "name": "plz",
+          "required": true
+        },
+        {
+          "type": "text",
+          "label": "Ort",
+          "name": "ort",
+          "required": true
+        },
+        {
+          "type": "checkbox",
+          "label": "Mit der Speicherung meiner Kontaktdaten zur Weiterverwendung bin ich einverstanden.",
+          "name": "speicherung_der_kontaktdaten",
+          "required": true
+        }
+      ],
+      "successText": "Sehr gerne sende ich dir in Kürze dein Angebot für Aus Kopf & Herz in deine Hände. Schenke dir Zeit und Raum für dich. Ich freue mich auf deine Buchung und Teilnahme!"
+    },
+    "pages": [
+      {
+        "color": "#641462",
+        "titleRose": "Kopf & Herz",
+        "markdown": "Schenke dir Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt \n* zum Nachdenken\n* zum Verändern\n* zum Gestalten\n* für mehr Klarheit und Fokus",
+        "properties": [
+          {
+            "title": "Für Wen?",
+            "markdown": "* für dich und deine Wünsche und Ziele \n* unabhängig davon, was du beruflich machst \n* und wo du jetzt gerade in deinem Alltag stehst"
+          }
+        ],
+        "ordering": 10,
+        "images": [ "/media/papierblatt_quer.png"
+          , "/media/papierblatt_visionboard.jpg"
+          
+        ],
+        "type": "listing",
+        "titleNormalAfter": "in deine Hände",
+        "titleNormal": "Aus"
+      },
+      {
+        "type": "detail",
+        "meta": {
+          "title": "Aus Kopf & Herz in deine Hände",
+          "description": "Schenke dir Raum für deine Wünsche und Ziele"
+        },
+        "header": {
+          "image": "/media/aus_kopf_und_herz_titelbild_silke_348.png"
+        },
+        "title": "Aus Kopf & Herz in deine Hände",
+        "sections": [
+          {
+            "type": "titleTextButtonImage",
+            "title": "Schenke dir Raum für deine Wünsche und Ziele",
+            "markdown": "Sei es dir wert, dein Leben – egal ob privat und oder beruflich – so auszurichten, zu gestalten & wieder in deine Hände zu nehmen wie du es möchtest.\n\nSammle dich, richte dich neu aus, fokussiere und finde Antworten & Lösungen, die sich für dich gut anfühlen und zu dir passen. So kommst du deiner Selbstbestimmtheit näher. Das macht dich fröhlicher & zufriedener.\n\nGeht nicht? Doch, denn wir zaubern nicht, sondern entfesseln mit dir nur das, was schon längst in dir steckt!",
+            "cta": {
+              "text": "Details anfragen",
+              "url": "#form"
+            },
+            "image": "/media/visionboard.jpg"
+          },
+          {
+            "type": "titleImage",
+            "title": "Gestalte dein Leben",
+            "image": "/media/grafik_auskopfundherz.png"
+          },
+          {
+            "type": "titleImageButton",
+            "title": "Zeitstrahl",
+            "cta": {
+              "text": "Ich bin dabei und melde mich an!",
+              "kind": "purple",
+              "url": "#form"
+            },
+            "image": "/media/zeitstrahl_auskopfundherz.png"
+          },
+          {
+            "type": "blocks",
+            "blocks": [
+              {
+                "numbers": [
+                  "1",
+                  "2"
+                ],
+                "title": "VIRTUELLES ONE:ONE",
+                "markdown": "### Was bewegt dich?\n\nWo stehst du aktuell beruflich, privat – in deinem Leben? Welchen Herausforderungen stehst du gegenüber und wie sehen deine Wünsche &\nZiele aus?\n\nWir besprechen deine offenen Punkte, gerne anhand des vorab ausgefüllten Fragebogens oder frei und ungestützt. Du darfst entscheiden.\n\nIch möchte dich einladen, die Zeit nach dem One:One zu nutzen, um dich auf den Gestaltungsprozess einzustimmen. Was wünschst du dir und\nwas möchtest du verändern? Es ist ein Anfang zu wissen, was du nicht möchtest um anschließend herauszufinden, was dich begeistert und wie\ndu dein Leben gestalten möchtest. Hole dir deine Power, Selbstbestimmtheit und Gestaltungsräume zurück.\n\n**Deine Wünsche und Ziele sind wichtig – du bist wichtig!**",
+                "subtitle": "Check-in"
+              },
+              {
+                "numbers": [
+                  "3"
+                ],
+                "title": "GESTALTE DEIN VISIONBOARD",
+                "subtitle": "“Bilder sagen mehr als tausend Worte.“",
+                "markdown": "Nutze die Kraft der Bilder für dich, achte auf Bilder, die dich berühren und wundervolle Emotionen in dir wecken.\n\n### So gestaltest du dein Visionboard\n\n* für dein Leben, deine Ziele & deine Projekte\n* für alles, was dich bewegt, um neue Perspektiven & Möglichkeiten zu finden und neue Wege einzuschlagen\n* in angenehmer Atmosphäre\n* in einer kleinen Gruppe, in der ich dich gerne unterstütze und dir Impulse mitgebe\n\n### Ganz konkret für dich\n\n* Raum & Zeit\n* Anregungen & Materialien zur Gestaltung\n* 4 Stunden Workshop inklusive Pause, kleinem Snack, Tee und Kaltgetränk\n* Im SALON-F in München, zentral zwischen Karlsplatz und Sendlinger Tor\n\n### Was bringst du mit?\n\n* dich, einfach nur dich\n* deine Wünsche und Ziele mit dem ausgefüllten Fragebogen\n* Bilder, Fotos, Notizen, … einfach alles, was du zwischenzeitlich für dich entdeckt hast, was dich emotional anspricht und einen Platz auf deinem Visionboard finden darf "
+              },
+              {
+                "markdown": "### Wie geht es dir?\n\n### Wo stehst du gerade?\n\nHast du schon Schritte & Fortschritte gemacht zu dem, was du dir vorgenommen hast?\\\nGibt es Themen, bei denen du nicht weiterkommst und über die du gerne sprechen möchtest?\\\nWie bleibst du an deinen Wünschen und Zielen dran? Welche Routine könnte dir guttun, um weiterzugehen?\n\n**Du bist wichtig, einzigartig und wundervoll!**",
+                "title": "VIRTUELLES ONE:ONE",
+                "numbers": [
+                  "4"
+                ],
+                "subtitle": "Cross-Check"
+              },
+              {
+                "title": "DU MÖCHTEST MEHR?",
+                "numbers": [
+                  "&"
+                ],
+                "subtitle": "Du wünscht dir eine Vertiefung und weitere One:Ones",
+                "markdown": "Du möchtest weitergehen, dranbleiben und wünscht dir Unterstützung? Ich bin gerne für dich da.",
+                "cta": {
+                  "text": "Angebot anfragen",
+                  "url": "#form",
+                  "kind": "purple"
+                }
+              }
+            ]
+          },
+          {
+            "type": "form",
+            "placeholder": "---"
+          }
+        ]
+      }
+    ],
+    "bottom": {
+      "titleLeft": "--",
+      "markdownLeft": "\\-﻿-",
+      "titleRight": "--",
+      "markdownRight": "\\-﻿-"
+    },
+    "slug": "kopfundherz",
+    "header": {
+      "image": "/media/logo_auskopfundherz_277.png"
+    },
+    "meetings": [
+      {
+        "day": "2023-04-01",
+        "title": "1. April 2023"
+      },
+      {
+        "day": "2023-08-05",
+        "title": "5. August 2023"
+      },
+      {
+        "day": "",
+        "title": "One:Ones only"
+      },
+      {
+        "day": "",
+        "title": "One:Ones zur Vertiefung"
+      }
+    ],
+    "title": "Aus Kopf und Herz",
+    "image": "/media/logo_auskopfundherz_277.png"
+  },
+  "en": {}
+}

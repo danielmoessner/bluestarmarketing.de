@@ -26,6 +26,7 @@ module.exports = {
           nightblue: "#162259",
           alice: "#dfeaf8",
           pink: "#e50069",
+          purple: "#641462",
         },
       },
       typography: (theme) => ({
