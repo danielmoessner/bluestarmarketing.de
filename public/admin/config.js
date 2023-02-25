@@ -712,24 +712,11 @@ var startimes = {
       widget: "object",
       fields: [
         {
-          label: "Titel 1",
-          name: "title1",
+          label: "Titel",
+          name: "title",
           widget: "string",
           i18n: true
-        },
-        {
-          label: "Bild",
-          name: "image",
-          widget: "image"
-        },
-        {
-          label: "Titel 2",
-          name: "title2",
-          widget: "string",
-          i18n: true
-        },
-        markdown_default,
-        cta_default
+        }
       ]
     },
     {
