@@ -79,13 +79,12 @@ const event: CmsCollection = {
               hint: "Die größte Nummer erscheint zuerst.",
             },
             { label: "Farbe", name: "color", widget: "string" },
-            { label: "Bild", name: "image", widget: "image" },
             {
               label: "Bilder",
               name: "images",
               widget: "list",
               i18n: false,
-              fields: [{ label: "Bild", name: "image", widget: "image" }],
+              field: { label: "Bild", name: "image", widget: "image" },
             },
             {
               label: "Titel Normal Vorher",

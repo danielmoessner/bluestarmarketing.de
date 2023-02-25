@@ -6,11 +6,11 @@ import Seo from "@/components/Seo";
 import Header from "@/components/Header";
 import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
-import Image from "next/image";
 import Prose from "@/components/Prose";
 import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
+import Carousel from "@/components/Carousel";
 
 function Page({ pageData, footerData, events, meetingsData }) {
   const page = pageData;
@@ -78,10 +78,7 @@ function Page({ pageData, footerData, events, meetingsData }) {
                           </div>
                           <div className="flex flex-col justify-between">
                             <div className="leading-[0px]">
-                              <Image
-                                {...listing.image}
-                                alt={listing.titleRose}
-                              />
+                              <Carousel images={listing.images} />
                             </div>
                             <div className="flex justify-center mt-6 md:justify-start">
                               <Button

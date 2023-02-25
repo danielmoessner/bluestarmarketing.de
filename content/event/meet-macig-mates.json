@@ -21,12 +21,10 @@
         ],
         "ordering": 100,
         "images": [
-          {
-            "image": "/media/magic_mates.jpg"
-          }
+           "/media/magic_mates.jpg"
+          
         ],
         "type": "listing",
-        "image": "/media/magic_mates.jpg",
         "titleNormal": "Meet"
       },
       {
