@@ -1,15 +1,14 @@
 {
   "de": {
     "register": {
-      "markdownForm": "Für Marketer:innen aus Tech-Unternehmen\n\n**Wir freuen uns auf deine Anmeldung zu Meet Magic Mates!**\n\nZwischen dir und deiner Teilnahme liegen nur noch wenige Schritte. \\\nNach der Übermittlung des Formulars prüfen wir die Daten. \\\nMit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung."
+      "markdownForm": "Für Marketer:innen aus Tech-Unternehmen\n\n**Wir freuen uns auf deine Anmeldung zu Meet Magic Mates!**\n\nZwischen dir und deiner Teilnahme liegen nur noch wenige Schritte. \\\nNach der Übermittlung des Formulars prüfen wir die Daten. \\\nMit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung.",
+      "successText": "Vielen Dank für deine Anmeldung zu Meet Magic Mates! Wir prüfen deine Daten. Mit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung."
     },
     "pages": [
       {
-        "type": "listing",
-        "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
-        "titleNormal": "Meet",
-        "titleRose": "Magic Mates",
         "color": "#e50069",
+        "titleRose": "Magic Mates",
+        "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
         "properties": [
           {
             "title": "Warum?",
@@ -20,8 +19,15 @@
             "markdown": "Für Marketer:innen"
           }
         ],
+        "ordering": 100,
+        "images": [
+          {
+            "image": "/media/magic_mates.jpg"
+          }
+        ],
+        "type": "listing",
         "image": "/media/magic_mates.jpg",
-        "ordering": 100
+        "titleNormal": "Meet"
       },
       {
         "type": "detail",
@@ -51,7 +57,6 @@
             "markdownLeft": "Dich – einfach nur dich!\n\nSei da, sei neugierig & offen, stelle dich vor, höre zu und fühle dich willkommen.\n\nSehr gerne dein Magic Marketing Mate.",
             "markdownRight": "Das entscheidest du individuell für dich!\n\nMein Wunsch ist es, für dich einen Raum und eine erfüllte Zeit mit neuen und bekannten Gesichtern, spannende Impulse, neue Kontakte, Lachen & **Freude** zu gestalten."
           }
-          
         ]
       }
     ],
