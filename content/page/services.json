@@ -7,7 +7,7 @@
     },
     "header": {
       "image": "/media/bluestar_marketing_services.jpg",
-      "text": "Der B2B-Marketingpartner für Tech-Unternehmen, die erstklassig verlinkte Strategien & Kampagnen schätzen.",
+      "markdown": "**Dein B2B-Marketingpartner**\nIntegrale Strategien & Kampagnen \\\nfür Team-Alignment, \\\nEmpowerment & Wachstum",
       "cta": {
         "text": "Jetzt Erstgespräch vereinbaren",
         "url": "/kontakt"
@@ -152,7 +152,7 @@
     },
     "header": {
       "image": "/media/bluestar_marketing_services.jpg",
-      "text": "The B2B marketing partner for tech companies that appreciate top-notch, well connected strategies & campaigns.",
+      "markdown": "**Your B2B marketing partner** \\\nIntegral strategies & campaigns \\\nfor team alignment, \\\nempowerment & growth",
       "cta": {
         "text": "Talk to us today!",
         "url": "/kontakt"

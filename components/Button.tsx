@@ -36,6 +36,8 @@ function Button({
     bClassName += ` text-bsm-nightblue group-hover:pl-3 group-hover:pr-9`;
   } else if (kind === "pink") {
     bClassName += ` text-bsm-nightblue md:w-72 pink justify-center`;
+  } else if (kind === "purple") {
+    bClassName += " text-bsm-purple md:w-72 purple justify-center";
   }
 
   const button = useRef(null);
@@ -90,11 +92,17 @@ function Button({
           .button-svg--wrapper:hover .button-svg--rect.pink {
             stroke: #e50069;
           }
+          .button-svg--rect.purple {
+            stroke: #641642;
+          }
+          .button-svg--wrapper:hover .button-svg--rect.purple {
+            stroke: #641642;
+          }
         `}
       </style>
       <svg className="absolute top-0 left-0 z-0 w-full h-full pointer-events-none button-svg">
         <rect
-          className={`button-svg--rect ${kind === "pink" && "pink"}`}
+          className={`button-svg--rect ${kind}`}
           x="0"
           y="0"
           fill="none"

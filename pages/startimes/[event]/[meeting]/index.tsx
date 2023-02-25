@@ -109,8 +109,7 @@ function Page({
   const meta = {
     title: meeting.title,
     description: `${page.intro.meeting}: ${formattedDate} ${meeting.general.from} - ${meeting.general.to} Uhr`,
-    image: event.meta.image,
-    keywords: event.meta.keywords,
+    image: event.image,
   };
 
   return (
