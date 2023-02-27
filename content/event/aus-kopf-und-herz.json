@@ -90,9 +90,9 @@
           }
         ],
         "ordering": 10,
-        "images": [ "/media/papierblatt_quer.png"
-          , "/media/papierblatt_visionboard.jpg"
-          
+        "images": [
+          "/media/papierblatt_quer.png",
+          "/media/papierblatt_visionboard.jpg"
         ],
         "type": "listing",
         "titleNormalAfter": "in deine Hände",
@@ -190,7 +190,7 @@
       "titleRight": "--",
       "markdownRight": "\\-﻿-"
     },
-    "slug": "kopfundherz",
+    "slug": "auskopfundherz",
     "header": {
       "image": "/media/logo_auskopfundherz_277.png"
     },
