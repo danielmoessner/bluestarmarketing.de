@@ -267,6 +267,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
             >
               <Container layout="sm">
                 <RegisterForm
+                  name={`${event.title} Form`}
                   image={page.form.image}
                   eventTitle={event.title}
                   htmlText={event.register.markdownForm.html}

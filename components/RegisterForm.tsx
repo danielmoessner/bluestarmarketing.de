@@ -15,6 +15,7 @@ interface Props {
   eventTitle: string;
   meetings: { day: string; title: string }[];
   onText: string;
+  name: string;
 }
 
 function RegisterForm({
@@ -26,6 +27,7 @@ function RegisterForm({
   requiredFieldsText,
   eventImage,
   meetings,
+  name,
   eventTitle,
 }: Props) {
   const availableMeetings = meetings.filter(
@@ -66,7 +68,7 @@ function RegisterForm({
       </div>
       <div className="mt-10">
         <DynamicForm
-          name="meetingform"
+          name={name}
           fields={computedFields}
           submitText={submitText}
           successText={successText}
