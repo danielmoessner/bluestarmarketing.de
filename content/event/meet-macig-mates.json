@@ -21,8 +21,7 @@
         ],
         "ordering": 100,
         "images": [
-           "/media/magic_mates.jpg"
-          
+          "/media/magic_mates.jpg"
         ],
         "type": "listing",
         "titleNormal": "Meet"
@@ -36,7 +35,7 @@
         "header": {
           "image": "/media/magic_mates.jpg"
         },
-        "title": "Aus Kopf & Herz in deine Hände",
+        "title": "Meet Magic Mates",
         "sections": [
           {
             "type": "titleTextImage",
