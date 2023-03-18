@@ -97,13 +97,6 @@ const meeting: CmsCollection = {
           required: false,
         },
         {
-          label: "Titel",
-          name: "title",
-          widget: "string",
-          i18n: true,
-          required: false,
-        },
-        {
           label: "Markdown",
           name: "markdown",
           i18n: true,

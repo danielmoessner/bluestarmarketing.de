@@ -133,10 +133,7 @@ function Page({
                   <Image {...meeting.detail.image} alt={meeting.detail.title} />
                 </div>
                 <div>
-                  <h2 className="pt-2 text-4xl lg:pt-3 lg:text-5xl font-rose">
-                    {meeting.detail.title}
-                  </h2>
-                  <div className="mt-8">
+                  <div className="">
                     <Prose html={meeting.detail.markdown.html} />
                   </div>
                   <h2 className="pt-2 mt-5 text-4xl lg:pt-3 lg:text-5xl font-rose">
