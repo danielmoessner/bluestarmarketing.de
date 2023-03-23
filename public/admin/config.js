@@ -1695,7 +1695,15 @@ var meeting = {
           label: "Bild",
           name: "image",
           widget: "image",
-          i18n: false
+          i18n: false,
+          required: false
+        },
+        {
+          label: "Video",
+          name: "video",
+          widget: "file",
+          i18n: false,
+          required: false
         },
         {
           label: "Bildnachweis",
