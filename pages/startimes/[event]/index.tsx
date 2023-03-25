@@ -121,6 +121,36 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
+
+        if (section.type === "titleTextVideo")
+          return (
+            <section className="pt-12 pb-16 lg:pb-20">
+              <Container layout="sm">
+                <div className="">
+                  <Animate>
+                    <div className="grid gap-8 md:grid-cols-2">
+                      <div>
+                        <h2 className="text-3xl md:text-5xl font-rose">
+                          {section.title}
+                        </h2>
+                        <div className="mt-4 md:mt-6">
+                          <Prose html={section.markdown.html} />
+                        </div>
+                      </div>
+                      <div className="leading-[0px]">
+                        <video className="w-full h-auto" controls>
+                          <source src={section.video} type="video/webm" />
+                          Your browser does not support the video tag. Ihr
+                          Browser unterstützt das Video Format nicht.
+                        </video>
+                      </div>
+                    </div>
+                  </Animate>
+                </div>
+              </Container>
+            </section>
+          );
+
         if (section.type === "twoColumns")
           return (
             <section className="pt-16 pb-16">

@@ -140,7 +140,7 @@ function Page({
                 {meeting.detail.video && !meeting.detail.image && (
                   <div className="leading-[0px]">
                     <video className="w-full h-auto" controls>
-                      <source src={meeting.detail.video} type="video/mp4" />
+                      <source src={meeting.detail.video} type="video/webm" />
                       {/* <source src="movie.ogg" type="video/ogg" /> */}
                       Your browser does not support the video tag. Ihr Browser
                       unterstützt das Video Format nicht.
