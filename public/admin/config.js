@@ -123,6 +123,12 @@ var contact = {
         image_default,
         text_default,
         {
+          label: "Titel 2",
+          name: "title2",
+          i18n: true,
+          widget: "string"
+        },
+        {
           label: "E-Mail Text",
           name: "emailtext",
           i18n: true,
