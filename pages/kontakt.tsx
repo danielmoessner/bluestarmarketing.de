@@ -34,7 +34,8 @@ function Page({ pageData, footerData, globalData }) {
                 <div>
                   <Multiline text={page.start.text} />
                   <div className="mt-8">
-                    <div className="grid grid-cols-2 gap-4">
+                    <h2 className="text-5xl font-rose">{page.start.title2}</h2>
+                    <div className="grid grid-cols-2 gap-4 mt-5">
                       <div>
                         <h3 className="text-2xl font-bold">
                           {page.start.emailtext}
