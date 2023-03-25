@@ -1423,6 +1423,17 @@ var event = {
                   ]
                 },
                 {
+                  label: "Titel-Text-Video",
+                  name: "titleTextVideo",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    title_default,
+                    markdown_default,
+                    { label: "Video", name: "video", widget: "file" }
+                  ]
+                },
+                {
                   label: "Zwei-Spalten",
                   name: "twoColumns",
                   widget: "object",
