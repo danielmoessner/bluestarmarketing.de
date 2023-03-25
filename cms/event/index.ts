@@ -195,6 +195,17 @@ const event: CmsCollection = {
                   ],
                 },
                 {
+                  label: "Titel-Text-Video",
+                  name: "titleTextVideo",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    title,
+                    markdown,
+                    { label: "Video", name: "video", widget: "file" },
+                  ],
+                },
+                {
                   label: "Zwei-Spalten",
                   name: "twoColumns",
                   widget: "object",
