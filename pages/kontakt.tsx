@@ -7,57 +7,12 @@ import { renderContent } from "lib/renderContent";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Multiline from "@/components/Multiline";
-import DynamicForm from "@/components/Form";
 import Animate from "@/components/Animate";
-import { useRouter } from "next/router";
 import { getSingleJson } from "@/lib/getContent";
 
 function Page({ pageData, footerData, globalData }) {
   const page = pageData;
   const global = globalData;
-
-  const { locale } = useRouter();
-
-  const fields = [
-    {
-      label: "Name",
-      name: "name",
-      required: true,
-    },
-    {
-      label: locale === "de" ? "Unternehmen" : "Company",
-      name: "company",
-      required: false,
-    },
-    {
-      label: "E-Mail",
-      name: "email",
-      type: "email",
-      required: true,
-    },
-    {
-      label: locale === "de" ? "Telefon" : "Phone",
-      name: "phone",
-      type: "tel",
-      required: false,
-    },
-    {
-      label: locale === "de" ? "Nachricht" : "Message",
-      name: "message",
-      element: "textarea",
-      required: true,
-      className: "sm:col-span-2",
-      attrs: {
-        rows: 7,
-      },
-    },
-    {
-      label: page.form.privacy,
-      type: "checkbox",
-      name: "privacy_check",
-      required: true,
-    },
-  ];
 
   return (
     <Layout>
@@ -78,6 +33,62 @@ function Page({ pageData, footerData, globalData }) {
                 </div>
                 <div>
                   <Multiline text={page.start.text} />
+                  <div className="mt-8">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <h3 className="text-2xl font-bold">
+                          {page.start.emailtext}
+                        </h3>
+                        <a
+                          className="block mt-1"
+                          href={`mailto:${global.email}`}
+                        >
+                          {global.email}
+                        </a>
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold">
+                          {page.start.phonetext}
+                        </h3>
+                        <a className="block mt-1" href={`tel:${global.mobile}`}>
+                          {global.mobile}
+                        </a>
+                        <a className="block mt-1" href={`tel:${global.phone}`}>
+                          {global.phone}
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex mt-2 space-x-4">
+                        <a
+                          href={global.linkedin}
+                          className="block"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            className="w-5 h-5"
+                            src="/linkedin.png"
+                            alt="LinkedIn Icon"
+                          />
+                        </a>
+                        <a
+                          href={global.whatsapp}
+                          target="_blank"
+                          className="block"
+                          rel="noreferrer"
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            className="w-5 h-5"
+                            src="/whatsapp.png"
+                            alt="WhatsApp Icon"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Animate>
@@ -155,72 +166,7 @@ function Page({ pageData, footerData, globalData }) {
         </Container>
       </section>
 
-      <section className="py-16" id="k">
-        <Container layout="sm">
-          <div className="w-full py-2 text-center text-white bg-bsm-ocean">
-            <h2 className="text-2xl text-white">{page.form.title}</h2>
-          </div>
-          <div className="grid gap-8 mt-12 sm:grid-cols-2">
-            <div className="leading-[0px]">
-              <div>
-                <Image
-                  {...page.form.image}
-                  alt={page.form.title}
-                  className="max-h-[335px] w-auto"
-                />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold">{page.form.emailtext}</h3>
-              <a className="block mt-1" href={`mailto:${global.email}`}>
-                {global.email}
-              </a>
-              <h3 className="mt-8 text-2xl font-bold">{page.form.phonetext}</h3>
-              <a className="block mt-1" href={`tel:${global.mobile}`}>
-                {global.mobile}
-              </a>
-              <a className="block mt-1" href={`tel:${global.phone}`}>
-                {global.phone}
-              </a>
-              <div className="mt-8">
-                <a
-                  href={global.linkedin}
-                  className="block"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    className="w-5 h-5"
-                    src="/linkedin.png"
-                    alt="LinkedIn Icon"
-                  />
-                </a>
-                <a
-                  href={global.whatsapp}
-                  target="_blank"
-                  className="block"
-                  rel="noreferrer"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    className="w-5 h-5 mt-4"
-                    src="/whatsapp.png"
-                    alt="WhatsApp Icon"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="mt-10">
-            <DynamicForm
-              name="contactform"
-              fields={fields}
-              submitText={locale === "de" ? "Absenden" : "Send"}
-            />
-          </div>
-        </Container>
-      </section>
+      <section className="py-5"></section>
 
       <Footer data={footerData} />
     </Layout>

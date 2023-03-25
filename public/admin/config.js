@@ -118,7 +118,23 @@ var contact = {
       name: "start",
       i18n: true,
       widget: "object",
-      fields: [title_default, image_default, text_default]
+      fields: [
+        title_default,
+        image_default,
+        text_default,
+        {
+          label: "E-Mail Text",
+          name: "emailtext",
+          i18n: true,
+          widget: "string"
+        },
+        {
+          label: "Telefon Text",
+          name: "phonetext",
+          i18n: true,
+          widget: "string"
+        }
+      ]
     },
     {
       label: "Benefits",
@@ -160,34 +176,6 @@ var contact = {
           widget: "text"
         },
         image_default
-      ]
-    },
-    {
-      label: "Formular",
-      name: "form",
-      i18n: true,
-      widget: "object",
-      fields: [
-        title_default,
-        image_default,
-        {
-          label: "E-Mail Text",
-          name: "emailtext",
-          i18n: true,
-          widget: "string"
-        },
-        {
-          label: "Telefon Text",
-          name: "phonetext",
-          i18n: true,
-          widget: "string"
-        },
-        {
-          label: "Datenschutz Text",
-          name: "privacy",
-          i18n: true,
-          widget: "text"
-        }
       ]
     }
   ]
