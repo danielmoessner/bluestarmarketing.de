@@ -151,11 +151,11 @@ var contact = {
         title_default,
         { label: "Untertitel", name: "subtitle", i18n: true, widget: "string" },
         {
-          label: "Textbild",
-          name: "textimage",
+          label: "Text Rose",
+          name: "textrose",
           i18n: true,
-          widget: "image",
-          required: false
+          widget: "string",
+          required: true
         },
         {
           label: "Text Vorher",
