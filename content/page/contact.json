@@ -24,7 +24,7 @@
     "benefits": {
       "title": "Ein Gewinn für dich?",
       "subtitle": "Dann bist du bei uns",
-      "textimage": "/media/genau_richtig.png",
+      "textrose": "genau richtig.",
       "pretext": "Gemeinsam mit DIR verbinden WIR",
       "points": [
         "globale & lokale Marketingstrategien, -ziele & -kampagnen",
@@ -59,7 +59,7 @@
     "benefits": {
       "title": "Could this be a win for you?",
       "subtitle": "Then you've come to the",
-      "textimage": "/media/right_place.png",
+      "textrose": "right place.",
       "pretext": "Together with YOU WE connect",
       "points": [
         "global & local marketing strategies, targets & campaigns",

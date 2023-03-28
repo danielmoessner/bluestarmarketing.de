@@ -34,7 +34,9 @@ function Page({ pageData, footerData, globalData }) {
                 <div>
                   <Multiline text={page.start.text} />
                   <div className="mt-8">
-                    <h2 className="text-5xl font-rose">{page.start.title2}</h2>
+                    <h2 className="text-4xl lg:text-5xl font-rose">
+                      {page.start.title2}
+                    </h2>
                     <div className="grid grid-cols-2 gap-4 mt-5">
                       <div>
                         <h3 className="text-2xl font-bold">
@@ -124,14 +126,11 @@ function Page({ pageData, footerData, globalData }) {
               <Heading classes="!font-normal uppercase">
                 {page.benefits.title}
               </Heading>
-              <div className="flex items-center space-x-1.5">
+              <div className="flex items-center space-x-3">
                 <p className="text-2xl font-bold">{page.benefits.subtitle}</p>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={page.benefits.textimage.src}
-                  className="h-14"
-                  alt={page.benefits.subtitle}
-                />
+                <span className="text-4xl lg:text-5xl font-rose">
+                  {page.benefits.textrose}
+                </span>
               </div>
               <div className="mt-2 lg:mt-5">
                 <Multiline text={page.benefits.pretext} />
