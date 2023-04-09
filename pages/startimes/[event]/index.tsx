@@ -17,9 +17,19 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
   const meetings = meetingsData.filter(
     (m) => new Date() <= new Date(m.general.day)
   );
+
   const page = pageData;
   const event = eventData;
   const detail = event.pages.find((p) => p.type === "detail");
+
+  const eventMeetings = event.meetings.filter(
+    (m) => m.day && new Date() <= new Date(m.day)
+  );
+
+  const nextMeeting = () => {
+    if (eventMeetings.length > 0) return eventMeetings[0];
+    return null;
+  };
 
   const formMeetings = eventData.meetings;
 
@@ -50,6 +60,41 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                   <div className="flex flex-col justify-between">
                     <div className="">
                       <Prose html={section.markdown.html} />
+                    </div>
+                    <div className="">
+                      <Button href={section.cta.url}>{section.cta.text}</Button>
+                    </div>
+                  </div>
+                  <div className="">
+                    <Image {...section.image} alt={section.title} />
+                  </div>
+                </div>
+              </Container>
+            </section>
+          );
+        if (section.type === "titleTextEventButtonImage")
+          return (
+            <section key={section.title} className="py-8 lg:py-16">
+              <Container layout="sm">
+                <div className="flex justify-center">
+                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-8">
+                    {section.title}
+                  </h2>
+                </div>
+                <div className="grid gap-8 md:grid-cols-2">
+                  <div className="flex flex-col justify-between">
+                    <div className="">
+                      <Prose html={section.markdown.html} />
+                    </div>
+                    <div className="mb-6">
+                      {nextMeeting() && (
+                        <>
+                          <h3 className="mt-5 text-4xl font-rose">
+                            {section.next}
+                          </h3>
+                          <p>{formatDate(nextMeeting().day, "full")}</p>
+                        </>
+                      )}
                     </div>
                     <div className="">
                       <Button href={section.cta.url}>{section.cta.text}</Button>

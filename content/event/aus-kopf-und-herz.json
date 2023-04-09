@@ -115,7 +115,8 @@
         "title": "Aus Kopf & Herz in deine Hände",
         "sections": [
           {
-            "type": "titleTextButtonImage",
+            "type": "titleTextEventButtonImage",
+            "next": "Nächster Termin",
             "title": "Schenke dir Raum für deine Wünsche und Ziele",
             "markdown": "Sei es dir wert, dein Leben – egal ob privat und oder beruflich – so auszurichten, zu gestalten & wieder in deine Hände zu nehmen wie du es möchtest.\n\nSammle dich, richte dich neu aus, fokussiere und finde Antworten & Lösungen, die sich für dich gut anfühlen und zu dir passen. So kommst du deiner Selbstbestimmtheit näher. Das macht dich fröhlicher & zufriedener.\n\nGeht nicht? Doch, denn wir zaubern nicht, sondern entfesseln mit dir nur das, was schon längst in dir steckt!",
             "cta": {
