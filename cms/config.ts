@@ -9,7 +9,6 @@ import event from "./event";
 import meeting from "./meeting";
 
 const config: CmsConfig = {
-  publish_mode: "editorial_workflow",
   // See https://www.netlifycms.org/docs/beta-features/#i18n-support
   i18n: {
     structure: "multiple_folders",
