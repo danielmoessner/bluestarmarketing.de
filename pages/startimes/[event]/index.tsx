@@ -84,7 +84,10 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                 <div className="grid gap-8 md:grid-cols-2">
                   <div className="flex flex-col justify-between">
                     <div className="">
-                      <Prose html={section.markdown.html} />
+                      <Prose
+                        className="prose-h3:font-rose prose-h3:text-4xl prose-h3:font-normal prose-h3:mt-0"
+                        html={section.markdown.html}
+                      />
                     </div>
                     <div className="mb-6">
                       {nextMeeting() && (
@@ -144,7 +147,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
           );
         if (section.type === "titleTextImage")
           return (
-            <section className="pt-12 pb-16 lg:pb-20">
+            <section key={section.title} className="pt-12 pb-16 lg:pb-20">
               <Container layout="sm">
                 <div className="">
                   <Animate>
@@ -169,7 +172,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
 
         if (section.type === "titleTextVideo")
           return (
-            <section className="pt-12 pb-16 lg:pb-20">
+            <section key={section.title} className="pt-12 pb-16 lg:pb-20">
               <Container layout="sm">
                 <div className="">
                   <Animate>
@@ -198,7 +201,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
 
         if (section.type === "twoColumns")
           return (
-            <section className="pt-16 pb-16">
+            <section key={section.titleLeft} className="pt-16 pb-16">
               <Container layout="sm">
                 <div className="grid gap-8 md:grid-cols-2">
                   <Animate>
@@ -219,7 +222,10 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
           );
         if (section.type === "meetings")
           return (
-            <section className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
+            <section
+              key="meetings"
+              className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat"
+            >
               <Container layout="sm">
                 <div className="">
                   <Animate>
