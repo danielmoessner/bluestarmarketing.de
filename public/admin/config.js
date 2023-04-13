@@ -1756,7 +1756,6 @@ var meeting_default = meeting;
 
 // cms/config.ts
 var config2 = {
-  publish_mode: "editorial_workflow",
   // See https://www.netlifycms.org/docs/beta-features/#i18n-support
   i18n: {
     structure: "multiple_folders",
