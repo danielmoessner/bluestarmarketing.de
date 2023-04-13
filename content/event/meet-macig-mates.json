@@ -62,7 +62,8 @@
       "image": "/media/magic_mates.jpg"
     },
     "title": "Meet Magic Mates",
-    "image": "/media/magic_mates_logos.png"
+    "image": "/media/magic_mates_logos.png",
+    "meetings": []
   },
   "en": {}
 }
