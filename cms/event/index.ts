@@ -127,23 +127,25 @@ const event: CmsCollection = {
           fields: [
             meta,
             {
-              label: "Header",
-              name: "header",
-              widget: "object",
-              fields: [{ label: "Bild", name: "image", widget: "image" }],
-            },
-            {
-              label: "Titel",
-              name: "title",
-              widget: "string",
-              i18n: true,
-            },
-            {
               label: "Sektionen",
               name: "sections",
               widget: "list",
               i18n: true,
               types: [
+                {
+                  label: "Header",
+                  name: "header",
+                  widget: "object",
+                  fields: [
+                    { label: "Bild", name: "image", widget: "image" },
+                    {
+                      label: "Titel",
+                      name: "title",
+                      widget: "string",
+                      i18n: true,
+                    },
+                  ],
+                },
                 {
                   label: "Titel-Text-Button-Bild",
                   name: "titleTextButtonImage",
@@ -181,6 +183,16 @@ const event: CmsCollection = {
                   fields: [
                     title,
                     { label: "Bild", name: "image", widget: "image" },
+                  ],
+                },
+                {
+                  label: "Bild-Text",
+                  name: "imageText",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    { label: "Bild", name: "image", widget: "image" },
+                    markdown,
                   ],
                 },
                 {

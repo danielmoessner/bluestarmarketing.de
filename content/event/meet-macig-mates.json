@@ -32,11 +32,12 @@
           "description": "Vernetze dich mit neuen und bekannten Marketer:innen.",
           "title": "Meet Magic Mates"
         },
-        "header": {
-          "image": "/media/magic_mates_titelbild_1080x348.png"
-        },
-        "title": "MEET Magic Mates",
         "sections": [
+          {
+            "type": "header",
+            "title": "MEET Magic Mates",
+            "image": "/media/magic_mates_titelbild_1080x348.png"
+          },
           {
             "type": "titleTextVideo",
             "video": "/media/Magic_Silke_v1.webm",

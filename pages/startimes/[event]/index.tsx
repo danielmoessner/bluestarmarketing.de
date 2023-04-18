@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
 import RegisterForm from "@/components/RegisterForm";
+import { Fragment } from "react";
 
 function Page({ pageData, footerData, eventData, meetingsData }) {
   const meetings = meetingsData.filter(
@@ -36,17 +37,34 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
   return (
     <Layout>
       <Seo meta={detail.meta} />
-      <Header header={detail.header} />
-
-      <section className="pt-8 pb-0 lg:pt-16 lg:pb-10">
-        <Container layout="sm">
-          <div className="text-center">
-            <Heading size="h1">{detail.title}</Heading>
-          </div>
-        </Container>
-      </section>
 
       {detail.sections.map((section) => {
+        if (section.type === "header")
+          return (
+            <Fragment key={section.title}>
+              <section className="pt-8 lg:pb-10">
+                <Container layout="sm">
+                  <div className="">
+                    <div className="relative">
+                      <div className="leading-[0px]">
+                        <Image
+                          {...section.image}
+                          alt="Header"
+                          priority
+                          placeholder="empty"
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="pt-8 text-center lg:pt-16">
+                    <Heading size="h1">{section.title}</Heading>
+                  </div>
+                </Container>
+              </section>
+            </Fragment>
+          );
+
         if (section.type === "titleTextButtonImage")
           return (
             <section key={section.title} className="py-8 lg:py-16">
@@ -74,10 +92,10 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
           );
         if (section.type === "titleTextEventButtonImage")
           return (
-            <section key={section.title} className="py-8 lg:py-16">
+            <section key={section.title} className="py-16">
               <Container layout="sm">
                 <div className="flex justify-center">
-                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-8">
+                  <h2 className="mb-12 text-3xl md:text-5xl font-rose">
                     {section.title}
                   </h2>
                 </div>
@@ -85,7 +103,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                   <div className="flex flex-col justify-between">
                     <div className="">
                       <Prose
-                        className="prose-h3:font-rose prose-h3:text-4xl prose-h3:font-normal prose-h3:mt-0"
+                        className="-mt-12 prose-h3:font-rose prose-h3:text-4xl prose-h3:font-normal prose-h3:mt-12"
                         html={section.markdown.html}
                       />
                     </div>
@@ -110,6 +128,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
+
         if (section.type === "titleImage")
           return (
             <section key={section.title} className="py-8 lg:py-20">
@@ -125,6 +144,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
+
         if (section.type === "titleImageButton")
           return (
             <section key={section.title} className="py-8 lg:py-20">
@@ -162,6 +182,32 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                       </div>
                       <div className="leading-[0px]">
                         <Image {...section.image} alt={section.title} />
+                      </div>
+                    </div>
+                  </Animate>
+                </div>
+              </Container>
+            </section>
+          );
+
+        if (section.type === "imageText")
+          return (
+            <section
+              key={section.markdown.html.slice(0, 100)}
+              className="pt-12 pb-16 lg:pb-20"
+            >
+              <Container layout="sm">
+                <div className="">
+                  <Animate>
+                    <div className="grid gap-8 md:grid-cols-2">
+                      <div className="leading-[0px]">
+                        <Image
+                          {...section.image}
+                          alt={section.markdown.html.slice(0, 100)}
+                        />
+                      </div>
+                      <div className="">
+                        <Prose html={section.markdown.html} />
                       </div>
                     </div>
                   </Animate>
