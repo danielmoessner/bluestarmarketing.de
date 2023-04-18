@@ -1329,7 +1329,13 @@ var event = {
               i18n: true,
               required: false
             },
-            markdown_default,
+            {
+              label: "Markdown",
+              name: "markdown",
+              i18n: true,
+              widget: "markdown",
+              required: false
+            },
             {
               label: "Eigenschaften",
               name: "properties",

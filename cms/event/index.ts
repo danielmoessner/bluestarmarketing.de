@@ -107,7 +107,13 @@ const event: CmsCollection = {
               i18n: true,
               required: false,
             },
-            markdown,
+            {
+              label: "Markdown",
+              name: "markdown",
+              i18n: true,
+              widget: "markdown",
+              required: false,
+            },
             {
               label: "Eigenschaften",
               name: "properties",
