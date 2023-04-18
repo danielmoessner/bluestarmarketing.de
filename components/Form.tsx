@@ -50,7 +50,9 @@ function Form({
     <div className="max-w-none">
       <div className={`${formSent ? "block" : "hidden"}`}>
         <div className="py-24">
-          <p className="mx-auto mt-2 prose text-center">{successText}</p>
+          <p className="mx-auto mt-2 prose text-center whitespace-pre-line">
+            {successText}
+          </p>
         </div>
       </div>
 
@@ -67,7 +69,14 @@ function Form({
           <input type="hidden" name="form-name" value={name} />
 
           {fields.map((field) => {
-            if (field.type === "multiple")
+            if (field.type === "notice")
+              return (
+                <div key={field.title} className="sm:col-span-2">
+                  <p className="block text-sm font-medium">{field.title}</p>
+                  <p className="w-full text-sm">{field.text}</p>
+                </div>
+              );
+            else if (field.fieldType === "multiple")
               return (
                 <FormMultiple
                   key={field.name}
@@ -76,7 +85,7 @@ function Form({
                   register={register}
                 />
               );
-            else if (field.type === "textarea")
+            else if (field.fieldType === "textarea")
               return (
                 <FormTextarea
                   key={field.name}
@@ -85,7 +94,7 @@ function Form({
                   register={register}
                 />
               );
-            else if (field.type === "checkbox")
+            else if (field.fieldType === "checkbox")
               return (
                 <FormCheckbox
                   key={field.name}

@@ -37,7 +37,9 @@ function Page({
         locale === "de"
           ? "Für diese Termine melde ich mich an"
           : "I register for the following meetings",
-      type: "multiple",
+      fieldfieldType: "multiple",
+      type: "field",
+      fieldType: "multiple",
       name: "meetings",
       options: availableMeetings.map((m) => ({
         label: `${event.title} ${page.form.on} ${formatDate(
@@ -52,58 +54,54 @@ function Page({
       label: locale === "de" ? "Andrede" : "Salutation",
       name: "salutation",
       required: true,
+      type: "field",
     },
     {
       label: locale === "de" ? "Titel" : "Title",
       name: "title",
+      type: "field",
       required: true,
     },
     {
       label: locale === "de" ? "Vorname" : "First name",
       name: "first_name",
+      type: "field",
       required: true,
     },
     {
       label: locale === "de" ? "Nachname" : "Last name",
       name: "last_name",
       required: true,
+      type: "field",
     },
     {
       label: locale === "de" ? "Unternehmen" : "Company",
       name: "company",
       required: true,
+      type: "field",
     },
     {
       label: "E-Mail",
       name: "email",
-      type: "email",
+      fieldType: "email",
+      type: "field",
       required: true,
     },
     {
       label: locale === "de" ? "Mobilnummer" : "Mobile",
       name: "phone",
-      type: "tel",
+      fieldType: "tel",
+      type: "field",
       required: true,
     },
     {
       label:
         "Mit der Speicherung meiner Kontaktdaten zur Weiterverwendung bin ich einverstanden.",
       required: true,
-      type: "checkbox",
+      fieldType: "checkbox",
+      type: "field",
       name: "storage_of_the_data",
     },
-    // {
-    //   label: "Ich möchte Informationen zu Meet Magic Mates erhalten.",
-    //   name: "receive_information",
-    //   type: "checkbox",
-    //   required: false,
-    // },
-    // {
-    //   label: "Ich möchte die Star News erhalten.",
-    //   name: "receive_starnews",
-    //   required: false,
-    //   type: "checkbox",
-    // },
   ];
 
   const meta = {
