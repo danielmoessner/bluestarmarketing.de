@@ -118,7 +118,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
 
         if (section.type === "eventButton")
           return (
-            <section key={section.cta.text} className="pt-4 pb-16">
+            <section key={section.cta.text} className="pb-16">
               <Container layout="sm">
                 <div className="flex justify-center">
                   <div className="text-center">
