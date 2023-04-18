@@ -131,15 +131,20 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
 
         if (section.type === "titleImage")
           return (
-            <section key={section.title} className="py-8 lg:py-20">
+            <section
+              key={section.title}
+              className="py-8 lg:py-20 !overflow-auto"
+            >
               <Container layout="sm">
                 <div className="flex justify-center">
                   <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-12">
                     {section.title}
                   </h2>
                 </div>
-                <div className="">
-                  <Image {...section.image} alt={section.title} />
+                <div className="overflow-x-scroll">
+                  <div className="min-w-[600px]">
+                    <Image {...section.image} alt={section.title} />
+                  </div>
                 </div>
               </Container>
             </section>
@@ -154,8 +159,10 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                     {section.title}
                   </h2>
                 </div>
-                <div className="">
-                  <Image {...section.image} alt={section.title} />
+                <div className="overflow-x-scroll">
+                  <div className="min-w-[600px]">
+                    <Image {...section.image} alt={section.title} />
+                  </div>
                 </div>
                 <div className="flex justify-center mt-6 lg:mt-12">
                   <Button kind={section.cta.kind} href={section.cta.url}>
