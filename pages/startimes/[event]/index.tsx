@@ -89,7 +89,8 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               </Container>
             </section>
           );
-        if (section.type === "titleTextEventButtonImage")
+
+        if (section.type === "centerTitleTextImage")
           return (
             <section key={section.title} className="pt-4 pb-16">
               <Container layout="sm">
@@ -106,19 +107,6 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                         html={section.markdown.html}
                       />
                     </div>
-                    <div className="mb-6">
-                      {nextMeeting() && (
-                        <>
-                          <h3 className="mt-5 text-4xl font-rose">
-                            {section.next}
-                          </h3>
-                          <p>{formatDate(nextMeeting().day, "full")}</p>
-                        </>
-                      )}
-                    </div>
-                    <div className="">
-                      <Button href={section.cta.url}>{section.cta.text}</Button>
-                    </div>
                   </div>
                   <div className="">
                     <Image {...section.image} alt={section.title} />
@@ -128,69 +116,27 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
             </section>
           );
 
-        if (section.type === "titleImage")
+        if (section.type === "eventButton")
           return (
-            <section
-              key={section.title}
-              className="py-8 lg:py-20 !overflow-auto"
-            >
+            <section key={section.cta.text} className="pt-4 pb-16">
               <Container layout="sm">
                 <div className="flex justify-center">
-                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-12">
-                    {section.title}
-                  </h2>
-                </div>
-                <div className="overflow-x-scroll md:overflow-hidden">
-                  <div className="min-w-[600px]">
-                    <Image {...section.image} alt={section.title} />
-                  </div>
-                </div>
-              </Container>
-            </section>
-          );
+                  <div className="text-center">
+                    {nextMeeting() && (
+                      <>
+                        <h3 className="mt-5 text-4xl font-rose">
+                          {section.next}
+                        </h3>
+                        <p>{formatDate(nextMeeting().day, "full")}</p>
+                      </>
+                    )}
 
-        if (section.type === "titleImageButton")
-          return (
-            <section key={section.title} className="py-8 lg:py-20">
-              <Container layout="sm">
-                <div className="flex justify-center">
-                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-14">
-                    {section.title}
-                  </h2>
-                </div>
-                <div className="overflow-x-scroll md:overflow-hidden">
-                  <div className="min-w-[600px]">
-                    <Image {...section.image} alt={section.title} />
-                  </div>
-                </div>
-                <div className="flex justify-center mt-6 lg:mt-12">
-                  <Button kind={section.cta.kind} href={section.cta.url}>
-                    {section.cta.text}
-                  </Button>
-                </div>
-              </Container>
-            </section>
-          );
-        if (section.type === "titleTextImage")
-          return (
-            <section key={section.title} className="pt-12 pb-16 lg:pb-20">
-              <Container layout="sm">
-                <div className="">
-                  <Animate>
-                    <div className="grid gap-8 md:grid-cols-2">
-                      <div>
-                        <h2 className="text-3xl md:text-5xl font-rose">
-                          {section.title}
-                        </h2>
-                        <div className="mt-4 md:mt-6">
-                          <Prose html={section.markdown.html} />
-                        </div>
-                      </div>
-                      <div className="leading-[0px]">
-                        <Image {...section.image} alt={section.title} />
-                      </div>
+                    <div className="mt-5">
+                      <Button href={section.cta.url} kind="purple">
+                        {section.cta.text}
+                      </Button>
                     </div>
-                  </Animate>
+                  </div>
                 </div>
               </Container>
             </section>

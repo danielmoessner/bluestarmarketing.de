@@ -153,6 +153,20 @@ const event: CmsCollection = {
                   ],
                 },
                 {
+                  label: "Event-Button",
+                  name: "eventButton",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    {
+                      label: "Nächster Termin",
+                      name: "next",
+                      widget: "string",
+                    },
+                    cta,
+                  ],
+                },
+                {
                   label: "Titel-Text-Button-Bild",
                   name: "titleTextButtonImage",
                   widget: "object",
@@ -221,6 +235,17 @@ const event: CmsCollection = {
                 {
                   label: "Titel-Text-Bild",
                   name: "titleTextImage",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    title,
+                    markdown,
+                    { label: "Bild", name: "image", widget: "image" },
+                  ],
+                },
+                {
+                  label: "Zentriert-Titel-Text-Bild",
+                  name: "centerTitleTextImage",
                   widget: "object",
                   i18n: true,
                   fields: [
