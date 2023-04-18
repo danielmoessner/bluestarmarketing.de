@@ -109,21 +109,27 @@
           "title": "Aus Kopf & Herz in deine Hände",
           "description": "Schenke dir Raum für deine Wünsche und Ziele"
         },
-        "header": {
-          "image": "/media/aus_kopf_und_herz_titelbild_silke_348.png"
-        },
-        "title": "Aus Kopf & Herz in deine Hände",
         "sections": [
+          {
+            "type": "header",
+            "title": "Aus Kopf & Herz in deine Hände",
+            "image": "/media/aus_kopf_und_herz_titelbild_silke_348.png"
+          },
           {
             "type": "titleTextEventButtonImage",
             "next": "Nächster Termin",
             "title": "Schenke dir Raum für deine Wünsche und Ziele",
-            "markdown": "### Für mehr Klarheit und Fokus\n\n* für deine berufliche Entwicklung, nächste Karriereschritte & Gestaltungsmöglichkeiten\n* zur Vereinbarkeit von Beruf & Familie\n* im B2B Marketing\n* in Teams, zwischen Vertrieb, Marketing, HR & Geschäftsführung \n\n### Schenke dir Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten & Verändern\n* immer dann, wenn dir etwas zu eng geworden ist, sich nach Problem anfühlt und / oder dir nicht guttut\n\nSei es dir wert, dein Leben – egal ob privat und oder beruflich – so auszurichten, zu gestalten & wieder in deine Hände zu nehmen wie du es möchtest.\n\nSammle dich, richte dich neu aus, fokussiere und finde Antworten & Lösungen, die sich für dich gut anfühlen und zu dir passen. So kommst du deiner Selbstbestimmtheit näher. Das macht dich fröhlicher & zufriedener.\n\nGeht nicht? Doch, denn wir zaubern nicht, sondern entfesseln mit dir nur das, was schon längst in dir steckt!",
+            "markdown": "### Für mehr Klarheit und Fokus\n\n* für deine berufliche Entwicklung, nächste Karriereschritte & Gestaltungsmöglichkeiten\n* zur Vereinbarkeit von Beruf & Familie\n* im B2B Marketing\n* in Teams, zwischen Vertrieb, Marketing, HR & Geschäftsführung \n\n### Schenke dir Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten & Verändern\n* immer dann, wenn dir etwas zu eng geworden ist, sich nach Problem anfühlt und / oder dir nicht guttut",
             "cta": {
               "text": "Details anfragen",
               "url": "#form"
             },
             "image": "/media/visionboard.jpg"
+          },
+          {
+            "type": "imageText",
+            "markdown": "Sei es dir wert, dein Leben – egal ob privat und oder beruflich – so auszurichten, zu gestalten & wieder in deine Hände zu nehmen wie du es möchtest.\n\nSammle dich, richte dich neu aus, fokussiere und finde Antworten & Lösungen, die sich für dich gut anfühlen und zu dir passen. So kommst du deiner Selbstbestimmtheit näher. Das macht dich fröhlicher & zufriedener.\n\nGeht nicht? Doch, denn wir zaubern nicht, sondern entfesseln mit dir nur das, was schon längst in dir steckt!",
+            "image": "/media/visionboard_ausschnitt.jpg"
           },
           {
             "type": "titleImage",

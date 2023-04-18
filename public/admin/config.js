@@ -1349,23 +1349,25 @@ var event = {
           fields: [
             meta_default,
             {
-              label: "Header",
-              name: "header",
-              widget: "object",
-              fields: [{ label: "Bild", name: "image", widget: "image" }]
-            },
-            {
-              label: "Titel",
-              name: "title",
-              widget: "string",
-              i18n: true
-            },
-            {
               label: "Sektionen",
               name: "sections",
               widget: "list",
               i18n: true,
               types: [
+                {
+                  label: "Header",
+                  name: "header",
+                  widget: "object",
+                  fields: [
+                    { label: "Bild", name: "image", widget: "image" },
+                    {
+                      label: "Titel",
+                      name: "title",
+                      widget: "string",
+                      i18n: true
+                    }
+                  ]
+                },
                 {
                   label: "Titel-Text-Button-Bild",
                   name: "titleTextButtonImage",
@@ -1403,6 +1405,16 @@ var event = {
                   fields: [
                     title_default,
                     { label: "Bild", name: "image", widget: "image" }
+                  ]
+                },
+                {
+                  label: "Bild-Text",
+                  name: "imageText",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    { label: "Bild", name: "image", widget: "image" },
+                    markdown_default
                   ]
                 },
                 {
