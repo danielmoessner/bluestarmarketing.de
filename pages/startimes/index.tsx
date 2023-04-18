@@ -56,7 +56,9 @@ function Page({ pageData, footerData, events, meetingsData }) {
                         </h2>
                         <div className="grid gap-8 mt-8 lg:grid-cols-2">
                           <div>
-                            <Prose html={listing.markdown.html} />
+                            {listing.markdown && (
+                              <Prose html={listing.markdown.html} />
+                            )}
                             {listing.properties.map((p) => (
                               <div key={p.title}>
                                 <h3 className="mt-5 text-4xl font-rose">

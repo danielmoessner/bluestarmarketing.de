@@ -104,8 +104,12 @@
       {
         "color": "#641462",
         "titleRose": "Kopf & Herz",
-        "markdown": "Schenke dir Coaching-Sessions & erstelle dein Visionboard\nUnsere Einladung an dich: Schenke dir Zeit und Raum für deine Wünsche und Ziele\r\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten und Verändern\n",
+        "markdown": "",
         "properties": [
+          {
+            "title": "Schenke dir Coaching-Sessions & erstelle dein Visionboard",
+            "markdown": "Unsere Einladung an dich: Schenke dir Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten und Verändern"
+          },
           {
             "title": "Für mehr Klarheit und Fokus",
             "markdown": "* für deine berufliche Entwicklung, nächste Karriereschritte und Gestaltungsmöglichkeiten\n* in deinem Alltag\n* im strategischen und operativen Marketing\n* in Teams und Abteilungen: Vertrieb, Marketing, HR und im Management"
