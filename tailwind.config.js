@@ -38,6 +38,9 @@ module.exports = {
             strong: {
               color: "inherit",
             },
+            em: {
+              fontFamily: "Rosefield",
+            },
           },
         },
       }),
