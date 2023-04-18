@@ -42,7 +42,8 @@ function RegisterForm({
         locale === "de"
           ? "Für diese Termine melde ich mich an"
           : "I register for the following meetings",
-      type: "multiple",
+      fieldType: "multiple",
+      type: "field",
       name: "meetings",
       options: availableMeetings.map((m) => ({
         label: m.title,
