@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
 import Seo from "@/components/Seo";
-import Header from "@/components/Header";
 import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
 import Image from "next/image";
@@ -92,7 +91,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
           );
         if (section.type === "titleTextEventButtonImage")
           return (
-            <section key={section.title} className="py-16">
+            <section key={section.title} className="pt-4 pb-16">
               <Container layout="sm">
                 <div className="flex justify-center">
                   <h2 className="mb-12 text-3xl md:text-5xl font-rose">
@@ -141,7 +140,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                     {section.title}
                   </h2>
                 </div>
-                <div className="overflow-x-scroll">
+                <div className="overflow-x-scroll md:overflow-hidden">
                   <div className="min-w-[600px]">
                     <Image {...section.image} alt={section.title} />
                   </div>
@@ -159,7 +158,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                     {section.title}
                   </h2>
                 </div>
-                <div className="overflow-x-scroll">
+                <div className="overflow-x-scroll md:overflow-hidden">
                   <div className="min-w-[600px]">
                     <Image {...section.image} alt={section.title} />
                   </div>
