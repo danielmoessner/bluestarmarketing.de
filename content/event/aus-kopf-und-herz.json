@@ -137,20 +137,23 @@
             "image": "/media/aus_kopf_und_herz_titelbild_silke_348.png"
           },
           {
-            "type": "titleTextEventButtonImage",
-            "next": "Nächster Termin",
+            "type": "centerTitleTextImage",
             "title": "Schenke dir Coaching-Sessions & erstelle dein Visionboard",
             "markdown": "### Für mehr Klarheit und Fokus\n\n* für deine berufliche Entwicklung, nächste Karriereschritte & Gestaltungsmöglichkeiten\n* in deinem Alltag\n* im strategischen und operativen Marketing\n* in Teams und Abteilungen: Vertrieb, Marketing, HR und im Management\n\n### Schenke dir Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten & Verändern",
-            "cta": {
-              "text": "Details anfragen",
-              "url": "#form"
-            },
             "image": "/media/visionboard.jpg"
           },
           {
             "type": "imageText",
             "markdown": "Sei es dir wert, dein Leben – egal ob privat und oder beruflich – so auszurichten, zu gestalten & wieder in deine Hände zu nehmen wie du es möchtest.\n\nSammle dich, richte dich neu aus, fokussiere und finde Antworten & Lösungen, die sich für dich gut anfühlen und zu dir passen. So kommst du deiner Selbstbestimmtheit näher. Das macht dich fröhlicher & zufriedener.\n\nGeht nicht? Doch, denn wir zaubern nicht, sondern entfesseln mit dir nur das, was schon längst in dir steckt!",
             "image": "/media/visionboard_ausschnitt.jpg"
+          },
+          {
+            "type": "eventButton",
+            "next": "Nächster Termin",
+            "cta": {
+              "text": "Details anfragen",
+              "url": "#form"
+            }
           },
           {
             "type": "titleImage",

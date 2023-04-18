@@ -1375,6 +1375,20 @@ var event = {
                   ]
                 },
                 {
+                  label: "Event-Button",
+                  name: "eventButton",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    {
+                      label: "N\xE4chster Termin",
+                      name: "next",
+                      widget: "string"
+                    },
+                    cta_default
+                  ]
+                },
+                {
                   label: "Titel-Text-Button-Bild",
                   name: "titleTextButtonImage",
                   widget: "object",
@@ -1443,6 +1457,17 @@ var event = {
                 {
                   label: "Titel-Text-Bild",
                   name: "titleTextImage",
+                  widget: "object",
+                  i18n: true,
+                  fields: [
+                    title_default,
+                    markdown_default,
+                    { label: "Bild", name: "image", widget: "image" }
+                  ]
+                },
+                {
+                  label: "Zentriert-Titel-Text-Bild",
+                  name: "centerTitleTextImage",
                   widget: "object",
                   i18n: true,
                   fields: [
