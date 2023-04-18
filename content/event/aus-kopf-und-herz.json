@@ -87,11 +87,11 @@
       {
         "color": "#641462",
         "titleRose": "Kopf & Herz",
-        "markdown": "Schenke dir Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt \n* zum Nachdenken\n* zum Verändern\n* zum Gestalten\n* für mehr Klarheit und Fokus",
+        "markdown": "Schenke dir Coaching-Sessions & erstelle dein Visionboard\nUnsere Einladung an dich: Schenke dir Zeit und Raum für deine Wünsche und Ziele\r\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten und Verändern\n",
         "properties": [
           {
-            "title": "Für Wen?",
-            "markdown": "* für dich und deine Wünsche und Ziele \n* unabhängig davon, was du beruflich machst \n* und wo du jetzt gerade in deinem Alltag stehst"
+            "title": "Für mehr Klarheit und Fokus",
+            "markdown": "* für deine berufliche Entwicklung, nächste Karriereschritte und Gestaltungsmöglichkeiten\n* in deinem Alltag\n* im strategischen und operativen Marketing\n* in Teams und Abteilungen: Vertrieb, Marketing, HR und im Management"
           }
         ],
         "ordering": 10,
@@ -118,8 +118,8 @@
           {
             "type": "titleTextEventButtonImage",
             "next": "Nächster Termin",
-            "title": "Schenke dir Raum für deine Wünsche und Ziele",
-            "markdown": "### Für mehr Klarheit und Fokus\n\n* für deine berufliche Entwicklung, nächste Karriereschritte & Gestaltungsmöglichkeiten\n* zur Vereinbarkeit von Beruf & Familie\n* im B2B Marketing\n* in Teams, zwischen Vertrieb, Marketing, HR & Geschäftsführung \n\n### Schenke dir Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten & Verändern\n* immer dann, wenn dir etwas zu eng geworden ist, sich nach Problem anfühlt und / oder dir nicht guttut",
+            "title": "Schenke dir Coaching-Sessions & erstelle dein Visionboard",
+            "markdown": "### Für mehr Klarheit und Fokus\n\n* für deine berufliche Entwicklung, nächste Karriereschritte & Gestaltungsmöglichkeiten\n* in deinem Alltag\n* im strategischen und operativen Marketing\n* in Teams und Abteilungen: Vertrieb, Marketing, HR und im Management\n\n### Schenke dir Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten & Verändern",
             "cta": {
               "text": "Details anfragen",
               "url": "#form"
@@ -154,21 +154,21 @@
                   "1",
                   "2"
                 ],
-                "title": "VIRTUELLES ONE:ONE",
-                "markdown": "### Was bewegt dich?\n\nWo stehst du aktuell beruflich, privat – in deinem Leben? Welchen Herausforderungen stehst du gegenüber und wie sehen deine Wünsche &\nZiele aus?\n\nWir besprechen deine offenen Punkte, gerne anhand des vorab ausgefüllten Fragebogens oder frei und ungestützt. Du darfst entscheiden.\n\nIch möchte dich einladen, die Zeit nach dem One:One zu nutzen, um dich auf den Gestaltungsprozess einzustimmen. Was wünschst du dir und\nwas möchtest du verändern? Es ist ein Anfang zu wissen, was du nicht möchtest um anschließend herauszufinden, was dich begeistert und wie\ndu dein Leben gestalten möchtest. Hole dir deine Power, Selbstbestimmtheit und Gestaltungsräume zurück.\n\n**Deine Wünsche und Ziele sind wichtig – du bist wichtig!**",
+                "title": "VIRTUELLES COACHING",
+                "markdown": "### Was bewegt dich?\n\nWo stehst du aktuell beruflich, privat – in deinem Leben? Welchen Herausforderungen stehst du gegenüber und wie sehen deine Wünsche &\nZiele aus?\n\nWir besprechen deine offenen Punkte, gerne anhand des vorab ausgefüllten Fragebogens oder frei und ungestützt. Du darfst entscheiden.\n\nIch möchte dich einladen, die Zeit nach dem virtuellen Coaching-Termin zu nutzen, um dich auf den Gestaltungsprozess einzustimmen. Was wünschst du dir und\nwas möchtest du verändern? Es ist ein Anfang zu wissen, was du nicht möchtest um anschließend herauszufinden, was dich begeistert und wie\ndu dein Leben gestalten möchtest. Hole dir deine Power, Selbstbestimmtheit und Gestaltungsräume zurück.\n\n**Deine Wünsche und Ziele sind wichtig – du bist wichtig!**",
                 "subtitle": "Check-in"
               },
               {
                 "numbers": [
                   "3"
                 ],
-                "title": "GESTALTE DEIN VISIONBOARD",
+                "title": "ERSTELLE DEIN VISIONBOARD",
                 "subtitle": "“Bilder sagen mehr als tausend Worte.“",
-                "markdown": "Nutze die Kraft der Bilder für dich, achte auf Bilder, die dich berühren und wundervolle Emotionen in dir wecken.\n\n### So gestaltest du dein Visionboard\n\n* für dein Leben, deine Ziele & deine Projekte\n* für alles, was dich bewegt, um neue Perspektiven & Möglichkeiten zu finden und neue Wege einzuschlagen\n* in angenehmer Atmosphäre\n* in einer kleinen Gruppe, in der ich dich gerne unterstütze und dir Impulse mitgebe\n\n### Ganz konkret für dich\n\n* Raum & Zeit\n* Anregungen & Materialien zur Gestaltung\n* 4 Stunden Workshop inklusive Pause, kleinem Snack, Tee und Kaltgetränk\n* Im SALON-F in München, zentral zwischen Karlsplatz und Sendlinger Tor\n\n### Was bringst du mit?\n\n* dich, einfach nur dich\n* deine Wünsche und Ziele mit dem ausgefüllten Fragebogen\n* Bilder, Fotos, Notizen, … einfach alles, was du zwischenzeitlich für dich entdeckt hast, was dich emotional anspricht und einen Platz auf deinem Visionboard finden darf "
+                "markdown": "Nutze die Kraft der Bilder für dich, achte auf Bilder, die dich berühren und wundervolle Emotionen in dir wecken.\n\n### So erstellst du dein Visionboard\n\n* für dein Leben, deine Ziele & deine Projekte\n* für alles, was dich bewegt, um neue Perspektiven & Möglichkeiten zu finden und neue Wege einzuschlagen\n* in angenehmer Atmosphäre\n* in einer kleinen Gruppe, in der ich dich gerne unterstütze und dir Impulse mitgebe\n\n### Ganz konkret für dich\n\n* Raum & Zeit\n* Anregungen & Materialien zur Erstellung\n* 4 Stunden Workshop inklusive Pause, kleinem Snack, Tee und Kaltgetränk\n* Im SALON-F in München, zentral zwischen Karlsplatz und Sendlinger Tor\n\n### Was bringst du mit?\n\n* dich, einfach nur dich\n* deine Wünsche und Ziele mit dem ausgefüllten Fragebogen\n* Bilder, Fotos, Notizen, … einfach alles, was du zwischenzeitlich für dich entdeckt hast, was dich emotional anspricht und einen Platz auf deinem Visionboard finden darf "
               },
               {
                 "markdown": "### Wie geht es dir?\n\n### Wo stehst du gerade?\n\nHast du schon Schritte & Fortschritte gemacht zu dem, was du dir vorgenommen hast?\\\nGibt es Themen, bei denen du nicht weiterkommst und über die du gerne sprechen möchtest?\\\nWie bleibst du an deinen Wünschen und Zielen dran? Welche Routine könnte dir guttun, um weiterzugehen?\n\n**Du bist wichtig, einzigartig und wundervoll!**",
-                "title": "VIRTUELLES ONE:ONE",
+                "title": "VIRTUELLES COACHING",
                 "numbers": [
                   "4"
                 ],
@@ -179,7 +179,7 @@
                 "numbers": [
                   "&"
                 ],
-                "subtitle": "Du wünscht dir eine Vertiefung und weitere One:Ones",
+                "subtitle": "Du wünschst dir eine Vertiefung und weitere Coaching-Sessions",
                 "markdown": "Du möchtest weitergehen, dranbleiben und wünscht dir Unterstützung? Ich bin gerne für dich da.",
                 "cta": {
                   "text": "Angebot anfragen",
@@ -221,11 +221,11 @@
       },
       {
         "day": "",
-        "title": "One:Ones only"
+        "title": "Coaching-Sessions only"
       },
       {
         "day": "",
-        "title": "One:Ones zur Vertiefung"
+        "title": "Coaching-Sessions zur Vertiefung"
       }
     ],
     "title": "Aus Kopf und Herz",
