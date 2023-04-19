@@ -1,8 +1,66 @@
 {
   "de": {
-    "register": {
+    "form": {
       "markdownForm": "Für Marketer:innen aus Tech-Unternehmen\n\n**Wir freuen uns auf deine Anmeldung zu Meet Magic Mates!**\n\nZwischen dir und deiner Teilnahme liegen nur noch wenige Schritte. \\\nNach der Übermittlung des Formulars prüfen wir die Daten. \\\nMit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung.",
-      "successText": "Vielen Dank für deine Anmeldung zu Meet Magic Mates! Wir prüfen deine Daten. Mit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung."
+      "successTextMarkdown": "Vielen Dank für deine Anmeldung zu Meet Magic Mates! Wir prüfen deine Daten. Mit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung.",
+      "fields": [
+        {
+          "type": "field",
+          "fieldType": "text",
+          "label": "Anrede",
+          "name": "anrede",
+          "required": true
+        },
+        {
+          "type": "field",
+          "fieldType": "text",
+          "label": "Titel",
+          "name": "titel",
+          "required": true
+        },
+        {
+          "type": "field",
+          "fieldType": "text",
+          "label": "Vorname",
+          "name": "vorname",
+          "required": true
+        },
+        {
+          "type": "field",
+          "fieldType": "text",
+          "label": "Nachname",
+          "name": "nachname",
+          "required": true
+        },
+        {
+          "type": "field",
+          "fieldType": "text",
+          "label": "Unternehmen",
+          "name": "unternehmen",
+          "required": true
+        },
+        {
+          "type": "field",
+          "fieldType": "email",
+          "label": "E-Mail",
+          "name": "email",
+          "required": true
+        },
+        {
+          "type": "field",
+          "fieldType": "tel",
+          "label": "Mobilnummer",
+          "name": "mobilnummer",
+          "required": true
+        },
+        {
+          "type": "field",
+          "fieldType": "checkbox",
+          "label": "Mit der Speicherung meiner Kontaktdaten zur Weiterverwendung bin ich einverstanden.",
+          "required": true,
+          "name": "speicherung-der-kontaktdaten"
+        }
+      ]
     },
     "pages": [
       {
@@ -54,6 +112,15 @@
             "titleRight": "Was nimmst du mit?",
             "markdownLeft": "Dich – einfach nur dich!\n\nSei da, sei neugierig & offen, stelle dich vor, höre zu und fühle dich willkommen.\n\nSehr gerne dein Magic Marketing Mate.",
             "markdownRight": "Das entscheidest du individuell für dich!\n\nMein Wunsch ist es, für dich einen Raum und eine erfüllte Zeit mit neuen und bekannten Gesichtern, spannende Impulse, neue Kontakte, Lachen & **Freude** zu gestalten."
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "sections": [
+          {
+            "type": "form",
+            "placeholder": "---"
           }
         ]
       }

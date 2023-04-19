@@ -6,7 +6,7 @@
       "markdown": "\\-﻿-",
       "image": "/media/logo_auskopfundherz_277.png"
     },
-    "register": {
+    "form": {
       "markdownForm": "**Du hast Interesse und möchtest dabei sein?**\\\n**Gerne sende ich dir ein Angebot zu.**\n\nBitte fülle dazu das Formular aus, damit direkt alle relevanten Daten zur Erstellung verfügbar sind. **Aus Kopf und Herz** in deine Hände geht ab 4 Teilnehmer:innen je Termin an den Start.",
       "fields": [
         {
@@ -98,7 +98,7 @@
           "text": "Gerne möchten wir über unsere Initiative berichten. Mit der Anmeldung gibst Du Dein Einverständnis, dass vom Veranstalter gefertigtes Foto- und Filmmaterial dieser Veranstaltung mit der Abbildung Deiner Person unentgeltlich sowie zeitlich und räumlich unbeschränkt auf Internetseiten und/oder in Printprodukten bzw. auf Bild-/Tonträgern veröffentlicht werden darf."
         }
       ],
-      "successText": "Sehr gerne sende ich dir dein Angebot für Aus Kopf & Herz in deine Hände. Schenke dir Coaching-Sessions und erstelle dein Visionboard.\nIch freue mich auf dich und deine Teilnahme! \n\nHerzlichst\nSilke"
+      "successTextMarkdown": "Sehr gerne sende ich dir dein Angebot für Aus Kopf & Herz in deine Hände. Schenke dir Coaching-Sessions und erstelle dein Visionboard.\\\nIch freue mich auf dich und deine Teilnahme!\n\nHerzlichst\\\n*Silke*"
     },
     "pages": [
       {

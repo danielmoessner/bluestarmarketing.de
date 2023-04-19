@@ -57,7 +57,7 @@ const startimesmeeting: CmsCollectionFile = {
         },
         {
           label: "Erfolgstext",
-          name: "successText",
+          name: "successTextMarkdown",
           widget: "text",
           i18n: true,
         },

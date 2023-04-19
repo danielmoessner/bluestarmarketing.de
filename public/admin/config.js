@@ -821,7 +821,7 @@ var startimesmeeting = {
         },
         {
           label: "Erfolgstext",
-          name: "successText",
+          name: "successTextMarkdown",
           widget: "text",
           i18n: true
         }
@@ -1227,7 +1227,88 @@ var kind = {
 };
 var kind_default = kind;
 
+// cms/symbols/form.ts
+var form = {
+  label: "Formular",
+  name: "form",
+  i18n: true,
+  widget: "object",
+  fields: [
+    {
+      label: "Text",
+      name: "markdownForm",
+      i18n: true,
+      widget: "markdown",
+      required: false
+    },
+    {
+      label: "Erfolgstext",
+      name: "successTextMarkdown",
+      widget: "markdown",
+      i18n: true
+    },
+    {
+      label: "Felder",
+      name: "fields",
+      i18n: true,
+      required: true,
+      widget: "list",
+      types: [
+        {
+          label: "Feld",
+          name: "field",
+          widget: "object",
+          i18n: true,
+          fields: [
+            { label: "Label", name: "label", widget: "string", i18n: true },
+            { label: "Name", name: "name", widget: "string" },
+            {
+              label: "Typ",
+              name: "fieldType",
+              widget: "select",
+              default: "text",
+              options: ["textarea", "email", "tel", "text", "checkbox"]
+            },
+            {
+              label: "Ben\xF6tigt",
+              name: "required",
+              widget: "boolean",
+              required: false
+            }
+          ]
+        },
+        {
+          label: "Hinweis",
+          name: "notice",
+          widget: "object",
+          i18n: true,
+          fields: [
+            { label: "Title", name: "title", widget: "string", i18n: true },
+            { label: "Text", name: "text", widget: "text", i18n: true }
+          ]
+        }
+      ]
+    }
+  ]
+};
+var form_default = form;
+
 // cms/event/index.ts
+var formSection = {
+  label: "Formular",
+  name: "form",
+  widget: "object",
+  i18n: false,
+  fields: [
+    {
+      label: "Platzhalter",
+      name: "placeholder",
+      widget: "hidden",
+      default: "---",
+      hint: "Eingabe wird ignoriert aus technischen Gr\xFCnden notwenig."
+    }
+  ]
+};
 var event = {
   name: "event",
   label: "Events",
@@ -1603,90 +1684,29 @@ var event = {
                     }
                   ]
                 },
-                {
-                  label: "Formular",
-                  name: "form",
-                  widget: "object",
-                  i18n: false,
-                  fields: [
-                    {
-                      label: "Platzhalter",
-                      name: "placeholder",
-                      widget: "hidden",
-                      default: "---",
-                      hint: "Eingabe wird ignoriert aus technischen Gr\xFCnden notwenig."
-                    }
-                  ]
-                }
+                formSection
               ]
+            }
+          ]
+        },
+        {
+          label: "Event",
+          name: "event",
+          widget: "object",
+          i18n: true,
+          fields: [
+            {
+              label: "Sektionen",
+              name: "sections",
+              widget: "list",
+              i18n: true,
+              types: [formSection]
             }
           ]
         }
       ]
     },
-    {
-      label: "Formular",
-      name: "register",
-      i18n: true,
-      widget: "object",
-      fields: [
-        {
-          label: "Text",
-          name: "markdownForm",
-          i18n: true,
-          widget: "markdown",
-          required: false
-        },
-        {
-          label: "Erfolgstext",
-          name: "successText",
-          widget: "text",
-          i18n: true
-        },
-        {
-          label: "Felder",
-          name: "fields",
-          i18n: true,
-          required: true,
-          widget: "list",
-          types: [
-            {
-              label: "Feld",
-              name: "field",
-              widget: "object",
-              i18n: true,
-              fields: [
-                { label: "Label", name: "label", widget: "string", i18n: true },
-                { label: "Name", name: "name", widget: "string" },
-                {
-                  label: "Typ",
-                  name: "fieldType",
-                  widget: "select",
-                  default: "text",
-                  options: ["textarea", "email", "tel", "text", "checkbox"]
-                },
-                {
-                  label: "Ben\xF6tigt",
-                  name: "required",
-                  widget: "boolean",
-                  required: false
-                }
-              ]
-            },
-            {
-              label: "Hinweis",
-              name: "notice",
-              widget: "object",
-              i18n: true,
-              fields: [
-                { label: "Title", name: "title", widget: "string", i18n: true },
-                { label: "Text", name: "text", widget: "text", i18n: true }
-              ]
-            }
-          ]
-        }
-      ]
-    }
+    form_default
   ]
 };
 var event_default = event;

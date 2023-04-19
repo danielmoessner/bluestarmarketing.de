@@ -61,7 +61,7 @@ function renderMarkdown<T extends object | Array<object>>(
     result = data;
 
     for (const [key, value] of Object.entries(data)) {
-      if (key.includes("markdown") && typeof value === "string") {
+      if (key.toLowerCase().includes("markdown") && typeof value === "string") {
         result[key] = renderMarkdown1(value);
       } else if (typeof value === "object") {
         result[key] = renderMarkdown(value);

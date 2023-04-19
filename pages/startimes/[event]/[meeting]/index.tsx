@@ -9,9 +9,8 @@ import Prose from "@/components/Prose";
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
-import DynamicForm from "@/components/Form";
-import { useRouter } from "next/router";
 import Seo from "@/components/Seo";
+import RegisterForm from "@/components/RegisterForm";
 
 function Page({
   eventData,
@@ -29,80 +28,15 @@ function Page({
 
   const formattedDate = formatDate(meeting.general.day, "full");
 
-  const { locale } = useRouter();
+  const eventPage = event.pages.find((p) => p.type === "event");
 
-  const fields = [
-    {
-      label:
-        locale === "de"
-          ? "Für diese Termine melde ich mich an"
-          : "I register for the following meetings",
-      fieldfieldType: "multiple",
-      type: "field",
-      fieldType: "multiple",
-      name: "meetings",
-      options: availableMeetings.map((m) => ({
-        label: `${event.title} ${page.form.on} ${formatDate(
-          m.general.day,
-          "short"
-        )}`,
-        name: `meeting_${m.event}_${m.general.day}`,
-        checked: m.general.day === meeting.general.day,
-      })),
-    },
-    {
-      label: locale === "de" ? "Andrede" : "Salutation",
-      name: "salutation",
-      required: true,
-      type: "field",
-    },
-    {
-      label: locale === "de" ? "Titel" : "Title",
-      name: "title",
-      type: "field",
-      required: true,
-    },
-    {
-      label: locale === "de" ? "Vorname" : "First name",
-      name: "first_name",
-      type: "field",
-      required: true,
-    },
-    {
-      label: locale === "de" ? "Nachname" : "Last name",
-      name: "last_name",
-      required: true,
-      type: "field",
-    },
-    {
-      label: locale === "de" ? "Unternehmen" : "Company",
-      name: "company",
-      required: true,
-      type: "field",
-    },
-    {
-      label: "E-Mail",
-      name: "email",
-      fieldType: "email",
-      type: "field",
-      required: true,
-    },
-    {
-      label: locale === "de" ? "Mobilnummer" : "Mobile",
-      name: "phone",
-      fieldType: "tel",
-      type: "field",
-      required: true,
-    },
-    {
-      label:
-        "Mit der Speicherung meiner Kontaktdaten zur Weiterverwendung bin ich einverstanden.",
-      required: true,
-      fieldType: "checkbox",
-      type: "field",
-      name: "storage_of_the_data",
-    },
-  ];
+  const formMeetings = availableMeetings.map((m) => ({
+    day: m.general.day,
+    title: `${event.title} ${page.form.on} ${formatDate(
+      m.general.day,
+      "short"
+    )}`,
+  }));
 
   const meta = {
     title: meeting.title,
@@ -173,33 +107,32 @@ function Page({
         </Container>
       </section>
 
-      <section
-        className="py-16 bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]"
-        id="form"
-      >
-        <Container layout="sm">
-          <div className="grid gap-8 md:grid-cols-12">
-            <div className="md:col-span-4">
-              <Image {...page.form.image} alt={meeting.detail.title} />
-            </div>
-            <div className="md:col-span-6">
-              <Image className="w-40" {...event.image} alt={meeting.event} />
-              <div className="mt-5">
-                <Prose html={event.register.markdownForm.html} />
-              </div>
-            </div>
-          </div>
-          <div className="mt-10">
-            <DynamicForm
-              name="meetingform"
-              fields={fields}
-              submitText={page.form.button}
-              successText={page.form.successText}
-              requiredFieldsText={page.form.requiredFields}
-            />
-          </div>
-        </Container>
-      </section>
+      {eventPage.sections.map((section) => {
+        if (section.type === "form")
+          return (
+            <section
+              key="form"
+              className="py-16 bg-[url('/sternenregen.png')] bg-no-repeat bg-[left_60%_top_20%]"
+              id="form"
+            >
+              <Container layout="sm">
+                <RegisterForm
+                  name="meetingform"
+                  image={page.form.image}
+                  eventTitle={event.title}
+                  htmlText={event.form.markdownForm.html}
+                  onText={page.form.on}
+                  eventImage={event.image}
+                  meetings={formMeetings}
+                  submitText={page.form.button}
+                  successText={event.form.successTextMarkdown.html}
+                  requiredFieldsText={page.form.requiredFields}
+                  fields={event.form.fields}
+                />
+              </Container>
+            </section>
+          );
+      })}
 
       {meeting.detail.imgCredits && (
         <section className="py-12">
