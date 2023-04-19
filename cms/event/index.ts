@@ -1,10 +1,27 @@
 import title from "cms/symbols/title";
-import { CmsCollection } from "netlify-cms-core";
+import { CmsCollection, CmsField } from "netlify-cms-core";
 import cta from "../symbols/cta";
 import kind from "../symbols/kind";
 import { internalLinkFields } from "../symbols/link";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
+import form from "../symbols/form";
+
+const formSection: CmsField = {
+  label: "Formular",
+  name: "form",
+  widget: "object",
+  i18n: false,
+  fields: [
+    {
+      label: "Platzhalter",
+      name: "placeholder",
+      widget: "hidden",
+      default: "---",
+      hint: "Eingabe wird ignoriert aus technischen Gründen notwenig.",
+    },
+  ],
+};
 
 const event: CmsCollection = {
   name: "event",
@@ -381,90 +398,29 @@ const event: CmsCollection = {
                     },
                   ],
                 },
-                {
-                  label: "Formular",
-                  name: "form",
-                  widget: "object",
-                  i18n: false,
-                  fields: [
-                    {
-                      label: "Platzhalter",
-                      name: "placeholder",
-                      widget: "hidden",
-                      default: "---",
-                      hint: "Eingabe wird ignoriert aus technischen Gründen notwenig.",
-                    },
-                  ],
-                },
+                formSection,
               ],
+            },
+          ],
+        },
+        {
+          label: "Event",
+          name: "event",
+          widget: "object",
+          i18n: true,
+          fields: [
+            {
+              label: "Sektionen",
+              name: "sections",
+              widget: "list",
+              i18n: true,
+              types: [formSection],
             },
           ],
         },
       ],
     },
-    {
-      label: "Formular",
-      name: "register",
-      i18n: true,
-      widget: "object",
-      fields: [
-        {
-          label: "Text",
-          name: "markdownForm",
-          i18n: true,
-          widget: "markdown",
-          required: false,
-        },
-        {
-          label: "Erfolgstext",
-          name: "successText",
-          widget: "text",
-          i18n: true,
-        },
-        {
-          label: "Felder",
-          name: "fields",
-          i18n: true,
-          required: true,
-          widget: "list",
-          types: [
-            {
-              label: "Feld",
-              name: "field",
-              widget: "object",
-              i18n: true,
-              fields: [
-                { label: "Label", name: "label", widget: "string", i18n: true },
-                { label: "Name", name: "name", widget: "string" },
-                {
-                  label: "Typ",
-                  name: "fieldType",
-                  widget: "select",
-                  default: "text",
-                  options: ["textarea", "email", "tel", "text", "checkbox"],
-                },
-                {
-                  label: "Benötigt",
-                  name: "required",
-                  widget: "boolean",
-                  required: false,
-                },
-              ],
-            },
-            {
-              label: "Hinweis",
-              name: "notice",
-              widget: "object",
-              i18n: true,
-              fields: [
-                { label: "Title", name: "title", widget: "string", i18n: true },
-                { label: "Text", name: "text", widget: "text", i18n: true },
-              ],
-            },
-          ],
-        },
-      ],
-    },
+    form,
   ],
 };
 

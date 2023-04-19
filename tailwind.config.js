@@ -40,6 +40,7 @@ module.exports = {
             },
             em: {
               fontFamily: "Rosefield",
+              fontSize: "300%",
             },
           },
         },

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import FormTextarea from "./FormTextarea";
 import FormCheckbox from "./FormCheckbox";
 import FormMultiple from "./FormMultiple";
+import Prose from "./Prose";
 
 const convertedFormEntries = (formData: FormData) =>
   Array.from(formData, ([key, value]) => [
@@ -49,10 +50,8 @@ function Form({
   return (
     <div className="max-w-none">
       <div className={`${formSent ? "block" : "hidden"}`}>
-        <div className="py-24">
-          <p className="mx-auto mt-2 prose text-center whitespace-pre-line">
-            {successText}
-          </p>
+        <div className="max-w-2xl py-24 mx-auto">
+          <Prose html={successText} className="text-center" />
         </div>
       </div>
 

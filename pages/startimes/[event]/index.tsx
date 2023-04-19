@@ -12,6 +12,7 @@ import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
 import RegisterForm from "@/components/RegisterForm";
 import { Fragment } from "react";
+import SectionTitleTextImage from "@/components/SectionTitleTextImage";
 
 function Page({ pageData, footerData, eventData, meetingsData }) {
   const meetings = meetingsData.filter(
@@ -116,30 +117,9 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
             </section>
           );
 
-        if (section.type === "titleTextImage")
-          return (
-            <section key={section.title} className="pt-12 pb-16 lg:pb-20">
-              <Container layout="sm">
-                <div className="">
-                  <Animate>
-                    <div className="grid gap-8 md:grid-cols-2">
-                      <div>
-                        <h2 className="text-3xl md:text-5xl font-rose">
-                          {section.title}
-                        </h2>
-                        <div className="mt-4 md:mt-6">
-                          <Prose html={section.markdown.html} />
-                        </div>
-                      </div>
-                      <div className="leading-[0px]">
-                        <Image {...section.image} alt={section.title} />
-                      </div>
-                    </div>
-                  </Animate>
-                </div>
-              </Container>
-            </section>
-          );
+        section.type === "titleTextImage" && (
+          <SectionTitleTextImage key={section.title} section={section} />
+        );
 
         if (section.type === "eventButton")
           return (
@@ -420,14 +400,14 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                   name={`${event.title} Form`}
                   image={page.form.image}
                   eventTitle={event.title}
-                  htmlText={event.register.markdownForm.html}
+                  htmlText={event.form.markdownForm.html}
                   onText={page.form.on}
                   eventImage={event.image}
                   meetings={formMeetings}
                   submitText={page.form.button}
-                  successText={event.register.successText}
+                  successText={event.form.successTextMarkdown.html}
                   requiredFieldsText={page.form.requiredFields}
-                  fields={event.register.fields}
+                  fields={event.form.fields}
                 />
               </Container>
             </section>
