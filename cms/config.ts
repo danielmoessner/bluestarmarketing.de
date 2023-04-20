@@ -6,7 +6,6 @@ import { CmsConfig } from "netlify-cms-core";
 import customer from "./customer";
 import article from "./article";
 import event from "./event";
-import meeting from "./meeting";
 
 const config: CmsConfig = {
   // See https://www.netlifycms.org/docs/beta-features/#i18n-support
@@ -36,16 +35,7 @@ const config: CmsConfig = {
   // See https://www.netlifycms.org/docs/beta-features/#manual-initialization
   load_config_file: false,
   // See https://www.netlifycms.org/docs/collection-types/
-  collections: [
-    page,
-    event,
-    meeting,
-    article,
-    category,
-    customer,
-    setting,
-    legal,
-  ],
+  collections: [page, event, article, category, customer, setting, legal],
 };
 
 export default config;

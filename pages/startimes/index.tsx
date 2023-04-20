@@ -11,13 +11,10 @@ import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
 import Carousel from "@/components/Carousel";
+import { getNextMeeting } from "@/lib/event";
 
-function Page({ pageData, footerData, events, meetingsData }) {
+function Page({ pageData, footerData, events }) {
   const page = pageData;
-  const meetings = meetingsData.filter((m) => new Date() <= new Date(m.day));
-  const nextMeeting = (event) => {
-    return meetings.filter((m) => m.event === event.slug)[0];
-  };
 
   return (
     <Layout>
@@ -67,13 +64,16 @@ function Page({ pageData, footerData, events, meetingsData }) {
                                 <Prose html={p.markdown.html} />
                               </div>
                             ))}
-                            {nextMeeting(event) && (
+                            {getNextMeeting(event) && (
                               <>
                                 <h3 className="mt-5 text-4xl font-rose">
                                   {page.listing.next}
                                 </h3>
                                 <p>
-                                  {formatDate(nextMeeting(event).day, "full")}
+                                  {formatDate(
+                                    getNextMeeting(event).day,
+                                    "full"
+                                  )}
                                 </p>
                               </>
                             )}
@@ -136,18 +136,8 @@ export async function getStaticProps({ locale }) {
     (a, b) => getOrderingOfEvent(b) - getOrderingOfEvent(a)
   );
 
-  const meetings1 = getAllJson("meeting", locale);
-  const meetings2 = meetings1.map((m) => ({
-    day: m.general.day,
-    event: m.event,
-  }));
-  const meetings3 = meetings2.sort(
-    (m1, m2) => new Date(m1.day).getTime() - new Date(m2.day).getTime()
-  );
-
   return {
     props: {
-      meetingsData: meetings3,
       events: events4,
       pageData,
       footerData,

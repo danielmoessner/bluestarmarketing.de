@@ -131,7 +131,43 @@
     },
     "title": "Meet Magic Mates",
     "image": "/media/magic_mates_logos.png",
-    "meetings": []
+    "meetings": [
+      {
+        "day": "2023-06-28",
+        "title": "Meet Magic Mates im Juni 2023",
+        "from": "17:00",
+        "to": "19:00",
+        "addons": [
+          {
+            "type": "listSection",
+            "markdown": "Sales & Marketing – wie viel Reibung darf oder muss es sein – zur Zielerreichung, Performance & zum Empowerment?\n\n&nbsp;\\\n&nbsp;"
+          },
+          {
+            "type": "detailView",
+            "video": "/media/schatz_budgets.webm",
+            "imgCredits": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com",
+            "markdown": "In der MEET Magic Mates Summer-Edition geht es um das Thema, das immer & jeden bewegt:\n\nSales & Marketing – wie viel Reibung darf oder muss es sein: zur Zielerreichung, Performance & zum Empowerment? \n\n* und öffnet **erstmals** die Türen für **Sales** und Marketing-Entscheider\n* Impulse, Austausch und gute Gespräche"
+          }
+        ]
+      },
+      {
+        "day": "2023-09-28",
+        "from": "17:00",
+        "to": "19:00",
+        "title": "Meet Magic Mates im September 2023",
+        "addons": [
+          {
+            "type": "listSection",
+            "markdown": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen aus den vorangegangenen Meet Magic Mates Termine."
+          },
+          {
+            "type": "detailView",
+            "image": "/media/wunschrakete.jpg",
+            "imgCredits": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com"
+          }
+        ]
+      }
+    ]
   },
   "en": {}
 }
