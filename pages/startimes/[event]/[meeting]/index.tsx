@@ -128,6 +128,7 @@ function Page({
                   successText={event.form.successTextMarkdown.html}
                   requiredFieldsText={page.form.requiredFields}
                   fields={event.form.fields}
+                  addons={event.form.addons}
                 />
               </Container>
             </section>

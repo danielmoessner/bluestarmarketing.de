@@ -7,7 +7,7 @@
       "image": "/media/logo_auskopfundherz_277.png"
     },
     "form": {
-      "markdownForm": "**Du hast Interesse und möchtest dabei sein?**\\\n**Gerne sende ich dir ein Angebot zu.**\n\nBitte fülle dazu das Formular aus, damit direkt alle relevanten Daten zur Erstellung verfügbar sind. **Aus Kopf und Herz** in deine Hände geht ab 4 Teilnehmer:innen je Termin an den Start.",
+      "markdownForm": "**Du hast Interesse und möchtest dabei sein?**\\\n**Gerne sende ich dir ein Angebot zu.**\n\nBitte fülle dazu das Formular aus, damit direkt alle relevanten Daten zur Erstellung verfügbar sind. **Aus Kopf und Herz in deine Hände** geht ab 4 Teilnehmer:innen je Termin an den Start.",
       "fields": [
         {
           "type": "field",
@@ -98,7 +98,18 @@
           "text": "Gerne möchten wir über unsere Initiative berichten. Mit der Anmeldung gibst Du Dein Einverständnis, dass vom Veranstalter gefertigtes Foto- und Filmmaterial dieser Veranstaltung mit der Abbildung Deiner Person unentgeltlich sowie zeitlich und räumlich unbeschränkt auf Internetseiten und/oder in Printprodukten bzw. auf Bild-/Tonträgern veröffentlicht werden darf."
         }
       ],
-      "successTextMarkdown": "Sehr gerne sende ich dir dein Angebot für Aus Kopf & Herz in deine Hände. Schenke dir Coaching-Sessions und erstelle dein Visionboard.\\\nIch freue mich auf dich und deine Teilnahme!\n\nHerzlichst\\\n*Silke*"
+      "successTextMarkdown": "Sehr gerne sende ich dir dein Angebot für Aus Kopf & Herz in deine Hände. Schenke dir Coaching-Sessions und erstelle dein Visionboard.\\\nIch freue mich auf dich und deine Teilnahme!\n\nHerzlichst\\\n*Silke*",
+      "addons": [
+        {
+          "type": "earlyBird",
+          "image": "/media/button_auskopfundherz.png",
+          "title": "Frühbucher-Preis",
+          "left1": "bis zum 8. Mai 2023",
+          "left2": "für Privatkunden € 390,–",
+          "right1": "Preise ab 9. Mai 2023",
+          "right2": "Privatkunden € 490,– | Firmenkunden € 580,–"
+        }
+      ]
     },
     "pages": [
       {

@@ -1,4 +1,6 @@
 import { CmsField } from "netlify-cms-core";
+import image from "./image";
+import title from "./title";
 
 const form: CmsField = {
   label: "Formular",
@@ -18,6 +20,29 @@ const form: CmsField = {
       name: "successTextMarkdown",
       widget: "markdown",
       i18n: true,
+    },
+    {
+      label: "Addons",
+      name: "addons",
+      widget: "list",
+      required: false,
+      i18n: true,
+      types: [
+        {
+          label: "Frühbucher",
+          name: "earlyBird",
+          widget: "object",
+          i18n: true,
+          fields: [
+            image,
+            title,
+            { label: "Links 1", name: "left1", widget: "string" },
+            { label: "Links 2", name: "left2", widget: "string" },
+            { label: "Rechts 1", name: "right1", widget: "string" },
+            { label: "Rechts 2", name: "right2", widget: "string" },
+          ],
+        },
+      ],
     },
     {
       label: "Felder",
