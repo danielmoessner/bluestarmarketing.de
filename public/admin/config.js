@@ -1383,6 +1383,91 @@ var event = {
           i18n: "duplicate",
           date_format: "DD.MM.YYYY",
           required: false
+        },
+        {
+          label: "Von",
+          name: "from",
+          widget: "datetime",
+          time_format: "HH:mm",
+          format: "HH:mm",
+          i18n: "duplicate",
+          date_format: false,
+          required: false
+        },
+        {
+          label: "Bis",
+          name: "to",
+          widget: "datetime",
+          format: "HH:mm",
+          i18n: "duplicate",
+          time_format: "HH:mm",
+          date_format: false,
+          required: false
+        },
+        {
+          label: "Addons",
+          name: "addons",
+          widget: "list",
+          i18n: true,
+          types: [
+            {
+              label: "Listen-Sektion",
+              name: "listSection",
+              i18n: true,
+              widget: "object",
+              fields: [
+                {
+                  label: "Text",
+                  name: "markdown",
+                  i18n: true,
+                  widget: "markdown"
+                }
+              ]
+            },
+            {
+              label: "Detail-Ansicht",
+              name: "detailView",
+              i18n: true,
+              widget: "object",
+              fields: [
+                {
+                  label: "Bild",
+                  name: "image",
+                  widget: "image",
+                  i18n: false,
+                  required: false
+                },
+                {
+                  label: "Video",
+                  name: "video",
+                  widget: "file",
+                  i18n: false,
+                  required: false
+                },
+                {
+                  label: "Bildnachweis",
+                  name: "imgCredits",
+                  widget: "string",
+                  i18n: true,
+                  required: false
+                },
+                {
+                  label: "Markdown",
+                  name: "markdown",
+                  i18n: true,
+                  widget: "markdown",
+                  required: false
+                },
+                {
+                  label: "Text",
+                  name: "text",
+                  widget: "text",
+                  i18n: true,
+                  required: false
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1734,130 +1819,6 @@ var event = {
 };
 var event_default = event;
 
-// cms/meeting/index.ts
-var meeting = {
-  name: "meeting",
-  label: "Termine",
-  label_singular: "Termin",
-  editor: {
-    preview: false
-  },
-  i18n: {
-    structure: "single_file",
-    locales: ["de", "en"]
-  },
-  extension: "json",
-  slug: "{{fields.title}}",
-  folder: "content/meeting",
-  create: true,
-  fields: [
-    {
-      label: "Event",
-      name: "event",
-      widget: "relation",
-      multiple: false,
-      collection: "event",
-      i18n: false,
-      display_fields: ["title"],
-      search_fields: ["title"],
-      value_field: "slug"
-    },
-    title_default,
-    {
-      label: "Allgemein",
-      name: "general",
-      widget: "object",
-      fields: [
-        {
-          label: "Tag",
-          name: "day",
-          widget: "datetime",
-          time_format: false,
-          format: "YYYY-MM-DD",
-          i18n: "duplicate",
-          date_format: "DD.MM.YYYY"
-        },
-        {
-          label: "Von",
-          name: "from",
-          widget: "datetime",
-          time_format: "HH:mm",
-          format: "HH:mm",
-          i18n: "duplicate",
-          date_format: false
-        },
-        {
-          label: "Bis",
-          name: "to",
-          widget: "datetime",
-          format: "HH:mm",
-          i18n: "duplicate",
-          time_format: "HH:mm",
-          date_format: false
-        }
-      ]
-    },
-    {
-      label: "Listenansicht",
-      name: "list",
-      i18n: true,
-      widget: "object",
-      fields: [
-        {
-          label: "Text",
-          name: "markdown",
-          i18n: true,
-          widget: "markdown"
-        }
-      ]
-    },
-    {
-      label: "Detailansicht",
-      name: "detail",
-      i18n: true,
-      widget: "object",
-      fields: [
-        {
-          label: "Bild",
-          name: "image",
-          widget: "image",
-          i18n: false,
-          required: false
-        },
-        {
-          label: "Video",
-          name: "video",
-          widget: "file",
-          i18n: false,
-          required: false
-        },
-        {
-          label: "Bildnachweis",
-          name: "imgCredits",
-          widget: "string",
-          i18n: true,
-          required: false
-        },
-        {
-          label: "Markdown",
-          name: "markdown",
-          i18n: true,
-          widget: "markdown",
-          required: false
-        },
-        {
-          label: "Text",
-          name: "text",
-          widget: "text",
-          i18n: true,
-          required: false
-        }
-      ]
-    }
-  ]
-};
-var meeting_default = meeting;
-
 // cms/config.ts
 var config2 = {
   // See https://www.netlifycms.org/docs/beta-features/#i18n-support
@@ -1887,16 +1848,7 @@ var config2 = {
   // See https://www.netlifycms.org/docs/beta-features/#manual-initialization
   load_config_file: false,
   // See https://www.netlifycms.org/docs/collection-types/
-  collections: [
-    page_default,
-    event_default,
-    meeting_default,
-    article_default,
-    category_default,
-    customer_default,
-    setting_default,
-    legal_default
-  ]
+  collections: [page_default, event_default, article_default, category_default, customer_default, setting_default, legal_default]
 };
 var config_default = config2;
 export {

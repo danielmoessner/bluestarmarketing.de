@@ -13,26 +13,13 @@ import Button from "@/components/Button";
 import RegisterForm from "@/components/RegisterForm";
 import { Fragment } from "react";
 import SectionTitleTextImage from "@/components/SectionTitleTextImage";
+import { getAvailableMeetings, getNextMeeting } from "@/lib/event";
 
-function Page({ pageData, footerData, eventData, meetingsData }) {
-  const meetings = meetingsData.filter(
-    (m) => new Date() <= new Date(m.general.day)
-  );
-
+function Page({ pageData, footerData, eventData }) {
   const page = pageData;
   const event = eventData;
+  const availableMeetings = getAvailableMeetings(event);
   const detail = event.pages.find((p) => p.type === "detail");
-
-  const eventMeetings = event.meetings.filter(
-    (m) => m.day && new Date() <= new Date(m.day)
-  );
-
-  const nextMeeting = () => {
-    if (eventMeetings.length > 0) return eventMeetings[0];
-    return null;
-  };
-
-  const formMeetings = eventData.meetings;
 
   return (
     <Layout>
@@ -127,12 +114,12 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
               <Container layout="sm">
                 <div className="flex justify-center">
                   <div className="text-center">
-                    {nextMeeting() && (
+                    {getNextMeeting(event) && (
                       <>
                         <h3 className="mt-5 text-4xl font-rose">
                           {section.next}
                         </h3>
-                        <p>{formatDate(nextMeeting().day, "full")}</p>
+                        <p>{formatDate(getNextMeeting(event).day, "full")}</p>
                       </>
                     )}
 
@@ -237,8 +224,8 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                     </h2>
                   </Animate>
                   <div className="grid gap-8 mt-6 md:mt-10 md:grid-cols-2">
-                    {meetings.map((meeting) => (
-                      <Animate key={meeting.general.day}>
+                    {availableMeetings.map((meeting) => (
+                      <Animate key={meeting.day}>
                         <div className="flex flex-col justify-between h-full p-5 bg-white">
                           <div>
                             <div className="flex justify-between">
@@ -247,24 +234,30 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                               </div>
                               <div>
                                 <p className="text-bsm-pink">
-                                  {formatDate(meeting.general.day, "full")}
+                                  {formatDate(meeting.day, "full")}
                                 </p>
                                 <p className="text-bsm-pink">
-                                  {meeting.general.from}-{meeting.general.to}{" "}
+                                  {meeting.from}-{meeting.to}{" "}
                                   {page.meetings.time}
                                 </p>
                               </div>
                             </div>
                             <div className="mt-5">
-                              <Prose html={meeting.list.markdown.html} />
+                              <Prose
+                                html={
+                                  meeting.addons.find(
+                                    (a) => a.type === "listSection"
+                                  ).markdown.html
+                                }
+                              />
                             </div>
                           </div>
                           <div className="flex justify-center pt-5">
                             <Button
                               kind="pink"
                               href={`/startimes/${
-                                meeting.event
-                              }/${meeting.general.day.replaceAll("-", "")}`}
+                                event.slug
+                              }/${meeting.day.replaceAll("-", "")}`}
                             >
                               {page.meetings.button}
                             </Button>
@@ -403,7 +396,7 @@ function Page({ pageData, footerData, eventData, meetingsData }) {
                   htmlText={event.form.markdownForm.html}
                   onText={page.form.on}
                   eventImage={event.image}
-                  meetings={formMeetings}
+                  meetings={availableMeetings}
                   submitText={page.form.button}
                   successText={event.form.successTextMarkdown.html}
                   requiredFieldsText={page.form.requiredFields}
@@ -429,21 +422,12 @@ export async function getStaticProps({ locale, params }) {
   const { event } = params;
 
   const events = getAllJson("event", locale);
-  const meetings1 = getAllJson("meeting", locale);
-
   const foundEvent = events.find((e) => e.slug === event);
-  const meetings2 = meetings1.filter((m) => m.event === event);
-  const meetings3 = meetings2.sort(
-    (m1, m2) =>
-      new Date(m1.general.day).getTime() - new Date(m2.general.day).getTime()
-  );
-  const meetings4 = await renderContent(meetings3);
 
   const eventData = await renderContent(foundEvent);
 
   return {
     props: {
-      meetingsData: meetings4,
       pageData,
       footerData,
       eventData,

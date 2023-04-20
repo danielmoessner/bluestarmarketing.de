@@ -11,36 +11,22 @@ import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
 import Seo from "@/components/Seo";
 import RegisterForm from "@/components/RegisterForm";
+import { getAvailableMeetings } from "@/lib/event";
 
-function Page({
-  eventData,
-  meetingData,
-  footerData,
-  pageData,
-  availableMeetingsData,
-}) {
+function Page({ eventData, meetingData, footerData, pageData }) {
   const event = eventData;
   const page = pageData;
   const meeting = meetingData;
-  const availableMeetings = availableMeetingsData.filter(
-    (m) => new Date() <= new Date(m.general.day)
-  );
+  const availableMeetings = getAvailableMeetings(event);
 
-  const formattedDate = formatDate(meeting.general.day, "full");
+  const formattedDate = formatDate(meeting.day, "full");
 
   const eventPage = event.pages.find((p) => p.type === "event");
-
-  const formMeetings = availableMeetings.map((m) => ({
-    day: m.general.day,
-    title: `${event.title} ${page.form.on} ${formatDate(
-      m.general.day,
-      "short"
-    )}`,
-  }));
+  const detail = meeting.addons.find((a) => a.type === "detailView");
 
   const meta = {
     title: meeting.title,
-    description: `${page.intro.meeting}: ${formattedDate} ${meeting.general.from} - ${meeting.general.to} Uhr`,
+    description: `${page.intro.meeting}: ${formattedDate} ${meeting.from} - ${meeting.to} Uhr`,
     image: event.image,
   };
 
@@ -61,19 +47,15 @@ function Page({
           <div className="">
             <Animate>
               <div className="grid gap-8 md:grid-cols-2">
-                {meeting.detail.image && (
+                {detail.image && (
                   <div className="leading-[0px]">
-                    <Image
-                      {...meeting.detail.image}
-                      alt={meeting.detail.title}
-                    />
+                    <Image {...detail.image} alt={detail.title} />
                   </div>
                 )}
-                {meeting.detail.video && !meeting.detail.image && (
+                {detail.video && !detail.image && (
                   <div className="leading-[0px]">
                     <video className="w-full h-auto" controls>
-                      <source src={meeting.detail.video} type="video/webm" />
-                      {/* <source src="movie.ogg" type="video/ogg" /> */}
+                      <source src={detail.video} type="video/webm" />
                       Your browser does not support the video tag. Ihr Browser
                       unterstützt das Video Format nicht.
                     </video>
@@ -81,14 +63,14 @@ function Page({
                 )}
                 <div>
                   <div className="">
-                    <Prose html={meeting.detail.markdown.html} />
+                    <Prose html={detail.markdown?.html} />
                   </div>
                   <h2 className="pt-2 mt-5 text-4xl lg:pt-3 lg:text-5xl font-rose">
                     {page.intro.meeting}
                   </h2>
                   <p className="mt-2 font-bold">
                     {formattedDate} <br />
-                    {meeting.general.from} - {meeting.general.to} Uhr
+                    {meeting.from} - {meeting.to} Uhr
                   </p>
                 </div>
               </div>
@@ -98,9 +80,7 @@ function Page({
                 </Button>
               </div>
               <div className="max-w-3xl mx-auto text-center mt-14">
-                <p className="text-3xl md:text-5xl font-rose">
-                  {meeting.detail.text}
-                </p>
+                <p className="text-3xl md:text-5xl font-rose">{detail.text}</p>
               </div>
             </Animate>
           </div>
@@ -123,7 +103,7 @@ function Page({
                   htmlText={event.form.markdownForm.html}
                   onText={page.form.on}
                   eventImage={event.image}
-                  meetings={formMeetings}
+                  meetings={availableMeetings}
                   submitText={page.form.button}
                   successText={event.form.successTextMarkdown.html}
                   requiredFieldsText={page.form.requiredFields}
@@ -135,10 +115,10 @@ function Page({
           );
       })}
 
-      {meeting.detail.imgCredits && (
+      {detail.imgCredits && (
         <section className="py-12">
           <Container layout="sm">
-            <p className="text-xs">{meeting.detail.imgCredits}</p>
+            <p className="text-xs">{detail.imgCredits}</p>
           </Container>
         </section>
       )}
@@ -154,11 +134,11 @@ export async function getStaticProps({ params, locale }) {
   const { event, meeting } = params;
 
   const events = getAllJson("event", locale);
-  const meetings = getAllJson("meeting", locale);
 
   const foundEvent = events.find((e) => e.slug === event);
-  const foundMeeting = meetings.find(
-    (m) => m.general.day.replaceAll("-", "") === meeting
+
+  const foundMeeting = foundEvent.meetings.find(
+    (m) => m.day.replaceAll("-", "") === meeting
   );
 
   const eventData = await renderContent(foundEvent);
@@ -171,16 +151,8 @@ export async function getStaticProps({ params, locale }) {
     getSingleJson("setting", "footer", locale)
   );
 
-  const availableMeetingsData = meetings
-    .filter((m) => m.event === event)
-    .sort(
-      (m1, m2) =>
-        new Date(m1.general.day).getTime() - new Date(m2.general.day).getTime()
-    );
-
   return {
     props: {
-      availableMeetingsData,
       eventData,
       pageData,
       meetingData,
@@ -190,16 +162,27 @@ export async function getStaticProps({ params, locale }) {
 }
 
 export async function getStaticPaths({ locales }) {
-  const meetings = locales
-    .map((locale) => getAllJson("meeting", locale))
-    .flat();
+  const events = locales.map((locale) => getAllJson("event", locale)).flat();
+
+  const meetings = [];
+  events.forEach((e) => {
+    e.meetings.forEach((m) => {
+      if (
+        m &&
+        Object.keys(m).includes("addons") &&
+        m.addons.length > 0 &&
+        m.addons.find((a) => a.type === "detailView")
+      )
+        meetings.push({ ...m, event: e.slug });
+    });
+  });
 
   return {
     paths: meetings.map((m) => {
       return {
         params: {
           event: m.event,
-          meeting: m.general.day.replaceAll("-", ""),
+          meeting: m.day.replaceAll("-", ""),
         },
         locale: m._locale,
       };
