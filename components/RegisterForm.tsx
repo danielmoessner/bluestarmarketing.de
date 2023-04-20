@@ -16,6 +16,8 @@ interface Props {
   meetings: { day: string; title: string }[];
   onText: string;
   name: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  addons?: any[];
 }
 
 function RegisterForm({
@@ -29,6 +31,7 @@ function RegisterForm({
   meetings,
   name,
   eventTitle,
+  addons = [],
 }: Props) {
   const availableMeetings = meetings.filter(
     (m) => !m.day || new Date() <= new Date(m.day)
@@ -54,6 +57,8 @@ function RegisterForm({
     ...fields,
   ];
 
+  const earlyBird = addons.find((a) => a.type === "earlyBird");
+
   return (
     <div>
       <div className="grid gap-8 md:grid-cols-12">
@@ -65,6 +70,32 @@ function RegisterForm({
           <div className="mt-10">
             <Prose html={htmlText} />
           </div>
+          {earlyBird && (
+            <div className="flex items-center mt-8 space-x-3">
+              <div>
+                <Image className="w-16" {...earlyBird.image} alt="Early Bird" />
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-bsm-purple">
+                  {earlyBird.title}
+                </p>
+                <div className="flex items-center space-x-5">
+                  <div className="text-bsm-purple">
+                    <p className="text-lg font-bold text-bsm-purple">
+                      {earlyBird.left1}
+                    </p>
+                    <p className="font-normal text-bsm-purple">
+                      {earlyBird.left2}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-bold">{earlyBird.right1}</p>
+                    <p className="font-normal">{earlyBird.right2}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <div className="mt-10">

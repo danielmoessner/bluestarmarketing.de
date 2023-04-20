@@ -1248,6 +1248,29 @@ var form = {
       i18n: true
     },
     {
+      label: "Addons",
+      name: "addons",
+      widget: "list",
+      required: false,
+      i18n: true,
+      types: [
+        {
+          label: "Fr\xFChbucher",
+          name: "earlyBird",
+          widget: "object",
+          i18n: true,
+          fields: [
+            image_default,
+            title_default,
+            { label: "Links 1", name: "left1", widget: "string" },
+            { label: "Links 2", name: "left2", widget: "string" },
+            { label: "Rechts 1", name: "right1", widget: "string" },
+            { label: "Rechts 2", name: "right2", widget: "string" }
+          ]
+        }
+      ]
+    },
+    {
       label: "Felder",
       name: "fields",
       i18n: true,
