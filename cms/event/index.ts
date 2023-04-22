@@ -329,6 +329,7 @@ const event: CmsCollection = {
                   fields: [
                     title,
                     { label: "Bild", name: "image", widget: "image" },
+                    // { label: "Mobiles Bild"}
                   ],
                 },
                 {

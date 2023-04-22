@@ -283,10 +283,8 @@ function Page({ pageData, footerData, eventData }) {
                     {section.title}
                   </h2>
                 </div>
-                <div className="overflow-x-scroll md:overflow-hidden">
-                  <div className="min-w-[600px]">
-                    <Image {...section.image} alt={section.title} />
-                  </div>
+                <div className="">
+                  <Image {...section.image} alt={section.title} />
                 </div>
                 <div className="flex justify-center mt-6 lg:mt-12">
                   <Button kind={section.cta.kind} href={section.cta.url}>
@@ -309,10 +307,8 @@ function Page({ pageData, footerData, eventData }) {
                     {section.title}
                   </h2>
                 </div>
-                <div className="overflow-x-scroll md:overflow-hidden">
-                  <div className="min-w-[600px]">
-                    <Image {...section.image} alt={section.title} />
-                  </div>
+                <div className="flex justify-center">
+                  <Image {...section.image} alt={section.title} />
                 </div>
               </Container>
             </section>
