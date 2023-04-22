@@ -1637,6 +1637,7 @@ var event = {
                   fields: [
                     title_default,
                     { label: "Bild", name: "image", widget: "image" }
+                    // { label: "Mobiles Bild"}
                   ]
                 },
                 {
