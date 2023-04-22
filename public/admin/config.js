@@ -1464,6 +1464,29 @@ var event = {
                   widget: "text",
                   i18n: true,
                   required: false
+                },
+                {
+                  label: "Neu",
+                  name: "new",
+                  widget: "object",
+                  i18n: true,
+                  required: false,
+                  fields: [
+                    {
+                      label: "Titel",
+                      name: "title",
+                      widget: "string",
+                      i18n: true,
+                      required: false
+                    },
+                    {
+                      label: "Text",
+                      name: "text",
+                      widget: "text",
+                      i18n: true,
+                      required: false
+                    }
+                  ]
                 }
               ]
             }

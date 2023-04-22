@@ -65,13 +65,27 @@ function Page({ eventData, meetingData, footerData, pageData }) {
                   <div className="">
                     <Prose html={detail.markdown?.html} />
                   </div>
-                  <h2 className="pt-2 mt-5 text-4xl lg:pt-3 lg:text-5xl font-rose">
-                    {page.intro.meeting}
-                  </h2>
-                  <p className="mt-2 font-bold">
-                    {formattedDate} <br />
-                    {meeting.from} - {meeting.to} Uhr
-                  </p>
+                  <div className="flex items-center space-x-8">
+                    <div>
+                      <h2 className="pt-2 mt-5 text-4xl lg:pt-3 lg:text-5xl font-rose">
+                        {page.intro.meeting}
+                      </h2>
+                      <p className="mt-2 font-bold">
+                        {formattedDate} <br />
+                        {meeting.from} - {meeting.to} Uhr
+                      </p>
+                    </div>
+                    {detail.new && detail.new.title && detail.new.text && (
+                      <div>
+                        <h2 className="pt-2 mt-5 text-4xl lg:pt-3 lg:text-5xl font-rose">
+                          {detail.new.title}
+                        </h2>
+                        <p className="max-w-xs mt-2 font-bold whitespace-pre-line">
+                          {detail.new.text}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="flex justify-center mt-6 lg:mt-10">
