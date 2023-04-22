@@ -20,6 +20,9 @@ function Page({ pageData, footerData, eventData }) {
   const event = eventData;
   const availableMeetings = getAvailableMeetings(event);
   const detail = event.pages.find((p) => p.type === "detail");
+  const listableMeetings = availableMeetings.filter(
+    (m) => m.addons && m.addons.find((a) => a.type === "listSection")
+  );
 
   return (
     <Layout>
@@ -224,7 +227,7 @@ function Page({ pageData, footerData, eventData }) {
                     </h2>
                   </Animate>
                   <div className="grid gap-8 mt-6 md:mt-10 md:grid-cols-2">
-                    {availableMeetings.map((meeting) => (
+                    {listableMeetings.map((meeting) => (
                       <Animate key={meeting.day}>
                         <div className="flex flex-col justify-between h-full p-5 bg-white">
                           <div>

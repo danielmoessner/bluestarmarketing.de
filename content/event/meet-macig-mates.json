@@ -166,6 +166,36 @@
             "imgCredits": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com"
           }
         ]
+      },
+      {
+        "day": "2023-11-28",
+        "from": "17:00",
+        "to": "19:30",
+        "title": "Meet Magic Mates im November",
+        "addons": [
+          {
+            "type": "listSection",
+            "markdown": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen aus den vorangegangenen Meet Magic Mates Termine."
+          },
+          {
+            "type": "detailView"
+          }
+        ]
+      },
+      {
+        "day": "2024-01-25",
+        "from": "17:00",
+        "to": "19:30",
+        "title": "Meet Magic Mates im Januar",
+        "addons": [
+          {
+            "type": "listSection",
+            "markdown": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen aus den vorangegangenen Meet Magic Mates Termine."
+          },
+          {
+            "type": "detailView"
+          }
+        ]
       }
     ]
   },
