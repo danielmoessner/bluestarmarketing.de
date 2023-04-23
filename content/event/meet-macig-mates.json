@@ -134,7 +134,7 @@
     "meetings": [
       {
         "day": "2023-06-28",
-        "title": "Meet Magic Mates im Juni 2023",
+        "title": "Meet Magic Mates am 28. Juni 2023",
         "from": "17:00",
         "to": "19:00",
         "addons": [
@@ -158,7 +158,7 @@
         "day": "2023-09-28",
         "from": "17:00",
         "to": "19:00",
-        "title": "Meet Magic Mates im September 2023",
+        "title": "Meet Magic Mates am 28. September 2023",
         "addons": [
           {
             "type": "listSection",
@@ -175,7 +175,7 @@
         "day": "2023-11-28",
         "from": "17:00",
         "to": "19:30",
-        "title": "Meet Magic Mates im November",
+        "title": "Meet Magic Mates am 28. November 2023",
         "addons": [
           {
             "type": "listSection",
@@ -190,7 +190,7 @@
         "day": "2024-01-25",
         "from": "17:00",
         "to": "19:30",
-        "title": "Meet Magic Mates im Januar",
+        "title": "Meet Magic Mates am 25. Januar 2024",
         "addons": [
           {
             "type": "listSection",
