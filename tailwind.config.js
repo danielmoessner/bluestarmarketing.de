@@ -41,6 +41,7 @@ module.exports = {
             em: {
               fontFamily: "Rosefield",
               fontSize: "300%",
+              fontStyle: "normal",
             },
           },
         },
