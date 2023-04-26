@@ -169,7 +169,8 @@
           {
             "type": "titleImage",
             "title": "Gestalte dein Leben",
-            "image": "/media/grafik_aus_kopf_und_herz_schmal.png"
+            "image": "/media/grafik_aus_kopf_und_herz.png",
+            "mobileImage": "/media/aus_kopf_und_herz_mobil.png"
           },
           {
             "type": "titleImageButton",

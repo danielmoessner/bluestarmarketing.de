@@ -29,7 +29,7 @@ async function renderImages<T extends object | Array<object>>(
     result = data;
 
     for (const [key, value] of Object.entries(data)) {
-      if (key.includes("image")) {
+      if (key.toLowerCase().includes("image")) {
         if (typeof value === "string") result[key] = await renderImages1(value);
         else if (Array.isArray(value))
           result[key] = await Promise.all(

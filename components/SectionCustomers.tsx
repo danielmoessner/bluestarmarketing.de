@@ -4,7 +4,7 @@ import Animate from "@/components/Animate";
 import Multiline from "@/components/Multiline";
 import Button from "@/components/Button";
 
-function Component({ customers }) {
+function SectionCustomers({ customers }) {
   return (
     <section className="pt-12 pb-16 md:py-20 lg:py-32">
       <Container layout="sm">
@@ -51,4 +51,4 @@ function Component({ customers }) {
   );
 }
 
-export default Component;
+export default SectionCustomers;

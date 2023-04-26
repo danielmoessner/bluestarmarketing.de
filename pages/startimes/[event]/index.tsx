@@ -14,6 +14,7 @@ import RegisterForm from "@/components/RegisterForm";
 import { Fragment } from "react";
 import SectionTitleTextImage from "@/components/SectionTitleTextImage";
 import { getAvailableMeetings, getNextMeeting } from "@/lib/event";
+import SectionTitleImage from "@/components/SectionTitleImage";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -107,9 +108,10 @@ function Page({ pageData, footerData, eventData }) {
             </section>
           );
 
-        section.type === "titleTextImage" && (
-          <SectionTitleTextImage key={section.title} section={section} />
-        );
+        if (section.type === "titleTextImage")
+          return (
+            <SectionTitleTextImage key={section.title} section={section} />
+          );
 
         if (section.type === "eventButton")
           return (
@@ -296,23 +298,7 @@ function Page({ pageData, footerData, eventData }) {
           );
 
         if (section.type === "titleImage")
-          return (
-            <section
-              key={section.title}
-              className="py-8 lg:py-20 !overflow-auto"
-            >
-              <Container layout="sm">
-                <div className="flex justify-center">
-                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-12">
-                    {section.title}
-                  </h2>
-                </div>
-                <div className="flex justify-center">
-                  <Image {...section.image} alt={section.title} />
-                </div>
-              </Container>
-            </section>
-          );
+          return <SectionTitleImage key={section.title} section={section} />;
 
         if (section.type === "blocks")
           return (

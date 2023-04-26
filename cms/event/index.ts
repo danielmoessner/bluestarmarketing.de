@@ -6,7 +6,6 @@ import { internalLinkFields } from "../symbols/link";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
 import form from "../symbols/form";
-import text from "../symbols/text";
 
 const formSection: CmsField = {
   label: "Formular",
@@ -329,7 +328,12 @@ const event: CmsCollection = {
                   fields: [
                     title,
                     { label: "Bild", name: "image", widget: "image" },
-                    // { label: "Mobiles Bild"}
+                    {
+                      label: "Mobiles Bild",
+                      name: "mobileImage",
+                      widget: "image",
+                      required: false,
+                    },
                   ],
                 },
                 {
