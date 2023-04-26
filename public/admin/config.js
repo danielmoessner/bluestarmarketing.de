@@ -1636,8 +1636,13 @@ var event = {
                   i18n: true,
                   fields: [
                     title_default,
-                    { label: "Bild", name: "image", widget: "image" }
-                    // { label: "Mobiles Bild"}
+                    { label: "Bild", name: "image", widget: "image" },
+                    {
+                      label: "Mobiles Bild",
+                      name: "mobileImage",
+                      widget: "image",
+                      required: false
+                    }
                   ]
                 },
                 {
