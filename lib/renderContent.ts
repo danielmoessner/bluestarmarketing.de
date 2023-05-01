@@ -23,22 +23,22 @@ async function renderImages<T extends object | Array<object>>(
 ): Promise<RenderedImage<T>> {
   let result;
 
-  if (Array.isArray(data)) {
-    result = await Promise.all(data.map((i) => renderImages(i)));
-  } else {
+  if (data) {
     result = data;
 
     for (const [key, value] of Object.entries(data)) {
-      if (key.toLowerCase().includes("image")) {
-        if (typeof value === "string") result[key] = await renderImages1(value);
-        else if (Array.isArray(value))
-          result[key] = await Promise.all(
-            value.map((i) => (typeof i === "string" ? renderImages1(i) : i))
-          );
-      } else if (typeof value === "object") {
+      if (key.toLowerCase().includes("image") && typeof value === "string") {
+        result[key] = await renderImages1(value);
+      } else if (key.toLowerCase().includes("image") && Array.isArray(value)) {
+        result[key] = await Promise.all(
+          value.map((i) => (typeof i === "string" ? renderImages1(i) : i))
+        );
+      } else if (typeof value === "object" || Array.isArray(value)) {
         result[key] = await renderImages(value);
       }
     }
+  } else {
+    result = data;
   }
 
   return result;
@@ -57,7 +57,7 @@ function renderMarkdown<T extends object | Array<object>>(
 
   if (Array.isArray(data)) {
     result = data.map((i) => renderMarkdown(i));
-  } else {
+  } else if (data) {
     result = data;
 
     for (const [key, value] of Object.entries(data)) {
@@ -67,6 +67,8 @@ function renderMarkdown<T extends object | Array<object>>(
         result[key] = renderMarkdown(value);
       }
     }
+  } else {
+    result = data;
   }
 
   return result;

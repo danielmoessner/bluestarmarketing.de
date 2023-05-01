@@ -831,6 +831,107 @@ var startimesmeeting = {
 };
 var startimesmeeting_default = startimesmeeting;
 
+// cms/sections/blocks.ts
+var blocksSection = (name = "blocks") => ({
+  label: "Bl\xF6cke",
+  name,
+  widget: "object",
+  i18n: false,
+  fields: [
+    {
+      label: "Bl\xF6cke",
+      name: "blocks",
+      widget: "list",
+      i18n: false,
+      fields: [
+        title_default,
+        {
+          label: "Zahlen",
+          name: "numbers",
+          widget: "select",
+          multiple: true,
+          required: false,
+          options: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "&"]
+        },
+        {
+          label: "Untertitel",
+          name: "subtitle",
+          widget: "string",
+          i18n: false
+        },
+        markdown_default,
+        {
+          label: "CTA",
+          name: "cta",
+          i18n: false,
+          widget: "object",
+          required: false,
+          fields: [
+            {
+              label: "Text",
+              name: "text",
+              i18n: false,
+              required: false,
+              widget: "string"
+            },
+            {
+              label: "url",
+              name: "url",
+              i18n: false,
+              widget: "string",
+              required: false,
+              hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf oder /kontakt"
+            },
+            {
+              label: "Art",
+              name: "kind",
+              widget: "select",
+              required: false,
+              options: [
+                { label: "Nachtblau", value: "blue" },
+                { label: "Pink", value: "pink" },
+                { label: "Dunkelviolett", value: "purple" }
+              ],
+              i18n: false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+});
+var blocks_default = blocksSection;
+
+// cms/sections/titleImageImage.ts
+var titleImageImageSection = () => ({
+  label: "Titel \\ Bild - Bild",
+  name: "titleImageImage",
+  widget: "object",
+  i18n: false,
+  fields: [
+    title_default,
+    { label: "Bild Links", name: "image1", widget: "image" },
+    { label: "Alt Links", name: "alt1", widget: "string", required: false },
+    { label: "Bild Rechts", name: "image2", widget: "image" },
+    { label: "Alt Rechts", name: "alt2", widget: "string", required: false }
+  ]
+});
+var titleImageImage_default = titleImageImageSection;
+
+// cms/page/participantsonly.ts
+var participantsonly = {
+  file: "content/page/participantsonly.json",
+  label: "Teilnehmeronly",
+  i18n: true,
+  name: "participantsonly",
+  fields: [
+    blocks_default("blocks1"),
+    titleImageImage_default(),
+    blocks_default("blocks2")
+  ]
+};
+var participantsonly_default = participantsonly;
+
 // cms/page/index.ts
 var config = {
   name: "pages",
@@ -857,6 +958,7 @@ var config = {
     startimes_default,
     startimesmeetings_default,
     startimesmeeting_default,
+    participantsonly_default,
     contact_default
   ]
 };
@@ -1316,8 +1418,8 @@ var form = {
 };
 var form_default = form;
 
-// cms/event/index.ts
-var formSection = {
+// cms/sections/form.ts
+var formSection = () => ({
   label: "Formular",
   name: "form",
   widget: "object",
@@ -1331,7 +1433,10 @@ var formSection = {
       hint: "Eingabe wird ignoriert aus technischen Gr\xFCnden notwenig."
     }
   ]
-};
+});
+var form_default2 = formSection;
+
+// cms/event/index.ts
 var event = {
   name: "event",
   label: "Events",
@@ -1744,84 +1849,8 @@ var event = {
                   i18n: true,
                   fields: [title_default]
                 },
-                {
-                  label: "Bl\xF6cke",
-                  name: "blocks",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    {
-                      label: "Bl\xF6cke",
-                      name: "blocks",
-                      widget: "list",
-                      fields: [
-                        title_default,
-                        {
-                          label: "Zahlen",
-                          name: "numbers",
-                          widget: "select",
-                          multiple: true,
-                          options: [
-                            "1",
-                            "2",
-                            "3",
-                            "4",
-                            "5",
-                            "6",
-                            "7",
-                            "8",
-                            "9",
-                            "&"
-                          ]
-                        },
-                        {
-                          label: "Untertitel",
-                          name: "subtitle",
-                          widget: "string",
-                          i18n: true
-                        },
-                        markdown_default,
-                        {
-                          label: "CTA",
-                          name: "cta",
-                          i18n: true,
-                          widget: "object",
-                          required: false,
-                          fields: [
-                            {
-                              label: "Text",
-                              name: "text",
-                              i18n: true,
-                              required: false,
-                              widget: "string"
-                            },
-                            {
-                              label: "url",
-                              name: "url",
-                              i18n: true,
-                              widget: "string",
-                              required: false,
-                              hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf oder /kontakt"
-                            },
-                            {
-                              label: "Art",
-                              name: "kind",
-                              widget: "select",
-                              required: false,
-                              options: [
-                                { label: "Nachtblau", value: "blue" },
-                                { label: "Pink", value: "pink" },
-                                { label: "Dunkelviolett", value: "purple" }
-                              ],
-                              i18n: false
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                formSection
+                blocks_default(),
+                form_default2()
               ]
             }
           ]
@@ -1837,7 +1866,7 @@ var event = {
               name: "sections",
               widget: "list",
               i18n: true,
-              types: [formSection]
+              types: [form_default2()]
             }
           ]
         }
