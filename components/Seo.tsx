@@ -2,7 +2,18 @@ import React from "react";
 import Head from "next/head";
 import global from "../content/setting/global.json";
 
-function Seo({ meta }) {
+interface Meta {
+  title: string;
+  description: string;
+  image?: string;
+  keywords?: string;
+}
+
+interface Props {
+  meta: Meta;
+}
+
+function Seo({ meta }: Props) {
   const { title, description, image, keywords } = meta;
 
   return (

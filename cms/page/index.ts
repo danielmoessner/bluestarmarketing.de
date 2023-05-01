@@ -12,6 +12,7 @@ import starnews from "./starnews";
 import startimes from "./startimes";
 import startimesmeetings from "./startimesmeetings";
 import startimesmeeting from "./startimesmeeting";
+import participantsonly from "./participantsonly";
 
 const config: CmsCollection = {
   name: "pages",
@@ -38,6 +39,7 @@ const config: CmsCollection = {
     startimes,
     startimesmeetings,
     startimesmeeting,
+    participantsonly,
     contact,
   ],
 };

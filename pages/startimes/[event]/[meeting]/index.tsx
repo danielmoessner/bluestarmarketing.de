@@ -37,7 +37,9 @@ function Page({ eventData, meetingData, footerData, pageData }) {
       <section className="py-8 md:py-16">
         <Container layout="sm">
           <div className="text-center">
-            <Heading size="h1">{meeting.title}</Heading>
+            <Heading size="h1" element="h1">
+              {meeting.title}
+            </Heading>
           </div>
         </Container>
       </section>
@@ -62,7 +64,7 @@ function Page({ eventData, meetingData, footerData, pageData }) {
                   </div>
                 )}
                 <div>
-                  <div className="">
+                  <div className="-mt-10">
                     <Prose html={detail.markdown?.html} />
                   </div>
                   <div className="flex items-center space-x-8">

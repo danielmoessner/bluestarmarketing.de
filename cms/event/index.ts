@@ -1,27 +1,13 @@
 import title from "cms/symbols/title";
-import { CmsCollection, CmsField } from "netlify-cms-core";
+import { CmsCollection } from "netlify-cms-core";
 import cta from "../symbols/cta";
 import kind from "../symbols/kind";
 import { internalLinkFields } from "../symbols/link";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
 import form from "../symbols/form";
-
-const formSection: CmsField = {
-  label: "Formular",
-  name: "form",
-  widget: "object",
-  i18n: false,
-  fields: [
-    {
-      label: "Platzhalter",
-      name: "placeholder",
-      widget: "hidden",
-      default: "---",
-      hint: "Eingabe wird ignoriert aus technischen Gründen notwenig.",
-    },
-  ],
-};
+import blocksSection from "../sections/blocks";
+import formSection from "../sections/form";
 
 const event: CmsCollection = {
   name: "event",
@@ -435,84 +421,8 @@ const event: CmsCollection = {
                   i18n: true,
                   fields: [title],
                 },
-                {
-                  label: "Blöcke",
-                  name: "blocks",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    {
-                      label: "Blöcke",
-                      name: "blocks",
-                      widget: "list",
-                      fields: [
-                        title,
-                        {
-                          label: "Zahlen",
-                          name: "numbers",
-                          widget: "select",
-                          multiple: true,
-                          options: [
-                            "1",
-                            "2",
-                            "3",
-                            "4",
-                            "5",
-                            "6",
-                            "7",
-                            "8",
-                            "9",
-                            "&",
-                          ],
-                        },
-                        {
-                          label: "Untertitel",
-                          name: "subtitle",
-                          widget: "string",
-                          i18n: true,
-                        },
-                        markdown,
-                        {
-                          label: "CTA",
-                          name: "cta",
-                          i18n: true,
-                          widget: "object",
-                          required: false,
-                          fields: [
-                            {
-                              label: "Text",
-                              name: "text",
-                              i18n: true,
-                              required: false,
-                              widget: "string",
-                            },
-                            {
-                              label: "url",
-                              name: "url",
-                              i18n: true,
-                              widget: "string",
-                              required: false,
-                              hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf oder /kontakt",
-                            },
-                            {
-                              label: "Art",
-                              name: "kind",
-                              widget: "select",
-                              required: false,
-                              options: [
-                                { label: "Nachtblau", value: "blue" },
-                                { label: "Pink", value: "pink" },
-                                { label: "Dunkelviolett", value: "purple" },
-                              ],
-                              i18n: false,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
-                },
-                formSection,
+                blocksSection(),
+                formSection(),
               ],
             },
           ],
@@ -528,7 +438,7 @@ const event: CmsCollection = {
               name: "sections",
               widget: "list",
               i18n: true,
-              types: [formSection],
+              types: [formSection()],
             },
           ],
         },
