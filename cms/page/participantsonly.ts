@@ -1,6 +1,7 @@
 import { CmsCollectionFile } from "netlify-cms-core";
 import blocksSection from "../sections/blocks";
 import titleImageImageSection from "../sections/titleImageImage";
+import coachingBookingSection from "../sections/coachingBooking";
 
 const participantsonly: CmsCollectionFile = {
   file: "content/page/participantsonly.json",
@@ -8,6 +9,7 @@ const participantsonly: CmsCollectionFile = {
   i18n: true,
   name: "participantsonly",
   fields: [
+    coachingBookingSection(),
     blocksSection("blocks1"),
     titleImageImageSection(),
     blocksSection("blocks2"),

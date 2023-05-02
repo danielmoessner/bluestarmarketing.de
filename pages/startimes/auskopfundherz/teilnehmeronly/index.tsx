@@ -8,6 +8,7 @@ import SectionImageImage from "@/components/SectionImageImage";
 import SectionBlocks from "@/components/SectionBlocks";
 import SectionTitleImageImage from "@/components/SectionTitleImageImage";
 import Seo from "@/components/Seo";
+import SectionCoachingBooking from "@/components/SectionCoachingBooking";
 
 function Page({ footerData, images, pageData }) {
   const page = pageData;
@@ -38,6 +39,7 @@ function Page({ footerData, images, pageData }) {
           image2Alt: "Aus Kopf und Herz Zeitstrahl Teil 1",
         }}
       />
+      <SectionCoachingBooking section={page.coachingBooking} />
       <SectionBlocks section={page.blocks1} />
       <SectionTitleImageImage section={page.titleImageImage} padding="py-20" />
       <SectionBlocks section={page.blocks2} />

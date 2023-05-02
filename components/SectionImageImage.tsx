@@ -8,7 +8,7 @@ function SectionImageImage({ section, padding = "py-12" }) {
       <Container layout="sm">
         <div className="">
           <Animate>
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid items-center gap-8 md:grid-cols-2">
               <div className="leading-[0px]">
                 <Image {...section.image1} alt={section.image1Alt} />
               </div>

@@ -918,6 +918,21 @@ var titleImageImageSection = () => ({
 });
 var titleImageImage_default = titleImageImageSection;
 
+// cms/sections/coachingBooking.ts
+var coachingBookingSection = () => ({
+  label: "Coaching Buchen",
+  name: "coachingBooking",
+  widget: "object",
+  i18n: false,
+  fields: [
+    markdown_default,
+    cta_default,
+    image_default,
+    { label: "Alt", name: "alt", widget: "string", required: false }
+  ]
+});
+var coachingBooking_default = coachingBookingSection;
+
 // cms/page/participantsonly.ts
 var participantsonly = {
   file: "content/page/participantsonly.json",
@@ -925,6 +940,7 @@ var participantsonly = {
   i18n: true,
   name: "participantsonly",
   fields: [
+    coachingBooking_default(),
     blocks_default("blocks1"),
     titleImageImage_default(),
     blocks_default("blocks2")
