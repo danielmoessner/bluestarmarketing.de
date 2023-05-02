@@ -8,7 +8,7 @@
             "3"
           ],
           "subtitle": "Bilder sagen mehr als tausend Worte.",
-          "markdown": "Nutze die Kraft der Bilder für dich, achte auf Bilder, die dich berühren und wundervolle Emotionen in dir wecken.\n\n### *So gestaltest du dein Visionboard*\n\n* für dein Leben, deine Ziele & deine Projekte \n* für alles, was dich bewegt, um neue Perspektiven & Möglichkeiten zu finden und um neue Wege einzuschlagen \n* in angenehmer Atmosphäre \n* in einer kleinen Gruppe, in der ich dich gerne unterstütze und dir Impulse mitgebe\n\n### *Ganz konkret für dich – wir treffen uns zur Erstellung deines Visionboards*\n\n* Raum & Zeit für dich am 10. Juni 2023 von 14:00 – 18:00 Uhr \n* 4 Stunden inklusive Pause, kleinem Snack, Tee, Kaffee und Kaltgetränk \n* Mit Anregungen und Materialien zur Erstellung deines Visionboards \n* Im Hinterhof 8, Marktstraße 8, 80802 München\n\n### *So kommst du zu uns*\n\n* Mit Öffentlichen Verkehrsmitteln: U3/U6 Münchner Freiheit\n* Mit dem Auto bietet sich eines der umliegenden Parkhäuser an: \\\n  • PARK ONE Tiefgarage Feilitzschhöfe, Feilitzschstraße 3 \\\n  • Parkhaus Schwabing, Occamstraße 18–20 \\\n  • Parkplatz, Marschallstraße 1\n* Silke mobil 0151 – 59 94 98 75\n\n### *Was bringst du mit?*\n\n* dich, einfach nur dich\n* deine Wünsche & Ziele und die ausgefüllten Fragebögen\n* **Bilder, Fotos, Notizen, … einfach alles, was du zwischenzeitlich für dich entdeckt hast, was dich emotional anspricht und einen Platz auf deinem Visionboard finden darf**"
+          "markdown": "Nutze die Kraft der Bilder für dich, achte auf Bilder, die dich berühren und wundervolle Emotionen in dir wecken.\n\n### *So gestaltest du dein Visionboard*\n\n* für dein Leben, deine Ziele & deine Projekte \n* für alles, was dich bewegt, um neue Perspektiven & Möglichkeiten zu finden und um neue Wege einzuschlagen \n* in angenehmer Atmosphäre \n* in einer kleinen Gruppe, in der ich dich gerne unterstütze und dir Impulse mitgebe\n\n### *Ganz konkret für dich – wir treffen uns zur Erstellung deines Visionboards*\n\n* Raum & Zeit für dich am 10. Juni 2023 von 14:00 – 18:00 Uhr \n* 4 Stunden inklusive Pause, kleinem Snack, Tee, Kaffee und Kaltgetränk \n* Mit Anregungen und Materialien zur Erstellung deines Visionboards \n* [Im Hinterhof 8](https://www.google.com/maps/place/hinterhof8/@48.162052,11.5861271,17z/data=!3m1!4b1!4m6!3m5!1s0x479e75ee35564953:0xd24ea7845dc5f31b!8m2!3d48.162052!4d11.5887074!16s%2Fg%2F11jmcd_rhc?hl=de), Marktstraße 8, 80802 München\n\n### *So kommst du zu uns*\n\n* Mit Öffentlichen Verkehrsmitteln: U3/U6 Münchner Freiheit\n* Mit dem Auto bietet sich eines der umliegenden Parkhäuser an: \\\n  • PARK ONE Tiefgarage Feilitzschhöfe, Feilitzschstraße 3 \\\n  • Parkhaus Schwabing, Occamstraße 18–20 \\\n  • Parkplatz, Marschallstraße 1\n* Silke mobil 0151 – 59 94 98 75\n\n### *Was bringst du mit?*\n\n* dich, einfach nur dich\n* deine Wünsche & Ziele und die ausgefüllten Fragebögen\n* **Bilder, Fotos, Notizen, … einfach alles, was du zwischenzeitlich für dich entdeckt hast, was dich emotional anspricht und einen Platz auf deinem Visionboard finden darf**"
         },
         {
           "title": "VIRTUELLES COACHING",
@@ -27,7 +27,7 @@
           "markdown": "Du möchtest weitergehen, dranbleiben und wünscht dir Unterstützung? Ich bin gerne für dich da.",
           "cta": {
             "text": "Angebot anfragen",
-            "url": "mailto:kontakt@bluestarmarketing.de",
+            "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@blue starmarketing2.onmicrosoft.com/bookings/",
             "kind": "purple"
           }
         }
@@ -55,9 +55,18 @@
           "title": "EMPFEHLUNG",
           "subtitle": "Meditationen für dich",
           "numbers": null,
-          "markdown": "Nimm dir einen Moment Zeit und schließe deine Augen. Spüre in dich hinein! Ich lade dich ein, gerne die **zwei von mir empfohlenen Meditationen** zu hören und ausgiebig zu verwenden, um noch tiefer in dir anzukommen und in dich hineinzufühlen.\n\n* Die Kraft deiner Absicht\n* Finde Ruhe im Sturm\n\nDu findest sie in der App homodea Meditationen. Die App gibt es für Android und Apple, die Registrierung ist kostenlos."
+          "markdown": "Nimm dir einen Moment Zeit und schließe deine Augen. Spüre in dich hinein! Ich lade dich ein, gerne die **zwei von mir empfohlenen Meditationen** zu hören und ausgiebig zu verwenden, um noch tiefer in dir anzukommen und in dich hineinzufühlen.\n\n* Die Kraft deiner Absicht\n* Finde Ruhe im Sturm\n\nDu findest sie in der App [homodea Meditationen](https://homodea-meditation.com/). Die App gibt es für Android und Apple, die Registrierung ist kostenlos."
         }
       ]
+    },
+    "coachingBooking": {
+      "markdown": "## *Buche deine virtuellen Coaching-Sessions*\n\n* zur Vorbereitung\n* zur Nachbereitung",
+      "cta": {
+        "text": "Coaching-Sessions buchen",
+        "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@blue starmarketing2.onmicrosoft.com/bookings/"
+      },
+      "image": "/media/screenshot_terminbuchung.png",
+      "alt": "Screenshot Buchung"
     }
   },
   "en": {}
