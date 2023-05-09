@@ -58,7 +58,7 @@
         {
           "type": "video",
           "title": "VORBEREITUNGSVIDEO",
-          "text": "Viel Freude bei der Einstimmung",
+          "test": "Viel Freude bei der Einstimmung",
           "videoUrl": "oRBbtiWUMGI"
         },
         {
@@ -66,7 +66,7 @@
           "title": "EMPFEHLUNG",
           "subtitle": "Meditationen für dich",
           "numbers": null,
-          "markdown": "Nimm dir einen Moment Zeit und schließe deine Augen. Spüre in dich hinein! Ich lade dich ein, gerne die **zwei von mir empfohlenen Meditationen** zu hören und ausgiebig zu verwenden, um noch tiefer in dir anzukommen und in dich hineinzufühlen.\n\n* Die Kraft deiner Absicht\n* Finde Ruhe im Sturm\n\nDu findest sie in der App [homodea Meditationen](https://homodea-meditation.com/). Die App gibt es für Android und Apple, die Registrierung ist kostenlos."
+          "markdown": "Nimm dir einen Moment Zeit und schließe deine Augen. Spüre in dich hinein! Ich lade dich ein, gerne die **zwei von mir empfohlenen Meditationen** zu hören und ausgiebig zu verwenden, um noch tiefer in dir anzukommen und in dich hineinzufühlen.\n\n* Die Kraft deiner Absicht\n* Finde Ruhe im Sturm\n\nDu findest sie in der App [homodea Meditationen](https://homodea-meditation.com/). Die App gibt es für Android und Apple, die Registrierung ist kostenlos.\n\n![QR-Code zur App](/media/qr_code_homodea_meditation_2.png \"Zu den Meditationen\")"
         }
       ]
     },
