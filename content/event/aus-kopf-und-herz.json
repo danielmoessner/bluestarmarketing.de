@@ -186,6 +186,7 @@
             "type": "blocks",
             "blocks": [
               {
+                "type": "text",
                 "numbers": [
                   "1",
                   "2"
@@ -195,6 +196,7 @@
                 "subtitle": "Check-in"
               },
               {
+                "type": "text",
                 "numbers": [
                   "3"
                 ],
@@ -203,6 +205,7 @@
                 "markdown": "Nutze die Kraft der Bilder für dich, achte auf Bilder, die dich berühren und wundervolle Emotionen in dir wecken.\n\n### So erstellst du dein Visionboard\n\n* für dein Leben, deine Ziele & deine Projekte\n* für alles, was dich bewegt, um neue Perspektiven & Möglichkeiten zu finden und neue Wege einzuschlagen\n* in angenehmer Atmosphäre\n* in einer kleinen Gruppe, in der ich dich gerne unterstütze und dir Impulse mitgebe\n\n### Ganz konkret für dich\n\n* Raum & Zeit\n* Anregungen & Materialien zur Erstellung\n* 4 Stunden Workshop inklusive Pause, kleinem Snack, Tee und Kaltgetränk\n* [Im Herzen Münchens in meinem Lieblingsstadtteil](https://hinterhof8.de/)\n\n### Was bringst du mit?\n\n* dich, einfach nur dich\n* deine Wünsche und Ziele mit dem ausgefüllten Fragebogen\n* Bilder, Fotos, Notizen, … einfach alles, was du zwischenzeitlich für dich entdeckt hast, was dich emotional anspricht und einen Platz auf deinem Visionboard finden darf"
               },
               {
+                "type": "text",
                 "markdown": "### Wie geht es dir?\n\n### Wo stehst du gerade?\n\nHast du schon Schritte & Fortschritte gemacht zu dem, was du dir vorgenommen hast?\\\nGibt es Themen, bei denen du nicht weiterkommst und über die du gerne sprechen möchtest?\\\nWie bleibst du an deinen Wünschen und Zielen dran? Welche Routine könnte dir guttun, um weiterzugehen?\n\n**Du bist wichtig, einzigartig und wundervoll!**",
                 "title": "VIRTUELLES COACHING",
                 "numbers": [
@@ -211,6 +214,7 @@
                 "subtitle": "Cross-Check"
               },
               {
+                "type": "text",
                 "title": "DU MÖCHTEST MEHR?",
                 "numbers": [
                   "&"

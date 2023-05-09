@@ -3,6 +3,7 @@
     "blocks2": {
       "blocks": [
         {
+          "type": "text",
           "title": "ERSTELLE DEIN VISIONBOARD",
           "numbers": [
             "3"
@@ -11,6 +12,7 @@
           "markdown": "Nutze die Kraft der Bilder für dich, achte auf Bilder, die dich berühren und wundervolle Emotionen in dir wecken.\n\n### *So gestaltest du dein Visionboard*\n\n* für dein Leben, deine Ziele & deine Projekte \n* für alles, was dich bewegt, um neue Perspektiven & Möglichkeiten zu finden und um neue Wege einzuschlagen \n* in angenehmer Atmosphäre \n* in einer kleinen Gruppe, in der ich dich gerne unterstütze und dir Impulse mitgebe\n\n### *Ganz konkret für dich – wir treffen uns zur Erstellung deines Visionboards*\n\n* Raum & Zeit für dich am 10. Juni 2023 von 14:00 – 18:00 Uhr \n* 4 Stunden inklusive Pause, kleinem Snack, Tee, Kaffee und Kaltgetränk \n* Mit Anregungen und Materialien zur Erstellung deines Visionboards \n* [Im Hinterhof 8](https://www.google.com/maps/place/hinterhof8/@48.162052,11.5861271,17z/data=!3m1!4b1!4m6!3m5!1s0x479e75ee35564953:0xd24ea7845dc5f31b!8m2!3d48.162052!4d11.5887074!16s%2Fg%2F11jmcd_rhc?hl=de), Marktstraße 8, 80802 München\n\n### *So kommst du zu uns*\n\n* Mit Öffentlichen Verkehrsmitteln: U3/U6 Münchner Freiheit\n* Mit dem Auto bietet sich eines der umliegenden Parkhäuser an: \\\n  • PARK ONE Tiefgarage Feilitzschhöfe, Feilitzschstraße 3 \\\n  • Parkhaus Schwabing, Occamstraße 18–20 \\\n  • Parkplatz, Marschallstraße 1\n* Silke mobil 0151 – 59 94 98 75\n\n### *Was bringst du mit?*\n\n* dich, einfach nur dich\n* deine Wünsche & Ziele und die ausgefüllten Fragebögen\n* **Bilder, Fotos, Notizen, … einfach alles, was du zwischenzeitlich für dich entdeckt hast, was dich emotional anspricht und einen Platz auf deinem Visionboard finden darf**"
         },
         {
+          "type": "text",
           "title": "VIRTUELLES COACHING",
           "subtitle": "Cross-Check",
           "numbers": [
@@ -19,6 +21,7 @@
           "markdown": "### *Wie geht es dir?*\n\n### *Wo stehst du jetzt?*\n\nHast du schon Schritte & Fortschritte gemacht um das zu erreichen, was du dir vorgenommen hast und in dein Leben bringen möchtest? \n\nGibt es Themen, bei denen du nicht weiterkommst und über die du gerne sprechen möchtest?\n\nWie bleibst du an deinen Wünschen und Zielen dran? Welche Routinen könnten dir guttun, um weiterzugehen?\n\n**Du bist wichtig, einzigartig und wundervoll!**"
         },
         {
+          "type": "text",
           "title": "DU MÖCHTEST MEHR?",
           "numbers": [
             "&"
@@ -43,6 +46,7 @@
     "blocks1": {
       "blocks": [
         {
+          "type": "text",
           "title": "VIRTUELLES COACHING",
           "numbers": [
             "1",
@@ -52,6 +56,13 @@
           "markdown": "### *Was bewegt dich?*\n\nWir besprechen deine offenen Punkte, gerne anhand der vorab ausgefüllten Fragebögen oder frei.\n\nIch möchte dich einladen, die Zeit nach dem virtuellen Coaching-Termin zu nutzen, um dich auf den Gestaltungsprozess des Visionboards einzustimmen. Hole dir deine Power, Selbstbestimmtheit und Gestaltungsräume zurück.\n\n**Deine Wünsche und Ziele sind wichtig – du bist wichtig!**"
         },
         {
+          "type": "video",
+          "title": "VORBEREITUNGSVIDEO",
+          "text": "Viel Freude bei der Einstimmung",
+          "videoUrl": "oRBbtiWUMGI"
+        },
+        {
+          "type": "text",
           "title": "EMPFEHLUNG",
           "subtitle": "Meditationen für dich",
           "numbers": null,
