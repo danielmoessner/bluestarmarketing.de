@@ -46,7 +46,10 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
                     </div>
                   </div>
                   <div className="mt-8">
-                    <Prose html={block.markdown.html} className="" />
+                    <Prose
+                      html={block.markdown.html}
+                      className="[&_img]:w-64"
+                    />
                   </div>
                   {block.cta &&
                     block.cta.text &&
