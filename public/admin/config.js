@@ -1860,7 +1860,7 @@ var event = {
                 },
                 {
                   label: "Zentriert-Titel-Text-Bild",
-                  name: "centerTitleTextImage",
+                  name: "centerTitleTextVideo",
                   widget: "object",
                   i18n: true,
                   fields: [
