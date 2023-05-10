@@ -59,7 +59,17 @@
           "type": "video",
           "title": "VORBEREITUNGSVIDEO",
           "test": "Viel Freude bei der Einstimmung",
-          "videoUrl": "oRBbtiWUMGI"
+          "videoUrl": "oRBbtiWUMGI",
+          "text": "Viel Freude bei der Einstimmung"
+        },
+        {
+          "type": "questionnaires",
+          "title": "Fragebögen",
+          "text": "Bitte ausfüllen",
+          "image1": "/media/fragebogen_auskopfundherz_1.png",
+          "image2": "/media/fragebogen_auskopfundherz_2.png",
+          "pdf1": "/media/fragebogen_auskopfundherz_1.pdf",
+          "pdf2": "/media/fragebogen_auskopfundherz_2.pdf"
         },
         {
           "type": "text",
