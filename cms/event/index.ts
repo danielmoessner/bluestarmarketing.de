@@ -198,6 +198,13 @@ const event: CmsCollection = {
               field: { label: "Bild", name: "image", widget: "image" },
             },
             {
+              label: "YouTube Video Code",
+              name: "youtube",
+              widget: "string",
+              required: false,
+              i18n: false,
+            },
+            {
               label: "Titel Normal Vorher",
               name: "titleNormal",
               widget: "string",
