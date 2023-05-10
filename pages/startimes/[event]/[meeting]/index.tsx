@@ -12,6 +12,7 @@ import { formatDate } from "@/lib/date";
 import Seo from "@/components/Seo";
 import RegisterForm from "@/components/RegisterForm";
 import { getAvailableMeetings } from "@/lib/event";
+import YoutubeVideo from "@/components/YoutubeVideo";
 
 function Page({ eventData, meetingData, footerData, pageData }) {
   const event = eventData;
@@ -56,11 +57,7 @@ function Page({ eventData, meetingData, footerData, pageData }) {
                 )}
                 {detail.video && !detail.image && (
                   <div className="leading-[0px]">
-                    <video className="w-full h-auto" controls>
-                      <source src={detail.video} type="video/webm" />
-                      Your browser does not support the video tag. Ihr Browser
-                      unterstützt das Video Format nicht.
-                    </video>
+                    <YoutubeVideo videoId={detail.video} />
                   </div>
                 )}
                 <div>
