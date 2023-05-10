@@ -2,6 +2,7 @@ import Button from "./Button";
 import Container from "./Container";
 import Prose from "./Prose";
 import Image from "next/image";
+import YoutubeVideo from "./YoutubeVideo";
 
 function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
   return (
@@ -78,12 +79,9 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
                     <div className="block mt-5 text-4xl text-center font-rose">
                       {block.text}
                     </div>
-                    <iframe
-                      src={"https://www.youtube.com/embed/" + block.videoUrl}
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      className="w-full mt-5 aspect-video"
-                    ></iframe>
+                    <div className="mt-5">
+                      <YoutubeVideo videoId={block.videoUrl} />
+                    </div>
                   </div>
                 </div>
               );
