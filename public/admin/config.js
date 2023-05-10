@@ -1606,9 +1606,9 @@ var event = {
                   required: false
                 },
                 {
-                  label: "Video",
+                  label: "YouTube Video Code",
                   name: "video",
-                  widget: "file",
+                  widget: "string",
                   i18n: false,
                   required: false
                 },
