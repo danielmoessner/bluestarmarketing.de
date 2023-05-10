@@ -1,12 +1,13 @@
 import Button from "./Button";
 import Container from "./Container";
 import Prose from "./Prose";
+import Image from "next/image";
 
 function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
   return (
     <section className={"bg-[url('/sternenhimmel.jpg')] bg-repeat " + padding}>
       <Container layout="sm">
-        <div className="grid grid-cols-2 gap-y-10">
+        <div className="grid grid-cols-2 gap-y-10 gap-x-10">
           {section.blocks.map((block) => {
             if (block.type === "text")
               return (
@@ -63,6 +64,7 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
                     )}
                 </div>
               );
+
             if (block.type === "video")
               return (
                 <div
@@ -82,6 +84,41 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       className="w-full mt-5 aspect-video"
                     ></iframe>
+                  </div>
+                </div>
+              );
+
+            if (block.type === "questionnaires")
+              return (
+                <div
+                  key={block.title}
+                  className="col-span-2 px-4 py-4 bg-white md:col-span-1 lg:px-8 lg:py-5"
+                >
+                  <div>
+                    <h2 className="text-2xl font-medium text-center lg:text-3xl text-bsm-purple">
+                      {block.title}
+                    </h2>
+                    <div className="block mt-5 text-4xl text-center font-rose">
+                      {block.text}
+                    </div>
+                    <div className="flex gap-6">
+                      <a
+                        className="flex flex-col justify-center w-1/2"
+                        href={block.pdf1}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image {...block.image1} alt="Fragebogen 1" />
+                      </a>
+                      <a
+                        className="flex flex-col justify-center w-1/2"
+                        href={block.pdf2}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image {...block.image2} alt="Fragebogen 2" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               );

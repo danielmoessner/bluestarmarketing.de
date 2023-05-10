@@ -914,6 +914,20 @@ var blocksSection = (name = "blocks") => ({
             { label: "Text", name: "text", widget: "string" },
             { label: "Video URL", name: "videoUrl", widget: "string" }
           ]
+        },
+        {
+          label: "Frageb\xF6gen",
+          name: "questionnaires",
+          widget: "object",
+          i18n: false,
+          fields: [
+            title_default,
+            { label: "Text", name: "text", widget: "string" },
+            { label: "Bild 1", name: "image1", widget: "image" },
+            { label: "Bild 2", name: "image2", widget: "image" },
+            { label: "PDF 1", name: "pdf1", widget: "file" },
+            { label: "PDF 2", name: "pdf2", widget: "file" }
+          ]
         }
       ]
     }
