@@ -13,7 +13,7 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
             if (block.type === "text")
               return (
                 <div
-                  key={block.title}
+                  key={block.title + block.numbers}
                   className="col-span-2 px-4 py-4 bg-white lg:px-8 lg:py-5"
                 >
                   <div className="flex justify-center">
