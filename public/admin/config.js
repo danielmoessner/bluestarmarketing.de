@@ -1499,6 +1499,25 @@ var titleTextVideo = () => ({
 });
 var titleTextVideo_default = titleTextVideo;
 
+// cms/sections/imagesText.ts
+var imagesText = () => ({
+  label: "Bilder-Text",
+  name: "imagesText",
+  widget: "object",
+  i18n: true,
+  fields: [
+    {
+      label: "Bilder",
+      name: "images",
+      widget: "list",
+      i18n: false,
+      field: { label: "Bild", name: "image", widget: "image" }
+    },
+    markdown_default
+  ]
+});
+var imagesText_default = imagesText;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -1859,16 +1878,21 @@ var event = {
                   ]
                 },
                 {
-                  label: "Zentriert-Titel-Text-Bild",
+                  label: "Zentriert-Titel-Text-Video",
                   name: "centerTitleTextVideo",
                   widget: "object",
                   i18n: true,
                   fields: [
                     title_default,
                     markdown_default,
-                    { label: "Bild", name: "image", widget: "image" }
+                    {
+                      label: "YouTube Video Code",
+                      name: "video",
+                      widget: "string"
+                    }
                   ]
                 },
+                imagesText_default(),
                 titleTextVideo_default(),
                 {
                   label: "Zwei-Spalten",

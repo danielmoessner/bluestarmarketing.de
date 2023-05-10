@@ -152,12 +152,17 @@
             "type": "centerTitleTextVideo",
             "title": "Schenke dir Coaching-Sessions & erstelle dein Visionboard",
             "markdown": "### Für mehr Klarheit und Fokus\n\n* für deine berufliche Entwicklung, nächste Karriereschritte & Gestaltungsmöglichkeiten\n* in deinem Alltag\n* im strategischen und operativen Marketing\n* in Teams und Abteilungen: Vertrieb, Marketing, HR und im Management\n\n### Schenke dir Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten & Verändern",
-            "video": "maQshCOi4L0"
+            "video": "maQshCOi4L0",
+            "image": "/media/adobestock_372929276_-4-1-.jpg"
           },
           {
-            "type": "imageText",
+            "type": "imagesText",
             "markdown": "Sei es dir wert, dein Leben – egal ob privat und oder beruflich – so auszurichten, zu gestalten & wieder in deine Hände zu nehmen wie du es möchtest.\n\nSammle dich, richte dich neu aus, fokussiere und finde Antworten & Lösungen, die sich für dich gut anfühlen und zu dir passen. So kommst du deiner Selbstbestimmtheit näher. Das macht dich fröhlicher & zufriedener.\n\nGeht nicht? Doch, denn wir zaubern nicht, sondern entfesseln mit dir nur das, was schon längst in dir steckt!",
-            "image": "/media/visionboard_ausschnitt.jpg"
+            "images": [
+              "/media/papierblatt_quer.png",
+              "/media/papierblatt_visionboard.jpg",
+              "/media/visionboard_ausschnitt.jpg"
+            ]
           },
           {
             "type": "eventButton",
