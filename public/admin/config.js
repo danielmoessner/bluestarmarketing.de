@@ -1485,6 +1485,20 @@ var formSection = () => ({
 });
 var form_default2 = formSection;
 
+// cms/sections/titleTextVideo.ts
+var titleTextVideo = () => ({
+  label: "Titel-Text-Video",
+  name: "titleTextVideo",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    markdown_default,
+    { label: "YouTube Video Code", name: "video", widget: "string" }
+  ]
+});
+var titleTextVideo_default = titleTextVideo;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -1855,17 +1869,7 @@ var event = {
                     { label: "Bild", name: "image", widget: "image" }
                   ]
                 },
-                {
-                  label: "Titel-Text-Video",
-                  name: "titleTextVideo",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    { label: "Video", name: "video", widget: "file" }
-                  ]
-                },
+                titleTextVideo_default(),
                 {
                   label: "Zwei-Spalten",
                   name: "twoColumns",

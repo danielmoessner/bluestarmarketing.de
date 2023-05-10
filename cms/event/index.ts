@@ -8,6 +8,7 @@ import meta from "../symbols/meta";
 import form from "../symbols/form";
 import blocksSection from "../sections/blocks";
 import formSection from "../sections/form";
+import titleTextVideo from "../sections/titleTextVideo";
 
 const event: CmsCollection = {
   name: "event",
@@ -378,17 +379,7 @@ const event: CmsCollection = {
                     { label: "Bild", name: "image", widget: "image" },
                   ],
                 },
-                {
-                  label: "Titel-Text-Video",
-                  name: "titleTextVideo",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    { label: "Video", name: "video", widget: "file" },
-                  ],
-                },
+                titleTextVideo(),
                 {
                   label: "Zwei-Spalten",
                   name: "twoColumns",
