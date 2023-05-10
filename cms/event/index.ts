@@ -9,6 +9,7 @@ import form from "../symbols/form";
 import blocksSection from "../sections/blocks";
 import formSection from "../sections/form";
 import titleTextVideo from "../sections/titleTextVideo";
+import imagesText from "../sections/imagesText";
 
 const event: CmsCollection = {
   name: "event",
@@ -369,16 +370,21 @@ const event: CmsCollection = {
                   ],
                 },
                 {
-                  label: "Zentriert-Titel-Text-Bild",
+                  label: "Zentriert-Titel-Text-Video",
                   name: "centerTitleTextVideo",
                   widget: "object",
                   i18n: true,
                   fields: [
                     title,
                     markdown,
-                    { label: "Bild", name: "image", widget: "image" },
+                    {
+                      label: "YouTube Video Code",
+                      name: "video",
+                      widget: "string",
+                    },
                   ],
                 },
+                imagesText(),
                 titleTextVideo(),
                 {
                   label: "Zwei-Spalten",

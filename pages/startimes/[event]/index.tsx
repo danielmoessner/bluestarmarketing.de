@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
 import Seo from "@/components/Seo";
-import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
 import Image from "next/image";
 import Prose from "@/components/Prose";
@@ -17,6 +16,8 @@ import { getAvailableMeetings, getNextMeeting } from "@/lib/event";
 import SectionTitleImage from "@/components/SectionTitleImage";
 import SectionBlocks from "@/components/SectionBlocks";
 import SectionTitleTextVideo from "@/components/SectionTitleTextVideo";
+import SectionImagesText from "@/components/SectionImagesText";
+import SectionHeader from "@/components/SectionHeader";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -33,30 +34,7 @@ function Page({ pageData, footerData, eventData }) {
 
       {detail.sections.map((section) => {
         if (section.type === "header")
-          return (
-            <Fragment key={section.title}>
-              <section className="pt-8 lg:pb-10">
-                <Container layout="sm">
-                  <div className="">
-                    <div className="relative">
-                      <div className="leading-[0px]">
-                        <Image
-                          {...section.image}
-                          alt="Header"
-                          priority
-                          placeholder="empty"
-                          className="w-full"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-8 text-center lg:pt-16">
-                    <Heading size="h1">{section.title}</Heading>
-                  </div>
-                </Container>
-              </section>
-            </Fragment>
-          );
+          return <SectionHeader key={section.title} section={section} />;
 
         if (section.type === "titleTextButtonImage")
           return (
@@ -144,6 +122,14 @@ function Page({ pageData, footerData, eventData }) {
                 </div>
               </Container>
             </section>
+          );
+
+        if (section.type === "imagesText")
+          return (
+            <SectionImagesText
+              key={section.markdown.html.slice(0, 100)}
+              section={section}
+            />
           );
 
         if (section.type === "titleTextVideo")
