@@ -97,6 +97,8 @@ const blocksSection = (name = "blocks"): CmsFieldObject & CmsFieldBase => ({
             { label: "Bild 2", name: "image2", widget: "image" },
             { label: "PDF 1", name: "pdf1", widget: "file" },
             { label: "PDF 2", name: "pdf2", widget: "file" },
+            { label: "Link 1 Text", name: "link1Text", widget: "string" },
+            { label: "Link 2 Text", name: "link2Text", widget: "string" },
           ],
         },
       ],

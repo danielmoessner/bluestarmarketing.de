@@ -100,22 +100,46 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
                       {block.text}
                     </div>
                     <div className="flex gap-6">
-                      <a
-                        className="flex flex-col justify-center w-1/2"
-                        href={block.pdf1}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Image {...block.image1} alt="Fragebogen 1" />
-                      </a>
-                      <a
-                        className="flex flex-col justify-center w-1/2"
-                        href={block.pdf2}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Image {...block.image2} alt="Fragebogen 2" />
-                      </a>
+                      <div className="flex flex-col justify-center w-1/2">
+                        <a
+                          className="flex"
+                          href={block.pdf1}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image {...block.image1} alt="Fragebogen 1" />
+                        </a>
+                        <div className="text-center">
+                          <a
+                            className="hover:underline"
+                            href={block.pdf1}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {block.link1Text}
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex flex-col justify-center w-1/2">
+                        <a
+                          className="flex"
+                          href={block.pdf2}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image {...block.image2} alt="Fragebogen 2" />
+                        </a>
+                        <div className="text-center">
+                          <a
+                            className="hover:underline"
+                            href={block.pdf2}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {block.link2Text}
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
