@@ -63,13 +63,15 @@
           "text": "Viel Freude bei der Einstimmung"
         },
         {
-          "type": "questionnaires",
-          "title": "Fragebögen",
+          "pdf2": "/media/fragebogen_auskopfundherz_2.pdf",
+          "link1Text": "PDF öffnen",
+          "link2Text": "PDF öffnen",
           "text": "Bitte ausfüllen",
           "image1": "/media/fragebogen_auskopfundherz_1.png",
           "image2": "/media/fragebogen_auskopfundherz_2.png",
-          "pdf1": "/media/fragebogen_auskopfundherz_1.pdf",
-          "pdf2": "/media/fragebogen_auskopfundherz_2.pdf"
+          "title": "Fragebögen",
+          "type": "questionnaires",
+          "pdf1": "/media/fragebogen_auskopfundherz_1.pdf"
         },
         {
           "type": "text",
