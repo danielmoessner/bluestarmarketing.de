@@ -1366,20 +1366,6 @@ var article = {
 };
 var article_default = article;
 
-// cms/symbols/kind.ts
-var kind = {
-  label: "Art",
-  name: "kind",
-  widget: "select",
-  options: [
-    { label: "Nachtblau", value: "blue" },
-    { label: "Pink", value: "pink" },
-    { label: "Dunkelviolett", value: "purple" }
-  ],
-  i18n: false
-};
-var kind_default = kind;
-
 // cms/symbols/form.ts
 var form = {
   label: "Formular",
@@ -1519,6 +1505,74 @@ var imagesText = () => ({
   ]
 });
 var imagesText_default = imagesText;
+
+// cms/symbols/kind.ts
+var kind = {
+  label: "Art",
+  name: "kind",
+  widget: "select",
+  options: [
+    { label: "Nachtblau", value: "blue" },
+    { label: "Pink", value: "pink" },
+    { label: "Dunkelviolett", value: "purple" }
+  ],
+  i18n: false
+};
+var kind_default = kind;
+
+// cms/sections/titleImageButton.ts
+var titleImageButtonSection = () => ({
+  label: "Titel-Bild-Button",
+  name: "titleImageButton",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    { label: "Bild", name: "image", widget: "image" },
+    {
+      label: "CTA",
+      name: "cta",
+      i18n: true,
+      widget: "object",
+      fields: [...internalLinkFields, kind_default]
+    }
+  ]
+});
+var titleImageButton_default = titleImageButtonSection;
+
+// cms/sections/titleTextButtonImage.ts
+var titleTextButtonImageSection = () => ({
+  label: "Titel-Text-Button-Bild",
+  name: "titleTextButtonImage",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    markdown_default,
+    cta_default,
+    { label: "Bild", name: "image", widget: "image" }
+  ]
+});
+var titleTextButtonImage_default = titleTextButtonImageSection;
+
+// cms/sections/titleImage.ts
+var titleImageSection = () => ({
+  label: "Titel-Bild",
+  name: "titleImage",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    { label: "Bild", name: "image", widget: "image" },
+    {
+      label: "Mobiles Bild",
+      name: "mobileImage",
+      widget: "image",
+      required: false
+    }
+  ]
+});
+var titleImage_default = titleImageSection;
 
 // cms/event/index.ts
 var event = {
@@ -1796,18 +1850,7 @@ var event = {
                     cta_default
                   ]
                 },
-                {
-                  label: "Titel-Text-Button-Bild",
-                  name: "titleTextButtonImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    cta_default,
-                    { label: "Bild", name: "image", widget: "image" }
-                  ]
-                },
+                titleTextButtonImage_default(),
                 {
                   label: "Titel-Text-Termin-Button-Bild",
                   name: "titleTextEventButtonImage",
@@ -1825,22 +1868,7 @@ var event = {
                     { label: "Bild", name: "image", widget: "image" }
                   ]
                 },
-                {
-                  label: "Titel-Bild",
-                  name: "titleImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "Mobiles Bild",
-                      name: "mobileImage",
-                      widget: "image",
-                      required: false
-                    }
-                  ]
-                },
+                titleImage_default(),
                 {
                   label: "Bild-Text",
                   name: "imageText",
@@ -1851,23 +1879,7 @@ var event = {
                     markdown_default
                   ]
                 },
-                {
-                  label: "Titel-Bild-Button",
-                  name: "titleImageButton",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "CTA",
-                      name: "cta",
-                      i18n: true,
-                      widget: "object",
-                      fields: [...internalLinkFields, kind_default]
-                    }
-                  ]
-                },
+                titleImageButton_default(),
                 {
                   label: "Titel-Text-Bild",
                   name: "titleTextImage",

@@ -1,8 +1,6 @@
 import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
 import cta from "../symbols/cta";
-import kind from "../symbols/kind";
-import { internalLinkFields } from "../symbols/link";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
 import form from "../symbols/form";
@@ -10,6 +8,9 @@ import blocksSection from "../sections/blocks";
 import formSection from "../sections/form";
 import titleTextVideo from "../sections/titleTextVideo";
 import imagesText from "../sections/imagesText";
+import titleImageButtonSection from "../sections/titleImageButton";
+import titleTextButtonImageSection from "../sections/titleTextButtonImage";
+import titleImageSection from "../sections/titleImage";
 
 const event: CmsCollection = {
   name: "event",
@@ -286,18 +287,7 @@ const event: CmsCollection = {
                     cta,
                   ],
                 },
-                {
-                  label: "Titel-Text-Button-Bild",
-                  name: "titleTextButtonImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    cta,
-                    { label: "Bild", name: "image", widget: "image" },
-                  ],
-                },
+                titleTextButtonImageSection(),
                 {
                   label: "Titel-Text-Termin-Button-Bild",
                   name: "titleTextEventButtonImage",
@@ -315,22 +305,7 @@ const event: CmsCollection = {
                     { label: "Bild", name: "image", widget: "image" },
                   ],
                 },
-                {
-                  label: "Titel-Bild",
-                  name: "titleImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "Mobiles Bild",
-                      name: "mobileImage",
-                      widget: "image",
-                      required: false,
-                    },
-                  ],
-                },
+                titleImageSection(),
                 {
                   label: "Bild-Text",
                   name: "imageText",
@@ -341,23 +316,7 @@ const event: CmsCollection = {
                     markdown,
                   ],
                 },
-                {
-                  label: "Titel-Bild-Button",
-                  name: "titleImageButton",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "CTA",
-                      name: "cta",
-                      i18n: true,
-                      widget: "object",
-                      fields: [...internalLinkFields, kind],
-                    },
-                  ],
-                },
+                titleImageButtonSection(),
                 {
                   label: "Titel-Text-Bild",
                   name: "titleTextImage",

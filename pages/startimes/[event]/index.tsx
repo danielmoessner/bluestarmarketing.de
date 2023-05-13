@@ -18,6 +18,7 @@ import SectionBlocks from "@/components/SectionBlocks";
 import SectionTitleTextVideo from "@/components/SectionTitleTextVideo";
 import SectionImagesText from "@/components/SectionImagesText";
 import SectionHeader from "@/components/SectionHeader";
+import SectionTitleImageButton from "@/components/SectionTitleImageButton";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -158,6 +159,7 @@ function Page({ pageData, footerData, eventData }) {
               </Container>
             </section>
           );
+
         if (section.type === "meetings")
           return (
             <section
@@ -221,23 +223,7 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "titleImageButton")
           return (
-            <section key={section.title} className="py-8 lg:py-20">
-              <Container layout="sm">
-                <div className="flex justify-center">
-                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-14">
-                    {section.title}
-                  </h2>
-                </div>
-                <div className="">
-                  <Image {...section.image} alt={section.title} />
-                </div>
-                <div className="flex justify-center mt-6 lg:mt-12">
-                  <Button kind={section.cta.kind} href={section.cta.url}>
-                    {section.cta.text}
-                  </Button>
-                </div>
-              </Container>
-            </section>
+            <SectionTitleImageButton key={section.title} section={section} />
           );
 
         if (section.type === "titleImage")
