@@ -30,7 +30,7 @@
           "markdown": "Du möchtest weitergehen, dranbleiben und wünscht dir Unterstützung? Ich bin gerne für dich da.",
           "cta": {
             "text": "Angebot anfragen",
-            "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@blue starmarketing2.onmicrosoft.com/bookings/",
+            "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@bluestarmarketing2.onmicrosoft.com/bookings/",
             "kind": "purple"
           }
         }
@@ -86,7 +86,7 @@
       "markdown": "## *Buche deine virtuellen Coaching-Sessions*\n\n* zur Vorbereitung\n* zur Nachbereitung",
       "cta": {
         "text": "Coaching-Sessions buchen",
-        "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@blue starmarketing2.onmicrosoft.com/bookings/"
+        "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@bluestarmarketing2.onmicrosoft.com/bookings/"
       },
       "image": "/media/screenshot_terminbuchung.png",
       "alt": "Screenshot Buchung"
