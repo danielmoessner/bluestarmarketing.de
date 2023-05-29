@@ -6,11 +6,13 @@ import meta from "../symbols/meta";
 import form from "../symbols/form";
 import blocksSection from "../sections/blocks";
 import formSection from "../sections/form";
-import titleTextVideo from "../sections/titleTextVideo";
-import imagesText from "../sections/imagesText";
+import titleTextVideoSection from "../sections/titleTextVideo";
+import imagesTextSection from "../sections/imagesText";
 import titleImageButtonSection from "../sections/titleImageButton";
 import titleTextButtonImageSection from "../sections/titleTextButtonImage";
 import titleImageSection from "../sections/titleImage";
+import titleSection from "../sections/title";
+import headerSection from "../sections/header";
 
 const event: CmsCollection = {
   name: "event",
@@ -259,20 +261,8 @@ const event: CmsCollection = {
               widget: "list",
               i18n: true,
               types: [
-                {
-                  label: "Header",
-                  name: "header",
-                  widget: "object",
-                  fields: [
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "Titel",
-                      name: "title",
-                      widget: "string",
-                      i18n: true,
-                    },
-                  ],
-                },
+                titleSection(),
+                headerSection(),
                 {
                   label: "Event-Button",
                   name: "eventButton",
@@ -343,8 +333,8 @@ const event: CmsCollection = {
                     },
                   ],
                 },
-                imagesText(),
-                titleTextVideo(),
+                imagesTextSection(),
+                titleTextVideoSection(),
                 {
                   label: "Zwei-Spalten",
                   name: "twoColumns",

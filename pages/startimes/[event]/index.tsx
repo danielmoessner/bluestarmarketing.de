@@ -19,6 +19,7 @@ import SectionImagesText from "@/components/SectionImagesText";
 import SectionHeader from "@/components/SectionHeader";
 import SectionTitleImageButton from "@/components/SectionTitleImageButton";
 import SectionEventButton from "@/components/SectionEventButton";
+import SectionTitle from "@/components/SectionTitle";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -36,6 +37,9 @@ function Page({ pageData, footerData, eventData }) {
       {detail.sections.map((section) => {
         if (section.type === "header")
           return <SectionHeader key={section.title} section={section} />;
+
+        if (section.type === "title")
+          return <SectionTitle key={section.title} section={section} />;
 
         if (section.type === "titleTextButtonImage")
           return (
