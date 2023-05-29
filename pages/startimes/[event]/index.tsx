@@ -20,6 +20,7 @@ import SectionHeader from "@/components/SectionHeader";
 import SectionTitleImageButton from "@/components/SectionTitleImageButton";
 import SectionEventButton from "@/components/SectionEventButton";
 import SectionTitle from "@/components/SectionTitle";
+import SectionImageText from "@/components/SectionImageText";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -88,28 +89,10 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "imageText")
           return (
-            <section
+            <SectionImageText
               key={section.markdown.html.slice(0, 100)}
-              className="pt-12 pb-16 lg:pb-20"
-            >
-              <Container layout="sm">
-                <div className="">
-                  <Animate>
-                    <div className="grid gap-8 md:grid-cols-2">
-                      <div className="leading-[0px]">
-                        <Image
-                          {...section.image}
-                          alt={section.markdown.html.slice(0, 100)}
-                        />
-                      </div>
-                      <div className="">
-                        <Prose html={section.markdown.html} />
-                      </div>
-                    </div>
-                  </Animate>
-                </div>
-              </Container>
-            </section>
+              section={section}
+            />
           );
 
         if (section.type === "imagesText")

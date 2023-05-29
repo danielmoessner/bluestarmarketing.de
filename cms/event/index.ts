@@ -13,6 +13,8 @@ import titleTextButtonImageSection from "../sections/titleTextButtonImage";
 import titleImageSection from "../sections/titleImage";
 import titleSection from "../sections/title";
 import headerSection from "../sections/header";
+import imageTextSection from "../sections/imageText";
+import titleTextImage from "../sections/titleTextImage";
 
 const event: CmsCollection = {
   name: "event",
@@ -296,28 +298,9 @@ const event: CmsCollection = {
                   ],
                 },
                 titleImageSection(),
-                {
-                  label: "Bild-Text",
-                  name: "imageText",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    { label: "Bild", name: "image", widget: "image" },
-                    markdown,
-                  ],
-                },
+                imageTextSection(),
                 titleImageButtonSection(),
-                {
-                  label: "Titel-Text-Bild",
-                  name: "titleTextImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    { label: "Bild", name: "image", widget: "image" },
-                  ],
-                },
+                titleTextImage(),
                 {
                   label: "Zentriert-Titel-Text-Video",
                   name: "centerTitleTextVideo",
