@@ -144,9 +144,8 @@
         },
         "sections": [
           {
-            "type": "header",
-            "title": "Aus Kopf & Herz in deine Hände",
-            "image": "/media/aus_kopf_und_herz_titelbild_silke_348.png"
+            "type": "title",
+            "title": "Aus Kopf & Herz in deine Hände"
           },
           {
             "type": "centerTitleTextVideo",

@@ -1,7 +1,7 @@
 import { CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
 import markdown from "../symbols/markdown";
 
-const imagesText = (): CmsFieldObject & CmsFieldBase => ({
+const imagesTextSection = (): CmsFieldObject & CmsFieldBase => ({
   label: "Bilder-Text",
   name: "imagesText",
   widget: "object",
@@ -18,4 +18,4 @@ const imagesText = (): CmsFieldObject & CmsFieldBase => ({
   ],
 });
 
-export default imagesText;
+export default imagesTextSection;

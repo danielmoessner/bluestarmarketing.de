@@ -2,7 +2,7 @@ import { CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
 import title from "../symbols/title";
 import markdown from "../symbols/markdown";
 
-const titleTextVideo = (): CmsFieldObject & CmsFieldBase => ({
+const titleTextVideoSection = (): CmsFieldObject & CmsFieldBase => ({
   label: "Titel-Text-Video",
   name: "titleTextVideo",
   widget: "object",
@@ -14,4 +14,4 @@ const titleTextVideo = (): CmsFieldObject & CmsFieldBase => ({
   ],
 });
 
-export default titleTextVideo;
+export default titleTextVideoSection;

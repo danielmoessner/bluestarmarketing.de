@@ -93,9 +93,8 @@
         },
         "sections": [
           {
-            "type": "header",
-            "title": "MEET Magic Mates",
-            "image": "/media/magic_mates_titelbild_1080x348.png"
+            "type": "title",
+            "title": "MEET Magic Mates"
           },
           {
             "type": "titleTextVideo",

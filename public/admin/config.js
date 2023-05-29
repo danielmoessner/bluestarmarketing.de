@@ -1468,7 +1468,7 @@ var formSection = () => ({
 var form_default2 = formSection;
 
 // cms/sections/titleTextVideo.ts
-var titleTextVideo = () => ({
+var titleTextVideoSection = () => ({
   label: "Titel-Text-Video",
   name: "titleTextVideo",
   widget: "object",
@@ -1479,10 +1479,10 @@ var titleTextVideo = () => ({
     { label: "YouTube Video Code", name: "video", widget: "string" }
   ]
 });
-var titleTextVideo_default = titleTextVideo;
+var titleTextVideo_default = titleTextVideoSection;
 
 // cms/sections/imagesText.ts
-var imagesText = () => ({
+var imagesTextSection = () => ({
   label: "Bilder-Text",
   name: "imagesText",
   widget: "object",
@@ -1498,7 +1498,7 @@ var imagesText = () => ({
     markdown_default
   ]
 });
-var imagesText_default = imagesText;
+var imagesText_default = imagesTextSection;
 
 // cms/symbols/kind.ts
 var kind = {
@@ -1567,6 +1567,41 @@ var titleImageSection = () => ({
   ]
 });
 var titleImage_default = titleImageSection;
+
+// cms/sections/title.ts
+var titleSection = () => ({
+  label: "Title",
+  name: "title",
+  widget: "object",
+  i18n: false,
+  fields: [
+    {
+      label: "Titel",
+      name: "title",
+      widget: "string",
+      i18n: true
+    }
+  ]
+});
+var title_default2 = titleSection;
+
+// cms/sections/header.ts
+var headerSection = () => ({
+  label: "Header",
+  name: "header",
+  widget: "object",
+  i18n: false,
+  fields: [
+    { label: "Bild", name: "image", widget: "image" },
+    {
+      label: "Titel",
+      name: "title",
+      widget: "string",
+      i18n: true
+    }
+  ]
+});
+var header_default2 = headerSection;
 
 // cms/event/index.ts
 var event = {
@@ -1816,20 +1851,8 @@ var event = {
               widget: "list",
               i18n: true,
               types: [
-                {
-                  label: "Header",
-                  name: "header",
-                  widget: "object",
-                  fields: [
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "Titel",
-                      name: "title",
-                      widget: "string",
-                      i18n: true
-                    }
-                  ]
-                },
+                title_default2(),
+                header_default2(),
                 {
                   label: "Event-Button",
                   name: "eventButton",
