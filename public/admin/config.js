@@ -694,12 +694,6 @@ var startimes = {
   fields: [
     meta_default,
     {
-      label: "Header",
-      name: "header",
-      widget: "object",
-      fields: [{ label: "Bild", name: "image", widget: "image" }]
-    },
-    {
       label: "Start",
       name: "start",
       i18n: true,

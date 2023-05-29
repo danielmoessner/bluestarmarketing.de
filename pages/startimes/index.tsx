@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
 import Seo from "@/components/Seo";
-import Header from "@/components/Header";
 import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
 import Prose from "@/components/Prose";
@@ -20,7 +19,6 @@ function Page({ pageData, footerData, events }) {
   return (
     <Layout>
       <Seo meta={page.meta} />
-      <Header header={page.header} />
 
       <section className="pt-12 pb-14 lg:pb-16">
         <Container layout="sm">
