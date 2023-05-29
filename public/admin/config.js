@@ -1603,6 +1603,26 @@ var headerSection = () => ({
 });
 var header_default2 = headerSection;
 
+// cms/sections/imageText.ts
+var imageTextSection = () => ({
+  label: "Bild-Text",
+  name: "imageText",
+  widget: "object",
+  i18n: true,
+  fields: [{ label: "Bild", name: "image", widget: "image" }, markdown_default]
+});
+var imageText_default = imageTextSection;
+
+// cms/sections/titleTextImage.ts
+var titleTextImage = () => ({
+  label: "Titel-Text-Bild",
+  name: "titleTextImage",
+  widget: "object",
+  i18n: true,
+  fields: [title_default, markdown_default, { label: "Bild", name: "image", widget: "image" }]
+});
+var titleTextImage_default = titleTextImage;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -1886,28 +1906,9 @@ var event = {
                   ]
                 },
                 titleImage_default(),
-                {
-                  label: "Bild-Text",
-                  name: "imageText",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    { label: "Bild", name: "image", widget: "image" },
-                    markdown_default
-                  ]
-                },
+                imageText_default(),
                 titleImageButton_default(),
-                {
-                  label: "Titel-Text-Bild",
-                  name: "titleTextImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    { label: "Bild", name: "image", widget: "image" }
-                  ]
-                },
+                titleTextImage_default(),
                 {
                   label: "Zentriert-Titel-Text-Video",
                   name: "centerTitleTextVideo",
