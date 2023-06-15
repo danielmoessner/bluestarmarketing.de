@@ -104,7 +104,7 @@
           "type": "earlyBird",
           "image": "/media/button_auskopfundherz.png",
           "title": "Frühbucher-Preis",
-          "left1": "bis zum 19. Mai 2023",
+          "left1": "bis zum 21. Juli 2023",
           "left2": "für Privatkunden € 390,–",
           "right1": "Preise ab 19. Mai 2023",
           "right2": "Privatkunden € 490,– | Firmenkunden € 580,–"
@@ -180,7 +180,7 @@
               "kind": "purple",
               "url": "#form"
             },
-            "image": "/media/zeitstrahl.png"
+            "image": "/media/zeitstrahl_visionboard_2023_06_13_neu.png"
           },
           {
             "type": "blocks",
@@ -260,10 +260,10 @@
         "to": "20:36"
       },
       {
-        "day": "2023-08-05",
-        "title": "5. August 2023",
-        "from": "20:36",
-        "to": "20:36"
+        "day": "2023-09-01",
+        "title": "1. September 2023",
+        "from": "15:00",
+        "to": "19:00"
       },
       {
         "day": "",
