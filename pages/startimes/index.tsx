@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
 import Seo from "@/components/Seo";
-import Header from "@/components/Header";
 import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
 import Prose from "@/components/Prose";
@@ -12,6 +11,7 @@ import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
 import Carousel from "@/components/Carousel";
 import { getNextMeeting } from "@/lib/event";
+import YoutubeVideo from "@/components/YoutubeVideo";
 
 function Page({ pageData, footerData, events }) {
   const page = pageData;
@@ -19,7 +19,6 @@ function Page({ pageData, footerData, events }) {
   return (
     <Layout>
       <Seo meta={page.meta} />
-      <Header header={page.header} />
 
       <section className="pt-12 pb-14 lg:pb-16">
         <Container layout="sm">
@@ -79,9 +78,16 @@ function Page({ pageData, footerData, events }) {
                             )}
                           </div>
                           <div className="flex flex-col justify-between">
-                            <div className="leading-[0px]">
-                              <Carousel images={listing.images} />
-                            </div>
+                            {listing.youtube && (
+                              <div>
+                                <YoutubeVideo videoId={listing.youtube} />
+                              </div>
+                            )}
+                            {!listing.youtube && (
+                              <div className="leading-[0px]">
+                                <Carousel images={listing.images} />
+                              </div>
+                            )}
                             <div className="flex justify-center mt-6 md:justify-start">
                               <Button
                                 kind="pink"

@@ -64,6 +64,7 @@
     },
     "pages": [
       {
+        "youtube": "DMbR5867tFQ",
         "color": "#e50069",
         "titleRose": "Magic Mates",
         "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
@@ -92,13 +93,12 @@
         },
         "sections": [
           {
-            "type": "header",
-            "title": "MEET Magic Mates",
-            "image": "/media/magic_mates_titelbild_1080x348.png"
+            "type": "title",
+            "title": "MEET Magic Mates"
           },
           {
             "type": "titleTextVideo",
-            "video": "/media/Magic_Silke_v1.webm",
+            "video": "DMbR5867tFQ",
             "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
             "title": "Wie gestaltest du die neue Zeit?"
           },
@@ -144,9 +144,9 @@
           },
           {
             "type": "detailView",
-            "video": "/media/schatz_budgets.webm",
+            "video": "ESdeBu1ueLA",
             "imgCredits": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com",
-            "markdown": "## *MEET Magic Mates Summer-Edition*\n\nEs geht um ein Thema, das immer wieder & jeden bewegt.\n\n**Sales & Marketing – wie viel Reibung darf es sein oder verderben zu viele Köche den Brei** im Hinblick auf die Zielerreichung, Performance & zum Empowerment?\n\n* und öffnet **erstmals** die Türen für **Sales** und Marketing-Entscheider\n\n### *Impulse, Austausch und gute Gespräche*\n\n* Mit Christina Decker, Director Strategic Channels Europe bei Trend Micro\n* Mit Thomas Huber, Regional Director of Commercial Sales bei Nutanix\n* Mit Karl Tucholski, meinem Wegbereiter & Mentor seit dem Start in München, derzeitiger Geschäftsführer bei Konica Minolta Printing Solutions\n* und vielen weiteren Impulsgebern:innen im Panel",
+            "markdown": "## *MEET Magic Mates Summer-Edition*\n\nEs geht um ein Thema, das immer wieder & jeden bewegt.\n\n**Sales & Marketing – wie viel Reibung darf es sein oder verderben zu viele Köche den Brei** im Hinblick auf die Zielerreichung, Performance & zum Empowerment?\n\n* und öffnet **erstmals** die Türen für **Sales** und Marketing-Entscheider\n\n### *Impulse, Austausch und gute Gespräche*\n\n* Mit Christina Decker, Director Strategic Channels Europe bei Trend Micro\n* Mit Thomas Huber, Regional Director of Commercial Sales bei Nutanix\n* Mit Karl Tucholski, Strategische Vertriebspersönlichkeit und engagierter Macher & mein Wegbereiter & Mentor seit dem Start in München 2002\n* und vielen weiteren Impulsgebern:innen im Panel",
             "new": {
               "title": "Neu",
               "text": "Für Marketing UND Sales- \nEntscheider aus der IT"
