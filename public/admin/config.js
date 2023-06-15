@@ -694,12 +694,6 @@ var startimes = {
   fields: [
     meta_default,
     {
-      label: "Header",
-      name: "header",
-      widget: "object",
-      fields: [{ label: "Bild", name: "image", widget: "image" }]
-    },
-    {
       label: "Start",
       name: "start",
       i18n: true,
@@ -913,6 +907,22 @@ var blocksSection = (name = "blocks") => ({
             title_default,
             { label: "Text", name: "text", widget: "string" },
             { label: "Video URL", name: "videoUrl", widget: "string" }
+          ]
+        },
+        {
+          label: "Frageb\xF6gen",
+          name: "questionnaires",
+          widget: "object",
+          i18n: false,
+          fields: [
+            title_default,
+            { label: "Text", name: "text", widget: "string" },
+            { label: "Bild 1", name: "image1", widget: "image" },
+            { label: "Bild 2", name: "image2", widget: "image" },
+            { label: "PDF 1", name: "pdf1", widget: "file" },
+            { label: "PDF 2", name: "pdf2", widget: "file" },
+            { label: "Link 1 Text", name: "link1Text", widget: "string" },
+            { label: "Link 2 Text", name: "link2Text", widget: "string" }
           ]
         }
       ]
@@ -1350,20 +1360,6 @@ var article = {
 };
 var article_default = article;
 
-// cms/symbols/kind.ts
-var kind = {
-  label: "Art",
-  name: "kind",
-  widget: "select",
-  options: [
-    { label: "Nachtblau", value: "blue" },
-    { label: "Pink", value: "pink" },
-    { label: "Dunkelviolett", value: "purple" }
-  ],
-  i18n: false
-};
-var kind_default = kind;
-
 // cms/symbols/form.ts
 var form = {
   label: "Formular",
@@ -1470,6 +1466,162 @@ var formSection = () => ({
   ]
 });
 var form_default2 = formSection;
+
+// cms/sections/titleTextVideo.ts
+var titleTextVideoSection = () => ({
+  label: "Titel-Text-Video",
+  name: "titleTextVideo",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    markdown_default,
+    { label: "YouTube Video Code", name: "video", widget: "string" }
+  ]
+});
+var titleTextVideo_default = titleTextVideoSection;
+
+// cms/sections/imagesText.ts
+var imagesTextSection = () => ({
+  label: "Bilder-Text",
+  name: "imagesText",
+  widget: "object",
+  i18n: true,
+  fields: [
+    {
+      label: "Bilder",
+      name: "images",
+      widget: "list",
+      i18n: false,
+      field: { label: "Bild", name: "image", widget: "image" }
+    },
+    markdown_default
+  ]
+});
+var imagesText_default = imagesTextSection;
+
+// cms/symbols/kind.ts
+var kind = {
+  label: "Art",
+  name: "kind",
+  widget: "select",
+  options: [
+    { label: "Nachtblau", value: "blue" },
+    { label: "Pink", value: "pink" },
+    { label: "Dunkelviolett", value: "purple" }
+  ],
+  i18n: false
+};
+var kind_default = kind;
+
+// cms/sections/titleImageButton.ts
+var titleImageButtonSection = () => ({
+  label: "Titel-Bild-Button",
+  name: "titleImageButton",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    { label: "Bild", name: "image", widget: "image" },
+    {
+      label: "CTA",
+      name: "cta",
+      i18n: true,
+      widget: "object",
+      fields: [...internalLinkFields, kind_default]
+    }
+  ]
+});
+var titleImageButton_default = titleImageButtonSection;
+
+// cms/sections/titleTextButtonImage.ts
+var titleTextButtonImageSection = () => ({
+  label: "Titel-Text-Button-Bild",
+  name: "titleTextButtonImage",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    markdown_default,
+    cta_default,
+    { label: "Bild", name: "image", widget: "image" }
+  ]
+});
+var titleTextButtonImage_default = titleTextButtonImageSection;
+
+// cms/sections/titleImage.ts
+var titleImageSection = () => ({
+  label: "Titel-Bild",
+  name: "titleImage",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    { label: "Bild", name: "image", widget: "image" },
+    {
+      label: "Mobiles Bild",
+      name: "mobileImage",
+      widget: "image",
+      required: false
+    }
+  ]
+});
+var titleImage_default = titleImageSection;
+
+// cms/sections/title.ts
+var titleSection = () => ({
+  label: "Title",
+  name: "title",
+  widget: "object",
+  i18n: false,
+  fields: [
+    {
+      label: "Titel",
+      name: "title",
+      widget: "string",
+      i18n: true
+    }
+  ]
+});
+var title_default2 = titleSection;
+
+// cms/sections/header.ts
+var headerSection = () => ({
+  label: "Header",
+  name: "header",
+  widget: "object",
+  i18n: false,
+  fields: [
+    { label: "Bild", name: "image", widget: "image" },
+    {
+      label: "Titel",
+      name: "title",
+      widget: "string",
+      i18n: true
+    }
+  ]
+});
+var header_default2 = headerSection;
+
+// cms/sections/imageText.ts
+var imageTextSection = () => ({
+  label: "Bild-Text",
+  name: "imageText",
+  widget: "object",
+  i18n: true,
+  fields: [{ label: "Bild", name: "image", widget: "image" }, markdown_default]
+});
+var imageText_default = imageTextSection;
+
+// cms/sections/titleTextImage.ts
+var titleTextImage = () => ({
+  label: "Titel-Text-Bild",
+  name: "titleTextImage",
+  widget: "object",
+  i18n: true,
+  fields: [title_default, markdown_default, { label: "Bild", name: "image", widget: "image" }]
+});
+var titleTextImage_default = titleTextImage;
 
 // cms/event/index.ts
 var event = {
@@ -1578,9 +1730,9 @@ var event = {
                   required: false
                 },
                 {
-                  label: "Video",
+                  label: "YouTube Video Code",
                   name: "video",
-                  widget: "file",
+                  widget: "string",
                   i18n: false,
                   required: false
                 },
@@ -1661,6 +1813,13 @@ var event = {
               field: { label: "Bild", name: "image", widget: "image" }
             },
             {
+              label: "YouTube Video Code",
+              name: "youtube",
+              widget: "string",
+              required: false,
+              i18n: false
+            },
+            {
               label: "Titel Normal Vorher",
               name: "titleNormal",
               widget: "string",
@@ -1712,20 +1871,8 @@ var event = {
               widget: "list",
               i18n: true,
               types: [
-                {
-                  label: "Header",
-                  name: "header",
-                  widget: "object",
-                  fields: [
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "Titel",
-                      name: "title",
-                      widget: "string",
-                      i18n: true
-                    }
-                  ]
-                },
+                title_default2(),
+                header_default2(),
                 {
                   label: "Event-Button",
                   name: "eventButton",
@@ -1740,18 +1887,7 @@ var event = {
                     cta_default
                   ]
                 },
-                {
-                  label: "Titel-Text-Button-Bild",
-                  name: "titleTextButtonImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    cta_default,
-                    { label: "Bild", name: "image", widget: "image" }
-                  ]
-                },
+                titleTextButtonImage_default(),
                 {
                   label: "Titel-Text-Termin-Button-Bild",
                   name: "titleTextEventButtonImage",
@@ -1769,82 +1905,27 @@ var event = {
                     { label: "Bild", name: "image", widget: "image" }
                   ]
                 },
+                titleImage_default(),
+                imageText_default(),
+                titleImageButton_default(),
+                titleTextImage_default(),
                 {
-                  label: "Titel-Bild",
-                  name: "titleImage",
+                  label: "Zentriert-Titel-Text-Video",
+                  name: "centerTitleTextVideo",
                   widget: "object",
                   i18n: true,
                   fields: [
                     title_default,
-                    { label: "Bild", name: "image", widget: "image" },
+                    markdown_default,
                     {
-                      label: "Mobiles Bild",
-                      name: "mobileImage",
-                      widget: "image",
-                      required: false
+                      label: "YouTube Video Code",
+                      name: "video",
+                      widget: "string"
                     }
                   ]
                 },
-                {
-                  label: "Bild-Text",
-                  name: "imageText",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    { label: "Bild", name: "image", widget: "image" },
-                    markdown_default
-                  ]
-                },
-                {
-                  label: "Titel-Bild-Button",
-                  name: "titleImageButton",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "CTA",
-                      name: "cta",
-                      i18n: true,
-                      widget: "object",
-                      fields: [...internalLinkFields, kind_default]
-                    }
-                  ]
-                },
-                {
-                  label: "Titel-Text-Bild",
-                  name: "titleTextImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    { label: "Bild", name: "image", widget: "image" }
-                  ]
-                },
-                {
-                  label: "Zentriert-Titel-Text-Bild",
-                  name: "centerTitleTextImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    { label: "Bild", name: "image", widget: "image" }
-                  ]
-                },
-                {
-                  label: "Titel-Text-Video",
-                  name: "titleTextVideo",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    { label: "Video", name: "video", widget: "file" }
-                  ]
-                },
+                imagesText_default(),
+                titleTextVideo_default(),
                 {
                   label: "Zwei-Spalten",
                   name: "twoColumns",

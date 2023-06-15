@@ -1,13 +1,20 @@
 import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
 import cta from "../symbols/cta";
-import kind from "../symbols/kind";
-import { internalLinkFields } from "../symbols/link";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
 import form from "../symbols/form";
 import blocksSection from "../sections/blocks";
 import formSection from "../sections/form";
+import titleTextVideoSection from "../sections/titleTextVideo";
+import imagesTextSection from "../sections/imagesText";
+import titleImageButtonSection from "../sections/titleImageButton";
+import titleTextButtonImageSection from "../sections/titleTextButtonImage";
+import titleImageSection from "../sections/titleImage";
+import titleSection from "../sections/title";
+import headerSection from "../sections/header";
+import imageTextSection from "../sections/imageText";
+import titleTextImage from "../sections/titleTextImage";
 
 const event: CmsCollection = {
   name: "event",
@@ -115,9 +122,9 @@ const event: CmsCollection = {
                   required: false,
                 },
                 {
-                  label: "Video",
+                  label: "YouTube Video Code",
                   name: "video",
-                  widget: "file",
+                  widget: "string",
                   i18n: false,
                   required: false,
                 },
@@ -198,6 +205,13 @@ const event: CmsCollection = {
               field: { label: "Bild", name: "image", widget: "image" },
             },
             {
+              label: "YouTube Video Code",
+              name: "youtube",
+              widget: "string",
+              required: false,
+              i18n: false,
+            },
+            {
               label: "Titel Normal Vorher",
               name: "titleNormal",
               widget: "string",
@@ -249,20 +263,8 @@ const event: CmsCollection = {
               widget: "list",
               i18n: true,
               types: [
-                {
-                  label: "Header",
-                  name: "header",
-                  widget: "object",
-                  fields: [
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "Titel",
-                      name: "title",
-                      widget: "string",
-                      i18n: true,
-                    },
-                  ],
-                },
+                titleSection(),
+                headerSection(),
                 {
                   label: "Event-Button",
                   name: "eventButton",
@@ -277,18 +279,7 @@ const event: CmsCollection = {
                     cta,
                   ],
                 },
-                {
-                  label: "Titel-Text-Button-Bild",
-                  name: "titleTextButtonImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    cta,
-                    { label: "Bild", name: "image", widget: "image" },
-                  ],
-                },
+                titleTextButtonImageSection(),
                 {
                   label: "Titel-Text-Termin-Button-Bild",
                   name: "titleTextEventButtonImage",
@@ -306,82 +297,27 @@ const event: CmsCollection = {
                     { label: "Bild", name: "image", widget: "image" },
                   ],
                 },
+                titleImageSection(),
+                imageTextSection(),
+                titleImageButtonSection(),
+                titleTextImage(),
                 {
-                  label: "Titel-Bild",
-                  name: "titleImage",
+                  label: "Zentriert-Titel-Text-Video",
+                  name: "centerTitleTextVideo",
                   widget: "object",
                   i18n: true,
                   fields: [
                     title,
-                    { label: "Bild", name: "image", widget: "image" },
+                    markdown,
                     {
-                      label: "Mobiles Bild",
-                      name: "mobileImage",
-                      widget: "image",
-                      required: false,
+                      label: "YouTube Video Code",
+                      name: "video",
+                      widget: "string",
                     },
                   ],
                 },
-                {
-                  label: "Bild-Text",
-                  name: "imageText",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    { label: "Bild", name: "image", widget: "image" },
-                    markdown,
-                  ],
-                },
-                {
-                  label: "Titel-Bild-Button",
-                  name: "titleImageButton",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    { label: "Bild", name: "image", widget: "image" },
-                    {
-                      label: "CTA",
-                      name: "cta",
-                      i18n: true,
-                      widget: "object",
-                      fields: [...internalLinkFields, kind],
-                    },
-                  ],
-                },
-                {
-                  label: "Titel-Text-Bild",
-                  name: "titleTextImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    { label: "Bild", name: "image", widget: "image" },
-                  ],
-                },
-                {
-                  label: "Zentriert-Titel-Text-Bild",
-                  name: "centerTitleTextImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    { label: "Bild", name: "image", widget: "image" },
-                  ],
-                },
-                {
-                  label: "Titel-Text-Video",
-                  name: "titleTextVideo",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    { label: "Video", name: "video", widget: "file" },
-                  ],
-                },
+                imagesTextSection(),
+                titleTextVideoSection(),
                 {
                   label: "Zwei-Spalten",
                   name: "twoColumns",

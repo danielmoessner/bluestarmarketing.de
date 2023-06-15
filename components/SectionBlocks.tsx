@@ -1,17 +1,19 @@
 import Button from "./Button";
 import Container from "./Container";
 import Prose from "./Prose";
+import Image from "next/image";
+import YoutubeVideo from "./YoutubeVideo";
 
 function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
   return (
     <section className={"bg-[url('/sternenhimmel.jpg')] bg-repeat " + padding}>
       <Container layout="sm">
-        <div className="grid grid-cols-2 gap-y-10">
+        <div className="grid grid-cols-2 gap-y-10 gap-x-10">
           {section.blocks.map((block) => {
             if (block.type === "text")
               return (
                 <div
-                  key={block.title}
+                  key={block.title + block.numbers}
                   className="col-span-2 px-4 py-4 bg-white lg:px-8 lg:py-5"
                 >
                   <div className="flex justify-center">
@@ -63,6 +65,7 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
                     )}
                 </div>
               );
+
             if (block.type === "video")
               return (
                 <div
@@ -76,12 +79,68 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
                     <div className="block mt-5 text-4xl text-center font-rose">
                       {block.text}
                     </div>
-                    <iframe
-                      src={"https://www.youtube.com/embed/" + block.videoUrl}
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      className="w-full mt-5 aspect-video"
-                    ></iframe>
+                    <div className="mt-5">
+                      <YoutubeVideo videoId={block.videoUrl} />
+                    </div>
+                  </div>
+                </div>
+              );
+
+            if (block.type === "questionnaires")
+              return (
+                <div
+                  key={block.title}
+                  className="col-span-2 px-4 py-4 bg-white md:col-span-1 lg:px-8 lg:py-5"
+                >
+                  <div>
+                    <h2 className="text-2xl font-medium text-center lg:text-3xl text-bsm-purple">
+                      {block.title}
+                    </h2>
+                    <div className="block mt-5 text-4xl text-center font-rose">
+                      {block.text}
+                    </div>
+                    <div className="flex gap-6">
+                      <div className="flex flex-col justify-center w-1/2">
+                        <a
+                          className="flex"
+                          href={block.pdf1}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image {...block.image1} alt="Fragebogen 1" />
+                        </a>
+                        <div className="text-center">
+                          <a
+                            className="hover:underline"
+                            href={block.pdf1}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {block.link1Text}
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex flex-col justify-center w-1/2">
+                        <a
+                          className="flex"
+                          href={block.pdf2}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image {...block.image2} alt="Fragebogen 2" />
+                        </a>
+                        <div className="text-center">
+                          <a
+                            className="hover:underline"
+                            href={block.pdf2}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {block.link2Text}
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               );

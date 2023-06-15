@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
 import Seo from "@/components/Seo";
-import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
 import Image from "next/image";
 import Prose from "@/components/Prose";
@@ -11,11 +10,17 @@ import Footer from "@/components/Footer";
 import { formatDate } from "@/lib/date";
 import Button from "@/components/Button";
 import RegisterForm from "@/components/RegisterForm";
-import { Fragment } from "react";
 import SectionTitleTextImage from "@/components/SectionTitleTextImage";
-import { getAvailableMeetings, getNextMeeting } from "@/lib/event";
+import { getAvailableMeetings } from "@/lib/event";
 import SectionTitleImage from "@/components/SectionTitleImage";
 import SectionBlocks from "@/components/SectionBlocks";
+import SectionTitleTextVideo from "@/components/SectionTitleTextVideo";
+import SectionImagesText from "@/components/SectionImagesText";
+import SectionHeader from "@/components/SectionHeader";
+import SectionTitleImageButton from "@/components/SectionTitleImageButton";
+import SectionEventButton from "@/components/SectionEventButton";
+import SectionTitle from "@/components/SectionTitle";
+import SectionImageText from "@/components/SectionImageText";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -32,30 +37,10 @@ function Page({ pageData, footerData, eventData }) {
 
       {detail.sections.map((section) => {
         if (section.type === "header")
-          return (
-            <Fragment key={section.title}>
-              <section className="pt-8 lg:pb-10">
-                <Container layout="sm">
-                  <div className="">
-                    <div className="relative">
-                      <div className="leading-[0px]">
-                        <Image
-                          {...section.image}
-                          alt="Header"
-                          priority
-                          placeholder="empty"
-                          className="w-full"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-8 text-center lg:pt-16">
-                    <Heading size="h1">{section.title}</Heading>
-                  </div>
-                </Container>
-              </section>
-            </Fragment>
-          );
+          return <SectionHeader key={section.title} section={section} />;
+
+        if (section.type === "title")
+          return <SectionTitle key={section.title} section={section} />;
 
         if (section.type === "titleTextButtonImage")
           return (
@@ -83,27 +68,9 @@ function Page({ pageData, footerData, eventData }) {
             </section>
           );
 
-        if (section.type === "centerTitleTextImage")
+        if (section.type === "centerTitleTextVideo")
           return (
-            <section key={section.title} className="pt-4 pb-16">
-              <Container layout="sm">
-                <div className="flex justify-center">
-                  <h2 className="mb-12 text-3xl md:text-5xl font-rose">
-                    {section.title}
-                  </h2>
-                </div>
-                <div className="grid gap-8 md:grid-cols-2">
-                  <div className="flex flex-col justify-between">
-                    <div className="">
-                      <Prose className="-mt-12" html={section.markdown.html} />
-                    </div>
-                  </div>
-                  <div className="">
-                    <Image {...section.image} alt={section.title} />
-                  </div>
-                </div>
-              </Container>
-            </section>
+            <SectionTitleTextVideo key={section.title} section={section} />
           );
 
         if (section.type === "titleTextImage")
@@ -113,83 +80,32 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "eventButton")
           return (
-            <section key={section.cta.text} className="pb-16">
-              <Container layout="sm">
-                <div className="flex justify-center">
-                  <div className="text-center">
-                    {getNextMeeting(event) && (
-                      <>
-                        <h3 className="mt-5 text-4xl font-rose">
-                          {section.next}
-                        </h3>
-                        <p>{formatDate(getNextMeeting(event).day, "full")}</p>
-                      </>
-                    )}
-
-                    <div className="mt-5">
-                      <Button href={section.cta.url} kind="purple">
-                        {section.cta.text}
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </section>
+            <SectionEventButton
+              section={section}
+              event={event}
+              key={section.next}
+            />
           );
 
         if (section.type === "imageText")
           return (
-            <section
+            <SectionImageText
               key={section.markdown.html.slice(0, 100)}
-              className="pt-12 pb-16 lg:pb-20"
-            >
-              <Container layout="sm">
-                <div className="">
-                  <Animate>
-                    <div className="grid gap-8 md:grid-cols-2">
-                      <div className="leading-[0px]">
-                        <Image
-                          {...section.image}
-                          alt={section.markdown.html.slice(0, 100)}
-                        />
-                      </div>
-                      <div className="">
-                        <Prose html={section.markdown.html} />
-                      </div>
-                    </div>
-                  </Animate>
-                </div>
-              </Container>
-            </section>
+              section={section}
+            />
+          );
+
+        if (section.type === "imagesText")
+          return (
+            <SectionImagesText
+              key={section.markdown.html.slice(0, 100)}
+              section={section}
+            />
           );
 
         if (section.type === "titleTextVideo")
           return (
-            <section key={section.title} className="pt-12 pb-16 lg:pb-20">
-              <Container layout="sm">
-                <div className="">
-                  <Animate>
-                    <div className="grid gap-8 md:grid-cols-2">
-                      <div>
-                        <h2 className="text-3xl md:text-5xl font-rose">
-                          {section.title}
-                        </h2>
-                        <div className="mt-4 md:mt-6">
-                          <Prose html={section.markdown.html} />
-                        </div>
-                      </div>
-                      <div className="leading-[0px]">
-                        <video className="w-full h-auto" controls>
-                          <source src={section.video} type="video/webm" />
-                          Your browser does not support the video tag. Ihr
-                          Browser unterstützt das Video Format nicht.
-                        </video>
-                      </div>
-                    </div>
-                  </Animate>
-                </div>
-              </Container>
-            </section>
+            <SectionTitleTextVideo key={section.title} section={section} />
           );
 
         if (section.type === "twoColumns")
@@ -213,6 +129,7 @@ function Page({ pageData, footerData, eventData }) {
               </Container>
             </section>
           );
+
         if (section.type === "meetings")
           return (
             <section
@@ -276,23 +193,7 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "titleImageButton")
           return (
-            <section key={section.title} className="py-8 lg:py-20">
-              <Container layout="sm">
-                <div className="flex justify-center">
-                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-14">
-                    {section.title}
-                  </h2>
-                </div>
-                <div className="">
-                  <Image {...section.image} alt={section.title} />
-                </div>
-                <div className="flex justify-center mt-6 lg:mt-12">
-                  <Button kind={section.cta.kind} href={section.cta.url}>
-                    {section.cta.text}
-                  </Button>
-                </div>
-              </Container>
-            </section>
+            <SectionTitleImageButton key={section.title} section={section} />
           );
 
         if (section.type === "titleImage")

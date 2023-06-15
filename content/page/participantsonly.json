@@ -30,7 +30,7 @@
           "markdown": "Du möchtest weitergehen, dranbleiben und wünscht dir Unterstützung? Ich bin gerne für dich da.",
           "cta": {
             "text": "Angebot anfragen",
-            "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@blue starmarketing2.onmicrosoft.com/bookings/",
+            "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@bluestarmarketing2.onmicrosoft.com/bookings/",
             "kind": "purple"
           }
         }
@@ -59,7 +59,19 @@
           "type": "video",
           "title": "VORBEREITUNGSVIDEO",
           "test": "Viel Freude bei der Einstimmung",
-          "videoUrl": "oRBbtiWUMGI"
+          "videoUrl": "oRBbtiWUMGI",
+          "text": "Viel Freude bei der Einstimmung"
+        },
+        {
+          "pdf2": "/media/fragebogen_auskopfundherz_2.pdf",
+          "link1Text": "PDF öffnen",
+          "link2Text": "PDF öffnen",
+          "text": "Bitte ausfüllen",
+          "image1": "/media/fragebogen_auskopfundherz_1.png",
+          "image2": "/media/fragebogen_auskopfundherz_2.png",
+          "title": "Fragebögen",
+          "type": "questionnaires",
+          "pdf1": "/media/fragebogen_auskopfundherz_1.pdf"
         },
         {
           "type": "text",
@@ -74,7 +86,7 @@
       "markdown": "## *Buche deine virtuellen Coaching-Sessions*\n\n* zur Vorbereitung\n* zur Nachbereitung",
       "cta": {
         "text": "Coaching-Sessions buchen",
-        "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@blue starmarketing2.onmicrosoft.com/bookings/"
+        "url": "https://outlook.office365.com/owa/calendar/AusKopfundHerzindeineHndeCheckIn@bluestarmarketing2.onmicrosoft.com/bookings/"
       },
       "image": "/media/screenshot_terminbuchung.png",
       "alt": "Screenshot Buchung"
