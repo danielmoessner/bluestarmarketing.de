@@ -3,12 +3,7 @@ import Layout from "@/components/Layout";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
 import Seo from "@/components/Seo";
-import Animate from "@/components/Animate";
-import Image from "next/image";
-import Prose from "@/components/Prose";
 import Footer from "@/components/Footer";
-import { formatDate } from "@/lib/date";
-import Button from "@/components/Button";
 import RegisterForm from "@/components/RegisterForm";
 import SectionTitleTextImage from "@/components/SectionTitleTextImage";
 import { getAvailableMeetings } from "@/lib/event";
@@ -21,6 +16,9 @@ import SectionTitleImageButton from "@/components/SectionTitleImageButton";
 import SectionEventButton from "@/components/SectionEventButton";
 import SectionTitle from "@/components/SectionTitle";
 import SectionImageText from "@/components/SectionImageText";
+import SectionTitleTextButtonImage from "@/components/SectionTitleTextButtonImage";
+import SectionTwoColumns from "@/components/SectionTwoColumns";
+import SectionMeetings from "@/components/SectionMeetings";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -44,28 +42,10 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "titleTextButtonImage")
           return (
-            <section key={section.title} className="py-8 lg:py-16">
-              <Container layout="sm">
-                <div className="flex justify-center">
-                  <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-8">
-                    {section.title}
-                  </h2>
-                </div>
-                <div className="grid gap-8 md:grid-cols-2">
-                  <div className="flex flex-col justify-between">
-                    <div className="">
-                      <Prose html={section.markdown.html} />
-                    </div>
-                    <div className="">
-                      <Button href={section.cta.url}>{section.cta.text}</Button>
-                    </div>
-                  </div>
-                  <div className="">
-                    <Image {...section.image} alt={section.title} />
-                  </div>
-                </div>
-              </Container>
-            </section>
+            <SectionTitleTextButtonImage
+              section={section}
+              key={section.title}
+            />
           );
 
         if (section.type === "centerTitleTextVideo")
@@ -110,85 +90,21 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "twoColumns")
           return (
-            <section key={section.titleLeft} className="pt-16 pb-16">
-              <Container layout="sm">
-                <div className="grid gap-8 md:grid-cols-2">
-                  <Animate>
-                    <h2 className="text-5xl font-rose">{section.titleLeft}</h2>
-                    <div className="mt-5">
-                      <Prose html={section.markdownLeft.html} />
-                    </div>
-                  </Animate>
-                  <Animate>
-                    <h2 className="text-5xl font-rose">{section.titleRight}</h2>
-                    <div className="mt-5">
-                      <Prose html={section.markdownRight.html} />
-                    </div>
-                  </Animate>
-                </div>
-              </Container>
-            </section>
+            <SectionTwoColumns key={section.titleLeft} section={section} />
           );
 
         if (section.type === "meetings")
           return (
-            <section
+            <SectionMeetings
               key="meetings"
-              className="pb-12 pt-10 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat"
-            >
-              <Container layout="sm">
-                <div className="">
-                  <Animate>
-                    <h2 className="mx-auto text-5xl text-center font-rose">
-                      {page.meetings.title}
-                    </h2>
-                  </Animate>
-                  <div className="grid gap-8 mt-6 md:mt-10 md:grid-cols-2">
-                    {listableMeetings.map((meeting) => (
-                      <Animate key={meeting.day}>
-                        <div className="flex flex-col justify-between h-full p-5 bg-white">
-                          <div>
-                            <div className="flex justify-between">
-                              <div className="w-24">
-                                <Image {...event.image} alt={event.title} />
-                              </div>
-                              <div>
-                                <p className="text-bsm-pink">
-                                  {formatDate(meeting.day, "full")}
-                                </p>
-                                <p className="text-bsm-pink">
-                                  {meeting.from}-{meeting.to}{" "}
-                                  {page.meetings.time}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="mt-5">
-                              <Prose
-                                html={
-                                  meeting.addons.find(
-                                    (a) => a.type === "listSection"
-                                  ).markdown.html
-                                }
-                              />
-                            </div>
-                          </div>
-                          <div className="flex justify-center pt-5">
-                            <Button
-                              kind="pink"
-                              href={`/startimes/${
-                                event.slug
-                              }/${meeting.day.replaceAll("-", "")}`}
-                            >
-                              {page.meetings.button}
-                            </Button>
-                          </div>
-                        </div>
-                      </Animate>
-                    ))}
-                  </div>
-                </div>
-              </Container>
-            </section>
+              meetingsTitle={page.meetings.title}
+              meetingsButton={page.meetings.button}
+              meetingsTime={page.meetings.time}
+              meetingsImage={event.image}
+              meetingsImageAlt={event.title}
+              meetings={listableMeetings}
+              eventSlug={event.slug}
+            />
           );
 
         if (section.type === "titleImageButton")
