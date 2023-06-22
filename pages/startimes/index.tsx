@@ -5,13 +5,11 @@ import { renderContent } from "@/lib/renderContent";
 import Seo from "@/components/Seo";
 import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
-import Prose from "@/components/Prose";
 import Footer from "@/components/Footer";
-import { formatDate } from "@/lib/date";
-import Button from "@/components/Button";
-import Carousel from "@/components/Carousel";
-import { getNextMeeting } from "@/lib/event";
-import YoutubeVideo from "@/components/YoutubeVideo";
+import BlockHeadingManagementSalesMarketing from "@/components/BlockHeadingManagementSalesMarketing";
+import BlockBoldCenterText from "@/components/BlockBoldCenterText";
+import BlockMarkdownImagesButton from "@/components/BlockMarkdownImagesButton";
+import BlockOldOne from "@/components/BlockOldOne";
 
 function Page({ pageData, footerData, events }) {
   const page = pageData;
@@ -43,61 +41,41 @@ function Page({ pageData, footerData, events }) {
                         style={{ backgroundColor: listing.color }}
                       ></div>
                       <div className="px-6 py-8">
-                        <h2 className="text-5xl text-center uppercase">
-                          {listing.titleNormal}{" "}
-                          <span className="normal-case font-rose">
-                            {listing.titleRose}{" "}
-                          </span>
-                          {listing.titleNormalAfter}
-                        </h2>
-                        <div className="grid gap-8 mt-8 lg:grid-cols-2">
-                          <div>
-                            {listing.markdown && (
-                              <Prose html={listing.markdown.html} />
-                            )}
-                            {listing.properties.map((p) => (
-                              <div key={p.title}>
-                                <h3 className="mt-5 text-4xl font-rose">
-                                  {p.title}
-                                </h3>
-                                <Prose html={p.markdown.html} />
-                              </div>
-                            ))}
-                            {getNextMeeting(event) && (
-                              <>
-                                <h3 className="mt-5 text-4xl font-rose">
-                                  {page.listing.next}
-                                </h3>
-                                <p>
-                                  {formatDate(
-                                    getNextMeeting(event).day,
-                                    "full"
-                                  )}
-                                </p>
-                              </>
-                            )}
-                          </div>
-                          <div className="flex flex-col justify-between">
-                            {listing.youtube && (
-                              <div>
-                                <YoutubeVideo videoId={listing.youtube} />
-                              </div>
-                            )}
-                            {!listing.youtube && (
-                              <div className="leading-[0px]">
-                                <Carousel images={listing.images} />
-                              </div>
-                            )}
-                            <div className="flex justify-center mt-6 md:justify-start">
-                              <Button
-                                kind="pink"
-                                href={`/startimes/${event.slug}/`}
-                              >
-                                {page.listing.button}
-                              </Button>
-                            </div>
-                          </div>
-                        </div>
+                        {listing.content?.map((c) => {
+                          if (c.type === "msmTitle")
+                            return (
+                              <BlockHeadingManagementSalesMarketing
+                                key="msmTitle"
+                                block={c}
+                              />
+                            );
+
+                          if (c.type === "boldCenterText")
+                            return (
+                              <BlockBoldCenterText
+                                key="boldCenterText"
+                                block={c}
+                              />
+                            );
+
+                          if (c.type === "markdownImagesButton")
+                            return (
+                              <BlockMarkdownImagesButton
+                                key="markdownImagesButton"
+                                block={c}
+                              />
+                            );
+
+                          if (c.type === "blockOldOne")
+                            return (
+                              <BlockOldOne
+                                key="blockOldOne"
+                                block={c}
+                                event={event}
+                                page={page}
+                              />
+                            );
+                        })}
                       </div>
                     </div>
                   </Animate>

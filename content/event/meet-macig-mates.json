@@ -66,24 +66,29 @@
       {
         "youtube": "DMbR5867tFQ",
         "color": "#e50069",
-        "titleRose": "Magic Mates",
-        "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
-        "properties": [
-          {
-            "title": "Warum?",
-            "markdown": "Wir lieben die Power von Brilliant Minds, den Austausch, das Miteinander, Co-Creation & Freude und sind davon schon immer überzeugt und inspiriert – heute mehr denn je, sodass wir jetzt gemeinsam starten."
-          },
-          {
-            "title": "Für Wen?",
-            "markdown": "Für Marketer:innen"
-          }
-        ],
         "ordering": 100,
-        "images": [
-          "/media/magic_mates.jpg"
-        ],
         "type": "listing",
-        "titleNormal": "Meet"
+        "content": [
+          {
+            "type": "blockOldOne",
+            "titleRose": "Magic Mates",
+            "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
+            "properties": [
+              {
+                "title": "Warum?",
+                "markdown": "Wir lieben die Power von Brilliant Minds, den Austausch, das Miteinander, Co-Creation & Freude und sind davon schon immer überzeugt und inspiriert – heute mehr denn je, sodass wir jetzt gemeinsam starten."
+              },
+              {
+                "title": "Für Wen?",
+                "markdown": "Für Marketer:innen"
+              }
+            ],
+            "images": [
+              "/media/magic_mates.jpg"
+            ],
+            "titleNormal": "Meet"
+          }
+        ]
       },
       {
         "type": "detail",

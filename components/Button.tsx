@@ -38,6 +38,8 @@ function Button({
     bClassName += ` text-bsm-nightblue md:w-72 pink justify-center`;
   } else if (kind === "purple") {
     bClassName += " text-bsm-purple md:w-72 purple justify-center";
+  } else if (kind === "ocean") {
+    bClassName += " text-bsm-nightblue md:w-72 ocean justify-center";
   }
 
   const button = useRef(null);
@@ -97,6 +99,12 @@ function Button({
           }
           .button-svg--wrapper:hover .button-svg--rect.purple {
             stroke: #641642;
+          }
+          .button-svg--rect.ocean {
+            stroke: #00adea;
+          }
+          .button-svg--wrapper:hover .button-svg--rect.ocean {
+            stroke: #00adea;
           }
         `}
       </style>

@@ -1623,6 +1623,32 @@ var titleTextImage = () => ({
 });
 var titleTextImage_default = titleTextImage;
 
+// cms/symbols/fullCta.ts
+var fullCta = {
+  label: "CTA",
+  name: "cta",
+  i18n: false,
+  widget: "object",
+  required: false,
+  fields: [
+    ...internalLinkFields,
+    {
+      label: "Art",
+      name: "kind",
+      widget: "select",
+      required: false,
+      options: [
+        { label: "Nachtblau", value: "blue" },
+        { label: "Pink", value: "pink" },
+        { label: "Dunkelviolett", value: "purple" },
+        { label: "Ocean", value: "ocean" }
+      ],
+      i18n: false
+    }
+  ]
+};
+var fullCta_default = fullCta;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -1806,54 +1832,114 @@ var event = {
             },
             { label: "Farbe", name: "color", widget: "string" },
             {
-              label: "Bilder",
-              name: "images",
+              label: "Inhalt",
+              name: "content",
               widget: "list",
-              i18n: false,
-              field: { label: "Bild", name: "image", widget: "image" }
-            },
-            {
-              label: "YouTube Video Code",
-              name: "youtube",
-              widget: "string",
-              required: false,
-              i18n: false
-            },
-            {
-              label: "Titel Normal Vorher",
-              name: "titleNormal",
-              widget: "string",
-              i18n: true,
-              required: false
-            },
-            {
-              label: "Titel Rose",
-              name: "titleRose",
-              widget: "string",
-              i18n: true,
-              required: false
-            },
-            {
-              label: "Titel Normal Nachher",
-              name: "titleNormalAfter",
-              widget: "string",
-              i18n: true,
-              required: false
-            },
-            {
-              label: "Markdown",
-              name: "markdown",
-              i18n: true,
-              widget: "markdown",
-              required: false
-            },
-            {
-              label: "Eigenschaften",
-              name: "properties",
-              widget: "list",
-              fields: [
-                { label: "Titel", name: "title", widget: "string" },
-                markdown_default
+              types: [
+                {
+                  label: "MSM-Titel",
+                  name: "msmTitle",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Untertitel",
+                      name: "subtitle",
+                      widget: "string"
+                    }
+                  ]
+                },
+                {
+                  label: "Dicker-Text",
+                  name: "boldCenterText",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Text",
+                      name: "text",
+                      widget: "text"
+                    }
+                  ]
+                },
+                {
+                  label: "Text-Bilder-Button",
+                  name: "markdownImagesButton",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Markdown",
+                      name: "markdown",
+                      i18n: true,
+                      widget: "markdown",
+                      required: false
+                    },
+                    {
+                      label: "Bilder",
+                      name: "images",
+                      widget: "list",
+                      i18n: false,
+                      field: { label: "Bild", name: "image", widget: "image" }
+                    },
+                    fullCta_default
+                  ]
+                },
+                {
+                  label: "Block-Alt-1",
+                  name: "blockOldOne",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Bilder",
+                      name: "images",
+                      widget: "list",
+                      i18n: false,
+                      field: { label: "Bild", name: "image", widget: "image" }
+                    },
+                    {
+                      label: "YouTube Video Code",
+                      name: "youtube",
+                      widget: "string",
+                      required: false,
+                      i18n: false
+                    },
+                    {
+                      label: "Titel Normal Vorher",
+                      name: "titleNormal",
+                      widget: "string",
+                      i18n: true,
+                      required: false
+                    },
+                    {
+                      label: "Titel Rose",
+                      name: "titleRose",
+                      widget: "string",
+                      i18n: true,
+                      required: false
+                    },
+                    {
+                      label: "Titel Normal Nachher",
+                      name: "titleNormalAfter",
+                      widget: "string",
+                      i18n: true,
+                      required: false
+                    },
+                    {
+                      label: "Markdown",
+                      name: "markdown",
+                      i18n: true,
+                      widget: "markdown",
+                      required: false
+                    },
+                    {
+                      label: "Eigenschaften",
+                      name: "properties",
+                      widget: "list",
+                      fields: [
+                        { label: "Titel", name: "title", widget: "string" },
+                        markdown_default
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]

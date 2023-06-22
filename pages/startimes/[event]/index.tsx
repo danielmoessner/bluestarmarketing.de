@@ -173,7 +173,16 @@ export async function getStaticProps({ locale, params }) {
 }
 
 export async function getStaticPaths({ locales }) {
-  const events = locales.map((locale) => getAllJson("event", locale)).flat();
+  const events = locales
+    .map((locale) =>
+      getAllJson("event", locale).filter((e) => {
+        for (const page of e.pages) {
+          if (page.type === "detail") return true;
+        }
+        return false;
+      })
+    )
+    .flat();
 
   return {
     paths: events.map((e) => {

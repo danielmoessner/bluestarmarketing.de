@@ -113,28 +113,33 @@
     },
     "pages": [
       {
-        "youtube": "maQshCOi4L0",
-        "color": "#641462",
-        "titleRose": "Kopf & Herz",
-        "markdown": "",
-        "properties": [
-          {
-            "title": "Schenke dir Coaching-Sessions & erstelle dein Visionboard",
-            "markdown": "Unsere Einladung an dich: Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten und Verändern"
-          },
-          {
-            "title": "Für mehr Klarheit und Fokus",
-            "markdown": "* für deine berufliche Entwicklung, nächste Karriereschritte und Gestaltungsmöglichkeiten\n* in deinem Alltag\n* im strategischen und operativen Marketing\n* in Teams und Abteilungen: Vertrieb, Marketing, HR und im Management"
-          }
-        ],
-        "ordering": 10,
-        "images": [
-          "/media/papierblatt_quer.png",
-          "/media/papierblatt_visionboard.jpg"
-        ],
         "type": "listing",
-        "titleNormalAfter": "in deine Hände",
-        "titleNormal": "Aus"
+        "ordering": 10,
+        "color": "#641462",
+        "content": [
+          {
+            "type": "blockOldOne",
+            "youtube": "maQshCOi4L0",
+            "titleRose": "Kopf & Herz",
+            "markdown": "",
+            "properties": [
+              {
+                "title": "Schenke dir Coaching-Sessions & erstelle dein Visionboard",
+                "markdown": "Unsere Einladung an dich: Zeit und Raum für deine Wünsche und Ziele\n\n* in dieser neuen und sich so schnell verändernden Welt\n* zum Reflektieren, Gestalten und Verändern"
+              },
+              {
+                "title": "Für mehr Klarheit und Fokus",
+                "markdown": "* für deine berufliche Entwicklung, nächste Karriereschritte und Gestaltungsmöglichkeiten\n* in deinem Alltag\n* im strategischen und operativen Marketing\n* in Teams und Abteilungen: Vertrieb, Marketing, HR und im Management"
+              }
+            ],
+            "images": [
+              "/media/papierblatt_quer.png",
+              "/media/papierblatt_visionboard.jpg"
+            ],
+            "titleNormalAfter": "in deine Hände",
+            "titleNormal": "Aus"
+          }
+        ]
       },
       {
         "type": "detail",

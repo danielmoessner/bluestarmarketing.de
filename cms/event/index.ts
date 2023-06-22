@@ -15,6 +15,7 @@ import titleSection from "../sections/title";
 import headerSection from "../sections/header";
 import imageTextSection from "../sections/imageText";
 import titleTextImage from "../sections/titleTextImage";
+import fullCta from "../symbols/fullCta";
 
 const event: CmsCollection = {
   name: "event",
@@ -198,54 +199,114 @@ const event: CmsCollection = {
             },
             { label: "Farbe", name: "color", widget: "string" },
             {
-              label: "Bilder",
-              name: "images",
+              label: "Inhalt",
+              name: "content",
               widget: "list",
-              i18n: false,
-              field: { label: "Bild", name: "image", widget: "image" },
-            },
-            {
-              label: "YouTube Video Code",
-              name: "youtube",
-              widget: "string",
-              required: false,
-              i18n: false,
-            },
-            {
-              label: "Titel Normal Vorher",
-              name: "titleNormal",
-              widget: "string",
-              i18n: true,
-              required: false,
-            },
-            {
-              label: "Titel Rose",
-              name: "titleRose",
-              widget: "string",
-              i18n: true,
-              required: false,
-            },
-            {
-              label: "Titel Normal Nachher",
-              name: "titleNormalAfter",
-              widget: "string",
-              i18n: true,
-              required: false,
-            },
-            {
-              label: "Markdown",
-              name: "markdown",
-              i18n: true,
-              widget: "markdown",
-              required: false,
-            },
-            {
-              label: "Eigenschaften",
-              name: "properties",
-              widget: "list",
-              fields: [
-                { label: "Titel", name: "title", widget: "string" },
-                markdown,
+              types: [
+                {
+                  label: "MSM-Titel",
+                  name: "msmTitle",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Untertitel",
+                      name: "subtitle",
+                      widget: "string",
+                    },
+                  ],
+                },
+                {
+                  label: "Dicker-Text",
+                  name: "boldCenterText",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Text",
+                      name: "text",
+                      widget: "text",
+                    },
+                  ],
+                },
+                {
+                  label: "Text-Bilder-Button",
+                  name: "markdownImagesButton",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Markdown",
+                      name: "markdown",
+                      i18n: true,
+                      widget: "markdown",
+                      required: false,
+                    },
+                    {
+                      label: "Bilder",
+                      name: "images",
+                      widget: "list",
+                      i18n: false,
+                      field: { label: "Bild", name: "image", widget: "image" },
+                    },
+                    fullCta,
+                  ],
+                },
+                {
+                  label: "Block-Alt-1",
+                  name: "blockOldOne",
+                  widget: "object",
+                  fields: [
+                    {
+                      label: "Bilder",
+                      name: "images",
+                      widget: "list",
+                      i18n: false,
+                      field: { label: "Bild", name: "image", widget: "image" },
+                    },
+                    {
+                      label: "YouTube Video Code",
+                      name: "youtube",
+                      widget: "string",
+                      required: false,
+                      i18n: false,
+                    },
+                    {
+                      label: "Titel Normal Vorher",
+                      name: "titleNormal",
+                      widget: "string",
+                      i18n: true,
+                      required: false,
+                    },
+                    {
+                      label: "Titel Rose",
+                      name: "titleRose",
+                      widget: "string",
+                      i18n: true,
+                      required: false,
+                    },
+                    {
+                      label: "Titel Normal Nachher",
+                      name: "titleNormalAfter",
+                      widget: "string",
+                      i18n: true,
+                      required: false,
+                    },
+                    {
+                      label: "Markdown",
+                      name: "markdown",
+                      i18n: true,
+                      widget: "markdown",
+                      required: false,
+                    },
+                    {
+                      label: "Eigenschaften",
+                      name: "properties",
+                      widget: "list",
+                      fields: [
+                        { label: "Titel", name: "title", widget: "string" },
+                        markdown,
+                      ],
+                    },
+                  ],
+                },
               ],
             },
           ],
