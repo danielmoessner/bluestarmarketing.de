@@ -10,6 +10,7 @@ import BlockHeadingManagementSalesMarketing from "@/components/BlockHeadingManag
 import BlockBoldCenterText from "@/components/BlockBoldCenterText";
 import BlockMarkdownImagesButton from "@/components/BlockMarkdownImagesButton";
 import BlockOldOne from "@/components/BlockOldOne";
+import BlockMarkdownImageImagesButton from "@/components/BlockMarkdownImageImagesButton";
 
 function Page({ pageData, footerData, events }) {
   const page = pageData;
@@ -62,6 +63,14 @@ function Page({ pageData, footerData, events }) {
                             return (
                               <BlockMarkdownImagesButton
                                 key="markdownImagesButton"
+                                block={c}
+                              />
+                            );
+
+                          if (c.type === "markdownImageImagesButton")
+                            return (
+                              <BlockMarkdownImageImagesButton
+                                key="markdownImageImagesButton"
                                 block={c}
                               />
                             );

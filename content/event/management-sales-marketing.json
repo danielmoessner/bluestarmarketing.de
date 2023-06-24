@@ -17,16 +17,17 @@
             "text": "Bringe die Zukunft ins HIER & JETZT\nSetze Ideen in integrale Businesslösungen, Strategien & Marketingkampagnen um"
           },
           {
-            "type": "markdownImagesButton",
+            "type": "markdownImageImagesButton",
             "markdown": "* Empowerment in Unternehmen\n* Potenzialbooster für Teams & Projekte über alle Hierachieebenen hinweg & für Individual Contributor\n* **SALES & MARKETING** wie **SALZ & PFEFFER**? \\\n  Ohne geht in der Küche wie im Business nichts! Dein Power-Mix zum **MAGIC TEAM** für integrale Lösungen, Strategien & Kampagnen.",
-            "images": [
-              "/media/empowerment_treppe_fuer_pp_pur.png"
-            ],
             "cta": {
               "text": "Details anzeigen",
               "url": "/kontakt",
               "kind": "ocean"
-            }
+            },
+            "images": [
+              "/media/management_sales_marketing.png"
+            ],
+            "image": "/media/empowerment_treppe_fuer_pp_pur.png"
           }
         ]
       }

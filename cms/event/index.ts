@@ -15,7 +15,10 @@ import titleSection from "../sections/title";
 import headerSection from "../sections/header";
 import imageTextSection from "../sections/imageText";
 import titleTextImage from "../sections/titleTextImage";
-import fullCta from "../symbols/fullCta";
+import boldCenterTextBlock from "../blocks/boldCenterText";
+import msmTitle from "../blocks/msmTitle";
+import markdownImagesButton from "../blocks/markdownImagesButton";
+import markdownImageImagesButton from "../blocks/markdownImageImagesButton";
 
 const event: CmsCollection = {
   name: "event",
@@ -203,52 +206,10 @@ const event: CmsCollection = {
               name: "content",
               widget: "list",
               types: [
-                {
-                  label: "MSM-Titel",
-                  name: "msmTitle",
-                  widget: "object",
-                  fields: [
-                    {
-                      label: "Untertitel",
-                      name: "subtitle",
-                      widget: "string",
-                    },
-                  ],
-                },
-                {
-                  label: "Dicker-Text",
-                  name: "boldCenterText",
-                  widget: "object",
-                  fields: [
-                    {
-                      label: "Text",
-                      name: "text",
-                      widget: "text",
-                    },
-                  ],
-                },
-                {
-                  label: "Text-Bilder-Button",
-                  name: "markdownImagesButton",
-                  widget: "object",
-                  fields: [
-                    {
-                      label: "Markdown",
-                      name: "markdown",
-                      i18n: true,
-                      widget: "markdown",
-                      required: false,
-                    },
-                    {
-                      label: "Bilder",
-                      name: "images",
-                      widget: "list",
-                      i18n: false,
-                      field: { label: "Bild", name: "image", widget: "image" },
-                    },
-                    fullCta,
-                  ],
-                },
+                msmTitle(),
+                boldCenterTextBlock(),
+                markdownImagesButton(),
+                markdownImageImagesButton(),
                 {
                   label: "Block-Alt-1",
                   name: "blockOldOne",

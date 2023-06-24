@@ -1623,6 +1623,36 @@ var titleTextImage = () => ({
 });
 var titleTextImage_default = titleTextImage;
 
+// cms/blocks/boldCenterText.ts
+var boldCenterTextBlock = () => ({
+  label: "Dicker-Text",
+  name: "boldCenterText",
+  widget: "object",
+  fields: [
+    {
+      label: "Text",
+      name: "text",
+      widget: "text"
+    }
+  ]
+});
+var boldCenterText_default = boldCenterTextBlock;
+
+// cms/blocks/msmTitle.ts
+var msmTitle = () => ({
+  label: "MSM-Titel",
+  name: "msmTitle",
+  widget: "object",
+  fields: [
+    {
+      label: "Untertitel",
+      name: "subtitle",
+      widget: "string"
+    }
+  ]
+});
+var msmTitle_default = msmTitle;
+
 // cms/symbols/fullCta.ts
 var fullCta = {
   label: "CTA",
@@ -1648,6 +1678,60 @@ var fullCta = {
   ]
 };
 var fullCta_default = fullCta;
+
+// cms/blocks/markdownImagesButton.ts
+var markdownImagesButton = () => ({
+  label: "Text-Bilder-Button",
+  name: "markdownImagesButton",
+  widget: "object",
+  fields: [
+    {
+      label: "Markdown",
+      name: "markdown",
+      i18n: true,
+      widget: "markdown"
+    },
+    {
+      label: "Bilder",
+      name: "images",
+      widget: "list",
+      i18n: false,
+      field: { label: "Bild", name: "image", widget: "image" }
+    },
+    fullCta_default
+  ]
+});
+var markdownImagesButton_default = markdownImagesButton;
+
+// cms/blocks/markdownImageImagesButton.ts
+var markdownImageImagesButton = () => ({
+  label: "Text-Bild-Bilder-Button",
+  name: "markdownImageImagesButton",
+  widget: "object",
+  fields: [
+    {
+      label: "Markdown",
+      name: "markdown",
+      i18n: true,
+      widget: "markdown"
+    },
+    {
+      label: "Bild",
+      name: "image",
+      widget: "image",
+      i18n: false
+    },
+    {
+      label: "Bilder",
+      name: "images",
+      widget: "list",
+      i18n: false,
+      field: { label: "Bild", name: "image", widget: "image" }
+    },
+    fullCta_default
+  ]
+});
+var markdownImageImagesButton_default = markdownImageImagesButton;
 
 // cms/event/index.ts
 var event = {
@@ -1836,52 +1920,10 @@ var event = {
               name: "content",
               widget: "list",
               types: [
-                {
-                  label: "MSM-Titel",
-                  name: "msmTitle",
-                  widget: "object",
-                  fields: [
-                    {
-                      label: "Untertitel",
-                      name: "subtitle",
-                      widget: "string"
-                    }
-                  ]
-                },
-                {
-                  label: "Dicker-Text",
-                  name: "boldCenterText",
-                  widget: "object",
-                  fields: [
-                    {
-                      label: "Text",
-                      name: "text",
-                      widget: "text"
-                    }
-                  ]
-                },
-                {
-                  label: "Text-Bilder-Button",
-                  name: "markdownImagesButton",
-                  widget: "object",
-                  fields: [
-                    {
-                      label: "Markdown",
-                      name: "markdown",
-                      i18n: true,
-                      widget: "markdown",
-                      required: false
-                    },
-                    {
-                      label: "Bilder",
-                      name: "images",
-                      widget: "list",
-                      i18n: false,
-                      field: { label: "Bild", name: "image", widget: "image" }
-                    },
-                    fullCta_default
-                  ]
-                },
+                msmTitle_default(),
+                boldCenterText_default(),
+                markdownImagesButton_default(),
+                markdownImageImagesButton_default(),
                 {
                   label: "Block-Alt-1",
                   name: "blockOldOne",
