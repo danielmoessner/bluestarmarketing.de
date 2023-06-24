@@ -1614,14 +1614,14 @@ var imageTextSection = () => ({
 var imageText_default = imageTextSection;
 
 // cms/sections/titleTextImage.ts
-var titleTextImage = () => ({
+var titleTextImageSection = () => ({
   label: "Titel-Text-Bild",
   name: "titleTextImage",
   widget: "object",
   i18n: true,
   fields: [title_default, markdown_default, { label: "Bild", name: "image", widget: "image" }]
 });
-var titleTextImage_default = titleTextImage;
+var titleTextImage_default = titleTextImageSection;
 
 // cms/blocks/boldCenterText.ts
 var boldCenterTextBlock = () => ({
@@ -1732,6 +1732,61 @@ var markdownImageImagesButton = () => ({
   ]
 });
 var markdownImageImagesButton_default = markdownImageImagesButton;
+
+// cms/sections/titleTextEventButtonImage.ts
+var titleTextEventButtonImageSection = () => ({
+  label: "Titel-Text-Termin-Button-Bild",
+  name: "titleTextEventButtonImage",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    markdown_default,
+    {
+      label: "N\xE4chster Termin",
+      name: "next",
+      widget: "string"
+    },
+    cta_default,
+    { label: "Bild", name: "image", widget: "image" }
+  ]
+});
+var titleTextEventButtonImage_default = titleTextEventButtonImageSection;
+
+// cms/sections/eventButtonSection.ts
+var eventButtonSection = () => ({
+  label: "Event-Button",
+  name: "eventButton",
+  widget: "object",
+  i18n: true,
+  fields: [
+    {
+      label: "N\xE4chster Termin",
+      name: "next",
+      widget: "string"
+    },
+    cta_default
+  ]
+});
+var eventButtonSection_default = eventButtonSection;
+
+// cms/sections/centerTitleTextVideo.ts
+var centerTitleTextVideoSection = () => ({
+  label: "Zentriert-Titel-Text-Video",
+  name: "centerTitleTextVideo",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    markdown_default,
+    {
+      label: "YouTube Video Code",
+      name: "video",
+      widget: "string"
+    }
+  ]
+});
+var centerTitleTextVideo_default = centerTitleTextVideoSection;
 
 // cms/event/index.ts
 var event = {
@@ -2001,57 +2056,14 @@ var event = {
               types: [
                 title_default2(),
                 header_default2(),
-                {
-                  label: "Event-Button",
-                  name: "eventButton",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    {
-                      label: "N\xE4chster Termin",
-                      name: "next",
-                      widget: "string"
-                    },
-                    cta_default
-                  ]
-                },
+                eventButtonSection_default(),
                 titleTextButtonImage_default(),
-                {
-                  label: "Titel-Text-Termin-Button-Bild",
-                  name: "titleTextEventButtonImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    {
-                      label: "N\xE4chster Termin",
-                      name: "next",
-                      widget: "string"
-                    },
-                    cta_default,
-                    { label: "Bild", name: "image", widget: "image" }
-                  ]
-                },
+                titleTextEventButtonImage_default(),
                 titleImage_default(),
                 imageText_default(),
                 titleImageButton_default(),
                 titleTextImage_default(),
-                {
-                  label: "Zentriert-Titel-Text-Video",
-                  name: "centerTitleTextVideo",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title_default,
-                    markdown_default,
-                    {
-                      label: "YouTube Video Code",
-                      name: "video",
-                      widget: "string"
-                    }
-                  ]
-                },
+                centerTitleTextVideo_default(),
                 imagesText_default(),
                 titleTextVideo_default(),
                 {

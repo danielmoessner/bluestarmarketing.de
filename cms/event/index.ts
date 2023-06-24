@@ -1,6 +1,5 @@
 import title from "cms/symbols/title";
 import { CmsCollection } from "netlify-cms-core";
-import cta from "../symbols/cta";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
 import form from "../symbols/form";
@@ -14,11 +13,14 @@ import titleImageSection from "../sections/titleImage";
 import titleSection from "../sections/title";
 import headerSection from "../sections/header";
 import imageTextSection from "../sections/imageText";
-import titleTextImage from "../sections/titleTextImage";
+import titleTextImageSection from "../sections/titleTextImage";
 import boldCenterTextBlock from "../blocks/boldCenterText";
 import msmTitle from "../blocks/msmTitle";
 import markdownImagesButton from "../blocks/markdownImagesButton";
 import markdownImageImagesButton from "../blocks/markdownImageImagesButton";
+import titleTextEventButtonImageSection from "../sections/titleTextEventButtonImage";
+import eventButtonSection from "../sections/eventButtonSection";
+import centerTitleTextVideoSection from "../sections/centerTitleTextVideo";
 
 const event: CmsCollection = {
   name: "event",
@@ -287,57 +289,14 @@ const event: CmsCollection = {
               types: [
                 titleSection(),
                 headerSection(),
-                {
-                  label: "Event-Button",
-                  name: "eventButton",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    {
-                      label: "Nächster Termin",
-                      name: "next",
-                      widget: "string",
-                    },
-                    cta,
-                  ],
-                },
+                eventButtonSection(),
                 titleTextButtonImageSection(),
-                {
-                  label: "Titel-Text-Termin-Button-Bild",
-                  name: "titleTextEventButtonImage",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    {
-                      label: "Nächster Termin",
-                      name: "next",
-                      widget: "string",
-                    },
-                    cta,
-                    { label: "Bild", name: "image", widget: "image" },
-                  ],
-                },
+                titleTextEventButtonImageSection(),
                 titleImageSection(),
                 imageTextSection(),
                 titleImageButtonSection(),
-                titleTextImage(),
-                {
-                  label: "Zentriert-Titel-Text-Video",
-                  name: "centerTitleTextVideo",
-                  widget: "object",
-                  i18n: true,
-                  fields: [
-                    title,
-                    markdown,
-                    {
-                      label: "YouTube Video Code",
-                      name: "video",
-                      widget: "string",
-                    },
-                  ],
-                },
+                titleTextImageSection(),
+                centerTitleTextVideoSection(),
                 imagesTextSection(),
                 titleTextVideoSection(),
                 {
