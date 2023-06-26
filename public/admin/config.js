@@ -1788,6 +1788,61 @@ var centerTitleTextVideoSection = () => ({
 });
 var centerTitleTextVideo_default = centerTitleTextVideoSection;
 
+// cms/blocks/roseTitle.ts
+var roseTitle = () => ({
+  label: "Rose-Titel",
+  name: "roseTitle",
+  widget: "object",
+  fields: [
+    {
+      label: "Titel Normal Vorher",
+      name: "titleNormal",
+      widget: "string",
+      i18n: true,
+      required: false
+    },
+    {
+      label: "Titel Rose",
+      name: "titleRose",
+      widget: "string",
+      i18n: true,
+      required: false
+    },
+    {
+      label: "Titel Normal Nachher",
+      name: "titleNormalAfter",
+      widget: "string",
+      i18n: true,
+      required: false
+    }
+  ]
+});
+var roseTitle_default = roseTitle;
+
+// cms/blocks/propertiesEventsVideoButton.ts
+var propertiesEventsVideoButton = () => ({
+  label: "Eigenschaften-Events-Video-Button",
+  name: "propertiesEventsVideoButton",
+  widget: "object",
+  fields: [
+    {
+      label: "Eigenschaften",
+      name: "properties",
+      widget: "list",
+      fields: [{ label: "Titel", name: "title", widget: "string" }, markdown_default]
+    },
+    {
+      label: "YouTube Video Code",
+      name: "youtube",
+      widget: "string",
+      required: false,
+      i18n: false
+    },
+    fullCta_default
+  ]
+});
+var propertiesEventsVideoButton_default = propertiesEventsVideoButton;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -1976,9 +2031,11 @@ var event = {
               widget: "list",
               types: [
                 msmTitle_default(),
+                roseTitle_default(),
                 boldCenterText_default(),
                 markdownImagesButton_default(),
                 markdownImageImagesButton_default(),
+                propertiesEventsVideoButton_default(),
                 {
                   label: "Block-Alt-1",
                   name: "blockOldOne",

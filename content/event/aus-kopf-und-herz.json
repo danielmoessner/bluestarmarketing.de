@@ -118,10 +118,14 @@
         "color": "#641462",
         "content": [
           {
-            "type": "blockOldOne",
-            "youtube": "maQshCOi4L0",
+            "type": "roseTitle",
+            "titleNormal": "Aus",
             "titleRose": "Kopf & Herz",
-            "markdown": "",
+            "titleNormalAfter": "in deine Hände"
+          },
+          {
+            "type": "propertiesEventsVideoButton",
+            "youtube": "maQshCOi4L0",
             "properties": [
               {
                 "title": "Schenke dir Coaching-Sessions & erstelle dein Visionboard",
@@ -132,12 +136,11 @@
                 "markdown": "* für deine berufliche Entwicklung, nächste Karriereschritte und Gestaltungsmöglichkeiten\n* in deinem Alltag\n* im strategischen und operativen Marketing\n* in Teams und Abteilungen: Vertrieb, Marketing, HR und im Management"
               }
             ],
-            "images": [
-              "/media/papierblatt_quer.png",
-              "/media/papierblatt_visionboard.jpg"
-            ],
-            "titleNormalAfter": "in deine Hände",
-            "titleNormal": "Aus"
+            "cta": {
+              "text": "Details anzeigen",
+              "kind": "purple",
+              "url": "/startimes/auskopfundherz"
+            }
           }
         ]
       },

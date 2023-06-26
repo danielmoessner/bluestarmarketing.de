@@ -37,7 +37,7 @@ function Button({
   } else if (kind === "pink") {
     bClassName += ` text-bsm-nightblue md:w-72 pink justify-center`;
   } else if (kind === "purple") {
-    bClassName += " text-bsm-purple md:w-72 purple justify-center";
+    bClassName += " text-bsm-nightblue md:w-72 purple justify-center";
   } else if (kind === "ocean") {
     bClassName += " text-bsm-nightblue md:w-72 ocean justify-center";
   }
@@ -82,27 +82,20 @@ function Button({
           .button-svg--wrapper:hover .button-svg--rect {
             stroke: #00adea;
             stroke-dasharray: 15, 610;
-            // stroke-dasharray: 15, 741;
             stroke-dashoffset: 190;
             stroke-dashoffset: 219.5;
             stroke-width: 4;
             transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
           }
-          .button-svg--rect.pink {
-            stroke: #e50069;
-          }
+          .button-svg--rect.pink,
           .button-svg--wrapper:hover .button-svg--rect.pink {
             stroke: #e50069;
           }
-          .button-svg--rect.purple {
-            stroke: #641642;
-          }
+          .button-svg--rect.purple,
           .button-svg--wrapper:hover .button-svg--rect.purple {
             stroke: #641642;
           }
-          .button-svg--rect.ocean {
-            stroke: #00adea;
-          }
+          .button-svg--rect.ocean,
           .button-svg--wrapper:hover .button-svg--rect.ocean {
             stroke: #00adea;
           }

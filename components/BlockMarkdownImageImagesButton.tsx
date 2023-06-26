@@ -8,7 +8,7 @@ function BlockMarkdownImageImagesButton({ block }) {
     <div className="grid gap-8 mt-8 lg:grid-cols-2">
       <div>
         <Prose html={block.markdown.html} />
-        <div className="">
+        <div className="px-10">
           <Image {...block.image} alt="" />
         </div>
       </div>

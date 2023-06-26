@@ -11,6 +11,8 @@ import BlockBoldCenterText from "@/components/BlockBoldCenterText";
 import BlockMarkdownImagesButton from "@/components/BlockMarkdownImagesButton";
 import BlockOldOne from "@/components/BlockOldOne";
 import BlockMarkdownImageImagesButton from "@/components/BlockMarkdownImageImagesButton";
+import BlockRoseHeading from "@/components/BlockRoseHeading";
+import BlockPropertiesNextEventVideoButton from "@/components/BlockPropertiesNextEventVideoButton";
 
 function Page({ pageData, footerData, events }) {
   const page = pageData;
@@ -48,6 +50,21 @@ function Page({ pageData, footerData, events }) {
                               <BlockHeadingManagementSalesMarketing
                                 key="msmTitle"
                                 block={c}
+                              />
+                            );
+
+                          if (c.type === "roseTitle")
+                            return (
+                              <BlockRoseHeading key="roseTitle" block={c} />
+                            );
+
+                          if (c.type === "propertiesEventsVideoButton")
+                            return (
+                              <BlockPropertiesNextEventVideoButton
+                                key="propertiesEventsVideoButton"
+                                block={c}
+                                event={event}
+                                nextEventText={page.listing.next}
                               />
                             );
 

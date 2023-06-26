@@ -21,6 +21,8 @@ import markdownImageImagesButton from "../blocks/markdownImageImagesButton";
 import titleTextEventButtonImageSection from "../sections/titleTextEventButtonImage";
 import eventButtonSection from "../sections/eventButtonSection";
 import centerTitleTextVideoSection from "../sections/centerTitleTextVideo";
+import roseTitle from "../blocks/roseTitle";
+import propertiesEventsVideoButton from "../blocks/propertiesEventsVideoButton";
 
 const event: CmsCollection = {
   name: "event",
@@ -209,9 +211,11 @@ const event: CmsCollection = {
               widget: "list",
               types: [
                 msmTitle(),
+                roseTitle(),
                 boldCenterTextBlock(),
                 markdownImagesButton(),
                 markdownImageImagesButton(),
+                propertiesEventsVideoButton(),
                 {
                   label: "Block-Alt-1",
                   name: "blockOldOne",
