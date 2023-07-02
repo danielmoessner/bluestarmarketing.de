@@ -8,6 +8,7 @@ import { ImageRendered } from "types/shared";
 interface Header1 {
   markdown: { html: string };
   image: ImageRendered;
+  title: string;
   cta: {
     text: string;
     url: string;
@@ -57,13 +58,41 @@ function Component({ header, position = "bottom-right" }: Props) {
               >
                 <Animate>
                   <div className="p-5 bg-bsm-matt/90">
-                    <Heading element="h1" size="header">
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: header.markdown.html,
-                        }}
-                      ></div>
-                    </Heading>
+                    {header.title &&
+                      header.title === "management_sales_marketing" && (
+                        <div className="mb-2">
+                          <h1 className="flex items-center text-[1.7rem] tracking-tight leading-none uppercase">
+                            <span>Management</span>
+                            <div className="flex-shrink-0 w-5 ml-1 mr-0.5">
+                              <Image
+                                width={151}
+                                height={177}
+                                src="/herz_und_gross.png"
+                                alt="& Zeichen"
+                              />
+                            </div>
+                            <span>Sales</span>
+                            <div className="flex-shrink-0 w-5 ml-1 mr-0.5">
+                              <Image
+                                width={151}
+                                height={177}
+                                src="/herz_und_gross.png"
+                                alt="& Zeichen"
+                              />
+                            </div>
+                            <span>Marketing</span>
+                          </h1>
+                          <div className="text-xl uppercase">
+                            Empowerment For Integral Business
+                          </div>
+                        </div>
+                      )}
+                    <div
+                      className="text-2xl"
+                      dangerouslySetInnerHTML={{
+                        __html: header.markdown.html,
+                      }}
+                    ></div>
                     <div className="mt-4">
                       <Button element="Link" href={header.cta.url}>
                         {header.cta.text}

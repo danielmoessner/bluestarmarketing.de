@@ -1,18 +1,19 @@
 {
   "de": {
     "meta": {
-      "description": "**Dein B2B-Marketingpartner**\nIntegrale Strategien & Kampagnen \\\nfür Team-Alignment, \\\nEmpowerment & Wachstum",
+      "description": "Wir setzen Ideen in integrale Lösungen, Strategien & Marketingkampagnen um.",
       "title": "Blue Star Marketing",
       "image": "/media/logo_bluestar_300px.svg",
       "keywords": "b2b marketing, b2b marketing strategie, b2b marketing strategien, b2b marketing agentur, b2b tech marketing, integriertes marketing, business marketing, funnelstrategien"
     },
     "header": {
-      "markdown": "**Dein B2B-Marketingpartner**\nIntegrale Strategien & Kampagnen \\\nfür Team-Alignment, \\\nEmpowerment & Wachstum",
+      "markdown": "Wir setzen Ideen in integrale Lösungen, Strategien & Marketingkampagnen um.",
       "image": "/media/bluestar_home_2.jpg",
       "cta": {
         "text": "Jetzt Erstgespräch vereinbaren",
         "url": "/kontakt"
-      }
+      },
+      "title": "management_sales_marketing"
     },
     "customers": {
       "title": "Das sagen unsere Kund:innen",
@@ -110,7 +111,7 @@
       "keywords": "b2b marketing, b2b marketing strategie, b2b marketing strategien, b2b marketing agentur, b2b tech marketing, integriertes marketing, business marketing, funnelstrategien"
     },
     "header": {
-      "markdown": "**Your B2B marketing partner** \\\nIntegral strategies & campaigns \\\nfor team alignment, \\\nempowerment & growth",
+      "markdown": "Integral strategies & campaigns for team \\\nalignment, empowerment & growth",
       "image": "/media/bluestar_home_2.jpg",
       "cta": {
         "text": "Talk to us today!",
