@@ -1,7 +1,6 @@
 import Container from "./Container";
 import Image from "next/image";
 import Button from "./Button";
-import Heading from "./Heading";
 import Animate from "./Animate";
 import { ImageRendered } from "types/shared";
 

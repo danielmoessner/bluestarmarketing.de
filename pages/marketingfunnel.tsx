@@ -47,10 +47,9 @@ function Page({ pageData, footerData }) {
             </Animate>
           </div>
           <div className="mt-12">
-            <div
-              className="max-w-3xl mx-auto md:pl-[13%]"
-              dangerouslySetInnerHTML={{ __html: page.start.svg }}
-            ></div>
+            <div className="leading-[0px] max-w-3xl mx-auto md:pl-[13%]">
+              <Image {...page.start.imageFunnel} alt="Funnel" />
+            </div>
           </div>
         </Container>
       </section>

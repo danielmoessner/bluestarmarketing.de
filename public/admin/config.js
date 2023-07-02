@@ -571,15 +571,6 @@ var marketingstrategy = {
 };
 var marketingstrategy_default = marketingstrategy;
 
-// cms/symbols/svg.ts
-var svg = {
-  label: "SVG",
-  name: "svg",
-  widget: "string",
-  i18n: true
-};
-var svg_default = svg;
-
 // cms/page/salesmarketing.ts
 var salesmarketing = {
   file: "content/page/salesmarketing.json",
@@ -594,7 +585,18 @@ var salesmarketing = {
       name: "start",
       i18n: true,
       widget: "object",
-      fields: [title_default, markdown_default, image_default, cta_default, svg_default]
+      fields: [
+        title_default,
+        markdown_default,
+        image_default,
+        cta_default,
+        {
+          label: "Bild Funnel",
+          name: "imageFunnel",
+          widget: "image",
+          i18n: true
+        }
+      ]
     },
     {
       label: "Reise",
@@ -606,6 +608,15 @@ var salesmarketing = {
   ]
 };
 var salesmarketing_default = salesmarketing;
+
+// cms/symbols/svg.ts
+var svg = {
+  label: "SVG",
+  name: "svg",
+  widget: "string",
+  i18n: true
+};
+var svg_default = svg;
 
 // cms/page/marketingcampaign.ts
 var marketingcampaign = {
