@@ -25,7 +25,6 @@ function Page({ pageData, footerData }) {
             <Heading element="h1" size="h1">
               {page.start.title}
             </Heading>
-            {/* <HeadingStar /> */}
           </div>
           <div className="mt-6 md:mt-8 lg:mt-16">
             <Animate>
@@ -42,10 +41,11 @@ function Page({ pageData, footerData }) {
             </Animate>
           </div>
           <div className="mt-12">
-            <div
-              className="max-w-3xl mx-auto"
-              dangerouslySetInnerHTML={{ __html: page.start.svg }}
-            ></div>
+            <div className="max-w-2xl mx-auto">
+              <div className="leading-[0px]">
+                <Image {...page.start.imageCircle} alt={page.start.title} />
+              </div>
+            </div>
           </div>
           <div className="flex justify-center mt-12">
             <Button href={page.start.cta.url}>{page.start.cta.text}</Button>
