@@ -1906,6 +1906,35 @@ var propertiesEventsVideoQuoteButton = () => ({
 });
 var propertiesEventsVideoQuoteButton_default = propertiesEventsVideoQuoteButton;
 
+// cms/symbols/quote.ts
+var quoteFields = [
+  { label: "Text", name: "text", i18n: true, widget: "text" },
+  { label: "Kunde", name: "customer", i18n: true, widget: "string" },
+  {
+    label: "Unternehmen",
+    name: "company",
+    i18n: true,
+    widget: "string",
+    required: false
+  }
+];
+var quote_default = quoteFields;
+
+// cms/sections/titleTextVideoQuote.ts
+var titleTextVideoQuoteSection = () => ({
+  label: "Titel-Text-Video-Zitat",
+  name: "titleTextVideoQuote",
+  widget: "object",
+  i18n: true,
+  fields: [
+    title_default,
+    markdown_default,
+    { label: "YouTube Video Code", name: "video", widget: "string" },
+    { label: "Quote", name: "quote", widget: "object", fields: quote_default }
+  ]
+});
+var titleTextVideoQuote_default = titleTextVideoQuoteSection;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -2187,6 +2216,7 @@ var event = {
                 centerTitleTextVideo_default(),
                 imagesText_default(),
                 titleTextVideo_default(),
+                titleTextVideoQuote_default(),
                 {
                   label: "Zwei-Spalten",
                   name: "twoColumns",

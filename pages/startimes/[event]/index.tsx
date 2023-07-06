@@ -19,6 +19,8 @@ import SectionImageText from "@/components/SectionImageText";
 import SectionTitleTextButtonImage from "@/components/SectionTitleTextButtonImage";
 import SectionTwoColumns from "@/components/SectionTwoColumns";
 import SectionMeetings from "@/components/SectionMeetings";
+import SectionCenterTitleTextVideo from "@/components/SectionCenterTitleTextVideo";
+import SectionTitleTextVideoQuote from "@/components/SectionTitleTextVideoQuote";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -50,7 +52,15 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "centerTitleTextVideo")
           return (
-            <SectionTitleTextVideo key={section.title} section={section} />
+            <SectionCenterTitleTextVideo
+              key={section.title}
+              section={section}
+            />
+          );
+
+        if (section.type === "titleTextVideoQuote")
+          return (
+            <SectionTitleTextVideoQuote key={section.title} section={section} />
           );
 
         if (section.type === "titleTextImage")

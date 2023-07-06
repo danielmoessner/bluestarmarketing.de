@@ -24,6 +24,7 @@ import centerTitleTextVideoSection from "../sections/centerTitleTextVideo";
 import roseTitle from "../blocks/roseTitle";
 import propertiesEventsVideoButton from "../blocks/propertiesEventsVideoButton";
 import propertiesEventsVideoQuoteButton from "../blocks/propertiesEventsVideoQuoteButton";
+import titleTextVideoQuoteSection from "../sections/titleTextVideoQuote";
 
 const event: CmsCollection = {
   name: "event",
@@ -305,6 +306,7 @@ const event: CmsCollection = {
                 centerTitleTextVideoSection(),
                 imagesTextSection(),
                 titleTextVideoSection(),
+                titleTextVideoQuoteSection(),
                 {
                   label: "Zwei-Spalten",
                   name: "twoColumns",
