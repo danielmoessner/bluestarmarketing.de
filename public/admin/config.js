@@ -880,6 +880,13 @@ var blocksSection = (name = "blocks") => ({
               widget: "string",
               i18n: false
             },
+            {
+              label: "YouTube Video Code",
+              name: "video",
+              required: false,
+              widget: "string",
+              i18n: false
+            },
             markdown_default,
             {
               label: "CTA",

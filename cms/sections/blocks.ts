@@ -35,6 +35,13 @@ const blocksSection = (name = "blocks"): CmsFieldObject & CmsFieldBase => ({
               widget: "string",
               i18n: false,
             },
+            {
+              label: "YouTube Video Code",
+              name: "video",
+              required: false,
+              widget: "string",
+              i18n: false,
+            },
             markdown,
             {
               label: "CTA",

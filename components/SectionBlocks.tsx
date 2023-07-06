@@ -47,6 +47,11 @@ function SectionBlocks({ section, padding = "pb-12 pt-10 md:pt-16" }) {
                       {block.subtitle}
                     </div>
                   </div>
+                  {block.video && (
+                    <div className="max-w-lg pt-5">
+                      <YoutubeVideo videoId={block.video} />
+                    </div>
+                  )}
                   <div className="mt-8">
                     <Prose
                       html={block.markdown.html}
