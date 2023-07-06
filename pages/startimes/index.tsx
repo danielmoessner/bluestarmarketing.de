@@ -13,6 +13,7 @@ import BlockOldOne from "@/components/BlockOldOne";
 import BlockMarkdownImageImagesButton from "@/components/BlockMarkdownImageImagesButton";
 import BlockRoseHeading from "@/components/BlockRoseHeading";
 import BlockPropertiesNextEventVideoButton from "@/components/BlockPropertiesNextEventVideoButton";
+import BlockPropertiesNextEventVideoQuoteButton from "@/components/BlockPropertiesNextEventVideoQuoteButton";
 
 function Page({ pageData, footerData, events }) {
   const page = pageData;
@@ -61,6 +62,16 @@ function Page({ pageData, footerData, events }) {
                           if (c.type === "propertiesEventsVideoButton")
                             return (
                               <BlockPropertiesNextEventVideoButton
+                                key="propertiesEventsVideoButton"
+                                block={c}
+                                event={event}
+                                nextEventText={page.listing.next}
+                              />
+                            );
+
+                          if (c.type === "propertiesEventsVideoQuoteButton")
+                            return (
+                              <BlockPropertiesNextEventVideoQuoteButton
                                 key="propertiesEventsVideoButton"
                                 block={c}
                                 event={event}

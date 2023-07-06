@@ -23,6 +23,7 @@ import eventButtonSection from "../sections/eventButtonSection";
 import centerTitleTextVideoSection from "../sections/centerTitleTextVideo";
 import roseTitle from "../blocks/roseTitle";
 import propertiesEventsVideoButton from "../blocks/propertiesEventsVideoButton";
+import propertiesEventsVideoQuoteButton from "../blocks/propertiesEventsVideoQuoteButton";
 
 const event: CmsCollection = {
   name: "event",
@@ -216,6 +217,7 @@ const event: CmsCollection = {
                 markdownImagesButton(),
                 markdownImageImagesButton(),
                 propertiesEventsVideoButton(),
+                propertiesEventsVideoQuoteButton(),
                 {
                   label: "Block-Alt-1",
                   name: "blockOldOne",

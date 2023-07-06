@@ -124,7 +124,7 @@
             "titleNormalAfter": "in deine Hände"
           },
           {
-            "type": "propertiesEventsVideoButton",
+            "type": "propertiesEventsVideoQuoteButton",
             "youtube": "maQshCOi4L0",
             "properties": [
               {
@@ -140,6 +140,10 @@
               "text": "Details anzeigen",
               "kind": "purple",
               "url": "/startimes/auskopfundherz"
+            },
+            "quote": {
+              "text": "Im Juni 2023 habe ich eine wundervolle Erfahrung machen dürfen. Mein Kunstwerk zu meinen Visionen habe ich in tollem Ambiente und in liebevoller Atmosphäre erstellt. Unter dem Motto: \"Aus Kopf und Herz in deine Hände\". Mit den tollsten Materialien und einer wundervollen Zeit ist ein ganz tolles Kunstwerk entstanden. \nMeine Gedanken, Werte und Visionen auf Papier zu bringen, war für mich eine ganz neue wundervolle Erfahrung. Begleitet von Silke auch in der Vor- und Nachbereitung \nmeines Termins habe ich mich bestens aufgehoben gefühlt. Silke hat mich wunderbar abgeholt und mich Schritt für Schritt unterstützt, wenn ich Hilfe gebraucht habe. Ich hatte eine Zeit mit lauter Glückseligkeit, die ich nicht vergessen werde. Ich komme gerne wieder. DANKE",
+              "customer": "Julia"
             }
           }
         ]

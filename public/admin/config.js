@@ -1864,6 +1864,41 @@ var propertiesEventsVideoButton = () => ({
 });
 var propertiesEventsVideoButton_default = propertiesEventsVideoButton;
 
+// cms/blocks/propertiesEventsVideoQuoteButton.ts
+var propertiesEventsVideoQuoteButton = () => ({
+  label: "Eigenschaften-Events-Video-Zitat-Button",
+  name: "propertiesEventsVideoQuoteButton",
+  widget: "object",
+  fields: [
+    {
+      label: "Eigenschaften",
+      name: "properties",
+      widget: "list",
+      fields: [{ label: "Titel", name: "title", widget: "string" }, markdown_default]
+    },
+    {
+      label: "YouTube Video Code",
+      name: "youtube",
+      widget: "string",
+      required: false,
+      i18n: false
+    },
+    {
+      label: "Quote",
+      name: "quote",
+      widget: "object",
+      required: true,
+      i18n: true,
+      fields: [
+        { label: "Text", name: "text", i18n: true, widget: "text" },
+        { label: "Kunde", name: "customer", i18n: true, widget: "string" }
+      ]
+    },
+    fullCta_default
+  ]
+});
+var propertiesEventsVideoQuoteButton_default = propertiesEventsVideoQuoteButton;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -2057,6 +2092,7 @@ var event = {
                 markdownImagesButton_default(),
                 markdownImageImagesButton_default(),
                 propertiesEventsVideoButton_default(),
+                propertiesEventsVideoQuoteButton_default(),
                 {
                   label: "Block-Alt-1",
                   name: "blockOldOne",
