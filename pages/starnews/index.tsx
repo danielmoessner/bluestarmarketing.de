@@ -9,8 +9,8 @@ import Article from "@/components/Article";
 import BlogLayout from "@/components/BlogLayout";
 import ArticleMeta from "@/components/ArticleMeta";
 import { useRouter } from "next/router";
-import { getAllJson, getSingleJson } from "../lib/getContent";
-import { renderContent } from "../lib/renderContent";
+import { getAllJson, getSingleJson } from "../../lib/getContent";
+import { renderContent } from "../../lib/renderContent";
 
 function Page({
   pageData,
@@ -115,9 +115,18 @@ export async function getStaticProps({ locale }) {
     (a) => a._original.de.slug === pageData._original.de.start.article
   );
 
-  const articleData = articleData2.filter(
+  const articleData3 = articleData2.filter(
     (a) => a._original.de.slug !== pageData._original.de.start.article
   );
+
+  const articleData = articleData3.map((a) => ({
+    categories: a.categories,
+    excerpt: a.excerpt,
+    isArchived: a.isArchived || false,
+    previewimage: a.previewimage,
+    slug: a.slug,
+    title: a.title,
+  }));
 
   return {
     props: {
