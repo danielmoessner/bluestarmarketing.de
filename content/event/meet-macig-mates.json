@@ -1,7 +1,7 @@
 {
   "de": {
     "form": {
-      "markdownForm": "Für Marketer:innen aus Tech-Unternehmen\n\n**Wir freuen uns auf deine Anmeldung zu Meet Magic Mates!**\n\nZwischen dir und deiner Teilnahme liegen nur noch wenige Schritte. \\\nNach der Übermittlung des Formulars prüfen wir die Daten. \\\nMit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung.",
+      "markdownForm": "Für Marketing & Sales Entscheider: innen\n\n**Wir freuen uns auf deine Anmeldung zu Meet Magic Mates!**\n\nZwischen dir und deiner Teilnahme liegen nur noch wenige Schritte. \\\nNach der Übermittlung des Formulars prüfen wir die Daten. \\\nMit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung.",
       "successTextMarkdown": "Vielen Dank für deine Anmeldung zu Meet Magic Mates! Wir prüfen deine Daten. Mit perfektem Match und verfügbarem Platz senden wir dir schnellstmöglich deine Bestätigung.",
       "fields": [
         {
@@ -72,15 +72,15 @@
           {
             "type": "blockOldOne",
             "titleRose": "Magic Mates",
-            "markdown": "* Vernetze dich mit neuen und bekannten Marketer:innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
+            "markdown": "* Vernetze dich mit neuen und bekannten Sales- & Marketing-Entscheidern: innen.\n* Schöpfe aus gebündelter Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
             "properties": [
               {
                 "title": "Warum?",
                 "markdown": "Wir lieben die Power von Brilliant Minds, den Austausch, das Miteinander, Co-Creation & Freude und sind davon schon immer überzeugt und inspiriert – heute mehr denn je, sodass wir jetzt gemeinsam starten."
               },
               {
-                "title": "Für Wen?",
-                "markdown": "Für Marketer:innen"
+                "title": "Für wen?",
+                "markdown": "Sales- & Marketing-Entscheidern: innen"
               }
             ],
             "images": [
@@ -162,7 +162,7 @@
       {
         "day": "2023-10-10",
         "from": "17:00",
-        "to": "19:00",
+        "to": "19:30",
         "title": "Meet Magic Mates am 10. Oktober 2023",
         "addons": [
           {
