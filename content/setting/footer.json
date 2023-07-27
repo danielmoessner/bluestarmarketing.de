@@ -1,7 +1,7 @@
 {
   "de": {
     "row1": {
-      "copyright": "© 2022 Blue Star Marketing GmbH & Co. KG",
+      "copyright": "© 2023 Blue Star Marketing GmbH & Co. KG",
       "content": [
         {
           "type": "externalLink",
@@ -12,11 +12,6 @@
           "type": "externalLink",
           "text": "Design: Annika Lind",
           "url": "https://annikalind-grafikdesign.de"
-        },
-        {
-          "type": "externalLink",
-          "text": "Fotos: Kitty Fried",
-          "url": "https://www.kitty-fried.de"
         }
       ]
     },
@@ -57,7 +52,7 @@
       "/media/bluestar_footer_6.jpg"
     ],
     "row1": {
-      "copyright": "© 2022 Blue Star Marketing GmbH & Co. KG",
+      "copyright": "© 2023 Blue Star Marketing GmbH & Co. KG",
       "content": [
         {
           "type": "externalLink",
@@ -68,11 +63,6 @@
           "type": "externalLink",
           "text": "Design: Annika Lind",
           "url": "https://annikalind-grafikdesign.de"
-        },
-        {
-          "type": "externalLink",
-          "text": "Photos: Kitty Fried",
-          "url": "https://www.kitty-fried.de"
         }
       ]
     },

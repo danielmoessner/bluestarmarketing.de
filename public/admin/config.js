@@ -1857,7 +1857,10 @@ var propertiesEventsVideoButton = () => ({
       label: "Eigenschaften",
       name: "properties",
       widget: "list",
-      fields: [{ label: "Titel", name: "title", widget: "string" }, markdown_default]
+      fields: [
+        { label: "Titel", name: "title", widget: "string", required: false },
+        markdown_default
+      ]
     },
     {
       label: "YouTube Video Code",

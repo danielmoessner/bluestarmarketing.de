@@ -70,10 +70,17 @@
         "type": "listing",
         "content": [
           {
-            "type": "blockOldOne",
-            "titleRose": "Magic Mates",
-            "markdown": "* Vernetze dich mit neuen und bekannten Sales- & Marketing-Entscheidern: innen.\n* Schöpfe aus gebündelter Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
+            "type": "roseTitle",
+            "titleNormal": "Meet",
+            "titleRose": "Magic Mates"
+          },
+          {
+            "type": "propertiesEventsVideoButton",
             "properties": [
+              {
+                "markdown": "* Vernetze dich mit neuen und bekannten Sales- & Marketing-Entscheidern: innen.\n* Schöpfe aus gebündelter Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
+                "title": ""
+              },
               {
                 "title": "Warum?",
                 "markdown": "Wir lieben die Power von Brilliant Minds, den Austausch, das Miteinander, Co-Creation & Freude und sind davon schon immer überzeugt und inspiriert – heute mehr denn je, sodass wir jetzt gemeinsam starten."
@@ -83,10 +90,12 @@
                 "markdown": "Sales- & Marketing-Entscheidern: innen"
               }
             ],
-            "images": [
-              "/media/magic_mates.jpg"
-            ],
-            "titleNormal": "Meet"
+            "youtube": "2BEt4B85zg8",
+            "cta": {
+              "text": "Details anzeigen",
+              "kind": "pink",
+              "url": "/startimes/meetmagicmates"
+            }
           }
         ]
       },

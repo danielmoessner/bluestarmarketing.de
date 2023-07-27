@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "./TranslatedLink";
 import Container from "./Container";
-import Image from "next/image";
 
 function Component({ data }) {
   return (
@@ -9,23 +8,6 @@ function Component({ data }) {
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
-      <div className="flex w-full">
-        {data.images.map((image, index) => (
-          <div key={index} className="relative w-full aspect-square">
-            <Image
-              src={image.src}
-              placeholder="blur"
-              sizes="(max-width: 600px) 33vw,
-              (max-width: 600) 50vw,
-              100vw"
-              blurDataURL={image.blurDataURL}
-              fill
-              alt={`Footer Bild ${index}`}
-              className="w-full"
-            />
-          </div>
-        ))}
-      </div>
       <Container layout="sm">
         <div className="mt-5">
           <div className="flex flex-col justify-between lg:items-center lg:flex-row">

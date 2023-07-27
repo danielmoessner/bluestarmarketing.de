@@ -9,9 +9,11 @@ function BlockPropertiesNextEventVideoButton({ block, event, nextEventText }) {
     <div>
       <div className="grid gap-8 mt-8 lg:grid-cols-2">
         <div>
-          {block.properties.map((p) => (
-            <div key={p.title}>
-              <h3 className="mt-5 text-4xl font-rose">{p.title}</h3>
+          {block.properties.map((p, i) => (
+            <div key={p.title + i}>
+              {p.title && (
+                <h3 className="mt-5 text-4xl font-rose">{p.title}</h3>
+              )}
               <Prose html={p.markdown.html} />
             </div>
           ))}

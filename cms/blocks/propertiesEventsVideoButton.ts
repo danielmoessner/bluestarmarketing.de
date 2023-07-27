@@ -11,7 +11,10 @@ const propertiesEventsVideoButton = (): CmsFieldObject & CmsFieldBase => ({
       label: "Eigenschaften",
       name: "properties",
       widget: "list",
-      fields: [{ label: "Titel", name: "title", widget: "string" }, markdown],
+      fields: [
+        { label: "Titel", name: "title", widget: "string", required: false },
+        markdown,
+      ],
     },
     {
       label: "YouTube Video Code",
