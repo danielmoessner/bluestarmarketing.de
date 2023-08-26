@@ -43,14 +43,14 @@ function Component({ link }: Props) {
               className={classNames(
                 isActive ? "bg-gray-50" : "",
                 open ? "text-gray-900 bg-gray-100" : "text-gray-600",
-                "group pl-3 pr-2 py-1 hover:bg-gray-100 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-gray-200"
+                "group pl-3 pr-2 py-1 hover:bg-gray-100 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-gray-200",
               )}
             >
               <span>{link.text}</span>
               <ChevronDownIcon
                 className={classNames(
                   open ? "text-gray-600" : "text-gray-400",
-                  "ml-2 h-5 w-5 group-hover:text-gray-500"
+                  "ml-2 h-5 w-5 group-hover:text-gray-500",
                 )}
                 aria-hidden="true"
               />

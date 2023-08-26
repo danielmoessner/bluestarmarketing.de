@@ -40,7 +40,7 @@ export async function getStaticProps({ params, locale }) {
   const legalData2 = legalData1.find((i) => i.slug === params.slug);
   const legalData = await renderContent(legalData2);
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
 
   return {

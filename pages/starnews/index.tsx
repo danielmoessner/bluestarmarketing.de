@@ -100,10 +100,10 @@ function Page({
 
 export async function getStaticProps({ locale }) {
   const pageData = await renderContent(
-    getSingleJson("page", "starnews", locale)
+    getSingleJson("page", "starnews", locale),
   );
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
 
   const categoryData = getAllJson("category", locale);
@@ -112,11 +112,11 @@ export async function getStaticProps({ locale }) {
   const articleData2 = await renderContent(articleData1);
 
   const mainArticleData = articleData2.find(
-    (a) => a._original.de.slug === pageData._original.de.start.article
+    (a) => a._original.de.slug === pageData._original.de.start.article,
   );
 
   const articleData3 = articleData2.filter(
-    (a) => a._original.de.slug !== pageData._original.de.start.article
+    (a) => a._original.de.slug !== pageData._original.de.start.article,
   );
 
   const articleData = articleData3.map((a) => ({

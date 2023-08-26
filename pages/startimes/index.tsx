@@ -136,10 +136,10 @@ function Page({ pageData, footerData, events }) {
 
 export async function getStaticProps({ locale }) {
   const pageData = await renderContent(
-    getSingleJson("page", "startimes", locale)
+    getSingleJson("page", "startimes", locale),
   );
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
 
   const getOrderingOfEvent = (event) => {
@@ -150,11 +150,11 @@ export async function getStaticProps({ locale }) {
 
   const events1 = getAllJson("event", locale);
   const events2 = events1.filter(
-    (e) => e.pages.filter((p) => p.type === "listing").length
+    (e) => e.pages.filter((p) => p.type === "listing").length,
   );
   const events3 = await renderContent(events2);
   const events4 = events3.sort(
-    (a, b) => getOrderingOfEvent(b) - getOrderingOfEvent(a)
+    (a, b) => getOrderingOfEvent(b) - getOrderingOfEvent(a),
   );
 
   return {

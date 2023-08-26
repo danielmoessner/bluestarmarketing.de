@@ -50,12 +50,12 @@ export async function getStaticProps({ params, locale }) {
   const articleData = await renderContent(articleDataSource);
 
   const pageData = await renderContent(
-    getSingleJson("page", "starnews", locale)
+    getSingleJson("page", "starnews", locale),
   );
   const categoryData = getAllJson("category", locale);
 
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
 
   return {

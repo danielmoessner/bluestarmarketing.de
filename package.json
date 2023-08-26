@@ -8,6 +8,7 @@
     "build": "npm run redirects && npm run cms:build && next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "cms": "npm run cms:watch & npx netlify-cms-proxy-server",
     "cms:watch": "watch 'npm run cms:build' cms",
     "cms:build": "esbuild cms/config.ts --bundle --outfile=./public/admin/config.js --target=es2020 --format=esm"
@@ -30,7 +31,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "next": "^13.4.19",
-    "plaiceholder": "^2.5.0",
+    "plaiceholder": "^3.0.0",
     "postcss": "^8.4.13",
     "prettier": "^3.0.2",
     "react": "^18.2.0",

@@ -50,10 +50,10 @@ function Page({ footerData, images, pageData }) {
 
 export async function getStaticProps({ locale }) {
   const pageData = await renderContent(
-    getSingleJson("page", "participantsonly", locale)
+    getSingleJson("page", "participantsonly", locale),
   );
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
   const images1 = {
     image1: "/media/aus_kopf_und_herz_grafik_teil_1.png",

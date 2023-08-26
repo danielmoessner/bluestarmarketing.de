@@ -78,10 +78,10 @@ function Page({ pageData, footerData }) {
 
 export async function getStaticProps({ locale }) {
   const pageData = await renderContent(
-    getSingleJson("page", "marketingcampaign", locale)
+    getSingleJson("page", "marketingcampaign", locale),
   );
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
 
   return {

@@ -43,17 +43,17 @@ function loadJson(filename: string, locale?: string) {
 
 export function getAllMarkdown(
   collection: string,
-  locale?: string
+  locale?: string,
 ): CmsObject[] {
   const collectionDirectory = join(
     process.cwd(),
     "content",
     collection,
-    locale
+    locale,
   );
   const filenames = fs.readdirSync(collectionDirectory);
   const items = filenames.map((filename) =>
-    loadMarkdown(`${collectionDirectory}/${filename}`, { _locale: locale })
+    loadMarkdown(`${collectionDirectory}/${filename}`, { _locale: locale }),
   );
 
   return items;
@@ -62,7 +62,7 @@ export function getAllMarkdown(
 export function getSingleJson(
   collection: string,
   item: string,
-  locale?: string
+  locale?: string,
 ): CmsObject {
   const filename = join(process.cwd(), "content", collection, item) + ".json";
   const data = loadJson(filename, locale);
@@ -74,7 +74,7 @@ export function getAllJson(collection: string, locale?: string): CmsObject[] {
   const collectionDirectory = join(process.cwd(), "content", collection);
   const filenames = fs.readdirSync(collectionDirectory);
   const items = filenames.map((filename) =>
-    loadJson(`${collectionDirectory}/${filename}`, locale)
+    loadJson(`${collectionDirectory}/${filename}`, locale),
   );
 
   return items;

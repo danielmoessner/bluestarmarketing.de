@@ -16,7 +16,7 @@ function Component() {
       {
         threshold: 1,
         rootMargin: "0px 0px -20% 0px",
-      }
+      },
     );
 
     if (ref.current) observer.observe(ref.current);

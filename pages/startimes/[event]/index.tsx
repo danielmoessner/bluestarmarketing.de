@@ -28,7 +28,7 @@ function Page({ pageData, footerData, eventData }) {
   const availableMeetings = getAvailableMeetings(event);
   const detail = event.pages.find((p) => p.type === "detail");
   const listableMeetings = availableMeetings.filter(
-    (m) => m.addons && m.addons.find((a) => a.type === "listSection")
+    (m) => m.addons && m.addons.find((a) => a.type === "listSection"),
   );
 
   return (
@@ -161,10 +161,10 @@ function Page({ pageData, footerData, eventData }) {
 
 export async function getStaticProps({ locale, params }) {
   const pageData = await renderContent(
-    getSingleJson("page", "startimesmeetings", locale)
+    getSingleJson("page", "startimesmeetings", locale),
   );
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
   const { event } = params;
 
@@ -190,7 +190,7 @@ export async function getStaticPaths({ locales }) {
           if (page.type === "detail") return true;
         }
         return false;
-      })
+      }),
     )
     .flat();
 

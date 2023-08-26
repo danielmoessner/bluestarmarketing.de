@@ -23,7 +23,7 @@ function Animate({ children, className, delay, duration, from, to }) {
       {
         threshold: 0.2,
         rootMargin: "0px 0px -10% 0px",
-      }
+      },
     );
     if (ref.current) observer.observe(ref.current);
 

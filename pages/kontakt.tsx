@@ -175,13 +175,13 @@ function Page({ pageData, footerData, globalData }) {
 
 export async function getStaticProps({ locale }) {
   const pageData = await renderContent(
-    getSingleJson("page", "contact", locale)
+    getSingleJson("page", "contact", locale),
   );
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
   const globalData = await renderContent(
-    getSingleJson("setting", "global", locale)
+    getSingleJson("setting", "global", locale),
   );
 
   return {

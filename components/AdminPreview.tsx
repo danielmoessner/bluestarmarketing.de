@@ -10,7 +10,7 @@ function Component({ children }: Props) {
     const iframe: HTMLIFrameElement | undefined =
       document.querySelector("#preview-pane");
     const link: HTMLLinkElement | undefined = document.querySelector(
-      "link[rel='stylesheet']"
+      "link[rel='stylesheet']",
     );
     if (iframe && style && style.innerHTML)
       iframe.contentDocument.head.appendChild(style.cloneNode(true));

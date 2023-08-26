@@ -34,7 +34,7 @@ function RegisterForm({
   addons = [],
 }: Props) {
   const availableMeetings = meetings.filter(
-    (m) => !m.day || new Date() <= new Date(m.day)
+    (m) => !m.day || new Date() <= new Date(m.day),
   );
 
   const { locale } = useRouter();

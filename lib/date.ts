@@ -18,7 +18,7 @@ export const formatDateTime = (dateString: string) => {
 
 export const formatDate = (
   dateString: string,
-  dateStyle: "short" | "full" | "medium" | "long" = "short"
+  dateStyle: "short" | "full" | "medium" | "long" = "short",
 ) => {
   if (!dateString) return "";
   const date = new Date(dateString);

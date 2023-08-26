@@ -151,17 +151,17 @@ export async function getStaticProps({ params, locale }) {
   const foundEvent = events.find((e) => e.slug === event);
 
   const foundMeeting = foundEvent.meetings.find(
-    (m) => m.day.replaceAll("-", "") === meeting
+    (m) => m.day.replaceAll("-", "") === meeting,
   );
 
   const eventData = await renderContent(foundEvent);
   const meetingData = await renderContent(foundMeeting);
 
   const pageData = await renderContent(
-    getSingleJson("page", "startimesmeeting", locale)
+    getSingleJson("page", "startimesmeeting", locale),
   );
   const footerData = await renderContent(
-    getSingleJson("setting", "footer", locale)
+    getSingleJson("setting", "footer", locale),
   );
 
   return {

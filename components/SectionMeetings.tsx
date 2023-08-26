@@ -59,7 +59,7 @@ function SectionMeetings({
                       kind="pink"
                       href={`/startimes/${eventSlug}/${meeting.day.replaceAll(
                         "-",
-                        ""
+                        "",
                       )}`}
                     >
                       {meetingsButton}
