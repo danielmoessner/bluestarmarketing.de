@@ -1,4 +1,4 @@
-import { CmsCollection } from "netlify-cms-core";
+import { CmsCollection } from "decap-cms";
 
 const legal: CmsCollection = {
   name: "legal",

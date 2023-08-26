@@ -1,4 +1,4 @@
-import { CmsField } from "netlify-cms-core";
+import { CmsField } from "decap-cms";
 
 const image: CmsField = {
   label: "Bild",

@@ -1,4 +1,4 @@
-import { CmsCollectionFile } from "netlify-cms-core";
+import { CmsCollectionFile } from "decap-cms";
 import blocksSection from "../sections/blocks";
 import titleImageImageSection from "../sections/titleImageImage";
 import coachingBookingSection from "../sections/coachingBooking";

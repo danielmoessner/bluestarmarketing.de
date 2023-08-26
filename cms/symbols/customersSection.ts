@@ -1,4 +1,4 @@
-import { CmsField } from "netlify-cms-core";
+import { CmsField } from "decap-cms";
 import cta from "./cta";
 import text from "./text";
 import title from "./title";

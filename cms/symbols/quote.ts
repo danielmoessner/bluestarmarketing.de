@@ -1,4 +1,4 @@
-import { CmsField } from "netlify-cms-core";
+import { CmsField } from "decap-cms";
 
 const quoteFields: CmsField[] = [
   { label: "Text", name: "text", i18n: true, widget: "text" },

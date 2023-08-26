@@ -1,5 +1,5 @@
 import title from "cms/symbols/title";
-import { CmsCollection } from "netlify-cms-core";
+import { CmsCollection } from "decap-cms";
 
 const article: CmsCollection = {
   name: "article",

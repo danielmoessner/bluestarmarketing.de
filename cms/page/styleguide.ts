@@ -1,6 +1,6 @@
 import meta from "../symbols/meta";
 import header from "../symbols/header";
-import { CmsCollectionFile } from "netlify-cms-core";
+import { CmsCollectionFile } from "decap-cms";
 
 const styleguide: CmsCollectionFile = {
   file: "content/page/styleguide.json",

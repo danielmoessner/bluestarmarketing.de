@@ -1,4 +1,4 @@
-import { CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
+import { CmsFieldBase, CmsFieldObject } from "decap-cms";
 
 const formSection = (): CmsFieldObject & CmsFieldBase => ({
   label: "Formular",

@@ -1,5 +1,5 @@
 import meta from "../symbols/meta";
-import { CmsCollectionFile } from "netlify-cms-core";
+import { CmsCollectionFile } from "decap-cms";
 import text from "cms/symbols/text";
 
 const startimes: CmsCollectionFile = {

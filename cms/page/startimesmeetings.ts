@@ -1,4 +1,4 @@
-import { CmsCollectionFile } from "netlify-cms-core";
+import { CmsCollectionFile } from "decap-cms";
 import title from "cms/symbols/title";
 
 const startimesmeetings: CmsCollectionFile = {

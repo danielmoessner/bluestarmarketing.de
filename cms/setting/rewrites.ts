@@ -1,4 +1,4 @@
-import { CmsCollectionFile } from "netlify-cms-core";
+import { CmsCollectionFile } from "decap-cms";
 
 const rewrites: CmsCollectionFile = {
   file: "content/setting/rewrites.json",

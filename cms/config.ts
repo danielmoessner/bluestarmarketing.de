@@ -2,7 +2,7 @@ import page from "./page/index";
 import category from "./category/index";
 import setting from "./setting/index";
 import legal from "./legal/index";
-import { CmsConfig } from "netlify-cms-core";
+import { CmsConfig } from "decap-cms";
 import customer from "./customer";
 import article from "./article";
 import event from "./event";

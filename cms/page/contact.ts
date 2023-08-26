@@ -1,6 +1,6 @@
 import meta from "../symbols/meta";
 import header from "../symbols/header";
-import { CmsCollectionFile } from "netlify-cms-core";
+import { CmsCollectionFile } from "decap-cms";
 import title from "cms/symbols/title";
 import image from "cms/symbols/image";
 import text from "cms/symbols/text";

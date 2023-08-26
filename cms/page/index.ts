@@ -1,4 +1,4 @@
-import { CmsCollection } from "netlify-cms-core";
+import { CmsCollection } from "decap-cms";
 import contact from "./contact";
 import customers from "./customers";
 import home from "./home";

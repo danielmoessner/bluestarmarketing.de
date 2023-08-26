@@ -1,4 +1,4 @@
-import { CmsCollection } from "netlify-cms-core";
+import { CmsCollection } from "decap-cms";
 import footer from "./footer";
 import global from "./global";
 import navigation from "./navigation";

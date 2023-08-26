@@ -1,4 +1,4 @@
-import { CmsField, CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
+import { CmsField, CmsFieldBase, CmsFieldObject } from "decap-cms";
 
 export const externalLinkFields: CmsField[] = [
   {

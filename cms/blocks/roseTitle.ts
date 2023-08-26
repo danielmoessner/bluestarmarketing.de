@@ -1,4 +1,4 @@
-import { CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
+import { CmsFieldBase, CmsFieldObject } from "decap-cms";
 
 const roseTitle = (): CmsFieldObject & CmsFieldBase => ({
   label: "Rose-Titel",

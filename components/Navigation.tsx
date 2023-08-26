@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Link from "./TranslatedLink";
 import NextLink from "next/link";
 import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Container from "./Container";
 import NavigationDropdown from "./NavigationDropdown";
 import NavigationLink from "./NavigationLink";
@@ -14,7 +14,6 @@ import { useRouter } from "next/router";
 
 function Component() {
   const { locale } = useRouter();
-  // const languagePath = asPath.split("/").slice(0, 2).join("/");
   const navigation = navigationSource[locale];
   const global = globalSource[locale];
 
@@ -36,7 +35,7 @@ function Component() {
                   <div className="md:hidden">
                     <Popover.Button className="bg-white border-2 border-gray-100 rounded-md px-2 py-1.5 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
                       <span className="sr-only">Menü öffnen</span>
-                      <MenuIcon className="w-6 h-6" aria-hidden="true" />
+                      <Bars3Icon className="w-6 h-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
                   <Popover.Group
@@ -136,7 +135,10 @@ function Component() {
                               className="bg-white rounded-md border-2 border-gray-100 px-2 py-1.5 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
                             >
                               <span className="sr-only">Menü schließen</span>
-                              <XIcon className="w-6 h-6" aria-hidden="true" />
+                              <XMarkIcon
+                                className="w-6 h-6"
+                                aria-hidden="true"
+                              />
                             </button>
                           </div>
                         </div>

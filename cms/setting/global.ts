@@ -1,4 +1,4 @@
-import { CmsCollectionFile } from "netlify-cms-core";
+import { CmsCollectionFile } from "decap-cms";
 
 const global: CmsCollectionFile = {
   file: "content/setting/global.json",

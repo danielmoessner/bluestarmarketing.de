@@ -1,5 +1,5 @@
 import title from "cms/symbols/title";
-import { CmsCollection } from "netlify-cms-core";
+import { CmsCollection } from "decap-cms";
 import markdown from "../symbols/markdown";
 import meta from "../symbols/meta";
 import form from "../symbols/form";

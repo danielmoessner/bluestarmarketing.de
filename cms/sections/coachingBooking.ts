@@ -1,4 +1,4 @@
-import { CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
+import { CmsFieldBase, CmsFieldObject } from "decap-cms";
 import cta from "../symbols/cta";
 import image from "../symbols/image";
 import markdown from "../symbols/markdown";

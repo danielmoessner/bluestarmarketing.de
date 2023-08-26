@@ -1,4 +1,4 @@
-import { CmsFieldBase, CmsFieldObject } from "netlify-cms-core";
+import { CmsFieldBase, CmsFieldObject } from "decap-cms";
 import fullCta from "../symbols/fullCta";
 
 const markdownImageImagesButton = (): CmsFieldObject & CmsFieldBase => ({
