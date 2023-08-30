@@ -22,7 +22,7 @@ function Page({ pageData, footerData }) {
   return (
     <Layout>
       <Seo meta={page.meta} />
-      <Header header={page.header} position="top-left" />
+      <Header header={page.header} position="bottom-left" />
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
