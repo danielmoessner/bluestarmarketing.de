@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Heading from "@/components/Heading";
 import { renderContent } from "lib/renderContent";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 import Multiline from "@/components/Multiline";
 import Animate from "@/components/Animate";
 import { getSingleJson } from "@/lib/getContent";
