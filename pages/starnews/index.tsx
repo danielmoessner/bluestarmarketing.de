@@ -124,6 +124,7 @@ export async function getStaticProps({ locale }) {
     excerpt: a.excerpt,
     isArchived: a.isArchived || false,
     previewimage: a.previewimage,
+    date: a.date,
     slug: a.slug,
     title: a.title,
   }));
