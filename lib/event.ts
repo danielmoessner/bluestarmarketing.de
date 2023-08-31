@@ -1,15 +1,17 @@
 interface Event {
-  meetings?: {
-    day: string;
-    title: string;
-    from?: string;
-    to?: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    addons?: any[];
-  }[];
+  meetings?: Meeting[];
 }
 
-const getNextMeeting = (event: Event) => {
+interface Meeting {
+  day: string;
+  title: string;
+  from?: string;
+  to?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  addons?: any[];
+}
+
+const getNextMeeting = (event: Event): Meeting | undefined => {
   if (!event.meetings) return null;
   const meeting = event.meetings
     .filter((m) => m.day && new Date() <= new Date(m.day))

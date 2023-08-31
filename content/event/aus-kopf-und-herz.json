@@ -184,7 +184,7 @@
             "next": "Nächster Termin",
             "cta": {
               "text": "Details anfragen",
-              "url": "#form"
+              "url": "/kontakt"
             }
           },
           {
@@ -192,16 +192,6 @@
             "title": "Gestalte dein Leben",
             "image": "/media/grafik_aus_kopf_und_herz.png",
             "mobileImage": "/media/aus_kopf_und_herz_mobil.png"
-          },
-          {
-            "type": "titleImageButton",
-            "title": "Zeitstrahl",
-            "cta": {
-              "text": "Ich bin dabei und melde mich an!",
-              "kind": "purple",
-              "url": "#form"
-            },
-            "image": "/media/zeitstrahl_visionboard_2023_06_13_neu.png"
           },
           {
             "type": "blocks",
@@ -245,15 +235,11 @@
                 "markdown": "Du möchtest weitergehen, dranbleiben und wünscht dir Unterstützung? Ich bin gerne für dich da.",
                 "cta": {
                   "text": "Angebot anfragen",
-                  "url": "#form",
+                  "url": "/kontakt",
                   "kind": "purple"
                 }
               }
             ]
-          },
-          {
-            "type": "form",
-            "placeholder": "---"
           }
         ]
       }
@@ -280,12 +266,6 @@
         "title": "10. Juni 2023",
         "from": "20:36",
         "to": "20:36"
-      },
-      {
-        "day": "2023-09-01",
-        "title": "1. September 2023",
-        "from": "15:00",
-        "to": "19:00"
       },
       {
         "day": "",
