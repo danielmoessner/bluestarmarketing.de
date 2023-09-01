@@ -60,7 +60,7 @@ function Component({ header, position = "bottom-right" }: Props) {
                     {header.title &&
                       header.title === "management_sales_marketing" && (
                         <div className="mb-2">
-                          <h1 className="flex items-center text-[1.7rem] tracking-tight leading-none uppercase">
+                          <h1 className="flex items-center flex-wrap text-[1.7rem] tracking-tight leading-none uppercase">
                             <span>Management</span>
                             <div className="flex-shrink-0 w-5 ml-1 mr-0.5">
                               <Image
