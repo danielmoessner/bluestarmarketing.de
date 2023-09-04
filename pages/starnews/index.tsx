@@ -119,7 +119,7 @@ export async function getStaticProps({ locale }) {
     (a) => a._original.de.slug !== pageData._original.de.start.article,
   );
 
-  const articleData = articleData3.map((a) => ({
+  const articleData4 = articleData3.map((a) => ({
     categories: a.categories,
     excerpt: a.excerpt,
     isArchived: a.isArchived || false,
@@ -128,6 +128,13 @@ export async function getStaticProps({ locale }) {
     slug: a.slug,
     title: a.title,
   }));
+
+  // sort by date
+  const articleData = articleData4.sort((a, b) => {
+    if (a.date < b.date) return 1;
+    if (a.date > b.date) return -1;
+    return 0;
+  });
 
   return {
     props: {
