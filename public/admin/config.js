@@ -1869,6 +1869,14 @@ var propertiesEventsVideoButton = () => ({
       required: false,
       i18n: false
     },
+    {
+      label: "N\xE4chsten Termine Text",
+      name: "nextEventsText",
+      widget: "string",
+      required: true,
+      default: "N\xE4chsten Termine",
+      i18n: true
+    },
     fullCta_default
   ]
 });

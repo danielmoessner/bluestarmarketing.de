@@ -19,9 +19,18 @@ const getNextMeeting = (event: Event): Meeting | undefined => {
   return meeting;
 };
 
+const getNextMeetings = (event: Event, count: number): Meeting[] => {
+  if (!event.meetings) return null;
+  const meetings = event.meetings
+    .filter((m) => m.day && new Date() <= new Date(m.day))
+    .sort((a, b) => new Date(a.day).getTime() - new Date(b.day).getTime())
+    .slice(0, count);
+  return meetings;
+};
+
 const getAvailableMeetings = (event: Event) => {
   if (!event.meetings) return [];
   return event.meetings.filter((m) => m.day && new Date() <= new Date(m.day));
 };
 
-export { getAvailableMeetings, getNextMeeting };
+export { getAvailableMeetings, getNextMeeting, getNextMeetings };

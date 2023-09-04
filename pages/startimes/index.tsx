@@ -65,7 +65,6 @@ function Page({ pageData, footerData, events }) {
                                 key="propertiesEventsVideoButton"
                                 block={c}
                                 event={event}
-                                nextEventText={page.listing.next}
                               />
                             );
 

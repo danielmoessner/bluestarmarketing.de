@@ -95,7 +95,8 @@
               "text": "Details anzeigen",
               "kind": "pink",
               "url": "/startimes/meetmagicmates"
-            }
+            },
+            "nextEventsText": "Nächsten Termine"
           }
         ]
       },

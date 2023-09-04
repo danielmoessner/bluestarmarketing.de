@@ -23,6 +23,14 @@ const propertiesEventsVideoButton = (): CmsFieldObject & CmsFieldBase => ({
       required: false,
       i18n: false,
     },
+    {
+      label: "Nächsten Termine Text",
+      name: "nextEventsText",
+      widget: "string",
+      required: true,
+      default: "Nächsten Termine",
+      i18n: true,
+    },
     fullCta,
   ],
 });
