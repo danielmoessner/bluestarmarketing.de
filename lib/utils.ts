@@ -7,6 +7,10 @@ export function isObject(item): boolean {
   return item && typeof item === "object" && !Array.isArray(item);
 }
 
+export function getAddon(l, type: string) {
+  return l.find((o) => o.type === type);
+}
+
 /**
  * Deep merge two objects.
  * @param target

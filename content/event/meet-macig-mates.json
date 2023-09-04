@@ -176,6 +176,10 @@
         "title": "Meet Magic Mates am 10. Oktober 2023",
         "addons": [
           {
+            "type": "icon",
+            "image": "/media/virtual_meet_magic_mates.png"
+          },
+          {
             "type": "listSection",
             "markdown": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen aus den vorangegangenen Meet Magic Mates Termine."
           },

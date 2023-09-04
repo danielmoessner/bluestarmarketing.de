@@ -105,6 +105,19 @@ const event: CmsCollection = {
           i18n: true,
           types: [
             {
+              label: "Icon",
+              name: "icon",
+              i18n: false,
+              widget: "object",
+              fields: [
+                {
+                  label: "Bild",
+                  name: "image",
+                  widget: "image",
+                },
+              ],
+            },
+            {
               label: "Listen-Sektion",
               name: "listSection",
               i18n: true,

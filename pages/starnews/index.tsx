@@ -129,7 +129,6 @@ export async function getStaticProps({ locale }) {
     title: a.title,
   }));
 
-  // sort by date
   const articleData = articleData4.sort((a, b) => {
     if (a.date < b.date) return 1;
     if (a.date > b.date) return -1;

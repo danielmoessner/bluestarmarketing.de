@@ -4,6 +4,7 @@ import Button from "./Button";
 import Container from "./Container";
 import { formatDate } from "@/lib/date";
 import Prose from "./Prose";
+import { getAddon } from "@/lib/utils";
 
 function SectionMeetings({
   meetingsTitle,
@@ -34,7 +35,14 @@ function SectionMeetings({
                   <div>
                     <div className="flex justify-between">
                       <div className="w-24">
-                        <Image {...meetingsImage} alt={meetingsImageAlt} />
+                        {getAddon(meeting.addons, "icon") ? (
+                          <Image
+                            {...getAddon(meeting.addons, "icon").image}
+                            alt={meeting.title}
+                          />
+                        ) : (
+                          <Image {...meetingsImage} alt={meetingsImageAlt} />
+                        )}
                       </div>
                       <div>
                         <p className="text-bsm-pink">
