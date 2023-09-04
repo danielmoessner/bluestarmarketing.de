@@ -153,6 +153,10 @@
         "to": "19:30",
         "addons": [
           {
+            "type": "icon",
+            "image": "/media/virtual_meet_magic_mates.png"
+          },
+          {
             "type": "listSection",
             "markdown": "**Sales & Marketing – wie viel Reibung darf es sein oder verderben zu viele Köche den Brei** im Hinblick auf die Zielerreichung, Performance & zum Empowerment?\n\n&nbsp;\\\n&nbsp;"
           },
@@ -175,10 +179,6 @@
         "to": "19:30",
         "title": "Meet Magic Mates am 10. Oktober 2023",
         "addons": [
-          {
-            "type": "icon",
-            "image": "/media/virtual_meet_magic_mates.png"
-          },
           {
             "type": "listSection",
             "markdown": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen aus den vorangegangenen Meet Magic Mates Termine."
