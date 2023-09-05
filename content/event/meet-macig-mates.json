@@ -96,7 +96,7 @@
               "kind": "pink",
               "url": "/startimes/meetmagicmates"
             },
-            "nextEventsText": "Nächsten Termine"
+            "nextEventsText": "Nächste Termine"
           }
         ]
       },
@@ -165,9 +165,9 @@
             "type": "detailView",
             "video": "",
             "imgCredits": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com",
-            "markdown": "## *Impulse & Austausch*\n\n**Sales & Marketing – wie viel Reibung darf es sein oder verderben zu viele Köche den Brei** im Hinblick auf die Zielerreichung, Performance & zum Empowerment?\n\n* und öffnet **erstmals** die Türen für **Sales** und Marketing-Entscheider",
+            "markdown": "## *Impulse & Austausch*\n\n**Sales & Marketing – wie viel Reibung darf es sein oder verderben zu viele Köche den Brei** im Hinblick auf die Zielerreichung, Performance & zum Empowerment?",
             "new": {
-              "title": "Virtual",
+              "title": "Virtuell",
               "text": "Über Teams\n     "
             },
             "image": "/media/virtual_meet_magic_mates.png"
