@@ -61,8 +61,11 @@ function Page({ eventData, meetingData, footerData, pageData }) {
                   </div>
                 )}
                 <div>
-                  <div className="-mt-10">
-                    <Prose html={detail.markdown?.html} />
+                  <div className="">
+                    <Prose
+                      html={detail.markdown?.html}
+                      className="prose-h2:mt-0 prose-h3:mt-0"
+                    />
                   </div>
                   <div className="flex items-start space-x-8">
                     <div>
