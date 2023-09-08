@@ -1,9 +1,5 @@
 import { externalLinkFields, internalLinkFields } from "cms/symbols/link";
-import {
-  CmsCollectionFile,
-  CmsFieldBase,
-  CmsFieldObject,
-} from "decap-cms";
+import { CmsCollectionFile, CmsFieldBase, CmsFieldObject } from "decap-cms";
 
 const link: CmsFieldBase & CmsFieldObject = {
   label: "Interner Link",
@@ -45,7 +41,11 @@ const footer: CmsCollectionFile = {
       collapsed: false,
       field: { label: "Bild", name: "image", i18n: true, widget: "image" },
     },
-
+    {
+      label: "Linien-Bild",
+      name: "lineImage",
+      widget: "image",
+    },
     {
       label: "Zeile 1",
       name: "row1",

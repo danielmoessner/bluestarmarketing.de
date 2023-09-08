@@ -1104,6 +1104,11 @@ var footer = {
       field: { label: "Bild", name: "image", i18n: true, widget: "image" }
     },
     {
+      label: "Linien-Bild",
+      name: "lineImage",
+      widget: "image"
+    },
+    {
       label: "Zeile 1",
       name: "row1",
       i18n: true,

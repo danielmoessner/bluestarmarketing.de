@@ -32,25 +32,12 @@
         "url": "/kontakt"
       }
     ],
-    "images": [
-      "/media/bluestar_footer_1.jpg",
-      "/media/bluestar_footer_2.jpg",
-      "/media/bluestar_footer_3.jpg",
-      "/media/bluestar_footer_4.jpg",
-      "/media/bluestar_footer_5.jpg",
-      "/media/bluestar_footer_6.jpg"
-    ],
-    "cookie": "Cookie-Richtline"
+    "images": [],
+    "cookie": "Cookie-Richtline",
+    "lineImage": "/media/wellengrafik_2.png"
   },
   "en": {
-    "images": [
-      "/media/bluestar_footer_1.jpg",
-      "/media/bluestar_footer_2.jpg",
-      "/media/bluestar_footer_3.jpg",
-      "/media/bluestar_footer_4.jpg",
-      "/media/bluestar_footer_5.jpg",
-      "/media/bluestar_footer_6.jpg"
-    ],
+    "images": [],
     "row1": {
       "copyright": "© 2023 Blue Star Marketing GmbH & Co. KG",
       "content": [
