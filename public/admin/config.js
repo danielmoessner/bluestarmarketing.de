@@ -288,6 +288,22 @@ var markdown = {
 };
 var markdown_default = markdown;
 
+// cms/sections/imageTitleRoseTextButton.ts
+var imageTitleRoseTextButton = () => ({
+  label: "Bild-Titel-Rose-Text-Button",
+  name: "imageTitleRoseTextButton",
+  widget: "object",
+  i18n: true,
+  fields: [
+    { label: "Bild", name: "image", widget: "image" },
+    title_default,
+    { label: "Rose", name: "rose", widget: "string" },
+    markdown_default,
+    cta_default
+  ]
+});
+var imageTitleRoseTextButton_default = imageTitleRoseTextButton;
+
 // cms/page/home.ts
 var service = (n) => ({
   label: "Service",
@@ -311,6 +327,7 @@ var home = {
       widget: "object",
       fields: [title_default, text_default, cta_default, image_default]
     },
+    imageTitleRoseTextButton_default(),
     {
       label: "Wir sind",
       name: "about",

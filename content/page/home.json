@@ -101,6 +101,16 @@
         "url": "/services"
       },
       "image": "/media/grafik_tropfen_de_komplett.png"
+    },
+    "imageTitleRoseTextButton": {
+      "cta": {
+        "text": "Mehr erfahren",
+        "url": "/startimes"
+      },
+      "title": "Star Times",
+      "rose": "for you",
+      "markdown": "S﻿tarte deine Reise.",
+      "image": "/media/panel_hinterhof8-22_li_startimes_meetmagicmates.jpg"
     }
   },
   "en": {

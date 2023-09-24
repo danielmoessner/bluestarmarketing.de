@@ -15,6 +15,7 @@ import SmallBox from "@/components/SmallBox";
 import ServiceLinks from "@/components/ServiceLinks";
 import Script from "next/script";
 import { getSingleJson } from "@/lib/getContent";
+import SectionImageTitleRoseTextButton from "@/components/SectionImageTitleRoseTextButton";
 
 function Page({ pageData, footerData }) {
   const page = pageData;
@@ -54,6 +55,10 @@ function Page({ pageData, footerData }) {
           </div>
         </Container>
       </section>
+
+      <SectionImageTitleRoseTextButton
+        section={page.imageTitleRoseTextButton}
+      />
 
       <section className="relative py-16 bg-no-repeat bg-cover bg-bsm-matt">
         <div className="absolute inset-0 z-0 overflow-hidden">
