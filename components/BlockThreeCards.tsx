@@ -8,7 +8,7 @@ function BlockThreeCards({ block }) {
       <Animate>
         <div className="grid gap-8 md:grid-cols-3">
           {block.cards.map((card, index) => (
-            <div key={card.alt} className="p-5 bg-white shadow">
+            <div key={index} className="p-5 bg-white shadow">
               <div className="leading-[0px] p-8">
                 <Image
                   {...card.image}
