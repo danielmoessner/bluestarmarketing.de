@@ -778,8 +778,6 @@ var startimes = {
       widget: "object",
       i18n: true,
       fields: [
-        { label: "Warum?", name: "why", widget: "string", i18n: true },
-        { label: "F\xFCr Wen?", name: "who", widget: "string", i18n: true },
         {
           label: "N\xE4chster Termin",
           name: "next",

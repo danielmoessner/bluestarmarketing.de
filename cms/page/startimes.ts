@@ -31,8 +31,6 @@ const startimes: CmsCollectionFile = {
       widget: "object",
       i18n: true,
       fields: [
-        { label: "Warum?", name: "why", widget: "string", i18n: true },
-        { label: "Für Wen?", name: "who", widget: "string", i18n: true },
         {
           label: "Nächster Termin",
           name: "next",

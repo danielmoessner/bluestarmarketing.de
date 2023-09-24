@@ -31,6 +31,14 @@
             "url": "/startimes/meetmagicmates"
           },
           "buttonKind": "pink"
+        },
+        {
+          "image": "/media/your_magic_team_sternenkreis_logo.png",
+          "buttonKind": "ocean",
+          "cta": {
+            "text": "Kommt Demnächst",
+            "url": "#"
+          }
         }
       ]
     }
