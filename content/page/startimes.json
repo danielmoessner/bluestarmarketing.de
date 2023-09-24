@@ -12,9 +12,27 @@
     },
     "listing": {
       "button": "Details anzeigen",
-      "why": "Warum?",
-      "who": "Für Wen?",
       "next": "Nächster Termin"
+    },
+    "threeCards": {
+      "cards": [
+        {
+          "image": "/media/virtual_meet_magic_mates.png",
+          "buttonKind": "pink",
+          "cta": {
+            "text": "Mehr erfahren",
+            "url": "/startimes/meetmagicmates/20230926"
+          }
+        },
+        {
+          "image": "/media/magic_mates_logos.png",
+          "cta": {
+            "text": "Mehr erfahren",
+            "url": "/startimes/meetmagicmates"
+          },
+          "buttonKind": "pink"
+        }
+      ]
     }
   },
   "en": {}

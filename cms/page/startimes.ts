@@ -1,6 +1,7 @@
 import meta from "../symbols/meta";
 import { CmsCollectionFile } from "decap-cms";
 import text from "cms/symbols/text";
+import threeCards from "../sections/threeCards";
 
 const startimes: CmsCollectionFile = {
   file: "content/page/startimes.json",
@@ -23,6 +24,7 @@ const startimes: CmsCollectionFile = {
         },
       ],
     },
+    threeCards(),
     {
       label: "Auflistung",
       name: "listing",

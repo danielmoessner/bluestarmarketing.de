@@ -723,6 +723,32 @@ var starnews = {
 };
 var starnews_default = starnews;
 
+// cms/sections/threeCards.ts
+var threeCards = () => ({
+  label: "Drei-Karten",
+  name: "threeCards",
+  widget: "object",
+  i18n: true,
+  fields: [
+    {
+      label: "Karten",
+      name: "cards",
+      widget: "list",
+      fields: [
+        { label: "Bild", name: "image", widget: "image" },
+        {
+          label: "Button Art",
+          name: "buttonKind",
+          widget: "select",
+          options: ["ocean", "pink"]
+        },
+        cta_default
+      ]
+    }
+  ]
+});
+var threeCards_default = threeCards;
+
 // cms/page/startimes.ts
 var startimes = {
   file: "content/page/startimes.json",
@@ -745,6 +771,7 @@ var startimes = {
         }
       ]
     },
+    threeCards_default(),
     {
       label: "Auflistung",
       name: "listing",

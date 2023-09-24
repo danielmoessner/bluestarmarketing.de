@@ -14,6 +14,7 @@ import BlockMarkdownImageImagesButton from "@/components/BlockMarkdownImageImage
 import BlockRoseHeading from "@/components/BlockRoseHeading";
 import BlockPropertiesNextEventVideoButton from "@/components/BlockPropertiesNextEventVideoButton";
 import BlockPropertiesNextEventVideoQuoteButton from "@/components/BlockPropertiesNextEventVideoQuoteButton";
+import BlockThreeCards from "@/components/BlockThreeCards";
 
 function Page({ pageData, footerData, events }) {
   const page = pageData;
@@ -32,6 +33,9 @@ function Page({ pageData, footerData, events }) {
 
       <section className="pb-12 pt-6 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
         <Container layout="sm">
+          <div className="mb-10">
+            <BlockThreeCards block={page.threeCards} />
+          </div>
           <div className="space-y-10">
             {events.map((event) => {
               const listing = event.pages.find((i) => i.type === "listing");
