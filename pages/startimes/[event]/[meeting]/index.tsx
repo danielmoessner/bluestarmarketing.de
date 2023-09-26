@@ -117,7 +117,6 @@ function Page({ eventData, meetingData, footerData, pageData }) {
                   image={page.form.image}
                   eventTitle={event.title}
                   htmlText={event.form.markdownForm.html}
-                  onText={page.form.on}
                   eventImage={event.image}
                   meetings={availableMeetings}
                   submitText={page.form.button}

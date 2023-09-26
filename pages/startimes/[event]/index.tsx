@@ -141,7 +141,6 @@ function Page({ pageData, footerData, eventData }) {
                   image={page.form.image}
                   eventTitle={event.title}
                   htmlText={event.form.markdownForm.html}
-                  onText={page.form.on}
                   eventImage={event.image}
                   meetings={availableMeetings}
                   submitText={page.form.button}
@@ -149,6 +148,7 @@ function Page({ pageData, footerData, eventData }) {
                   requiredFieldsText={page.form.requiredFields}
                   fields={event.form.fields}
                   addons={event.form.addons}
+                  currentDay=""
                 />
               </Container>
             </section>

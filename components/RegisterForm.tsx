@@ -14,7 +14,6 @@ interface Props {
   eventImage: ImageRendered;
   eventTitle: string;
   meetings: { day: string; title: string }[];
-  onText: string;
   name: string;
   currentDay: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
