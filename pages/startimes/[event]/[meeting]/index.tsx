@@ -125,6 +125,7 @@ function Page({ eventData, meetingData, footerData, pageData }) {
                   requiredFieldsText={page.form.requiredFields}
                   fields={event.form.fields}
                   addons={event.form.addons}
+                  currentDay={meeting.day}
                 />
               </Container>
             </section>

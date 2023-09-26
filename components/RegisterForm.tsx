@@ -16,6 +16,7 @@ interface Props {
   meetings: { day: string; title: string }[];
   onText: string;
   name: string;
+  currentDay: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   addons?: any[];
 }
@@ -31,6 +32,7 @@ function RegisterForm({
   meetings,
   name,
   eventTitle,
+  currentDay,
   addons = [],
 }: Props) {
   const availableMeetings = meetings.filter(
@@ -51,7 +53,7 @@ function RegisterForm({
       options: availableMeetings.map((m) => ({
         label: m.title,
         name: `meeting_${eventTitle}_${m.title}`,
-        checked: false,
+        checked: m.day === currentDay,
       })),
     },
     ...fields,
