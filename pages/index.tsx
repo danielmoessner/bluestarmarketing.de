@@ -16,6 +16,7 @@ import ServiceLinks from "@/components/ServiceLinks";
 import Script from "next/script";
 import { getSingleJson } from "@/lib/getContent";
 import SectionImageTitleRoseTextButton from "@/components/SectionImageTitleRoseTextButton";
+import SectionRoseTitleTextButtonImage from "@/components/SectionRoseTitleTextButtonImage";
 
 function Page({ pageData, footerData }) {
   const page = pageData;
@@ -55,6 +56,10 @@ function Page({ pageData, footerData }) {
           </div>
         </Container>
       </section>
+
+      <SectionRoseTitleTextButtonImage
+        section={page.roseTitleTextButtonImage}
+      />
 
       <SectionImageTitleRoseTextButton
         section={page.imageTitleRoseTextButton}

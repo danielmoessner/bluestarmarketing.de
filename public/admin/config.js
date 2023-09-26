@@ -304,6 +304,22 @@ var imageTitleRoseTextButton = () => ({
 });
 var imageTitleRoseTextButton_default = imageTitleRoseTextButton;
 
+// cms/sections/roseTitleTextButtonImage.ts
+var roseTitleTextButtonImage = () => ({
+  label: "Rose-Titel-Text-Button-Image",
+  name: "roseTitleTextButtonImage",
+  widget: "object",
+  i18n: true,
+  fields: [
+    { label: "Rose", name: "rose", widget: "string" },
+    title_default,
+    markdown_default,
+    cta_default,
+    { label: "Bild", name: "image", widget: "image" }
+  ]
+});
+var roseTitleTextButtonImage_default = roseTitleTextButtonImage;
+
 // cms/page/home.ts
 var service = (n) => ({
   label: "Service",
@@ -327,6 +343,7 @@ var home = {
       widget: "object",
       fields: [title_default, text_default, cta_default, image_default]
     },
+    roseTitleTextButtonImage_default(),
     imageTitleRoseTextButton_default(),
     {
       label: "Wir sind",

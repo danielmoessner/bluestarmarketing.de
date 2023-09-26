@@ -1,10 +1,29 @@
 {
   "de": {
+    "start": {
+      "title": "Auf deiner Marketingreise an deiner Seite",
+      "text": "B2B-Marketing in der DACH-Region ist für viele Tech-Unternehmen eine besondere Herausforderung. Genau darauf haben wir uns für dich fokussiert! Wir verbinden Marketingstrategien, zielorientierte Kampagnen und erstklassiges Projektmanagement.\nMit unseren strategischen Insights erreichst du Ziele, genießt Freiräume, kannst Wachstum aufzeigen und strahlen.",
+      "cta": {
+        "text": "Starte deine Marketingreise",
+        "url": "/services"
+      },
+      "image": "/media/grafik_tropfen_de_komplett.png"
+    },
     "meta": {
       "description": "Wir setzen Ideen in integrale Lösungen, Strategien & Marketingkampagnen um.",
       "title": "Blue Star Marketing",
       "image": "/media/logo_bluestar_300px.svg",
       "keywords": "b2b marketing, b2b marketing strategie, b2b marketing strategien, b2b marketing agentur, b2b tech marketing, integriertes marketing, business marketing, funnelstrategien"
+    },
+    "imageTitleRoseTextButton": {
+      "cta": {
+        "text": "Mehr erfahren",
+        "url": "/startimes"
+      },
+      "title": "Star Times",
+      "rose": "for you",
+      "markdown": "S﻿tarte deine Reise.",
+      "image": "/media/panel_hinterhof8-22_li_startimes_meetmagicmates.jpg"
     },
     "header": {
       "markdown": "Wir setzen Ideen in integrale Lösungen, Strategien & Marketingkampagnen um.",
@@ -15,6 +34,27 @@
       },
       "title": "management_sales_marketing"
     },
+    "about": {
+      "title": "Blue Star Marketing",
+      "subtitle": "Der B2B-Marketing-Partner an deiner Seite",
+      "markdown": "Gemeinsam mit DIR verbinden WIR\n\n* globale & lokale Marketingstrategien, -ziele & -kampagnen \n* Vertriebs- & Marketingziele\n* Menschen, Ideen & Konzepte\n\n**Behalte deine Ziele zusammen mit uns fest im Blick – wachse und gewinne!** \n\n**Wir verbinden die Sterne für dich.**",
+      "cta": {
+        "text": " Starte deine Wunschrakete ",
+        "url": "/services"
+      },
+      "image": "/media/wir_sind_bluestarmarketing.jpg",
+      "textimage": "/media/wir_sind_219px.png"
+    },
+    "roseTitleTextButtonImage": {
+      "rose": "Your",
+      "title": "Magic Team",
+      "cta": {
+        "text": "To your Magic Team",
+        "url": "https://outlook.office365.com/book/Erstgesprchvereinbaren@bluestarmarketing2.onmicrosoft.com"
+      },
+      "image": "/media/ocean-kreis.png",
+      "markdown": "Wir verbinden Deine Mitarbeiter*innen in einer Absicht, mit Deinen Zielen zum Magic Team für einzigartige Lösungen in Deinem Business zur Zielerreichung.\n\nErlebe Deine beste Zukunft im HIER und JETZT!\\\nDein NEUES Programm zur Zielerreichung."
+    },
     "customers": {
       "title": "Das sagen unsere Kund:innen",
       "text": "Silke arbeitete mit uns zusammen, um einen globalen Kunden bei der strategischen Marketingplanung für die DACH-Region zu unterstützen. Ihr Wissen über den Technologiesektor und ihre spezifischen regionalen Einblicke waren für uns und unseren Kunden von unschätzbarem Wert. Silke lieferte einen regionalen Plan, der sich klar an den globalen Prioritäten ausgerichtet hat und spezifisch und messbar war. Sie fügte sich sofort in unser Account-Team ein und es war eine Freude, mit ihr zu arbeiten. Wir freuen uns schon auf die nächste Gelegenheit zur Zusammenarbeit!",
@@ -24,33 +64,6 @@
         "text": "Mehr über unsere Kund:innen",
         "url": "/kunden"
       }
-    },
-    "services": {
-      "service3": {
-        "title": "Wir verbinden Sterne",
-        "text": "Marketing für mehr Erfolg & Wachstum!",
-        "cta": {
-          "text": "Mehr erfahren",
-          "url": "/kontakt"
-        }
-      },
-      "service2": {
-        "title": "Marketingkampagnen",
-        "text": "Zielführend & integriert: verlinkt mit euren Zielen und eurer Strategie.",
-        "cta": {
-          "text": "Mehr erfahren",
-          "url": "/marketingkampagnen"
-        }
-      },
-      "service1": {
-        "title": "Marketingstrategie",
-        "text": "Ganzheitlich & individuell: verbunden mit eurer globalen Strategie.",
-        "cta": {
-          "text": "Mehr erfahren",
-          "url": "/b2bmarketingstrategie"
-        }
-      },
-      "title": "Unsere Services in der DACH-Region"
     },
     "travel": {
       "title": "Marketingreise zu Wachstum und Erfolg",
@@ -82,35 +95,32 @@
         }
       ]
     },
-    "about": {
-      "title": "Blue Star Marketing",
-      "subtitle": "Der B2B-Marketing-Partner an deiner Seite",
-      "markdown": "Gemeinsam mit DIR verbinden WIR\n\n* globale & lokale Marketingstrategien, -ziele & -kampagnen \n* Vertriebs- & Marketingziele\n* Menschen, Ideen & Konzepte\n\n**Behalte deine Ziele zusammen mit uns fest im Blick – wachse und gewinne!** \n\n**Wir verbinden die Sterne für dich.**",
-      "cta": {
-        "text": " Starte deine Wunschrakete ",
-        "url": "/services"
+    "services": {
+      "service3": {
+        "title": "Wir verbinden Sterne",
+        "text": "Marketing für mehr Erfolg & Wachstum!",
+        "cta": {
+          "text": "Mehr erfahren",
+          "url": "/kontakt"
+        }
       },
-      "image": "/media/wir_sind_bluestarmarketing.jpg",
-      "textimage": "/media/wir_sind_219px.png"
-    },
-    "start": {
-      "title": "Auf deiner Marketingreise an deiner Seite",
-      "text": "B2B-Marketing in der DACH-Region ist für viele Tech-Unternehmen eine besondere Herausforderung. Genau darauf haben wir uns für dich fokussiert! Wir verbinden Marketingstrategien, zielorientierte Kampagnen und erstklassiges Projektmanagement.\nMit unseren strategischen Insights erreichst du Ziele, genießt Freiräume, kannst Wachstum aufzeigen und strahlen.",
-      "cta": {
-        "text": "Starte deine Marketingreise",
-        "url": "/services"
+      "service2": {
+        "title": "Marketingkampagnen",
+        "text": "Zielführend & integriert: verlinkt mit euren Zielen und eurer Strategie.",
+        "cta": {
+          "text": "Mehr erfahren",
+          "url": "/marketingkampagnen"
+        }
       },
-      "image": "/media/grafik_tropfen_de_komplett.png"
-    },
-    "imageTitleRoseTextButton": {
-      "cta": {
-        "text": "Mehr erfahren",
-        "url": "/startimes"
+      "service1": {
+        "title": "Marketingstrategie",
+        "text": "Ganzheitlich & individuell: verbunden mit eurer globalen Strategie.",
+        "cta": {
+          "text": "Mehr erfahren",
+          "url": "/b2bmarketingstrategie"
+        }
       },
-      "title": "Star Times",
-      "rose": "for you",
-      "markdown": "S﻿tarte deine Reise.",
-      "image": "/media/panel_hinterhof8-22_li_startimes_meetmagicmates.jpg"
+      "title": "Unsere Services in der DACH-Region"
     }
   },
   "en": {

@@ -9,6 +9,7 @@ import { internalLinkFields } from "cms/symbols/link";
 import markdown from "cms/symbols/markdown";
 import image from "cms/symbols/image";
 import imageTitleRoseTextButton from "../sections/imageTitleRoseTextButton";
+import roseTitleTextButtonImage from "../sections/roseTitleTextButtonImage";
 
 const service = (n: number): CmsField => ({
   label: "Service",
@@ -33,6 +34,7 @@ const home: CmsCollectionFile = {
       widget: "object",
       fields: [title, text, cta, image],
     },
+    roseTitleTextButtonImage(),
     imageTitleRoseTextButton(),
     {
       label: "Wir sind",
