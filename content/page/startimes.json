@@ -8,7 +8,7 @@
       "title": "Star Times"
     },
     "bottom": {
-      "text": "Bildnachweise: Rocket One line drawing: ngupakarti – stock.adobe.com | Abstract powder splatted background: kitsana – stock.adobe.com | White vertical paper sheet Mockup: customdesigner – stock.adobe.com"
+      "text": ""
     },
     "listing": {
       "button": "Details anzeigen",
@@ -22,7 +22,8 @@
           "cta": {
             "text": "Mehr erfahren",
             "url": "/startimes/meetmagicmates/20230926"
-          }
+          },
+          "padding": "px-14 py-5"
         },
         {
           "image": "/media/magic_mates_logos.png",
@@ -30,7 +31,8 @@
             "text": "Mehr erfahren",
             "url": "/startimes/meetmagicmates"
           },
-          "buttonKind": "pink"
+          "buttonKind": "pink",
+          "padding": "px-10"
         },
         {
           "image": "/media/your_magic_team_sternenkreis_logo.png",
@@ -38,7 +40,8 @@
           "cta": {
             "text": "Kommt Demnächst",
             "url": "#"
-          }
+          },
+          "padding": "px-5 pb-5"
         }
       ]
     }

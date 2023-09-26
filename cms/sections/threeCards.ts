@@ -20,6 +20,7 @@ const threeCards = (): CmsFieldObject & CmsFieldBase => ({
           options: ["ocean", "pink"],
         },
         cta,
+        { label: "Padding (Expert)", name: "padding", widget: "string" },
       ],
     },
   ],

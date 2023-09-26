@@ -759,7 +759,8 @@ var threeCards = () => ({
           widget: "select",
           options: ["ocean", "pink"]
         },
-        cta_default
+        cta_default,
+        { label: "Padding (Expert)", name: "padding", widget: "string" }
       ]
     }
   ]
@@ -809,7 +810,15 @@ var startimes = {
       name: "bottom",
       i18n: true,
       widget: "object",
-      fields: [text_default]
+      fields: [
+        {
+          label: "Text",
+          name: "text",
+          widget: "text",
+          i18n: true,
+          required: false
+        }
+      ]
     }
   ]
 };

@@ -1,6 +1,5 @@
 import meta from "../symbols/meta";
 import { CmsCollectionFile } from "decap-cms";
-import text from "cms/symbols/text";
 import threeCards from "../sections/threeCards";
 
 const startimes: CmsCollectionFile = {
@@ -45,7 +44,15 @@ const startimes: CmsCollectionFile = {
       name: "bottom",
       i18n: true,
       widget: "object",
-      fields: [text],
+      fields: [
+        {
+          label: "Text",
+          name: "text",
+          widget: "text",
+          i18n: true,
+          required: false,
+        },
+      ],
     },
   ],
 };

@@ -8,15 +8,23 @@ function BlockThreeCards({ block }) {
       <Animate>
         <div className="grid gap-8 md:grid-cols-3">
           {block.cards.map((card, index) => (
-            <div key={index} className="p-5 bg-white shadow-lg">
-              <div className="leading-[0px] p-8">
+            <div
+              key={index}
+              className="flex flex-col justify-start p-5 bg-white shadow-lg"
+            >
+              <div
+                className={
+                  "leading-[0px] h-full flex flex-col justify-center " +
+                  card.padding
+                }
+              >
                 <Image
                   {...card.image}
                   alt={"Bild der Karte " + index}
-                  className="items-center justify-center w-auto h-48 mx-auto"
+                  className="w-auto mx-auto"
                 />
               </div>
-              <div className="flex justify-center w-full">
+              <div className="flex justify-center w-full mt-auto">
                 <Button kind={card.buttonKind} href={card.cta.url}>
                   {card.cta.text}
                 </Button>
