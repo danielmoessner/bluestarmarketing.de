@@ -6,7 +6,6 @@ import title from "cms/symbols/title";
 import cta from "cms/symbols/cta";
 import text from "cms/symbols/text";
 import { internalLinkFields } from "cms/symbols/link";
-import markdown from "cms/symbols/markdown";
 import image from "cms/symbols/image";
 import imageTitleRoseTextButton from "../sections/imageTitleRoseTextButton";
 import roseTitleTextButtonImage from "../sections/roseTitleTextButtonImage";
@@ -27,28 +26,14 @@ const home: CmsCollectionFile = {
   fields: [
     meta,
     header,
+    roseTitleTextButtonImage(),
+    imageTitleRoseTextButton(),
     {
       label: "Start",
       name: "start",
       i18n: true,
       widget: "object",
       fields: [title, text, cta, image],
-    },
-    roseTitleTextButtonImage(),
-    imageTitleRoseTextButton(),
-    {
-      label: "Wir sind",
-      name: "about",
-      i18n: true,
-      widget: "object",
-      fields: [
-        { label: "Textbild", name: "textimage", i18n: true, widget: "image" },
-        title,
-        { label: "Untertitel", name: "subtitle", i18n: true, widget: "string" },
-        markdown,
-        cta,
-        image,
-      ],
     },
     {
       label: "Marketingreise",

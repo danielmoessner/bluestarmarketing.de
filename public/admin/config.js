@@ -336,28 +336,14 @@ var home = {
   fields: [
     meta_default,
     header_default,
+    roseTitleTextButtonImage_default(),
+    imageTitleRoseTextButton_default(),
     {
       label: "Start",
       name: "start",
       i18n: true,
       widget: "object",
       fields: [title_default, text_default, cta_default, image_default]
-    },
-    roseTitleTextButtonImage_default(),
-    imageTitleRoseTextButton_default(),
-    {
-      label: "Wir sind",
-      name: "about",
-      i18n: true,
-      widget: "object",
-      fields: [
-        { label: "Textbild", name: "textimage", i18n: true, widget: "image" },
-        title_default,
-        { label: "Untertitel", name: "subtitle", i18n: true, widget: "string" },
-        markdown_default,
-        cta_default,
-        image_default
-      ]
     },
     {
       label: "Marketingreise",

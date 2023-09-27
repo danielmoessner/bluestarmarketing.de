@@ -9,7 +9,6 @@ import SectionCustomers from "@/components/SectionCustomers";
 import Animate from "@/components/Animate";
 import Multiline from "@/components/Multiline";
 import Button from "@/components/Button";
-import Prose from "@/components/Prose";
 import Image from "next/image";
 import SmallBox from "@/components/SmallBox";
 import ServiceLinks from "@/components/ServiceLinks";
@@ -26,6 +25,14 @@ function Page({ pageData, footerData }) {
       <Seo meta={page.meta} />
       <Header header={page.header} position="bottom-left" />
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+
+      <SectionRoseTitleTextButtonImage
+        section={page.roseTitleTextButtonImage}
+      />
+
+      <SectionImageTitleRoseTextButton
+        section={page.imageTitleRoseTextButton}
+      />
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
@@ -56,14 +63,6 @@ function Page({ pageData, footerData }) {
           </div>
         </Container>
       </section>
-
-      <SectionRoseTitleTextButtonImage
-        section={page.roseTitleTextButtonImage}
-      />
-
-      <SectionImageTitleRoseTextButton
-        section={page.imageTitleRoseTextButton}
-      />
 
       <section className="relative py-16 bg-no-repeat bg-cover bg-bsm-matt">
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -102,44 +101,6 @@ function Page({ pageData, footerData }) {
             </div>
           </Container>
         </div>
-      </section>
-
-      <section className="relative py-16 ">
-        <Container layout="sm">
-          <div className="relative grid gap-8 lg:grid-cols-2">
-            <div>
-              <div className="flex flex-col-reverse">
-                <div className="mt-2">
-                  <h2 className="text-2xl font-bold">{page.about.subtitle}</h2>
-                </div>
-                <div className="flex items-center space-x-3">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={page.about.textimage.src}
-                    className="h-14"
-                    alt={page.about.subtitle}
-                  />
-                  <Heading element="div" size="h2">
-                    {page.about.title}
-                  </Heading>
-                </div>
-              </div>
-              <div className="mt-8">
-                <Prose html={page.about.markdown.html} />
-              </div>
-              <div className="mt-8 lg:mt-12">
-                <Button href={page.about.cta.url}>{page.about.cta.text}</Button>
-              </div>
-            </div>
-            <div>
-              <Animate>
-                <div className="leading-[0px]">
-                  <Image {...page.about.image} alt={page.about.title} />
-                </div>
-              </Animate>
-            </div>
-          </div>
-        </Container>
       </section>
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
