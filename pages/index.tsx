@@ -13,11 +13,11 @@ import Image from "next/image";
 import SmallBox from "@/components/SmallBox";
 import ServiceLinks from "@/components/ServiceLinks";
 import Script from "next/script";
-import { getSingleJson } from "@/lib/getContent";
+import { getAllJson, getSingleJson } from "@/lib/getContent";
 import SectionImageTitleRoseTextButton from "@/components/SectionImageTitleRoseTextButton";
 import SectionRoseTitleTextButtonImage from "@/components/SectionRoseTitleTextButtonImage";
 
-function Page({ pageData, footerData }) {
+function Page({ pageData, footerData, reviews }) {
   const page = pageData;
 
   return (
@@ -128,7 +128,7 @@ function Page({ pageData, footerData }) {
         </Container>
       </section>
 
-      <SectionCustomers customers={page.customers} />
+      <SectionCustomers customers={page.customers} reviews={reviews} />
 
       <Footer data={footerData} />
     </Layout>
@@ -140,11 +140,14 @@ export async function getStaticProps({ locale }) {
   const footerData = await renderContent(
     getSingleJson("setting", "footer", locale),
   );
+  const reviews1 = getAllJson("customer", locale);
+  const reviews = reviews1.sort((a, b) => a.ordering - b.ordering);
 
   return {
     props: {
       pageData,
       footerData,
+      reviews,
     },
   };
 }
