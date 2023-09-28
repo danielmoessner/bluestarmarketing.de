@@ -203,7 +203,9 @@
             "markdown": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen aus den vorangegangenen Meet Magic Mates Termine."
           },
           {
-            "type": "detailView"
+            "type": "detailView",
+            "image": "/media/ocean-kreis.png",
+            "markdown": "ZIELE ERREICHEN – WIR-POWER ZÜNDEN & DURCHSTARTEN - Wir zeigen Dir den Weg zu Deinem Magic Team."
           }
         ]
       },
