@@ -38,7 +38,7 @@
           "image": "/media/your_magic_team_sternenkreis_logo.png",
           "buttonKind": "ocean",
           "cta": {
-            "text": "Kommt Demnächst",
+            "text": "Kommt demnächst",
             "url": "#"
           },
           "padding": "px-5 pb-5"
