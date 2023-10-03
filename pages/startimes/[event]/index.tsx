@@ -98,7 +98,9 @@ function Page({ pageData, footerData, eventData }) {
           );
 
         if (section.type === "titleTextVideo")
-          return <SectionTextVideo key={section.title} section={section} />;
+          return (
+            <SectionTitleTextVideo key={section.title} section={section} />
+          );
 
         if (section.type === "twoColumns")
           return (
