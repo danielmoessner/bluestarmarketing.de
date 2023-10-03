@@ -112,10 +112,9 @@
             "title": "MEET Magic Mates"
           },
           {
-            "type": "titleTextVideo",
-            "video": "DMbR5867tFQ",
-            "markdown": "* Vernetze dich mit neuen und bekannten Sales- & Marketing-Entscheidern: innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
-            "title": "Wie gestaltest du die neue Zeit?"
+            "type": "textVideo",
+            "markdown": "ZIELE ERREICHEN – WIR-POWER ZÜNDEN & DURCHSTARTEN - Wir zeigen Dir den Weg zu Deinem Magic Team.",
+            "video": "DMbR5867tFQ"
           },
           {
             "type": "meetings",
@@ -205,7 +204,8 @@
           {
             "type": "detailView",
             "image": "/media/ocean-kreis.png",
-            "markdown": "ZIELE ERREICHEN – WIR-POWER ZÜNDEN & DURCHSTARTEN - Wir zeigen Dir den Weg zu Deinem Magic Team."
+            "markdown": "ZIELE ERREICHEN – WIR-POWER ZÜNDEN & DURCHSTARTEN - Wir zeigen Dir den Weg zu Deinem Magic Team.",
+            "imgCredits": "Foto: Katsiaryna - stock.adobe.com"
           }
         ]
       },

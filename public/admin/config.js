@@ -2005,6 +2005,19 @@ var titleTextVideoQuoteSection = () => ({
 });
 var titleTextVideoQuote_default = titleTextVideoQuoteSection;
 
+// cms/sections/textVideo.ts
+var textVideoSection = () => ({
+  label: "Text-Video",
+  name: "textVideo",
+  widget: "object",
+  i18n: true,
+  fields: [
+    markdown_default,
+    { label: "YouTube Video Code", name: "video", widget: "string" }
+  ]
+});
+var textVideo_default = textVideoSection;
+
 // cms/event/index.ts
 var event = {
   name: "event",
@@ -2299,6 +2312,7 @@ var event = {
                 centerTitleTextVideo_default(),
                 imagesText_default(),
                 titleTextVideo_default(),
+                textVideo_default(),
                 titleTextVideoQuote_default(),
                 {
                   label: "Zwei-Spalten",

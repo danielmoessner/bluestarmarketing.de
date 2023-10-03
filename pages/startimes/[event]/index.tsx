@@ -21,6 +21,7 @@ import SectionTwoColumns from "@/components/SectionTwoColumns";
 import SectionMeetings from "@/components/SectionMeetings";
 import SectionCenterTitleTextVideo from "@/components/SectionCenterTitleTextVideo";
 import SectionTitleTextVideoQuote from "@/components/SectionTitleTextVideoQuote";
+import SectionTextVideo from "@/components/SectionTextVideo";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -41,6 +42,9 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "title")
           return <SectionTitle key={section.title} section={section} />;
+
+        if (section.type === "textVideo")
+          return <SectionTextVideo key={section.title} section={section} />;
 
         if (section.type === "titleTextButtonImage")
           return (
@@ -94,9 +98,7 @@ function Page({ pageData, footerData, eventData }) {
           );
 
         if (section.type === "titleTextVideo")
-          return (
-            <SectionTitleTextVideo key={section.title} section={section} />
-          );
+          return <SectionTextVideo key={section.title} section={section} />;
 
         if (section.type === "twoColumns")
           return (
