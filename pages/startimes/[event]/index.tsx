@@ -44,7 +44,7 @@ function Page({ pageData, footerData, eventData }) {
           return <SectionTitle key={section.title} section={section} />;
 
         if (section.type === "textVideo")
-          return <SectionTextVideo key={section.title} section={section} />;
+          return <SectionTextVideo key="textVideo" section={section} />;
 
         if (section.type === "titleTextButtonImage")
           return (
