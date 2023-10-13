@@ -112,8 +112,9 @@
             "title": "MEET Magic Mates"
           },
           {
-            "type": "textVideo",
-            "markdown": "ZIELE ERREICHEN – WIR-POWER ZÜNDEN & DURCHSTARTEN - Wir zeigen Dir den Weg zu Deinem Magic Team.",
+            "type": "titleTextVideo",
+            "title": "Wie gestaltest du die neue Zeit?",
+            "markdown": "* Vernetze dich mit neuen und bekannten Sales- & Marketing-Entscheidern: innen.\n* Schöpfe aus gebündelter Marketing Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
             "video": "DMbR5867tFQ"
           },
           {
@@ -199,7 +200,7 @@
         "addons": [
           {
             "type": "listSection",
-            "markdown": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen aus den vorangegangenen Meet Magic Mates Termine."
+            "markdown": "ZIELE ERREICHEN – WIR-POWER ZÜNDEN & DURCHSTARTEN - Wir zeigen Dir den Weg zu Deinem Magic Team."
           },
           {
             "type": "detailView",
