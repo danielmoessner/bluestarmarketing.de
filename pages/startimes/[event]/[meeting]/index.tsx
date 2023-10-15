@@ -52,7 +52,7 @@ function Page({ eventData, meetingData, footerData, pageData }) {
               <div className="grid gap-8 md:grid-cols-2">
                 {detail.image && (
                   <div className="leading-[0px]">
-                    <Image {...detail.image} alt={detail.title} />
+                    <Image {...detail.image} alt="Logo des Events" />
                   </div>
                 )}
                 {detail.video && !detail.image && (
@@ -61,6 +61,11 @@ function Page({ eventData, meetingData, footerData, pageData }) {
                   </div>
                 )}
                 <div>
+                  {detail.logoImage && (
+                    <div className="mb-10">
+                      <Image {...detail.logoImage} alt="Titel Bild" />
+                    </div>
+                  )}
                   <div className="">
                     <Prose
                       html={detail.markdown?.html}

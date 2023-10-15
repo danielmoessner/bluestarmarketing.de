@@ -146,6 +146,13 @@ const event: CmsCollection = {
                   required: false,
                 },
                 {
+                  label: "Logo",
+                  name: "logoImage",
+                  widget: "image",
+                  i18n: false,
+                  required: false,
+                },
+                {
                   label: "YouTube Video Code",
                   name: "video",
                   widget: "string",
