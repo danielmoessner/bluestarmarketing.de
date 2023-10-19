@@ -42,6 +42,13 @@ const form: CmsField = {
             { label: "Rechts 2", name: "right2", widget: "string" },
           ],
         },
+        {
+          label: "Zweitbild",
+          name: "second",
+          widget: "image",
+          i18n: false,
+          fields: [image],
+        },
       ],
     },
     {

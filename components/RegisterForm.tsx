@@ -59,6 +59,7 @@ function RegisterForm({
   ];
 
   const earlyBird = addons.find((a) => a.type === "earlyBird");
+  const second = addons.find((a) => a.type === "second");
 
   return (
     <div>
@@ -68,6 +69,15 @@ function RegisterForm({
         </div>
         <div className="md:col-span-6">
           <Image className="w-40" {...eventImage} alt="Event Icon" />
+          {second && (
+            <div className="pt-6">
+              <Image
+                className="w-full h-auto"
+                {...second.image}
+                alt="Zweitbild"
+              />
+            </div>
+          )}
           <div className="mt-10">
             <Prose html={htmlText} />
           </div>
@@ -76,6 +86,7 @@ function RegisterForm({
               <div>
                 <Image className="w-16" {...earlyBird.image} alt="Early Bird" />
               </div>
+
               <div>
                 <p className="text-2xl font-bold text-bsm-purple">
                   {earlyBird.title}

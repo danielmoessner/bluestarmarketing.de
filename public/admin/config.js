@@ -1487,6 +1487,13 @@ var form = {
             { label: "Rechts 1", name: "right1", widget: "string" },
             { label: "Rechts 2", name: "right2", widget: "string" }
           ]
+        },
+        {
+          label: "Zweitbild",
+          name: "second",
+          widget: "image",
+          i18n: false,
+          fields: [image_default]
         }
       ]
     },

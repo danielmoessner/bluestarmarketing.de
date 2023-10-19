@@ -60,6 +60,12 @@
           "required": true,
           "name": "speicherung-der-kontaktdaten"
         }
+      ],
+      "addons": [
+        {
+          "type": "second",
+          "image": "/media/logo_managment_sales_marketing_2.png"
+        }
       ]
     },
     "pages": [
