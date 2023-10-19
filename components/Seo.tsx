@@ -5,7 +5,7 @@ import global from "../content/setting/global.json";
 interface Meta {
   title: string;
   description: string;
-  image?: string;
+  image?: { src: string };
   keywords?: string;
 }
 
@@ -21,7 +21,7 @@ function Seo({ meta }: Props) {
       {/* General tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      {image ? <meta name="image" content={image} /> : null}
+      {image ? <meta name="image" content={image.src} /> : null}
 
       {/* Keywords */}
       {keywords && <meta name="keywords" content={keywords} />}
@@ -29,13 +29,13 @@ function Seo({ meta }: Props) {
       {/* OpenGraph tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {image ? <meta property="og:image" content={image} /> : null}
+      {image ? <meta property="og:image" content={image.src} /> : null}
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {image ? <meta name="twitter:image" content={image} /> : null}
+      {image ? <meta name="twitter:image" content={image.src} /> : null}
 
       {/* Different Favicons */}
       <link
