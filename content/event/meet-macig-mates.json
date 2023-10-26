@@ -12,11 +12,8 @@
           "required": true
         },
         {
-          "type": "field",
-          "fieldType": "text",
-          "label": "Titel",
-          "name": "titel",
-          "required": true
+          "type": "empty",
+          "placeholder": "---"
         },
         {
           "type": "field",

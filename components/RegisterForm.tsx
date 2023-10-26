@@ -4,8 +4,12 @@ import DynamicForm from "@/components/Form";
 import { useRouter } from "next/router";
 import { ImageRendered } from "@/types/shared";
 
+type FormField =
+  | { label: string; name: string; required?: boolean; type: string }
+  | { type: "empty" };
+
 interface Props {
-  fields: { label: string; name: string; required?: boolean; type: string }[];
+  fields: FormField[];
   image: ImageRendered;
   htmlText: string;
   successText: string;

@@ -1536,6 +1536,20 @@ var form = {
             { label: "Title", name: "title", widget: "string", i18n: true },
             { label: "Text", name: "text", widget: "text", i18n: true }
           ]
+        },
+        {
+          label: "Leer",
+          name: "empty",
+          widget: "object",
+          fields: [
+            {
+              label: "Platzhalter",
+              name: "placeholder",
+              widget: "hidden",
+              default: "---",
+              hint: "Eingabe wird ignoriert aus technischen Gr\xFCnden notwenig."
+            }
+          ]
         }
       ]
     }

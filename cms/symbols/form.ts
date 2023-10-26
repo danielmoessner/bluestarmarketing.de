@@ -91,6 +91,20 @@ const form: CmsField = {
             { label: "Text", name: "text", widget: "text", i18n: true },
           ],
         },
+        {
+          label: "Leer",
+          name: "empty",
+          widget: "object",
+          fields: [
+            {
+              label: "Platzhalter",
+              name: "placeholder",
+              widget: "hidden",
+              default: "---",
+              hint: "Eingabe wird ignoriert aus technischen Gründen notwenig.",
+            },
+          ],
+        },
       ],
     },
   ],

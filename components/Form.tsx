@@ -102,6 +102,7 @@ function Form({
                   register={register}
                 />
               );
+            else if (field.type === "empty") return <div key={field.type} />;
             else
               return (
                 <FormInput
