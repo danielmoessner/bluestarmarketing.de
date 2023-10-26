@@ -13,7 +13,7 @@ const header: CmsField = {
       name: "title",
       i18n: false,
       widget: "select",
-      options: ["management_sales_marketing"],
+      options: ["management_sales_marketing", "leadership_sales_marketing"],
       required: false,
     },
     { label: "Text", name: "markdown", i18n: true, widget: "markdown" },

@@ -86,6 +86,35 @@ function Component({ header, position = "bottom-right" }: Props) {
                           </div>
                         </div>
                       )}
+                    {header.title &&
+                      header.title === "leadership_sales_marketing" && (
+                        <div className="mb-2">
+                          <h1 className="flex items-center flex-wrap text-[1.7rem] tracking-tight leading-none uppercase">
+                            <span>Leadership</span>
+                            <div className="flex-shrink-0 w-5 ml-1 mr-0.5">
+                              <Image
+                                width={151}
+                                height={177}
+                                src="/herz_und_gross.png"
+                                alt="& Zeichen"
+                              />
+                            </div>
+                            <span>Sales</span>
+                            <div className="flex-shrink-0 w-5 ml-1 mr-0.5">
+                              <Image
+                                width={151}
+                                height={177}
+                                src="/herz_und_gross.png"
+                                alt="& Zeichen"
+                              />
+                            </div>
+                            <span>Marketing</span>
+                          </h1>
+                          <div className="text-xl uppercase">
+                            Consulting & Coaching
+                          </div>
+                        </div>
+                      )}
                     <div
                       className="text-2xl"
                       dangerouslySetInnerHTML={{
