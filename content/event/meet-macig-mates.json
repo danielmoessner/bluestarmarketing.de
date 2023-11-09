@@ -113,8 +113,9 @@
         },
         "sections": [
           {
-            "type": "title",
-            "title": "MEET Magic Mates"
+            "type": "titleSubimage",
+            "title": "MEET Magic Mates",
+            "image": "/media/logo_leadership_sales_marketing.png"
           },
           {
             "type": "titleTextVideo",

@@ -22,6 +22,7 @@ import SectionMeetings from "@/components/SectionMeetings";
 import SectionCenterTitleTextVideo from "@/components/SectionCenterTitleTextVideo";
 import SectionTitleTextVideoQuote from "@/components/SectionTitleTextVideoQuote";
 import SectionTextVideo from "@/components/SectionTextVideo";
+import SectionTitleSubimage from "@/components/SectionTitleSubimage";
 
 function Page({ pageData, footerData, eventData }) {
   const page = pageData;
@@ -128,6 +129,9 @@ function Page({ pageData, footerData, eventData }) {
 
         if (section.type === "titleImage")
           return <SectionTitleImage key={section.title} section={section} />;
+
+        if (section.type === "titleSubimage")
+          return <SectionTitleSubimage key={section.title} section={section} />;
 
         if (section.type === "blocks")
           return <SectionBlocks section={section} key="blocks" />;

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function SectionTitleImage({ section }) {
   return (
-    <section key={section.title} className="py-8 lg:py-20 !overflow-auto">
+    <section className="py-8 lg:py-20 !overflow-auto">
       <Container layout="sm">
         <div className="flex justify-center">
           <h2 className="mb-4 text-3xl md:text-5xl font-rose lg:mb-12">

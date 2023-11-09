@@ -1746,6 +1746,16 @@ var boldCenterTextBlock = () => ({
 });
 var boldCenterText_default = boldCenterTextBlock;
 
+// cms/sections/titleSubimage.ts
+var titleImageSection2 = () => ({
+  label: "Titel-Bild",
+  name: "titleSubimage",
+  widget: "object",
+  i18n: true,
+  fields: [title_default, { label: "Bild", name: "image", widget: "image" }]
+});
+var titleSubimage_default = titleImageSection2;
+
 // cms/blocks/msmTitle.ts
 var msmTitle = () => ({
   label: "MSM-Titel",
@@ -2329,6 +2339,7 @@ var event = {
               i18n: true,
               types: [
                 title_default2(),
+                titleSubimage_default(),
                 header_default2(),
                 eventButtonSection_default(),
                 titleTextButtonImage_default(),

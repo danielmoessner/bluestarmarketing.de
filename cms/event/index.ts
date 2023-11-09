@@ -15,6 +15,7 @@ import headerSection from "../sections/header";
 import imageTextSection from "../sections/imageText";
 import titleTextImageSection from "../sections/titleTextImage";
 import boldCenterTextBlock from "../blocks/boldCenterText";
+import titleSubimageSection from "../sections/titleSubimage";
 import msmTitle from "../blocks/msmTitle";
 import markdownImagesButton from "../blocks/markdownImagesButton";
 import markdownImageImagesButton from "../blocks/markdownImageImagesButton";
@@ -316,6 +317,7 @@ const event: CmsCollection = {
               i18n: true,
               types: [
                 titleSection(),
+                titleSubimageSection(),
                 headerSection(),
                 eventButtonSection(),
                 titleTextButtonImageSection(),
