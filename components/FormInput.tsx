@@ -1,19 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
-import ChildrenData from "@/types/ChildrenData";
 
 function FormInput({
   name,
-  autoComplete,
-  type,
-  element,
+  autoComplete = "",
+  type = "text",
+  element = "input",
   label,
-  attrs,
-  className,
-  required,
-  placeholder,
-  children,
-  value,
+  attrs = {},
+  className = "",
+  required = false,
+  placeholder = "",
+  children = null,
+  value = "",
   register,
   error,
 }) {
@@ -51,35 +49,5 @@ function FormInput({
     </div>
   );
 }
-
-FormInput.defaultProps = {
-  autoComplete: "",
-  type: "text",
-  element: "input",
-  attrs: {},
-  className: "",
-  required: true,
-  value: "",
-  children: null,
-
-  placeholder: "",
-};
-
-export const InputProps = {
-  name: PropTypes.string.isRequired,
-  autoComplete: PropTypes.string,
-  type: PropTypes.string,
-  element: PropTypes.string,
-  label: PropTypes.string.isRequired,
-  children: ChildrenData,
-  className: PropTypes.string,
-  required: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  // eslint-disable-next-line react/forbid-prop-types
-  attrs: PropTypes.object,
-};
-
-FormInput.propTypes = InputProps;
 
 export default FormInput;

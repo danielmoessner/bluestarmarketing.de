@@ -12,8 +12,10 @@
           "required": true
         },
         {
-          "type": "empty",
-          "placeholder": "---"
+          "type": "field",
+          "fieldType": "text",
+          "label": "Job Titel / Funktion",
+          "name": "job-titel-funktion"
         },
         {
           "type": "field",
