@@ -14,7 +14,7 @@ import SmallBox from "@/components/SmallBox";
 import ServiceLinks from "@/components/ServiceLinks";
 import Script from "next/script";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
-import SectionImageTitleRoseTextButton from "@/components/SectionImageTitleRoseTextButton";
+import SectionIndexStarTimes from "@/components/SectionIndexStarTimes";
 import SectionRoseTitleTextButtonImage from "@/components/SectionRoseTitleTextButtonImage";
 
 function Page({ pageData, footerData, reviews }) {
@@ -30,9 +30,7 @@ function Page({ pageData, footerData, reviews }) {
         section={page.roseTitleTextButtonImage}
       />
 
-      <SectionImageTitleRoseTextButton
-        section={page.imageTitleRoseTextButton}
-      />
+      <SectionIndexStarTimes section={page.imageTitleRoseTextButton} />
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
@@ -40,7 +38,6 @@ function Page({ pageData, footerData, reviews }) {
             <Heading element="h2" size="h1">
               {page.start.title}
             </Heading>
-            {/* <HeadingStar /> */}
           </div>
           <div className="mt-4 lg:mt-14">
             <Animate>
