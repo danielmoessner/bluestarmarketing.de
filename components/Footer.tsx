@@ -6,22 +6,22 @@ import Image from "next/image";
 function Component({ data }) {
   return (
     <footer className="" aria-labelledby="footerHeading">
-      <div className="w-full pl-10">
+      <div className="w-full">
         <Image
           src={data.lineImage}
-          className="w-full h-auto ml-auto max-w-7xl"
+          className="w-full h-auto"
           alt={data.row1.copyright}
         />
       </div>
-      <div className="bg-white border-t">
+      <div className="bg-white">
         <h2 id="footerHeading" className="sr-only">
           Footer
         </h2>
         <Container layout="sm">
-          <div className="mt-4 mb-4">
-            <div className="-mx-2.5 -my-1">
+          <div className="mt-6 mb-8">
+            <div className="-mx-2.5">
               <div className="flex flex-wrap items-center">
-                <div className="pr-6">{data.row1.copyright}</div>
+                <div className="pr-6 pl-2.5 py-1">{data.row1.copyright}</div>
                 <button
                   className="text-base font-bold whitespace-pre-line px-2.5 py-1"
                   onClick={() => {
