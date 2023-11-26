@@ -2,7 +2,7 @@ import React from "react";
 import HeadingStar from "./HeadingStar";
 
 interface Props {
-  element?: "h1" | "h2" | "h3" | "header";
+  element?: "h1" | "h2" | "h3" | "header" | "div";
   size?: "h1" | "h2" | "h3" | "header";
   color?: string;
   classes?: string;
