@@ -28,18 +28,22 @@ function SectionIndexStarTimes({ section, padding = "pt-12 pb-16 lg:pb-20" }) {
                         Consulting & Coaching für Sales, Marketing & Management
                       </p>
                       <p>
-                        Individuell-einzigartige Lösungen & mehr
-                        …Klarheit…Freude…Erfolg...& für Dich.
+                        Individuell-einzigartige Lösungen für mehr… <br />
+                        Klarheit…Freude…Erfolg…&…
+                      </p>
+                      <p>
+                        <b>3/5/9 Coachings in Folge</b>
                       </p>
                       <ul>
-                        <li>3/5/9 Coachings in Folge</li>
                         <li>Deine Wünsche & Bedürfnisse</li>
                         <li>Strategie & Plan zur Umsetzung</li>
                         <li>Re-Loop: Check & Adaption</li>
-                        <li>
-                          Quick Fix in Co-Creation zu konkreter & klar
-                          umrissener Fragestellung
-                        </li>
+                      </ul>
+                      <p>
+                        <b>Marketing & Sales Quick Fix in Co-Creation</b>
+                      </p>
+                      <ul>
+                        <li>zu konkreter & klar umrissener Fragestellung</li>
                       </ul>
                     </ProseRaw>
                   </div>
@@ -69,8 +73,10 @@ function SectionIndexStarTimes({ section, padding = "pt-12 pb-16 lg:pb-20" }) {
                         WIR-Power & Freude in Deinem Team & Unternehmen für alle
                         schaffen.
                       </p>
+                      <p>
+                        <b>Make-it-Happen</b>
+                      </p>
                       <ul>
-                        <li>Make-it-Happen</li>
                         <li>Initial Deep Brief</li>
                         <li>Power-Kick-Off</li>
                         <li>1:1 Deep Dives in Vor- & Nachbereitung</li>
