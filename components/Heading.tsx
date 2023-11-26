@@ -1,9 +1,23 @@
 import React from "react";
-import PropTypes from "prop-types";
-import ChildrenData from "@/types/ChildrenData";
 import HeadingStar from "./HeadingStar";
 
-function Component({ element, size, color, children, classes, showStar }) {
+interface Props {
+  element?: "h1" | "h2" | "h3" | "header";
+  size?: "h1" | "h2" | "h3" | "header";
+  color?: string;
+  classes?: string;
+  children: React.ReactNode;
+  showStar?: boolean;
+}
+
+function Component({
+  element = "h2",
+  size = "h2",
+  color = "text-bsm-nightblue",
+  children,
+  classes = "",
+  showStar = false,
+}: Props) {
   const Tag = element;
 
   let allClasses = classes;
@@ -35,22 +49,5 @@ function Component({ element, size, color, children, classes, showStar }) {
     </Tag>
   );
 }
-
-Component.defaultProps = {
-  element: "h2",
-  size: "h2",
-  color: "text-bsm-nightblue",
-  classes: "",
-  showStar: false,
-};
-
-Component.propTypes = {
-  element: PropTypes.string,
-  size: PropTypes.oneOf(["h1", "h2", "h3", "header"]),
-  color: PropTypes.string,
-  classes: PropTypes.string,
-  children: ChildrenData.isRequired,
-  showStar: PropTypes.bool,
-};
 
 export default Component;
