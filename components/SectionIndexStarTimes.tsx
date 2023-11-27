@@ -11,7 +11,7 @@ function SectionIndexStarTimes({ section, padding = "pt-12 pb-16 lg:pb-20" }) {
       <Container layout="sm">
         <div className="">
           <Animate>
-            <div className="mb-16">
+            <div className="flex justify-center mb-16">
               <Heading element="h2" size="h1" showStar>
                 StarTimes for you
               </Heading>
