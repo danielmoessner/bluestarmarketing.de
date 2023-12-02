@@ -220,15 +220,16 @@
       {
         "day": "2024-01-25",
         "from": "17:00",
-        "to": "19:30",
-        "title": "Meet Magic Mates am 25. Januar 2024",
+        "to": "18:30",
+        "title": "Virtual Meet Magic Mates am 25. Januar 2024",
         "addons": [
           {
             "type": "listSection",
-            "markdown": "Wir wählen ein für euch **spannendes Thema aus der Essenz** und euren Beweggründen aus den vorangegangenen Meet Magic Mates Termine."
+            "markdown": "Wir zeigen Dir den Weg zu individuellen & einzigartigen Lösungen durch WIR-Power & Freude mit Deinem Team - zum Magic Team.\n\n* Begrüßung & Vorstellungsrunde\n* Impulsvortrag & Interaktion\n* Austausch"
           },
           {
-            "type": "detailView"
+            "type": "icon",
+            "image": "/media/virtual_meet_magic_mates.png"
           }
         ]
       }
