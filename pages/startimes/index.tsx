@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import { renderContent } from "@/lib/renderContent";
 import Seo from "@/components/Seo";
-import Heading from "@/components/Heading";
 import Animate from "@/components/Animate";
 import Footer from "@/components/Footer";
 import BlockHeadingManagementSalesMarketing from "@/components/BlockHeadingManagementSalesMarketing";
@@ -15,6 +14,7 @@ import BlockRoseHeading from "@/components/BlockRoseHeading";
 import BlockPropertiesNextEventVideoButton from "@/components/BlockPropertiesNextEventVideoButton";
 import BlockPropertiesNextEventVideoQuoteButton from "@/components/BlockPropertiesNextEventVideoQuoteButton";
 import BlockThreeCards from "@/components/BlockThreeCards";
+import SectionIndexStarTimes from "@/components/SectionIndexStarTimes";
 
 function Page({ pageData, footerData, events }) {
   const page = pageData;
@@ -23,13 +23,7 @@ function Page({ pageData, footerData, events }) {
     <Layout>
       <Seo meta={page.meta} />
 
-      <section className="pt-12 pb-14 lg:pb-16">
-        <Container layout="sm">
-          <div className="text-center">
-            <Heading size="h1">{page.start.title}</Heading>
-          </div>
-        </Container>
-      </section>
+      <SectionIndexStarTimes />
 
       <section className="pb-12 pt-6 md:pt-16 bg-[url('/sternenhimmel.jpg')] bg-repeat">
         <Container layout="sm">

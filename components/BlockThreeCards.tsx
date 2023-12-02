@@ -6,7 +6,7 @@ function BlockThreeCards({ block }) {
   return (
     <div key="threeCards">
       <Animate>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {block.cards.map((card, index) => (
             <div
               key={index}

@@ -5,7 +5,7 @@ import HeadingStar from "./HeadingStar";
 import ProseRaw from "./ProseRaw";
 import Heading from "./Heading";
 
-function SectionIndexStarTimes({ section, padding = "pt-12 pb-16 lg:pb-20" }) {
+function SectionIndexStarTimes({ padding = "pt-12 pb-16 lg:pb-20" }) {
   return (
     <section className={padding}>
       <Container layout="sm">
@@ -93,8 +93,8 @@ function SectionIndexStarTimes({ section, padding = "pt-12 pb-16 lg:pb-20" }) {
                   </div>
                 </div>
                 <div className="">
-                  <Button href={section.cta.url} kind="ocean">
-                    {section.cta.text}
+                  <Button href="/startimes" kind="ocean">
+                    Mehr erfahren
                   </Button>
                 </div>
               </div>

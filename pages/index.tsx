@@ -30,7 +30,7 @@ function Page({ pageData, footerData, reviews }) {
         section={page.roseTitleTextButtonImage}
       />
 
-      <SectionIndexStarTimes section={page.imageTitleRoseTextButton} />
+      <SectionIndexStarTimes />
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
