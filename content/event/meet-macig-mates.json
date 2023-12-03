@@ -69,43 +69,6 @@
     },
     "pages": [
       {
-        "youtube": "DMbR5867tFQ",
-        "color": "#e50069",
-        "ordering": 100,
-        "type": "listing",
-        "content": [
-          {
-            "type": "roseTitle",
-            "titleNormal": "Meet",
-            "titleRose": "Magic Mates"
-          },
-          {
-            "type": "propertiesEventsVideoButton",
-            "properties": [
-              {
-                "markdown": "* Vernetze dich mit neuen und bekannten Sales- & Marketing-Entscheidern: innen.\n* Schöpfe aus gebündelter Expertise, Power & Spirit.\n* Begeistere und öffne dich für **Impulse, Austausch, Ideen & Freude.**",
-                "title": ""
-              },
-              {
-                "title": "Warum?",
-                "markdown": "Wir lieben die Power von Brilliant Minds, den Austausch, das Miteinander, Co-Creation & Freude und sind davon schon immer überzeugt und inspiriert – heute mehr denn je, sodass wir jetzt gemeinsam starten."
-              },
-              {
-                "title": "Für wen?",
-                "markdown": "Sales- & Marketing-Entscheidern: innen"
-              }
-            ],
-            "youtube": "2BEt4B85zg8",
-            "cta": {
-              "text": "Details anzeigen",
-              "kind": "pink",
-              "url": "/startimes/meetmagicmates"
-            },
-            "nextEventsText": "Nächste Termine"
-          }
-        ]
-      },
-      {
         "type": "detail",
         "meta": {
           "description": "Vernetze dich mit neuen und bekannten Marketer:innen.",
