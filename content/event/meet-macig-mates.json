@@ -96,6 +96,10 @@
             "titleRight": "Was nimmst du mit?",
             "markdownLeft": "Dich – einfach nur dich!\n\nSei da, sei neugierig & offen, stelle dich vor, höre zu und fühle dich willkommen.",
             "markdownRight": "Das entscheidest du individuell für dich!\n\nMein Wunsch ist es, für dich einen Raum und eine erfüllte Zeit mit neuen und bekannten Gesichtern, spannende Impulse, neue Kontakte, Lachen & **Freude** zu gestalten."
+          },
+          {
+            "type": "form",
+            "placeholder": "---"
           }
         ]
       },
@@ -193,6 +197,9 @@
           {
             "type": "icon",
             "image": "/media/virtual_meet_magic_mates.png"
+          },
+          {
+            "type": "detailView"
           }
         ]
       }

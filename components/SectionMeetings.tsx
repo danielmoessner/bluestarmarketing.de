@@ -13,7 +13,6 @@ function SectionMeetings({
   meetingsImage,
   meetingsImageAlt,
   meetings,
-  eventSlug,
   padding = "pb-12 pt-10 md:pt-16",
 }) {
   return (
@@ -63,13 +62,7 @@ function SectionMeetings({
                     </div>
                   </div>
                   <div className="flex justify-center pt-5">
-                    <Button
-                      kind="pink"
-                      href={`/startimes/${eventSlug}/${meeting.day.replaceAll(
-                        "-",
-                        "",
-                      )}`}
-                    >
+                    <Button kind="pink" href="#form">
                       {meetingsButton}
                     </Button>
                   </div>

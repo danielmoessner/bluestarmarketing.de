@@ -118,7 +118,6 @@ function Page({ pageData, footerData, eventData }) {
               meetingsImage={event.image}
               meetingsImageAlt={event.title}
               meetings={listableMeetings}
-              eventSlug={event.slug}
             />
           );
 
@@ -162,6 +161,7 @@ function Page({ pageData, footerData, eventData }) {
             </section>
           );
       })}
+
       <Footer data={footerData} />
     </Layout>
   );
