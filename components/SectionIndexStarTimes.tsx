@@ -93,7 +93,10 @@ function SectionIndexStarTimes({ padding = "pt-12 pb-16 lg:pb-20" }) {
                   </div>
                 </div>
                 <div className="">
-                  <Button href="/startimes" kind="ocean">
+                  <Button
+                    href="https://outlook.office365.com/book/Erstgesprchvereinbaren@bluestarmarketing2.onmicrosoft.com/"
+                    kind="ocean"
+                  >
                     Mehr erfahren
                   </Button>
                 </div>
