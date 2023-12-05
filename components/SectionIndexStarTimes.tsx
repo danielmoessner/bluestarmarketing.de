@@ -13,7 +13,7 @@ function SectionIndexStarTimes({ padding = "pt-12 pb-16 lg:pb-20" }) {
           <Animate>
             <div className="flex justify-center mb-16">
               <Heading element="h2" size="h1" showStar>
-                StarTimes for you
+                StarTimes
               </Heading>
             </div>
             <div className="grid gap-12 md:grid-cols-2 [&>div]:bg-bsm-alice [&>div]:px-6 [&>div]:pt-8 [&>div]:pb-5">
