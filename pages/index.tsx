@@ -15,7 +15,7 @@ import ServiceLinks from "@/components/ServiceLinks";
 import Script from "next/script";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import SectionIndexStarTimes from "@/components/SectionIndexStarTimes";
-import SectionRoseTitleTextButtonImage from "@/components/SectionRoseTitleTextButtonImage";
+import SectionIndexMagicTeam from "@/components/SectionIndexMagicTeam";
 
 function Page({ pageData, footerData, reviews }) {
   const page = pageData;
@@ -26,9 +26,7 @@ function Page({ pageData, footerData, reviews }) {
       <Header header={page.header} position="bottom-left" />
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
 
-      <SectionRoseTitleTextButtonImage
-        section={page.roseTitleTextButtonImage}
-      />
+      <SectionIndexMagicTeam section={page.roseTitleTextButtonImage} />
 
       <SectionIndexStarTimes />
 

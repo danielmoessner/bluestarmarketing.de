@@ -2,7 +2,7 @@
   "eslint.validate": ["next", "javascript", "typescript", "jsx", "tsx"],
   "eslint.packageManager": "npm",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "editor.quickSuggestions": {
     "other": true,

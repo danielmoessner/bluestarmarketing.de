@@ -20,6 +20,7 @@ function SectionTitleTextVideo({ section }) {
               </div>
               <div className="leading-[0px]">
                 <YoutubeVideo videoId={section.video} />
+                <YoutubeVideo videoId="2BEt4B85zg8" />
               </div>
             </div>
           </Animate>
