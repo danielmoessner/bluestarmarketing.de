@@ -30,6 +30,7 @@ function Button({
       target,
     };
   }
+  console.log(attrs, target);
 
   let bClassName = `inline-flex text-center items-center border-2 border-transparent w-full font-medium block text-center ${size} text-bsm-nightblue bg-transparent hover:bg-transparent transition-all duration-500 outline-none focus:outline-none !shadow-none `;
   if (kind === "blue") {
