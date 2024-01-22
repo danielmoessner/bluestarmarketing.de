@@ -121,33 +121,6 @@
     "image": "/media/magic_mates_logos.png",
     "meetings": [
       {
-        "day": "2023-09-26",
-        "title": "Virtual Meet Magic Mates am 26. September 2023",
-        "from": "17:00",
-        "to": "19:30",
-        "addons": [
-          {
-            "type": "icon",
-            "image": "/media/virtual_meet_magic_mates.png"
-          },
-          {
-            "type": "listSection",
-            "markdown": "Sales & Marketing Integration & Alignment"
-          },
-          {
-            "type": "detailView",
-            "video": "",
-            "imgCredits": "",
-            "markdown": "## *Impulse & Austausch*\n\n**Sales & Marketing – wie viel Reibung darf es sein oder verderben zu viele Köche den Brei** im Hinblick auf die Zielerreichung, Performance & zum Empowerment?\n\n* 3 Fragen zum Check-In & Kennenlernen\n* Knackige Impulse\n* Austausch & Vernetzung",
-            "new": {
-              "title": "Virtuell",
-              "text": "Über Teams\n     "
-            },
-            "image": "/media/virtual_meet_magic_mates.png"
-          }
-        ]
-      },
-      {
         "day": "2023-10-10",
         "from": "17:00",
         "to": "19:30",
@@ -200,6 +173,33 @@
           },
           {
             "type": "detailView"
+          }
+        ]
+      },
+      {
+        "day": "2024-03-19",
+        "title": "Virtual Meet Magic Mates am 19. März 2023",
+        "from": "17:00",
+        "to": "18:30",
+        "addons": [
+          {
+            "type": "icon",
+            "image": "/media/virtual_meet_magic_mates.png"
+          },
+          {
+            "type": "listSection",
+            "markdown": "* Begrüßung & Vorstellungsrunde\n* Impulsvortrag & Interaktion\\\n  MEHR\\\n  ++ mehr Collaboration\\\n  ++ mehr Team - cross-functional\\\n  **+++ mehrWERT fürs Business**\\\n  Make-it-HAPPEN\n* Austausch"
+          },
+          {
+            "type": "detailView",
+            "video": "",
+            "imgCredits": "",
+            "markdown": "* Begrüßung & Vorstellungsrunde\n* Impulsvortrag & Interaktion\\\n  MEHR\\\n  ++ mehr Collaboration\\\n  ++ mehr Team - cross-functional\\\n  **+++ mehrWERT fürs Business**\\\n  Make-it-HAPPEN\n* Austausch",
+            "new": {
+              "title": "Virtuell",
+              "text": "Über Teams\n     "
+            },
+            "image": "/media/virtual_meet_magic_mates.png"
           }
         ]
       }
