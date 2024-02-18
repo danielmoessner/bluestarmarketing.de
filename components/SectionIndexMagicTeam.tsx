@@ -2,7 +2,6 @@ import Image from "next/image";
 import Button from "./Button";
 import Container from "./Container";
 import Animate from "./Animate";
-import Prose from "./Prose";
 import HeadingStar from "./HeadingStar";
 import Heading from "./Heading";
 import ProseRaw from "./ProseRaw";
