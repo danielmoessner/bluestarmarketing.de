@@ -5,6 +5,7 @@ import Animate from "./Animate";
 import Prose from "./Prose";
 import HeadingStar from "./HeadingStar";
 import Heading from "./Heading";
+import ProseRaw from "./ProseRaw";
 
 function SectionImageTitleRoseTextButton({
   section,
@@ -21,19 +22,37 @@ function SectionImageTitleRoseTextButton({
               </Heading>
             </div>
             <div className="grid gap-8 lg:grid-cols-2">
-              <div className="flex flex-col justify-between pt-8 pb-8">
+              <div className="flex flex-col justify-between pt-14">
                 <div className="">
                   <h3 className="relative inline-block text-3xl md:text-5xl ">
-                    <span className="ml-5 text-5xl font-rose md:text-8xl text-bsm-ocean">
+                    {/* <span className="ml-5 text-5xl font-rose md:text-8xl text-bsm-ocean">
                       Your
-                    </span>
-                    Magic Team
-                    <div className="absolute flex items-center justify-center mx-auto pointer-events-none md:top-10 top-4 -right-7 md:-right-10 lg:-right-12">
+                    </span> */}
+                    Add value & growth
+                    <div className="absolute flex items-center justify-center mx-auto pointer-events-none md:top-2 top-4 -right-7 md:-right-10 lg:-right-12">
                       <HeadingStar />
                     </div>
                   </h3>
-                  <div className="mt-4 md:mt-6">
-                    <Prose html={section.markdown.html} />
+                  <div className="mt-4 md:mt-14">
+                    <ProseRaw>
+                      <p>
+                        Meistere Komplexität, Krisen & Dauerbrenner
+                        funktionsübergreifend & auf allen Ebenen
+                      </p>
+                      <p>
+                        Überwinde Hindernisse, Widerstände und schleppende
+                        Zusammenarbeit
+                      </p>
+                      <p>
+                        Neue & integrale Lösungen für Dich, Dein Business und
+                        Dein Team in Co-Creation
+                      </p>
+                      <p>
+                        Mit WIR-Power in einer Absicht & gemeinsamen Zielen zu
+                        <b> mehrWERT & mehrWACHSTUM</b>
+                      </p>
+                      <p>Zukunft ist JETZT!</p>
+                    </ProseRaw>
                   </div>
                 </div>
                 <div className="">
