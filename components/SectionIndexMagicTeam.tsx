@@ -28,9 +28,17 @@ function SectionImageTitleRoseTextButton({
               </Heading>
             </div>
             <div className="grid gap-8 lg:grid-cols-2">
-              <div className="flex flex-col justify-between pt-14">
+              <div className="flex flex-col justify-between pt-10">
                 <div className="">
-                  <h3 className="relative inline-block text-3xl md:text-5xl "></h3>
+                  <h3 className="relative inline-block text-3xl md:text-5xl ">
+                    <span className="ml-5 text-4xl font-rose md:text-6xl">
+                      Add
+                    </span>{" "}
+                    value <span className="font-rose">&</span> growth
+                    <div className="absolute flex items-center justify-center mx-auto pointer-events-none md:top-2 top-4 -right-7 md:-right-10 lg:-right-12">
+                      <HeadingStar />
+                    </div>
+                  </h3>
                   <div className="mt-4 md:mt-14">
                     <ProseRaw>
                       <ul>
