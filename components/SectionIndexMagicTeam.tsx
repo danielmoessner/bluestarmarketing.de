@@ -17,24 +17,18 @@ function SectionImageTitleRoseTextButton({
           <Animate>
             <div className="flex justify-center mb-10">
               <Heading element="h2" size="h1">
-                <span>Make-it-happen</span>
+                <span>MehrWir</span>
                 <div className="inline-block ml-3 w-8 h-8 bg-[url('/stern_klein.svg')]"></div>
-                <span className="ml-5 text-4xl font-rose md:text-6xl">Add</span>{" "}
-                value
-                <span className="ml-5 text-4xl font-rose md:text-6xl">
-                  &
-                </span>{" "}
-                growth
+                <span>MehrWert</span>
+                <div className="inline-block ml-3 w-8 h-8 bg-[url('/stern_klein.svg')]"></div>
+                <span>MehrWachstum</span>
               </Heading>
             </div>
             <div className="grid gap-8 lg:grid-cols-2">
               <div className="flex flex-col justify-between pt-10">
                 <div className="">
                   <h3 className="relative inline-block text-3xl md:text-5xl ">
-                    <span className="ml-5 text-4xl font-rose md:text-6xl">
-                      Add
-                    </span>{" "}
-                    value <span className="font-rose">&</span> growth
+                    Mehr möglich machen
                     <div className="absolute flex items-center justify-center mx-auto pointer-events-none md:top-2 top-4 -right-7 md:-right-10 lg:-right-12">
                       <HeadingStar />
                     </div>
