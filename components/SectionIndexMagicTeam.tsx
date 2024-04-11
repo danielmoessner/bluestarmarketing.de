@@ -18,9 +18,9 @@ function SectionImageTitleRoseTextButton({
             <div className="flex justify-center mb-10">
               <Heading element="h2" size="h1">
                 <span>MehrWir</span>
-                <div className="inline-block ml-3 w-8 h-8 bg-[url('/stern_klein.svg')]"></div>
+                <div className="inline-block ml-3 w-8 h-8 mr-5 bg-[url('/stern_klein.svg')]"></div>
                 <span>MehrWert</span>
-                <div className="inline-block ml-3 w-8 h-8 bg-[url('/stern_klein.svg')]"></div>
+                <div className="inline-block ml-3 w-8 h-8 mr-5 bg-[url('/stern_klein.svg')]"></div>
                 <span>MehrWachstum</span>
               </Heading>
             </div>
