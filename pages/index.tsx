@@ -14,9 +14,8 @@ import SmallBox from "@/components/SmallBox";
 import ServiceLinks from "@/components/ServiceLinks";
 import Script from "next/script";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
-import SectionIndexStarTimes from "@/components/SectionIndexStarTimes";
-import SectionIndexMagicTeam from "@/components/SectionIndexMagicTeam";
 import SectionElephant from "@/components/SectionElephant";
+import SectionElephantTwo from "@/components/SectionElephantTwo";
 
 function Page({ pageData, footerData, reviews }) {
   const page = pageData;
@@ -28,10 +27,7 @@ function Page({ pageData, footerData, reviews }) {
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
 
       <SectionElephant />
-
-      <SectionIndexMagicTeam section={page.roseTitleTextButtonImage} />
-
-      <SectionIndexStarTimes />
+      <SectionElephantTwo />
 
       <section className="pt-16 pb-16 lg:pb-20" id="kontakt">
         <Container layout="sm">
