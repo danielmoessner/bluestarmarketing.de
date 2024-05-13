@@ -11,16 +11,34 @@ function SectionElephant({ padding = "pt-16 pb-16 lg:pb-20" }) {
     <section className={padding}>
       <Container layout="sm">
         <div className="grid lg:gap-10 lg:grid-cols-2">
-          <Animate>
-            <div className="pt-4">
+          <div className="lg:col-span-2">
+            <div className="flex justify-center pt-4">
               <ManagementSalesMarketing />
             </div>
-            <div className="mt-4">
+            <div className="mt-4 text-center">
               <Heading showStar size="h3" element="h1">
                 Nutze alle Potenziale & Ressourcen
               </Heading>
             </div>
-            <h2 className="mt-8 text-2xl font-medium">
+          </div>
+
+          <div>
+            <Image
+              src="/elephant-walking.jpeg"
+              alt="Bunter Elefant"
+              width={800}
+              height={600}
+              className="w-full"
+            />
+            <span className="block text-xs text-right">
+              Bildquelle: Japan Copilot –{" "}
+              <a target="_blank" href="https://stock.adobe.com/de/">
+                stock.adobe.com
+              </a>
+            </span>
+          </div>
+          <Animate>
+            <h2 className="text-2xl font-medium">
               Marketing der Extraklasse Strategische Konzeption & integrale
               Kampagnen
             </h2>
@@ -58,21 +76,6 @@ function SectionElephant({ padding = "pt-16 pb-16 lg:pb-20" }) {
               </Button>
             </div>
           </Animate>
-          <div>
-            <Image
-              src="/elephant-walking.jpeg"
-              alt="Bunter Elefant"
-              width={800}
-              height={600}
-              className="w-full"
-            />
-            <span className="block text-xs text-right">
-              Bildquelle: Japan Copilot –{" "}
-              <a target="_blank" href="https://stock.adobe.com/de/">
-                stock.adobe.com
-              </a>
-            </span>
-          </div>
         </div>
       </Container>
     </section>

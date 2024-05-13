@@ -10,13 +10,15 @@ function SectionElephant({ padding = "pt-16 pb-16 lg:pb-20" }) {
     <section className={padding}>
       <Container layout="sm">
         <div className="grid lg:gap-10 lg:grid-cols-2">
-          <Animate>
-            <div className="mt-4">
+          <div className="lg:col-span-2">
+            <div className="mt-4 text-center">
               <Heading showStar size="h3" element="h1">
                 Aktiviere Deine Superkräfte Dein stärkeres ICH
               </Heading>
             </div>
-            <h2 className="mt-8 text-2xl font-medium">
+          </div>
+          <Animate>
+            <h2 className="text-2xl font-medium">
               Superkräfte Coaching & Beratung für Marketing-Fach- und
               Führungskräfte
               <span className="block h-2"></span>
