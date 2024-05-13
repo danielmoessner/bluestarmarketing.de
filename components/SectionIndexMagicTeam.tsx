@@ -27,7 +27,7 @@ function SectionImageTitleRoseTextButton({
             <div className="grid gap-8 lg:grid-cols-2">
               <div className="flex flex-col justify-between pt-10">
                 <div className="">
-                  <h3 className="relative inline-block text-3xl md:text-5xl ">
+                  <h3 className="relative inline-block text-3xl md:text-5xl">
                     Mehr möglich machen
                     <div className="absolute flex items-center justify-center mx-auto pointer-events-none md:top-2 top-4 -right-7 md:-right-10 lg:-right-12">
                       <HeadingStar />

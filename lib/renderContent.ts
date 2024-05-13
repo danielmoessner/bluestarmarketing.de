@@ -11,7 +11,7 @@ import fs from "fs/promises";
 import path from "path";
 
 // render images
-async function renderImages1(data: string): Promise<ImageRendered> {
+export async function renderImages1(data: string): Promise<ImageRendered> {
   const buffer = await fs.readFile(path.join("./public", data));
   const {
     base64,

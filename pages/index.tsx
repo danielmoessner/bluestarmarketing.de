@@ -16,6 +16,7 @@ import Script from "next/script";
 import { getAllJson, getSingleJson } from "@/lib/getContent";
 import SectionIndexStarTimes from "@/components/SectionIndexStarTimes";
 import SectionIndexMagicTeam from "@/components/SectionIndexMagicTeam";
+import SectionElephant from "@/components/SectionElephant";
 
 function Page({ pageData, footerData, reviews }) {
   const page = pageData;
@@ -25,6 +26,8 @@ function Page({ pageData, footerData, reviews }) {
       <Seo meta={page.meta} />
       <Header header={page.header} position="bottom-left" />
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+
+      <SectionElephant />
 
       <SectionIndexMagicTeam section={page.roseTitleTextButtonImage} />
 
