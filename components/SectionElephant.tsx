@@ -39,10 +39,6 @@ function SectionElephant({ padding = "pt-16 pb-16 lg:pb-20" }) {
           </div>
           <Animate>
             <h2 className="text-2xl font-medium">
-              Marketing der Extraklasse Strategische Konzeption & integrale
-              Kampagnen
-            </h2>
-            <h2 className="mt-8 text-2xl font-medium text-bsm-ocean">
               Teamkräfte-Programm für MehrWert und Wachstum in Unternehmen mit
               Freude
             </h2>
