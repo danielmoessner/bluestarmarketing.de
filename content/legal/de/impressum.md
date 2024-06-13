@@ -2,7 +2,7 @@
 title: Impressum
 slug: impressum
 ---
-## Angaben gemäß § 5 TMG
+## Angaben gemäß § 5 DDG
 
 Blue Star Marketing GmbH & Co. KG\
 Silke Tolkmitt\
